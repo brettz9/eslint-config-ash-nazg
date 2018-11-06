@@ -141,6 +141,8 @@ may not all be under one's control).
 
 - `class-methods-use-this` -
 - `complexity` -
+- `default-case` - Refactoring code to know whether to throw or silently
+  ignore requires time.
 - `max-len` -
 - `no-alert` -
 - `no-console` -

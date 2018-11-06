@@ -1,5 +1,5 @@
 {
-    "extends": ["standard", "eslint:recommended"],
+    "extends": ["standard", "eslint:recommended", "import", "promise", "node", "jsdoc"],
     "rules": {
         "array-bracket-newline": ["error"],
         "array-bracket-spacing": ["error"],
@@ -15,7 +15,7 @@
         "computed-property-spacing": ["error"],
         "consistent-return": ["error"],
         "consistent-this": ["error"],
-        "default-case": ["error"],
+        "default-case": ["warn"],
         "dot-notation": ["error"],
         "for-direction": ["error"],
         "func-name-matching": ["error"],
