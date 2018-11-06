@@ -45,6 +45,8 @@ happy with it thus far).
     to do any logging.
 - *`func-names`* - Too prohibitive, though if applied to methods only, it may
   be useful (though with object shorthand, less necessary)
+- `func-style` - Declarations are simpler so appealing also. If enabling, would
+    also want `allowArrowFunctions`.
 - `id-blacklist` - Can be helpful but a little tyrannical
 - `id-length` - Can be helpful (especially a minimum) but a little tyrannical
 - `id-match` - Too project-specific
@@ -54,15 +56,22 @@ happy with it thus far).
 - `lines-around-comment` - Irksome to me
 - `lines-between-class-members` - Don't feel any need for it
 - `max-classes-per-file` - A bit tyrannical
+- `max-depth` - Sounds good but tyrannical
 - `max-lines-per-function` - A bit tyrannical
 - `max-lines` - A bit tyrannical
 - `max-params` - Can be troublesome when one is forced to abide by some API
+- *`max-statements-per-line`* - Tyrannical when prohibiting single-line
+  `if (...) { continue; }`; might revisit if allowed for control statements
 - `max-statements` - A bit tyrannical
 - `multiline-comment-style` - Would be nice if allowed multiline "starred-block"
     OR "bare-block" given some one may wish as JSDoc-style and others not
 - `newline-after-var` - Not very flexible
 - `newline-before-return` - Not very flexible
+- `newline-per-chained-call` - Not flexible in practice
 - `no-continue` - Can be convenient
+- `no-invalid-this` - Sounds good but not useful for element event
+  handlers/jQuery
+- `no-multi-assign` - Sounds good, but can be burdensome
 - `no-negated-condition` - Is generally simpler, but it can be annoying
     if one wishes to get a much smaller condition body visible at the top.
 - `no-nested-ternary` - Nested ternaries can be helpful to avoid clutter of
@@ -87,6 +96,10 @@ happy with it thus far).
 }};`
 - *`padding-line-between-statements`* - Might revisit
 - `prefer-arrow-callback` - Not compelling
+- `prefer-template` - Sounds good, but too cumbersome in practice
+- *`sort-imports`* - Would be useful with "warn" if could sort by
+  multiple/single type and sort members, but avoid alphabetical
+  sorting across imports which seems too rigid
 - `sort-keys` - Too cumbersome
 - `sort-vars` - Too cumbersome
 
@@ -126,9 +139,6 @@ may not all be under one's control).
 
 ## Rationale for changing required rules' configuration away from defaults
 
-- `func-style` - Declarations are simpler so using `declaration` option.
-    Arrow functions are convenient too, however, so enabling
-    `allowArrowFunctions`.
 - `function-paren-newline` - The default multiline can get too long whereas
     "consistent" can be clean and short.
 - `multiline-ternary` - Inline ternary can be very readable when not
