@@ -98,10 +98,38 @@ happy with it thus far).
 - `prefer-arrow-callback` - Not compelling
 - `prefer-template` - Sounds good, but too cumbersome in practice
 - *`sort-imports`* - Would be useful with "warn" if could sort by
-  multiple/single type and sort members, but avoid alphabetical
+  multiple/single type and sort members while avoiding alphabetical
   sorting across imports which seems too rigid
 - `sort-keys` - Too cumbersome
 - `sort-vars` - Too cumbersome
+
+### Rationale for disabled import rules
+
+- `import/no-restricted-paths` - Project-specific
+- `import/no-internal-modules` - Don't see any advantage
+- `import/no-cycle` - Don't see a problem with cyclic imports in ESM
+- `import/no-nodejs-modules` - Useful for some projects, but not all
+  including even client-side (though does offer `allow` option)
+- `import/exports-last` - Has some reason for being, but nicer to see
+  with declaration that the object is being exported. To find all, just
+  search for "export"
+- `import/no-namespace` - While can be more efficient to import only what
+  one needs, having a namespace can also avoid confusion.
+- `import/prefer-default-export` - Could even be a bad practice as
+  ugly to import with non-defaults added later
+- `import/no-default-export` - Has some basis, but defaults are admittedly
+  convenient. Let's not be so opinionated.
+- `import/no-named-export` - Could even be a bad practice as
+  ugly to import with non-defaults added later
+- `import/no-relative-parent-imports` - Appealing in some ways, but too rigid
+  for a broad standard
+- *`import/dynamic-import-chunkname`* - Might revisit for warnings, but
+  probably too specific for a broad standard
+- `import/max-dependencies` - Too constraining
+- `import/no-unassigned-import` - Could be useful with `allow` option,
+  but that would be project-specific, and unassigned imports are needed
+  for polyfills
+- `import/group-exports` - Too rigid as with `exports-last`.
 
 # Rationale for warnings
 
@@ -122,7 +150,6 @@ may not all be under one's control).
 - `prefer-numeric-literals` -
 - `require-jsdoc` -
 - `require-unicode-regexp` -
-- `sort-imports` -
 - `vars-on-top` - Not needed for `let`/`const`, and if overriding, this is
     cumbersome, despite being useful
 
@@ -163,6 +190,9 @@ may not all be under one's control).
 - `quote-props` - Changed to "as-needed" as properties more verbose and
     uglier with quoting
 - `valid-jsdoc` - The specific rules adopted add more checking.
+- `import/order` - Enforcing "builtin", "external", "internal" and then
+  ["parent", "sibling", "index"] in any order as these may be
+  project-specific.
 
 ## Rationale for adding JSDoc rules
 
