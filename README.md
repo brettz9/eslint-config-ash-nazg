@@ -37,12 +37,17 @@ some "standard" rules further which I have not had time to examine (but
 it would probably be toward the stricter rather than looser as I have been
 happy with it thus far).
 
+- *`array-bracket-newline`* - Switched to "consistent" as sometimes nice to
+    be a little condensed, especially when representing HTML as JSON within
+    Jamilih (or JsonML) templates.
 - *`array-element-newline`* - While the "consistent" option would be nice,
     it doesn't work well to keep up with a max width and the desire to avoid
     excessive height `[\n a, b, \n c, d\n]`
 - `arrow-body-style` - With `as-needed` and `requireReturnForObjectLiteral`
     seems reasonable, but too often in debugging, one needs to add brackets
     to do any logging.
+- `radix` - We're only dealing with ES5+ environments, so the radix is
+    redundant for base 10.
 - *`func-names`* - Too prohibitive, though if applied to methods only, it may
   be useful (though with object shorthand, less necessary)
 - `func-style` - Declarations are simpler so appealing also. If enabling, would
@@ -94,6 +99,9 @@ happy with it thus far).
 - *`object-curly-newline`* - Doesn't allow `let f = {foo () {
     dosomething();
 }};`
+- `one-var-declaration-per-line` - Sounds good, but too cumbersome for small
+  integer or boolean inits, and the indented next lines are not as
+  immediately clear that they belong to the declaration.
 - *`padding-line-between-statements`* - Might revisit
 - `prefer-arrow-callback` - Not compelling
 - `prefer-template` - Sounds good, but too cumbersome in practice
@@ -148,6 +156,9 @@ may not all be under one's control).
 - `no-console` -
 - `no-empty-function` -
 - `no-magic-numbers` -
+- `no-shadow` - Can catch errors, but also some work to refactor (See also
+    section "Rationale for changing required rules' configuration away
+    from defaults".)
 - `no-warning-comments` -
 - `prefer-numeric-literals` -
 - `require-jsdoc` -
@@ -180,7 +191,10 @@ may not all be under one's control).
 - `no-restricted-properties` - Use example default of restricting
     `__defineGetter__` in favor of `Object.defineProperty` as convenient
 - `no-shadow` - It is better practice not to confuse by using globals! I
-    didn't feel the examples for allowing necessitated their use
+    didn't feel the examples for allowing necessitated their use.
+    I added `"parent"`, `"name"`, `"closed"`, and `"start"` to `allow` as
+    frequent local variables technically shadowing globals (`start` for
+    QUnit env).
 - `object-shorthand` - Enabling `avoidExplicitReturnArrows` as methods
     without `this` that this rule grabs (which have their own meaning with
     arrow functions) are more succinctly expressed in shorthand, and
