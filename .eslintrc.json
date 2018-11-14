@@ -50,9 +50,9 @@
 "import/unambiguous": "warn",
 "import/no-commonjs": "warn",
 
-
 {
-    "extends": ["standard", "eslint:recommended", "import", "promise", "node", "jsdoc"],
+    "extends": ["standard", "eslint:recommended", "plugin:compat/recommended"],
+    "plugins": ["import", "promise", "node", "jsdoc", "markdown"],
     "rules": {
         "array-bracket-newline": ["error", "consistent"],
         "array-bracket-spacing": ["error"],
