@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ash-nazg",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An expansion and tweaking of the \"standard\" config style for ESLint",
   "main": "index.js",
   "scripts": {
@@ -27,20 +27,20 @@
   "dependencies": {},
   "peerDependencies": {
     "eslint": "^5.9.0",
+    "eslint-config-standard": "^12.0.0",
     "eslint-plugin-compat": "^2.6.3",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsdoc": "https://github.com/brettz9/eslint-plugin-jsdoc#Deploy",
     "eslint-plugin-markdown": "^1.0.0-rc.0",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-promise": "^4.0.1"
   },
   "devDependencies": {
     "eslint": "^5.9.0",
+    "eslint-config-standard": "^12.0.0",
     "eslint-plugin-compat": "^2.6.3",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsdoc": "https://github.com/brettz9/eslint-plugin-jsdoc#Deploy",
     "eslint-plugin-markdown": "^1.0.0-rc.0",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-promise": "^4.0.1"
   }
 }
