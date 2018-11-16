@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brettz9/eslint-config-standard-pp.git"
+    "url": "git+https://github.com/brettz9/eslint-config-ash-nazg.git"
   },
   "keywords": [
     "eslint",
@@ -18,9 +18,9 @@
   "contributors": [],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/brettz9/eslint-config-standard-pp/issues"
+    "url": "https://github.com/brettz9/eslint-config-ash-nazg/issues"
   },
-  "homepage": "https://github.com/brettz9/eslint-config-standard-pp#readme",
+  "homepage": "https://github.com/brettz9/eslint-config-ash-nazg#readme",
   "engines": {
     "node": "*"
   },
