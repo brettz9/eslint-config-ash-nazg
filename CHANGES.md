@@ -1,13 +1,17 @@
 # eslint-config-ash-nazg CHANGES
 
+## 0.1.1
+
+- Fix: Add missing `peerDependencies` for new items
+
 ## 0.1.0
 
-- Add `eslint-plugin-no-use-extend-native` and add from
+- Enhancement: Add `eslint-plugin-no-use-extend-native` and add from
     `eslint-plugin-unicorn`
 
 ## 0.0.4
 
-- Make devDeps explicitly include `eslint-plugin-node` and
+- Fix: Make devDeps explicitly include `eslint-plugin-node` and
   `eslint-plugin-standard` as `eslint-config-standard` currently relying
   on them.
 
