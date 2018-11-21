@@ -22,6 +22,11 @@ rules) for the rules we explicitly include (and see
 (See [explicitly-unused.js](./explicitly-unused.js) for the core and extended
 rules we don't include (rationale for non-inclusion below).)
 
+See [eslint-plugin-no-use-extend-native](https://github.com/dustinspecker/eslint-plugin-no-use-extend-native) for one added rule.
+
+See [Recommended Unicorn rules](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/index.js#L20-L53)
+for other rules (though with a few items disabled and enabled as per below).
+
 ## Other bundled configs
 
 The `ash-nazg/node` config expands upon the regular `ash-nazg` rules to
@@ -39,6 +44,10 @@ future, it may add Node-specific rules which may be unduly strict for
 `ash-nazg/node`).
 
 ## Comparison to other "standards"
+
+`eslint-config-ash-nazg` is a collection of some excellent preexisting
+rules other projects have created, curated with the intent of attaining
+productive strictness.
 
 ["standard"](https://standardjs.com/) ([config](https://github.com/standard/eslint-config-standard)) and `eslint:recommended` have brought a welcome degree of
 pseudo-standardization for code styling and error checking.
@@ -307,6 +316,22 @@ parameters, so that's why they are not even in `ash-nazg/sauron`, though
 if you feel you can succeed at imposing such rigor for your hordes of
 developer minions, by all means, have a hand at it...
 
+### Rationale for disabling some `plugin:unicorn/recommended` rules
+
+- `catch-error-name` - It can actually be useful to use different
+    error names to indicate what time of error may be expected.
+- `explicit-length-check` - Seems wasteful.
+- *`filename-case`* - Looks potentially useful with `camelCase`.
+- `throw-new-error` - Potentially confining.
+- `import-index` - While understandable, seems may cause more trouble in
+    making it harder to find references to `index`.
+
+### Rationale for including some Unicorn rules which are disabled in `plugin:unicorn/recommended`
+
+- `unicorn/custom-error-definition` - Does not seem confining.
+- `unicorn/no-unsafe-regex` - Seems like something to watch for, though
+    I may revisit if this reports too many common expressions.
+
 ### Rationale for only including some rules within `ash-nazg/sauron`
 
 These are good practices, but cumbersome, not as familiar to developers,
@@ -348,6 +373,8 @@ may not all be under one's control).
     to label all files
 - `promise/prefer-await-to-callbacks` - Sometimes useful, but callbacks
     may be used within repeating events
+- `unicorn/no-fn-reference-in-iterator` - May be cumbersome though does
+    catch potential problems
 
 ## Rationale for including rules that might not seem necessary
 

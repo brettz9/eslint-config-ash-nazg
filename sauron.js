@@ -29,6 +29,8 @@ module.exports = {
     "promise/valid-params": "warn",
     "promise/prefer-await-to-callbacks": "warn",
     "import/unambiguous": "warn",
-    "import/no-commonjs": "warn"
+    "import/no-commonjs": "warn",
+
+    "unicorn/no-fn-reference-in-iterator": "warn",
   }
 };

@@ -1,6 +1,6 @@
 module.exports = {
-  "extends": ["eslint:recommended", "standard", "plugin:compat/recommended"],
-  "plugins": ["promise", "import", "jsdoc", "markdown"],
+  "extends": ["eslint:recommended", "plugin:unicorn/recommended", "standard", "plugin:compat/recommended"],
+  "plugins": ["promise", "import", "unicorn", "no-use-extend-native", "jsdoc", "markdown"],
   "rules": {
     "array-bracket-newline": ["error", "consistent"],
     "array-bracket-spacing": ["error"],
@@ -142,6 +142,15 @@ module.exports = {
     "jsdoc/require-param": ["warn"],
     "jsdoc/require-param-name": ["warn"],
     "jsdoc/require-param-type": ["warn"],
-    "jsdoc/require-returns-type": ["warn"]
+    "jsdoc/require-returns-type": ["warn"],
+
+    "unicorn/catch-error-name": "off",
+    "unicorn/explicit-length-check": "off",
+    "unicorn/filename-case": "off",
+    "unicorn/throw-new-error": "off",
+    "unicorn/import-index": "off",
+
+    "unicorn/custom-error-definition": "error",
+	"unicorn/no-unsafe-regex": "error"
   }
 };

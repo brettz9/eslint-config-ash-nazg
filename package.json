@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ash-nazg",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "An expansion and tweaking of the \"standard\" config style for ESLint",
   "main": "index.js",
   "scripts": {
@@ -41,8 +41,10 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsdoc": "https://github.com/brettz9/eslint-plugin-jsdoc#Deploy",
     "eslint-plugin-markdown": "^1.0.0-rc.0",
+    "eslint-plugin-no-use-extend-native": "^0.3.12",
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-unicorn": "^6.0.1"
   }
 }

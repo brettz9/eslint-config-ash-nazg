@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 0.1.0
+
+- Add `eslint-plugin-no-use-extend-native` and add from
+    `eslint-plugin-unicorn`
+
 ## 0.0.4
 
 - Make devDeps explicitly include `eslint-plugin-node` and
