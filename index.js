@@ -151,6 +151,8 @@ module.exports = {
     "unicorn/import-index": "off",
 
     "unicorn/custom-error-definition": "error",
-	"unicorn/no-unsafe-regex": "error"
+	"unicorn/no-unsafe-regex": "error",
+
+    "no-restricted-syntax": ["error", "[operator=instanceof]"]
   }
 };

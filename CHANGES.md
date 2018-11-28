@@ -1,5 +1,11 @@
 # eslint-config-ash-nazg CHANGES
 
+## 0.2.0
+
+- Enhancement: Add `no-restricted-syntax` with `[operator=instanceof]` to
+    forbid use of `instanceof` (which, unless one is using
+    `Symbol.hasInstance`, is cross-frame unsafe)
+
 ## 0.1.1
 
 - Fix: Add missing `peerDependencies` for new items

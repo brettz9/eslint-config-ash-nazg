@@ -142,6 +142,8 @@ the rule.
     `fdescribe`) as convenient
 - `no-restricted-properties` - Use example default of restricting
     `__defineGetter__` in favor of `Object.defineProperty` as convenient
+- `no-restricted-syntax` - Set to eliminate any use of `instanceof`
+    (as it is not cross-frame safe, except if using `Symbol.hasInstance`)
 - `no-shadow` - It is better practice not to confuse by using globals! I
     didn't feel the examples for allowing necessitated their use.
     I added `"parent"`, `"top"`, `"open"`, `"close"`, `"stop"`, `"blur"`,
