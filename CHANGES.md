@@ -1,5 +1,20 @@
 # eslint-config-ash-nazg CHANGES
 
+## 0.3.0
+
+- Breaking change: Move rules (`capitalized-comments`, `complexity`,
+    `no-magic-numbers`, `no-warning-comments`) to new config
+    `ash-nazg/great-eye` (and add `max-statements-per-line` and
+    `no-plusplus` as well as jsdoc rules `require-description`,
+    `require-param-description`, `require-returns-description`
+    and `require-example`)
+- Fix: Though not a package, lint `explicitly-unused.js` file
+- Linting: Fix indent, tab
+- npm: Add ESLint config and script for project itself (using double
+    quotes given JSON-ish style)
+- npm: Update to versioned `eslint-plugin-jsdoc`
+- npm: Update devDep
+
 ## 0.2.0
 
 - Enhancement: Add `no-restricted-syntax` with `[operator=instanceof]` to

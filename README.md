@@ -17,7 +17,9 @@ modifications).
 
 See [index.js](./index.js) (and [node.js](./node.js) for `ash-nazg/node`
 rules) for the rules we explicitly include (and see
-[sauron.js](./sauron.js) for the even stricter `ash-nazg/sauron` rules).
+[sauron.js](./sauron.js) for the even stricter `ash-nazg/sauron` rules or
+[great-eye](./great-eye.js) for still stricter rules though which are
+probably best not used).
 
 (See [explicitly-unused.js](./explicitly-unused.js) for the core and extended
 rules we don't include (rationale for non-inclusion below).)
@@ -37,6 +39,12 @@ indicate what are generally best practices but are less likely to be due to
 an error and may possibly also require a high (and possibly tyrannical)
 degree of refactoring for existing projects. See below for the rationales
 for inclusion.
+
+The `ash-nazg/great-eye` config expands on `ash-nazg/sauron` to include
+rules which enforce good practices, but which are so cumbersome and may
+flag too much legitimate code that I personally won't regularly use them.
+Still, I like to track them here, including in the event that their
+config changes to make them less all-encompassing.
 
 The `ash-nazg/sauron-node` config incorporates both `ash-nazg/node` and
 `ash-nazg/sauron`. It currently adds no specific rules of its own (in the
@@ -96,9 +104,10 @@ In comparison to `eslint:recommended`, ash-nazg only *adds* restrictions with
 the exceptions of:
 
 1. Loosening the requirement of `no-console` into a mere warning and only in
-  the stricter "sauron" configuration. This is for the reason that console
-  logging is too useful for debugging (and sometimes for reporting progress)
-  to have to disable it at every turn and to distract one from actual errors.
+  the stricter `ash-nazg/sauron` configuration. This is for the reason that
+  console logging is too useful for debugging (and sometimes for reporting
+  progress) to have to disable it at every turn and to distract one from
+  actual errors.
 2. Change `no-empty` so that `allowEmptyCatch` is `true`. There are enough
   cases where one legitimately needs to suppress errors.
 
@@ -172,15 +181,15 @@ the rule.
 The following rules are not included within `eslint:recommended` or `standard`,
 nor have we chosen to include them in any of the `ash-nazg` rules.
 
-Note: asterisked items refer to features I might enable if the described
+Note: italicized items refer to features I might enable if the described
 option could become available (or upon further review). I might also tweak
 some `standard` rules further which I have not had time to examine (but
 it would probably be toward the stricter rather than looser as I have been
 happy with it thus far).
 
-- *`array-bracket-newline`* - Switched to "consistent" as sometimes nice to
-    be a little condensed, especially when representing HTML as JSON within
-    Jamilih (or JsonML) templates.
+- *`array-bracket-newline`* - Switched to "consistent" over "always" as
+    sometimes nice to be a little condensed, especially when representing
+    HTML as JSON within Jamilih (or JsonML) templates.
 - *`array-element-newline`* - While the "consistent" option would be nice,
     it doesn't work well to keep up with a max width and the desire to avoid
     excessive height `[\n a, b, \n c, d\n]`
@@ -316,7 +325,8 @@ While `jsdoc/require-description`, `jsdoc/require-param-description` and
 implement and even cumbersome for new ones to have to follow for lesser
 parameters, so that's why they are not even in `ash-nazg/sauron`, though
 if you feel you can succeed at imposing such rigor for your hordes of
-developer minions, by all means, have a hand at it...
+developer minions, by all means, have a hand at it (you can use the
+`ash-nazg/great-eye` config for these)...
 
 ### Rationale for disabling some `plugin:unicorn/recommended` rules
 
@@ -342,10 +352,8 @@ But perhaps useful for a new project which can pay closer attention to
 standards without the undue burden of having to refactor lots of code (which
 may not all be under one's control).
 
-- `capitalized-comments` - May be very prevalent
 - `class-methods-use-this` - Good for new code (though even here may need
   disabling). May break existing APIs.
-- `complexity` - A generally good practice, but can be work to refactor.
 - `consistent-this` - A good practice, but sometimes, especially with jQuery
   or DOM event handlers, and large functions where it can be difficult to
   track what a generic `that` is in reference to, `this` may be more clearly
@@ -358,13 +366,9 @@ may not all be under one's control).
   to have to disable it at every turn and to distract one from actual errors,
   even for production.
 - `no-empty-function` - Cumbersome to add comments within every no-op.
-- `no-magic-numbers` - Very helpful for clear code, but cumbersome.
 - `no-shadow` - Can catch errors, but also some work to refactor (See also
     section "Rationale for changing required rules' configuration away
     from defaults".)
-- `no-warning-comments` - Good to catch to-dos, but better to search or
-  parse code as a separate process rather than polluting one's ESLint
-  warnings--some to-dos are ok to be left for the long term
 - `prefer-numeric-literals` - Good but some work.
 - `require-jsdoc` - Imposes a heavy burden on preexisting large projects
 - `require-unicode-regexp` - Good, but some work to fix all.
@@ -377,6 +381,18 @@ may not all be under one's control).
     may be used within repeating events
 - `unicorn/no-fn-reference-in-iterator` - May be cumbersome though does
     catch potential problems
+
+### Rationale for only including some rules within `ash-nazg/great-eye`
+
+- `capitalized-comments` - May be very prevalent; reports with commented
+    out code
+- `complexity` - A generally good practice, but can be work to refactor,
+    and sometimes impractical to enforce.
+- `no-magic-numbers` - Very helpful for clear code, but cumbersome,
+    and sometimes very cumbersome.
+- `no-warning-comments` - Good to catch to-dos, but better to search or
+  parse code as a separate process rather than polluting one's ESLint
+  warnings--some to-dos are ok to be left for the long term
 
 ## Rationale for including rules that might not seem necessary
 

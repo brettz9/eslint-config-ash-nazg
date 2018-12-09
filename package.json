@@ -1,9 +1,10 @@
 {
   "name": "eslint-config-ash-nazg",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "An expansion and tweaking of the \"standard\" config style for ESLint",
   "main": "index.js",
   "scripts": {
+    "eslint": "eslint --report-unused-disable-directives --ext js,md .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,22 +27,22 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "eslint": "^5.9.0",
+    "eslint": "^5.10.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-compat": "^2.6.3",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsdoc": "https://github.com/brettz9/eslint-plugin-jsdoc#Deploy",
+    "eslint-plugin-jsdoc": "^3.14.0",
     "eslint-plugin-markdown": "^1.0.0-rc.0",
     "eslint-plugin-no-use-extend-native": "^0.3.12",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-unicorn": "^6.0.1"
   },
   "devDependencies": {
-    "eslint": "^5.9.0",
+    "eslint": "^5.10.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-compat": "^2.6.3",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsdoc": "https://github.com/brettz9/eslint-plugin-jsdoc#Deploy",
+    "eslint-plugin-jsdoc": "^3.14.0",
     "eslint-plugin-markdown": "^1.0.0-rc.0",
     "eslint-plugin-no-use-extend-native": "^0.3.12",
     "eslint-plugin-node": "^8.0.0",

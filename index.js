@@ -41,15 +41,15 @@ module.exports = {
     "no-process-exit": ["error"],
     "no-prototype-builtins": ["error"],
     "no-restricted-globals": ["error", {
-        "name": "event",
-        "message": "Use local event parameter instead (preferably as \"e\" or \"ev\")."
+      "name": "event",
+      "message": "Use local event parameter instead (preferably as \"e\" or \"ev\")."
     }, {
-        "name": "fdescribe",
-        "message": "Do not commit fdescribe. Use describe instead."
+      "name": "fdescribe",
+      "message": "Do not commit fdescribe. Use describe instead."
     }],
     "no-restricted-properties": ["error", {
-        "property": "__defineGetter__",
-        "message": "Please use `Object.defineProperty` instead."
+      "property": "__defineGetter__",
+      "message": "Please use `Object.defineProperty` instead."
     }],
     "no-script-url": ["error"],
     "no-sync": ["error"],
@@ -79,25 +79,25 @@ module.exports = {
     "object-curly-spacing": ["error", "never"],
 
     "valid-jsdoc": ["error", {
-        "prefer": {
-            "arg": "param",
-            "argument": "param",
-            "return": "returns",
-            "virtual": "abstract"
-        },
-        "preferType": {
-            "Boolean": "boolean",
-            "Number": "number",
-            "String": "string",
-            "object": "Object",
-            "array": "Array"
-        },
-        "requireReturn": true,
-        "requireReturnType": true,
-        "requireParamType": true,
-        "matchDescription": "^([A-Z][\\s\\S]*[.`?!])?$",
-        "requireParamDescription": false,
-        "requireReturnDescription": false
+      "prefer": {
+        "arg": "param",
+        "argument": "param",
+        "return": "returns",
+        "virtual": "abstract"
+      },
+      "preferType": {
+        "Boolean": "boolean",
+        "Number": "number",
+        "String": "string",
+        "object": "Object",
+        "array": "Array"
+      },
+      "requireReturn": true,
+      "requireReturnType": true,
+      "requireParamType": true,
+      "matchDescription": "^([A-Z][\\s\\S]*[.`?!])?$",
+      "requireParamDescription": false,
+      "requireReturnDescription": false
     }],
 
     "promise/catch-or-return": "error",
@@ -151,7 +151,7 @@ module.exports = {
     "unicorn/import-index": "off",
 
     "unicorn/custom-error-definition": "error",
-	"unicorn/no-unsafe-regex": "error",
+    "unicorn/no-unsafe-regex": "error",
 
     "no-restricted-syntax": ["error", "[operator=instanceof]"]
   }

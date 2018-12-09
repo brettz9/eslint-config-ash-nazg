@@ -1,9 +1,7 @@
 module.exports = {
   extends: ["ash-nazg"],
   rules: {
-    "capitalized-comments": ["warn"],
     "class-methods-use-this": ["warn"],
-    "complexity": ["warn"],
     "consistent-this": ["warn"],
     "default-case": ["warn"],
     "max-len": ["warn", {
@@ -13,9 +11,7 @@ module.exports = {
     "no-alert": ["warn"],
     "no-console": ["warn"],
     "no-empty-function": ["warn"],
-    "no-magic-numbers": ["warn"],
     "no-shadow": ["warn", {"builtinGlobals": true, "hoist": "functions", "allow": ["parent", "top", "open", "close", "stop", "blur", "status", "name", "closed", "start"]}],
-    "no-warning-comments": ["warn"],
     "prefer-numeric-literals": ["warn"],
     "require-jsdoc": ["warn"],
     "require-unicode-regexp": ["warn"],
