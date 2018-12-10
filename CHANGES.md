@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 0.4.0
+
+- Enhancement: Add some rules from @mysticatea/eslint-plugin
+- npm: Update devDeps/peerDeps
+
 ## 0.3.0
 
 - Breaking change: Move rules (`capitalized-comments`, `complexity`,

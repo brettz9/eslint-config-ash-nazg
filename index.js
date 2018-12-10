@@ -1,6 +1,6 @@
 module.exports = {
-  "extends": ["eslint:recommended", "plugin:unicorn/recommended", "standard", "plugin:compat/recommended"],
-  "plugins": ["promise", "import", "unicorn", "no-use-extend-native", "jsdoc", "markdown"],
+  "extends": ["eslint:recommended", "plugin:unicorn/recommended", "standard", "@mysticatea/eslint-comments/recommended", "plugin:compat/recommended"],
+  "plugins": ["promise", "import", "unicorn", "no-use-extend-native", "jsdoc", "markdown", "@mysticatea"],
   "rules": {
     "array-bracket-newline": ["error", "consistent"],
     "array-bracket-spacing": ["error"],
@@ -77,6 +77,7 @@ module.exports = {
     "object-property-newline": ["off"],
     "one-var": ["off"],
     "object-curly-spacing": ["error", "never"],
+    "no-restricted-syntax": ["error", "[operator=instanceof]"],
 
     "valid-jsdoc": ["error", {
       "prefer": {
@@ -153,6 +154,11 @@ module.exports = {
     "unicorn/custom-error-definition": "error",
     "unicorn/no-unsafe-regex": "error",
 
-    "no-restricted-syntax": ["error", "[operator=instanceof]"]
+    "@mysticatea/block-scoped-var": "error",
+    "@mysticatea/no-literal-call": "error",
+    "@mysticatea/no-this-in-static": "error",
+    "@mysticatea/no-use-ignored-vars": "error",
+    "@mysticatea/no-useless-rest-spread": "error",
+    "@mysticatea/eslint-comments/no-unused-disable": "error"
   }
 };

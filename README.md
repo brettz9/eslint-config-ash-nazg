@@ -24,10 +24,19 @@ probably best not used).
 (See [explicitly-unused.js](./explicitly-unused.js) for the core and extended
 rules we don't include (rationale for non-inclusion below).)
 
+See [mysticatea/eslint-plugin](https://github.com/mysticatea/eslint-plugin)
+for a number of added rules (though with a few items disabled and enabled
+as per below), including all of `@mysticatea/eslint-comments/recommended`.
+
 See [eslint-plugin-no-use-extend-native](https://github.com/dustinspecker/eslint-plugin-no-use-extend-native) for one added rule.
 
 See [Recommended Unicorn rules](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/index.js#L20-L53)
 for other rules (though with a few items disabled and enabled as per below).
+
+I've focused below on deviations because the original sites tend to
+already articulate the usefulness of the rules I *have* incorporated
+for these plugins/configs. This is for tracking design choices and
+not disparaging the utility of non-included rules.
 
 ## Other bundled configs
 
@@ -343,6 +352,22 @@ developer minions, by all means, have a hand at it (you can use the
 - `unicorn/custom-error-definition` - Does not seem confining.
 - `unicorn/no-unsafe-regex` - Seems like something to watch for, though
     I may revisit if this reports too many common expressions.
+
+### Rationale for not including some `@mysticatea/eslint-plugin` rules
+
+- `@mysticatea/arrow-parens` - Covered by other rules
+- `@mysticatea/no-instanceof-array` - Covered by our blocking of all
+    `instanceof`
+- `@mysticatea/no-instanceof-wrapper` - Covered by our blocking of all
+    `instanceof`
+- `@mysticatea/prefer-for-of` - I prefer array extras for easier reuse,
+    currying, etc. than `for-of`
+- `@mysticatea/eslint-comments/no-restricted-disable` - See no need
+- `@mysticatea/eslint-comments/no-use` - See no need
+- `@mysticatea/eslint-plugin/*` - Project more generic than ESLint plugins
+- `@mysticatea/ts/*` - Not supporting TypeScript
+- `@mysticatea/vue/*` - Project more generic than Vue.js
+- `@mysticatea/prettier` - Not interested in imposing prettier
 
 ### Rationale for only including some rules within `ash-nazg/sauron`
 
