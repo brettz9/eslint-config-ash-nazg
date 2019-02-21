@@ -1,5 +1,5 @@
 module.exports = {
-  "extends": ["eslint:recommended", "plugin:unicorn/recommended", "standard", "@mysticatea/eslint-comments/recommended", "plugin:compat/recommended"],
+  "extends": ["eslint:recommended", "plugin:unicorn/recommended", "standard", "plugin:eslint-comments/recommended", "plugin:compat/recommended"],
   "plugins": ["promise", "import", "unicorn", "no-use-extend-native", "jsdoc", "markdown", "@mysticatea"],
   "rules": {
     "array-bracket-newline": ["error", "consistent"],
@@ -159,6 +159,6 @@ module.exports = {
     "@mysticatea/no-this-in-static": "error",
     "@mysticatea/no-use-ignored-vars": "error",
     "@mysticatea/no-useless-rest-spread": "error",
-    "@mysticatea/eslint-comments/no-unused-disable": "error"
+    "eslint-comments/no-unused-disable": "error"
   }
 };

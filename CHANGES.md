@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 0.4.2
+
+- Fix: Try to workaround problem with recommended comments plugin
+
 ## 0.4.1
 
 - Fix: Add missing `eslint-plugin-eslint-comments` devDep/peerDep
