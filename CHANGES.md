@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 0.4.1
+
+- Fix: Add missing `eslint-plugin-eslint-comments` devDep/peerDep
+
 ## 0.4.0
 
 - Enhancement: Add some rules from @mysticatea/eslint-plugin
