@@ -148,6 +148,7 @@ module.exports = {
     "unicorn/catch-error-name": "off",
     "unicorn/explicit-length-check": "off",
     "unicorn/filename-case": "off",
+    "unicorn/no-unreadable-array-destructuring": "off",
     "unicorn/throw-new-error": "off",
     "unicorn/import-index": "off",
 

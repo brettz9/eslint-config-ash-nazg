@@ -72,6 +72,7 @@ module.exports = {
     "jsdoc/require-example": ["off"],
     "jsdoc/require-hyphen-before-param-description": ["off"],
     "jsdoc/require-param-description": ["off"],
+    "jsdoc/require-returns-check": ["off"],
     "jsdoc/require-returns-description": ["off"]
   }
 };

@@ -344,6 +344,7 @@ developer minions, by all means, have a hand at it (you can use the
 - `explicit-length-check` - Seems wasteful.
 - *`filename-case`* - Looks potentially useful with `camelCase`.
 - `throw-new-error` - Potentially confining.
+- `no-unreadable-array-destructuring` - Better to use this than multiple lines
 - `import-index` - While understandable, seems may cause more trouble in
     making it harder to find references to `index`.
 
@@ -352,6 +353,11 @@ developer minions, by all means, have a hand at it (you can use the
 - `unicorn/custom-error-definition` - Does not seem confining.
 - `unicorn/no-unsafe-regex` - Seems like something to watch for, though
     I may revisit if this reports too many common expressions.
+
+### Rationale for including eslint-comments rules which are not in `plugin:eslint-comments/recommended`
+
+- `eslint-comments/no-unused-disable` - Might be indicative of an error
+    and inefficient in any case
 
 ### Rationale for not including some `@mysticatea/eslint-plugin` rules
 

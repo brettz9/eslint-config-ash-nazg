@@ -1,5 +1,11 @@
 # eslint-config-ash-nazg CHANGES
 
+## 0.4.3
+
+- Change: Avoid `unicorn/no-unreadable-array-destructuring` rule
+- Docs: Update explicit listing per jsdoc changes
+- Docs: Explain missing included rules
+
 ## 0.4.2
 
 - Fix: Try to workaround problem with recommended comments plugin
