@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 0.4.4
+
+- Change (loosen): For `eslint-comments/disable-enable-pair`,
+    set option `allowWholeFile` to true
+
 ## 0.4.3
 
 - Change: Avoid `unicorn/no-unreadable-array-destructuring` rule

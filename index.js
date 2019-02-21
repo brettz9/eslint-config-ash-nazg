@@ -160,6 +160,7 @@ module.exports = {
     "@mysticatea/no-this-in-static": "error",
     "@mysticatea/no-use-ignored-vars": "error",
     "@mysticatea/no-useless-rest-spread": "error",
-    "eslint-comments/no-unused-disable": "error"
+    "eslint-comments/no-unused-disable": "error",
+    "eslint-comments/disable-enable-pair": ["error", {"allowWholeFile": true}]
   }
 };

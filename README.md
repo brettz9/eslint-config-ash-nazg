@@ -359,6 +359,11 @@ developer minions, by all means, have a hand at it (you can use the
 - `eslint-comments/no-unused-disable` - Might be indicative of an error
     and inefficient in any case
 
+### Rationale for changing eslint-comments rules from default recommended
+
+`eslint-comments/disable-enable-pair` - If at top, behavior is clear, and
+    no need to reenable within doc
+
 ### Rationale for not including some `@mysticatea/eslint-plugin` rules
 
 - `@mysticatea/arrow-parens` - Covered by other rules
