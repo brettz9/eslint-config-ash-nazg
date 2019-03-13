@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 0.5.0
+
+- Change (loosen): Disable cumbersome `@mysticatea/no-use-ignored-vars`
+
 ## 0.4.4
 
 - Change (loosen): For `eslint-comments/disable-enable-pair`,

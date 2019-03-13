@@ -379,6 +379,8 @@ developer minions, by all means, have a hand at it (you can use the
 - `@mysticatea/ts/*` - Not supporting TypeScript
 - `@mysticatea/vue/*` - Project more generic than Vue.js
 - `@mysticatea/prettier` - Not interested in imposing prettier
+- `@mysticatea/no-use-ignored-vars` - Relies on a regex (for pseudo-privates)
+    which can be useful
 
 ### Rationale for only including some rules within `ash-nazg/sauron`
 

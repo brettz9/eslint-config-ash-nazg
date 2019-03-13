@@ -158,7 +158,7 @@ module.exports = {
     "@mysticatea/block-scoped-var": "error",
     "@mysticatea/no-literal-call": "error",
     "@mysticatea/no-this-in-static": "error",
-    "@mysticatea/no-use-ignored-vars": "error",
+    "@mysticatea/no-use-ignored-vars": "off",
     "@mysticatea/no-useless-rest-spread": "error",
     "eslint-comments/no-unused-disable": "error",
     "eslint-comments/disable-enable-pair": ["error", {"allowWholeFile": true}]
