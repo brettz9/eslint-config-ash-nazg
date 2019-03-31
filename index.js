@@ -154,7 +154,7 @@ module.exports = {
 
     "unicorn/custom-error-definition": "error",
     "unicorn/no-unsafe-regex": "error",
-    "unicorn/prevent-abbreviations": "error",
+    "unicorn/prevent-abbreviations": "off",
 
     "@mysticatea/block-scoped-var": "error",
     "@mysticatea/no-literal-call": "error",

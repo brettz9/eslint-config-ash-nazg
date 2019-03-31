@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 1.0.2
+
+- Fix: Mistakenly enabled rather than disabled `prevent-abbreviations`
+
 ## 1.0.1
 
 - Fix: Omitted actual `prevent-abbreviations` disabling
