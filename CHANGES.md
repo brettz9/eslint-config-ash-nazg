@@ -1,9 +1,12 @@
 # eslint-config-ash-nazg CHANGES
 
-## 0.6.0
+## 1.0.0
 
-- Adds [Unicorn 8.0.0](https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v8.0.0),
+- Change (tighten, loosen): Updated `eslint-plugin-compat` to [3.1.0](https://github.com/amilajack/eslint-plugin-compat/releases)
+- Change (tighten, loosen): Updates Unicorn to [8.0.1](https://github.com/sindresorhus/eslint-plugin-unicorn/releases/),
   though disabling `prevent-abbreviations` except in the `great-eye` subconfig
+- Docs (README): List dependencies alphabetically in list, lb
+- npm: Update devDeps
 
 ## 0.5.0
 
