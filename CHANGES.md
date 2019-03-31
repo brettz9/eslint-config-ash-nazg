@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 0.6.0
+
+- Adds [Unicorn 8.0.0](https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v8.0.0),
+  though disabling `prevent-abbreviations` except in the `great-eye` subconfig
+
 ## 0.5.0
 
 - Change (loosen): Disable cumbersome `@mysticatea/no-use-ignored-vars`

@@ -66,7 +66,8 @@ future, it may add Node-specific rules which may be unduly strict for
 rules other projects have created, curated with the intent of attaining
 productive strictness.
 
-["standard"](https://standardjs.com/) ([config](https://github.com/standard/eslint-config-standard)) and `eslint:recommended` have brought a welcome degree of
+["standard"](https://standardjs.com/) ([config](https://github.com/standard/eslint-config-standard))
+and `eslint:recommended` have brought a welcome degree of
 pseudo-standardization for code styling and error checking.
 
 However, they do not impose as high of a degree of control as one may
@@ -85,25 +86,25 @@ where some constraints are unduly confining.
 Besides incorporating more from ESLint core, we also add rules from
 a few other (peer) dependencies.
 
-Besides being peer dependencies of `standard`, `eslint-plugin-promise`
-and `eslint-plugin-import` have some additional useful rules we apply.
-
-The list of browsers to support is not added in our use of
-`eslint-plugin-compat`, but it is a basic enough of a need to remind one
-of its need to be present (and to avoid needing to add the rule for it).
-
-`eslint-plugin-jsdoc` provides a number of helpful rules for catching
-bad or incomplete JSDoc during development. Note that we do not impose
-`require-jsdoc` except as a warning in `ash-nazg/sauron` mode, so
-`valid-jsdoc` and all of the `eslint-plugin-jsdoc` rules only apply for
-when JSDoc is used. We also avoid some of `eslint-plugin-jsdoc` stricter
-checking requirements for descriptions.
-
-Another basic use case is ensuring code snippets are linted, which is
-why `eslint-plugin-markdown` is expected. You may find its discussion of
-`overrides` helpful for tweaking rules for Markdown (and you may also wish
-to use `overrides`, for the `eslint-plugin-jsdoc` rule `check-examples` if
-you wish to lint your JSDoc examples according to different standards).
+- `eslint-plugin-compat` - Though its list of browsers to support is not
+  added by our code, it is a basic enough of a need to remind one
+  of its need to be present (and to avoid needing to add the rule for it).
+- `eslint-plugin-import` - Besides being peer dependencies of `standard`,
+  this has some additional useful rules we apply.
+- `eslint-plugin-jsdoc` - provides a number of helpful rules for catching
+  bad or incomplete JSDoc during development. Note that we do not impose
+  `require-jsdoc` except as a warning in `ash-nazg/sauron` mode, so
+  `valid-jsdoc` and all of the `eslint-plugin-jsdoc` rules only apply for
+  when JSDoc is used. We also avoid some of `eslint-plugin-jsdoc` stricter
+  checking requirements for descriptions.
+- `eslint-plugin-markdown` - Another basic use case is ensuring code
+  snippets are linted, which is why this is expected. You may find its
+  discussion of `overrides` helpful for tweaking rules for Markdown (and
+  you may also wish to use `overrides`, for the `eslint-plugin-jsdoc`
+  rule `check-examples` if you wish to lint your JSDoc examples according
+  to different standards).
+- `eslint-plugin-promise` - Besides being peer dependencies of `standard`,
+  this has some additional useful rules we apply.
 
 ## Deviations
 
@@ -342,6 +343,8 @@ developer minions, by all means, have a hand at it (you can use the
 - `catch-error-name` - It can actually be useful to use different
     error names to indicate what time of error may be expected.
 - `explicit-length-check` - Seems wasteful.
+- `prevent-abbreviations` - Very cumbersome for frequent conventions such
+  as `e` for `event`
 - *`filename-case`* - Looks potentially useful with `camelCase`.
 - `throw-new-error` - Potentially confining.
 - `no-unreadable-array-destructuring` - Better to use this than multiple lines

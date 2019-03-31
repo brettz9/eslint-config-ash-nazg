@@ -10,6 +10,7 @@ module.exports = {
     "jsdoc/require-description": ["warn"],
     "jsdoc/require-param-description": ["warn"],
     "jsdoc/require-returns-description": ["warn"],
-    "jsdoc/require-example": ["warn"]
+    "jsdoc/require-example": ["warn"],
+    "unicorn/prevent-abbreviations": "error"
   }
 };
