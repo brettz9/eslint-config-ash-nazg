@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 1.0.1
+
+- Fix: Omitted actual `prevent-abbreviations` disabling
+
 ## 1.0.0
 
 - Change (tighten, loosen): Updated `eslint-plugin-compat` to [3.1.0](https://github.com/amilajack/eslint-plugin-compat/releases)
