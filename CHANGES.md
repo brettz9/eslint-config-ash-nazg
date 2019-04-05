@@ -1,5 +1,12 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- Fail for new `check-syntax` (Closure-specific syntax)
+- Sauron only: `jsdoc/require-returns` warning
+- Make explicit lack of acceptance of `jsdoc/check-alignment`
+    and `jsdoc/check-indentation` except in the `ash-nazg/great-eye`
+
 ## 1.0.2
 
 - Fix: Mistakenly enabled rather than disabled `prevent-abbreviations`

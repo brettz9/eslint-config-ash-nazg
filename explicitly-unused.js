@@ -65,8 +65,11 @@ module.exports = {
 
     "promise/no-native": ["off"],
 
-    "jsdoc/no-undefined-types": ["off"],
+    "jsdoc/check-alignment": ["off"],
+    "jsdoc/check-indentation": ["off"],
+
     "jsdoc/newline-after-description": ["off"],
+    "jsdoc/no-undefined-types": ["off"],
     "jsdoc/require-description": ["off"],
     "jsdoc/require-description-complete-sentence": ["off"],
     "jsdoc/require-example": ["off"],

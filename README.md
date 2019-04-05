@@ -314,29 +314,38 @@ appears, to Dark Lords.
 
 #### Rationale for suppressing some `eslint-plugin-jsdoc` rules
 
-`jsdoc/require-description-complete-sentence` seems like a good idea, as
-bad English can be jarring as with bad styling, but this didn't seem to
-work too well. I use `valid-jsdoc` with a special `matchDescription` to
-capture this (I'm keeping `valid-jsdoc` on for now, but really need
-[this issue](https://github.com/eslint/doctrine/issues/221) and [this one](https://github.com/eslint/doctrine/issues/222)
-fixed for it to avoid complaining against actually valid code.)
-
-I'd like something like `jsdoc/no-undefined-types`, but since it
-[isn't aware](https://github.com/gajus/eslint-plugin-jsdoc/issues/99)
-of all of one's `@typedef`s, etc., it is too restrictive for me at this time.
-
-I can see the draw of `jsdoc/require-hyphen-before-param-description`,
-and `jsdoc/newline-after-description` but seems too pedantic to me for
-documentation.
-
-While `jsdoc/require-description`, `jsdoc/require-param-description` and
-`jsdoc/require-returns-description` are very good practices (as is
-`jsdoc/require-example`), they are difficult for large code bases to
-implement and even cumbersome for new ones to have to follow for lesser
-parameters, so that's why they are not even in `ash-nazg/sauron`, though
-if you feel you can succeed at imposing such rigor for your hordes of
-developer minions, by all means, have a hand at it (you can use the
-`ash-nazg/great-eye` config for these)...
+- `jsdoc/check-alignment` - A pretty good practice, but that that important;
+    put into `ash-nazg/great-eye`.
+- `jsdoc/check-indentation` - A pretty good practice, but that that important;
+    put into `ash-nazg/great-eye`.
+- `jsdoc/newline-after-description` - I can see its draw,
+    but seems too pedantic to me for documentation.
+- `jsdoc/no-undefined-types` - I'd like something like this, but since it
+    [isn't aware](https://github.com/gajus/eslint-plugin-jsdoc/issues/99)
+    of all of one's `@typedef`s, etc., it is too restrictive for me at this
+    time.
+- `jsdoc/require-description-complete-sentence` seems like a good idea, as
+    English mistakes can be jarring as with bad styling, but this didn't
+    seem to work too well. I use `valid-jsdoc` with a special
+    `matchDescription` to capture this (I'm keeping `valid-jsdoc` on
+    for now, but really need [this issue](https://github.com/eslint/doctrine/issues/221)
+    and [this one](https://github.com/eslint/doctrine/issues/222)
+    fixed for it to avoid complaining against actually valid code.)
+- `jsdoc/require-hyphen-before-param-description` - I can see its draw,
+    but seems too pedantic to me for documentation.
+- `jsdoc/require-description` - Though a very good practices, this is
+    difficult for large code bases to implement and even cumbersome
+    for new ones to have to follow for lesser parameters, so that's
+    why they are not even in `ash-nazg/sauron`, though if you feel
+    you can succeed at imposing such rigor for your hordes of
+    developer minions, by all means, have a hand at it (you can use the
+    `ash-nazg/great-eye` config for these)...
+- `jsdoc/require-param-description` - See `jsdoc/require-description`.
+- `jsdoc/require-returns-description` - See `jsdoc/require-description`.
+- `jsdoc/require-returns` - Put in `ash-nazg/sauron` as it is more than
+    just a consistent styling convention, and it is not impossible to
+    follow, but a bit difficult.
+- `jsdoc/require-example` - See `jsdoc/require-description`.
 
 ### Rationale for disabling some `plugin:unicorn/recommended` rules
 

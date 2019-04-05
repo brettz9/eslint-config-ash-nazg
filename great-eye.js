@@ -7,6 +7,8 @@ module.exports = {
     "no-magic-numbers": ["warn"],
     "no-plusplus": ["warn"],
     "no-warning-comments": ["warn"],
+    "jsdoc/check-alignment": ["warn"],
+    "jsdoc/check-indentation": ["warn"],
     "jsdoc/require-description": ["warn"],
     "jsdoc/require-param-description": ["warn"],
     "jsdoc/require-returns-description": ["warn"],

@@ -136,14 +136,15 @@ module.exports = {
 
     "jsdoc/check-examples": ["error"],
     "jsdoc/check-param-names": ["error"],
+    "jsdoc/check-syntax": ["error"],
     "jsdoc/check-tag-names": ["error"],
     "jsdoc/check-types": ["error"],
-    "jsdoc/valid-types": ["error"],
 
     "jsdoc/require-param": ["warn"],
     "jsdoc/require-param-name": ["warn"],
     "jsdoc/require-param-type": ["warn"],
     "jsdoc/require-returns-type": ["warn"],
+    "jsdoc/valid-types": ["error"],
 
     "unicorn/catch-error-name": "off",
     "unicorn/explicit-length-check": "off",
