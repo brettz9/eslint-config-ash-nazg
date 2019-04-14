@@ -1,6 +1,6 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 2.0.0
 
 - Fail for new `check-syntax` (Closure-specific syntax)
 - Sauron only: `jsdoc/require-returns` warning
