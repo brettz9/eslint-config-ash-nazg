@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 3.0.1
+
+- npm: Add typescript and plugins node/standard to peerDeps
+- npm: Add typescript as devDep
+
 ## 3.0.0
 
 - License: Add file (MIT)
