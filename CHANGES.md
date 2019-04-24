@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 3.0.0
+
+- License: Add file (MIT)
+- npm devDep: import, eslint-plugin
+
 ## 2.0.0
 
 - Fail for new `check-syntax` (Closure-specific syntax)
