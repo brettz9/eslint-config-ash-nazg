@@ -38,7 +38,6 @@ module.exports = {
     "no-misleading-character-class": ["error"],
     "no-mixed-requires": ["error", {"grouping": true, "allowCall": true}],
     "no-process-env": ["error"],
-    "no-process-exit": ["error"],
     "no-prototype-builtins": ["error"],
     "no-restricted-globals": ["error", {
       "name": "event",

@@ -60,9 +60,6 @@ module.exports = {
     "import/group-exports": ["off"],
     "import/dynamic-import-chunkname": ["off"],
 
-    "node/no-unpublished-import": ["off"],
-    "node/no-unsupported-features/es-syntax": ["off"],
-
     "promise/no-native": ["off"],
 
     "jsdoc/check-alignment": ["off"],

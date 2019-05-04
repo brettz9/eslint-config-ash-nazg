@@ -41,7 +41,9 @@ not disparaging the utility of non-included rules.
 ## Other bundled configs
 
 The `ash-nazg/node` config expands upon the regular `ash-nazg` rules to
-add rules specific to Node environments.
+add rules specific to Node environments. Specifically,
+`plugin:node/recommended-module` has been adopted for now along with
+some stylistic choices.
 
 The `ash-nazg/sauron` config expands upon the regular `ash-nazg` rules to
 indicate what are generally best practices but are less likely to be due to
@@ -56,9 +58,8 @@ Still, I like to track them here, including in the event that their
 config changes to make them less all-encompassing.
 
 The `ash-nazg/sauron-node` config incorporates both `ash-nazg/node` and
-`ash-nazg/sauron`. It currently adds no specific rules of its own (in the
-future, it may add Node-specific rules which may be unduly strict for
-`ash-nazg/node`).
+`ash-nazg/sauron`. It adds specific rules of its own which may be unduly
+strict for `ash-nazg/node`.
 
 ## Comparison to other "standards"
 
@@ -302,12 +303,8 @@ happy with it thus far).
 
 #### Rationale for disabled Node and Promise rules
 
-`node/no-unpublished-import` is disabled as I'd like it to have an
-option to check within `devDependencies`.
-
-`node/no-unsupported-features/es-syntax` is disabled as I want to use
-`import`/`export`in Node files, whether for polyglot source or
-`babel-node` execution.
+`node/prefer-promises/dns` and `node/prefer-promises/fs` are good, but
+a bit early with Node 12.
 
 `promise/no-native` is disabled as promises are essential--even, it
 appears, to Dark Lords.

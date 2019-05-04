@@ -1,5 +1,17 @@
 # eslint-config-ash-nazg CHANGES
 
+## 4.0.0
+
+- Tighten: Apply `plugin:node/recommended-module` rules, bringing
+    `node/no-unsupported-features/es-syntax` with `ignores: ["modules"]`,
+    `node/no-unpublished-import`, `node/no-deprecated-api`,
+    `node/process-exit-as-throw`.
+- Tighten: Add new Node rule `node/file-extension-in-import`
+- Tighten: Add `node/prefer-promises/dns` and `node/prefer-promises/fs`
+    in sauron-node
+- Loosen: Remove `no-process-exit` to `node`-based rules only
+- npm: Update eslint-plugin-node, eslint-plugin, js-yaml
+
 ## 3.0.1
 
 - npm: Add typescript and plugins node/standard to peerDeps

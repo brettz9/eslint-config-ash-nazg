@@ -1,17 +1,8 @@
 module.exports = {
-  extends: ["ash-nazg"],
+  extends: ["ash-nazg", "plugin:node/recommended-module"],
   plugins: ["node"],
   rules: {
-    "node/no-extraneous-import": ["error"],
-    "node/no-extraneous-require": ["error"],
-    "node/no-missing-import": ["error"],
-    "node/no-missing-require": ["error"],
-    "node/no-unpublished-bin": ["error"],
-    "node/no-unpublished-require": ["error"],
-    "node/no-unsupported-features/es-builtins": ["error"],
-    "node/no-unsupported-features/node-builtins": ["error"],
-    "node/shebang": ["error"],
-
+    "node/file-extension-in-import": ["error"],
     "node/exports-style": ["error", "module.exports"],
     "node/prefer-global/buffer": ["error", "always"],
     "node/prefer-global/console": ["error", "always"],

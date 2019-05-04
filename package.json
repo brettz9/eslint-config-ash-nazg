@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ash-nazg",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "An expansion and tweaking of the \"standard\" config style for ESLint",
   "main": "index.js",
   "scripts": {
@@ -27,7 +27,7 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "@mysticatea/eslint-plugin": "^10.0.2",
+    "@mysticatea/eslint-plugin": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-compat": "^3.1.1",
@@ -36,14 +36,14 @@
     "eslint-plugin-jsdoc": "^4.8.3",
     "eslint-plugin-markdown": "^1.0.0",
     "eslint-plugin-no-use-extend-native": "^0.4.0",
-    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-node": "^9.0.1",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-unicorn": "^8.0.2",
     "typescript": "^3.4.5"
   },
   "devDependencies": {
-    "@mysticatea/eslint-plugin": "^10.0.2",
+    "@mysticatea/eslint-plugin": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-compat": "^3.1.1",
@@ -52,7 +52,7 @@
     "eslint-plugin-jsdoc": "^4.8.3",
     "eslint-plugin-markdown": "^1.0.0",
     "eslint-plugin-no-use-extend-native": "^0.4.0",
-    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-node": "^9.0.1",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-unicorn": "^8.0.2",
