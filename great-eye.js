@@ -13,6 +13,7 @@ module.exports = {
     "jsdoc/require-param-description": ["warn"],
     "jsdoc/require-returns-description": ["warn"],
     "jsdoc/require-example": ["warn"],
+    "jsdoc/require-jsdoc": ["error"],
     "unicorn/prevent-abbreviations": "error"
   }
 };

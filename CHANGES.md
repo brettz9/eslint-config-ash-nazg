@@ -1,5 +1,18 @@
 # eslint-config-ash-nazg CHANGES
 
+## 5.0.0
+
+- Integrate eslint-plugin-jsdoc 4.8.4 which allows:
+  1. (Tighten): For `jsdoc/check-types`, check `undefined` and `null` for
+    casing
+  2. (Tighten): Add `jsdoc/require-jsdoc` rule (to great-eye only)
+  3. (Tighten): For `jsdoc/valid-types`, check namepath type tags for
+    empty or invalid namepaths
+  4. (Loosen): Support `@memberof!` with `jsdoc/check-tag-names`
+  5. This is not in effect, but the rule `jsdoc/no-undefined-types` will
+    loosen the types `undefined` and `null`, and check a variety of tags
+    which define names (e.g., `@class`).
+
 ## 4.0.0
 
 - Tighten: Apply `plugin:node/recommended-module` rules, bringing
