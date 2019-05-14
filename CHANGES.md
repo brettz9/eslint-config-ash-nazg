@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- Loosen: Allow backtick at beginning of jsdoc descriptions
+
 ## 5.0.0
 
 - Integrate eslint-plugin-jsdoc 4.8.4 which allows:
