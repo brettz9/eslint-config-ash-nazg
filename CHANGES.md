@@ -1,8 +1,72 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 6.0.0
 
-- Loosen: Allow backtick at beginning of jsdoc descriptions
+- Breaking change: Node minimum 6.0.0
+- Tighten (`great-eye`): Add `preferredTypes`
+- Tighten (`sauron`): Add `forceRequireReturn` and `preferredTypes`
+- Tighten: Add `require-returns-check`
+- Loosen: `allowOverrideWithoutParam`, `allowImplementsWithoutParam`,  
+  `allowAugmentsExtendsWithoutParam` all `true` by default
+- Tighten: Set `rejectExampleCodeRegex` to ``^``` to allow avoiding example <!-- `-->
+- Change: Set `matchingFileName` to `dummy.md` so that it will match any
+  Markdown rules by default
+- Change (`great-eye`): Switch from `require-jsdoc` to
+  `jsdoc/require-jsdoc` (former is deprecated);
+- Remove `valid-jsdoc` in favor of corresponding `eslint-plugin-jsdoc` config
+    - Breaking changes relative to `valid-jsdoc` as used previously:
+        - `jsdoc/check-types` - Per new defaults, use `object` instead
+            of `Object`
+        - `jsdoc/require-returns`: true only in sauron and as warning
+        - `jsdoc/require-returns-type` and `jsdoc/require-param-type` are
+            only warnings
+        - `jsdoc/match-description`: Now allowing backtick or digits at beginning
+            of jsdoc descriptions
+- Integrate eslint-plugin-jsdoc 7.0.0 (listing features/breaking changes only
+  and only apply if we add by default or if you enable the rule)
+    which:
+    - Breaking change: Drops Node v4 support; minimum 6.0.0; updated devDeps,
+        eslint peer dep to >= 5.16.0 (from >= 4.14.0)
+    - Breaking change: Add `meta.type` (usable by `--fix-type`) and
+        `meta.schema` (enforces schema on options) to rules
+    - Breaking change: `check-types` now expects "object" instead of "Object"
+    - `check-examples`: Change behavior to also check classes
+    - `check-types` and `no-undefined-types`: utilize `settings.jsdoc.preferredTypes` map
+    - `check-types`: Add option object with `noDefaults`
+    - `implements-on-classes`: Add rule to prevent @implements on
+        non-constructor functions
+    - `match-description`: Added rule (see `valid-jsdoc` note above)
+    - `no-types`: Add rule to prevent types on @param/@returns
+    - `no-undefined-types`: Consider Node.js/Commonjs as module (including
+        variables in module scope as well as global)
+    - `no-undefined-types` now automatically allows `NaN`
+        and `Infinity` types
+    - `no-undefined-types`: Add option object with `preferredTypesAreDefined` and `definedTypes`
+    - `no-undefined-types`, only check tags expected to have types (as
+      with `check-types`) or, for `valid-types`, tags expected to have
+      types or namepaths
+    - `require-description`: Add options `contexts` and `noDefaults` to
+        allow additional contexts (e.g., `ClassDeclaration`)
+    - `require-example`: Implement `avoidExampleOnConstructors` setting;
+        also skip if possesses `inheritdoc`/`override`
+    - `require-hyphen-before-param-description`: check `param`
+        `tagNamePreference` setting
+    - `require-jsdoc`: exempt empty functions option
+    - `require-param`: `ignorePrivate` setting
+    - `require-returns`, `require-returns-check`, and `require-jsdoc`: Treat
+        `async` functions as returning a value (since they return Promises)
+    - `require-returns`: Allow presence of `@interface` to avoid need for
+        `@returns` (as `@interface implies a class`); Allow presence of
+        ES setter to avoid need for `@returns` as setters don't return
+    - `require-returns`: `forceRequireReturns` setting
+    - `require-returns`: Avoid reporting when `@implements` is present
+    - `require-returns-check`: If a return is documented, allow `@class`
+        and `@interface` (as with `@constructor`) to ignore reporting a
+        missing return in body as constructors implicitly return the class;
+        for testing, add getter check
+    - `require-return-checks`: Prevent from erring within
+        `@virtual`/`@constructor` and class constructor
+- npm: Update eslint-plugin-node
 
 ## 5.0.0
 

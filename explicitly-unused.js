@@ -69,7 +69,6 @@ module.exports = {
     "jsdoc/no-undefined-types": ["off"],
     "jsdoc/require-description-complete-sentence": ["off"],
     "jsdoc/require-hyphen-before-param-description": ["off"],
-    "jsdoc/require-returns-check": ["off"],
 
     "@mysticatea/no-use-ignored-vars": ["off"]
   }

@@ -1,6 +1,15 @@
 module.exports = {
   "extends": ["eslint:recommended", "plugin:unicorn/recommended", "standard", "plugin:eslint-comments/recommended", "plugin:compat/recommended"],
   "plugins": ["promise", "import", "unicorn", "no-use-extend-native", "jsdoc", "markdown", "@mysticatea"],
+  "settings": {
+    "jsdoc": {
+      "allowOverrideWithoutParam": true,
+      "allowImplementsWithoutParam": true,
+      "allowAugmentsExtendsWithoutParam": true,
+      "matchingFileName": "dummy.md",
+      "rejectExampleCodeRegex": "^`"
+    }
+  },
   "rules": {
     "array-bracket-newline": ["error", "consistent"],
     "array-bracket-spacing": ["error"],
@@ -78,28 +87,6 @@ module.exports = {
     "object-curly-spacing": ["error", "never"],
     "no-restricted-syntax": ["error", "[operator=instanceof]"],
 
-    "valid-jsdoc": ["error", {
-      "prefer": {
-        "arg": "param",
-        "argument": "param",
-        "return": "returns",
-        "virtual": "abstract"
-      },
-      "preferType": {
-        "Boolean": "boolean",
-        "Number": "number",
-        "String": "string",
-        "object": "Object",
-        "array": "Array"
-      },
-      "requireReturn": true,
-      "requireReturnType": true,
-      "requireParamType": true,
-      "matchDescription": "^([`A-Z][\\s\\S]*[.`?!])?$",
-      "requireParamDescription": false,
-      "requireReturnDescription": false
-    }],
-
     "promise/catch-or-return": "error",
     "promise/no-return-wrap": "error",
     "promise/always-return": "error",
@@ -133,15 +120,16 @@ module.exports = {
     "import/newline-after-import": "error",
     "import/no-anonymous-default-export": "error",
 
+    "jsdoc/match-description": ["error"],
     "jsdoc/check-examples": ["error"],
     "jsdoc/check-param-names": ["error"],
     "jsdoc/check-syntax": ["error"],
     "jsdoc/check-tag-names": ["error"],
     "jsdoc/check-types": ["error"],
-
     "jsdoc/require-param": ["warn"],
     "jsdoc/require-param-name": ["warn"],
     "jsdoc/require-param-type": ["warn"],
+    "jsdoc/require-returns-check": ["error"],
     "jsdoc/require-returns-type": ["warn"],
     "jsdoc/valid-types": ["error"],
 

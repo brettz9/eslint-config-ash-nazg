@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ash-nazg",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "An expansion and tweaking of the \"standard\" config style for ESLint",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/brettz9/eslint-config-ash-nazg#readme",
   "engines": {
-    "node": "*"
+    "node": ">= 6.0.0"
   },
   "dependencies": {},
   "peerDependencies": {
@@ -33,10 +33,10 @@
     "eslint-plugin-compat": "^3.1.1",
     "eslint-plugin-eslint-comments": "^3.1.1",
     "eslint-plugin-import": "^2.17.2",
-    "eslint-plugin-jsdoc": "^4.8.4",
+    "eslint-plugin-jsdoc": "^7.0.0",
     "eslint-plugin-markdown": "^1.0.0",
     "eslint-plugin-no-use-extend-native": "^0.4.0",
-    "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-unicorn": "^8.0.2",
@@ -49,10 +49,10 @@
     "eslint-plugin-compat": "^3.1.1",
     "eslint-plugin-eslint-comments": "^3.1.1",
     "eslint-plugin-import": "^2.17.2",
-    "eslint-plugin-jsdoc": "^4.8.4",
+    "eslint-plugin-jsdoc": "^7.0.0",
     "eslint-plugin-markdown": "^1.0.0",
     "eslint-plugin-no-use-extend-native": "^0.4.0",
-    "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-unicorn": "^8.0.2",

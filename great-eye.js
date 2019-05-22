@@ -1,5 +1,12 @@
 module.exports = {
   extends: ["ash-nazg/sauron"],
+  settings: {
+    preferredTypes: {
+      number: {
+        message: "Use `Integer` or `Float`"
+      },
+    }
+  },
   rules: {
     "capitalized-comments": ["warn"],
     "complexity": ["warn"],

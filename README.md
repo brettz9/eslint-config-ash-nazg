@@ -94,10 +94,10 @@ a few other (peer) dependencies.
   this has some additional useful rules we apply.
 - `eslint-plugin-jsdoc` - provides a number of helpful rules for catching
   bad or incomplete JSDoc during development. Note that we do not impose
-  `require-jsdoc` except as a warning in `ash-nazg/sauron` mode, so
-  `valid-jsdoc` and all of the `eslint-plugin-jsdoc` rules only apply for
-  when JSDoc is used. We also avoid some of `eslint-plugin-jsdoc` stricter
-  checking requirements for descriptions.
+  `jsdoc/require-jsdoc` except as a warning in `ash-nazg/sauron` mode, so
+  all of the `eslint-plugin-jsdoc` rules should only apply when JSDoc is
+  used. We also avoid some of `eslint-plugin-jsdoc` stricter checking
+  requirements for descriptions.
 - `eslint-plugin-markdown` - Another basic use case is ensuring code
   snippets are linted, which is why this is expected. You may find its
   discussion of `overrides` helpful for tweaking rules for Markdown (and
@@ -182,7 +182,6 @@ the rule.
     non-iterable ‘array-like’ objects.
 - `quote-props` - Changed to "as-needed" as properties more verbose and
     uglier with quoting
-- `valid-jsdoc` - The specific rules adopted add more checking.
 - `import/order` - Enforcing "builtin", "external", "internal" and then
   ["parent", "sibling", "index"] in any order as these may be
   project-specific.
@@ -323,11 +322,8 @@ appears, to Dark Lords.
     time.
 - `jsdoc/require-description-complete-sentence` seems like a good idea, as
     English mistakes can be jarring as with bad styling, but this didn't
-    seem to work too well. I use `valid-jsdoc` with a special
-    `matchDescription` to capture this (I'm keeping `valid-jsdoc` on
-    for now, but really need [this issue](https://github.com/eslint/doctrine/issues/221)
-    and [this one](https://github.com/eslint/doctrine/issues/222)
-    fixed for it to avoid complaining against actually valid code.)
+    seem to work too well. I use `jsdoc/match-description` with a special
+    value to capture this.
 - `jsdoc/require-hyphen-before-param-description` - I can see its draw,
     but seems too pedantic to me for documentation.
 - `jsdoc/require-description` - Though a very good practices, this is
@@ -391,6 +387,14 @@ appears, to Dark Lords.
 - `@mysticatea/no-use-ignored-vars` - Relies on a regex (for pseudo-privates)
     which can be useful
 
+### Rationale for including eslint-plugin-jsdoc rules which are not in `plugin:jsdoc/recommended`
+
+- `check-examples` - If examples are present, they ought to follow one's standards,
+  including if overrides are in place to loosen/tighten
+- `check-syntax` - Following jsdoc, not Closure syntax
+- `match-description` - Cleaner to see complete sentences which its default allows.
+- `require-returns-check` - If the return value doesn't match, there may be a problem.
+
 ### Rationale for only including some rules within `ash-nazg/sauron`
 
 These are good practices, but cumbersome, not as familiar to developers,
@@ -417,7 +421,6 @@ may not all be under one's control).
     section "Rationale for changing required rules' configuration away
     from defaults".)
 - `prefer-numeric-literals` - Good but some work.
-- `require-jsdoc` - Imposes a heavy burden on preexisting large projects
 - `require-unicode-regexp` - Good, but some work to fix all.
 - `vars-on-top` - Not needed for `let`/`const`, and if overriding, this is
     cumbersome, despite being useful
@@ -428,6 +431,15 @@ may not all be under one's control).
     may be used within repeating events
 - `unicorn/no-fn-reference-in-iterator` - May be cumbersome though does
     catch potential problems
+- `jsdoc/require-jsdoc` - Imposes a heavy burden on preexisting large projects
+
+The `forceRequireReturn` setting was also applied therein as it may be
+cumbersome to add to all returns or not favored as a requirement in
+all projects though it does note that a method's return was considered
+even if `undefined`.
+
+The `preferredTypes` setting was enabled here as it can be cumbersome
+for projects to specify all child types.
 
 ### Rationale for only including some rules within `ash-nazg/great-eye`
 
@@ -440,6 +452,9 @@ may not all be under one's control).
 - `no-warning-comments` - Good to catch to-dos, but better to search or
   parse code as a separate process rather than polluting one's ESLint
   warnings--some to-dos are ok to be left for the long term
+
+The `preferredTypes` setting was enabled here for integer/float as it can
+be cumbersome for projects to distinguish.
 
 ## Rationale for including rules that might not seem necessary
 

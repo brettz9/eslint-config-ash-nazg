@@ -1,5 +1,34 @@
 module.exports = {
   extends: ["ash-nazg"],
+  settings: {
+    jsdoc: {
+      forceRequireReturn: true,
+      settings: {
+        preferredTypes: {
+          "*": {
+            message: "Use a more precise type or if necessary use `{{preferredType}}` or `ArbitraryCallbackResult`",
+            replacement: "Any"
+          },
+          any: {
+            message: "Use a more precise type or if necessary use `{{preferredType}}` or `ArbitraryCallbackResult`",
+            replacement: "Any"
+          },
+          Function: {
+            message: "Point to a `@callback` namepath or `{{replacement}}` if truly arbitrary in form",
+            replacement: "GenericCallback"
+          },
+          "object<>": {
+            message: "Use the specific object type or `{{replacement}}` if truly arbitrary",
+            replacement: "PlainObject"
+          },
+          "Array<>": {
+            message: "Use `GenericArray` if it is truly arbitrary.",
+            replacement: "GenericArray"
+          }
+        }
+      }
+    }
+  },
   rules: {
     "class-methods-use-this": ["warn"],
     "consistent-this": ["warn"],
@@ -13,13 +42,13 @@ module.exports = {
     "no-empty-function": ["warn"],
     "no-shadow": ["warn", {"builtinGlobals": true, "hoist": "functions", "allow": ["parent", "top", "open", "close", "stop", "blur", "status", "name", "closed", "start"]}],
     "prefer-numeric-literals": ["warn"],
-    "require-jsdoc": ["warn"],
     "require-unicode-regexp": ["warn"],
     "vars-on-top": ["warn"],
 
     "import/unambiguous": "warn",
     "import/no-commonjs": "warn",
 
+    "jsdoc/require-jsdoc": ["warn"],
     "jsdoc/require-returns": ["warn"],
 
     "promise/no-nesting": "warn",
