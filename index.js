@@ -3,9 +3,6 @@ module.exports = {
   "plugins": ["promise", "import", "unicorn", "no-use-extend-native", "jsdoc", "markdown", "@mysticatea"],
   "settings": {
     "jsdoc": {
-      "allowOverrideWithoutParam": true,
-      "allowImplementsWithoutParam": true,
-      "allowAugmentsExtendsWithoutParam": true,
       "matchingFileName": "dummy.md",
       "rejectExampleCodeRegex": "^`"
     }

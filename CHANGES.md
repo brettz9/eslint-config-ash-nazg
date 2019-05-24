@@ -1,5 +1,16 @@
 # eslint-config-ash-nazg CHANGES
 
+## 6.1.0
+
+- Change: Prefer not having `allowAugmentsExtendsWithoutParam` setting
+  or its recommended replacement
+- Refactoring: Remove now default config
+- npm: Update import (patch), jsdoc (feature) plugins
+
+## 6.0.1
+
+- npm: Update devDep
+
 ## 6.0.0
 
 - Breaking change: Node minimum 6.0.0
