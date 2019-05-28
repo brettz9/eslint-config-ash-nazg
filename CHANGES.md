@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 6.1.1
+
+- Fix: Issue in formatting of `settings.jsdoc`
+
 ## 6.1.0
 
 - Change: Prefer not having `allowAugmentsExtendsWithoutParam` setting

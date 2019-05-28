@@ -3,28 +3,26 @@ module.exports = {
   settings: {
     jsdoc: {
       forceRequireReturn: true,
-      settings: {
-        preferredTypes: {
-          "*": {
-            message: "Use a more precise type or if necessary use `{{preferredType}}` or `ArbitraryCallbackResult`",
-            replacement: "Any"
-          },
-          any: {
-            message: "Use a more precise type or if necessary use `{{preferredType}}` or `ArbitraryCallbackResult`",
-            replacement: "Any"
-          },
-          Function: {
-            message: "Point to a `@callback` namepath or `{{replacement}}` if truly arbitrary in form",
-            replacement: "GenericCallback"
-          },
-          "object<>": {
-            message: "Use the specific object type or `{{replacement}}` if truly arbitrary",
-            replacement: "PlainObject"
-          },
-          "Array<>": {
-            message: "Use `GenericArray` if it is truly arbitrary.",
-            replacement: "GenericArray"
-          }
+      preferredTypes: {
+        "*": {
+          message: "Use a more precise type or if necessary use `{{preferredType}}` or `ArbitraryCallbackResult`",
+          replacement: "Any"
+        },
+        any: {
+          message: "Use a more precise type or if necessary use `{{preferredType}}` or `ArbitraryCallbackResult`",
+          replacement: "Any"
+        },
+        Function: {
+          message: "Point to a `@callback` namepath or `{{replacement}}` if truly arbitrary in form",
+          replacement: "GenericCallback"
+        },
+        "object<>": {
+          message: "Use the specific object type or `{{replacement}}` if truly arbitrary",
+          replacement: "PlainObject"
+        },
+        "Array<>": {
+          message: "Use `GenericArray` if it is truly arbitrary.",
+          replacement: "GenericArray"
         }
       }
     }
