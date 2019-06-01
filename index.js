@@ -136,10 +136,12 @@ module.exports = {
     "unicorn/no-unreadable-array-destructuring": "off",
     "unicorn/throw-new-error": "off",
     "unicorn/import-index": "off",
+    "unicorn/prevent-abbreviations": "off",
 
     "unicorn/custom-error-definition": "error",
     "unicorn/no-unsafe-regex": "error",
-    "unicorn/prevent-abbreviations": "off",
+    "unicorn/prefer-event-key": "error",
+    "unicorn/prefer-flat-map": "error",
 
     "@mysticatea/block-scoped-var": "error",
     "@mysticatea/no-literal-call": "error",

@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 7.0.0
+
+- npm: Update unicorn, jsdoc, typescript peerDeps/devDeps
+- Tighten: Add rules, `unicorn/prefer-event-key` and `unicorn/prefer-flat-map`
+
 ## 6.1.1
 
 - Fix: Issue in formatting of `settings.jsdoc`
