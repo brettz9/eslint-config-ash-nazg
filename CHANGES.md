@@ -2,8 +2,9 @@
 
 ## 7.0.0
 
-- npm: Update unicorn, jsdoc, typescript peerDeps/devDeps
+- Tighten: Require `Promise` to have a type
 - Tighten: Add rules, `unicorn/prefer-event-key` and `unicorn/prefer-flat-map`
+- npm: Update unicorn, jsdoc, typescript peerDeps/devDeps
 
 ## 6.1.1
 
