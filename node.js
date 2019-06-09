@@ -2,6 +2,7 @@ module.exports = {
   extends: ["ash-nazg", "plugin:node/recommended-module"],
   plugins: ["node"],
   rules: {
+    "no-process-exit": "error",
     "node/file-extension-in-import": ["error"],
     "node/exports-style": ["error", "module.exports"],
     "node/prefer-global/buffer": ["error", "always"],
