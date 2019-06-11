@@ -16,12 +16,12 @@ module.exports = {
           message: "Point to a `@callback` namepath or `{{replacement}}` if truly arbitrary in form",
           replacement: "GenericCallback"
         },
+        Promise: {
+          message: "Specify the specific Promise type, including, if necessary, the type `Any`",
+        },
         ".<>": {
           message: "Prefer type form without dot",
           replacement: "<>"
-        },
-        "Promise<>": {
-          message: "Specify the specific Promise type, including, if necessary, the type `Any`",
         },
         "object<>": {
           message: "Use the specific object type or `{{replacement}}` if truly arbitrary",

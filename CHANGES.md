@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 7.0.1
+
+- Fix: For `Promise`, was reporting parents instead of children
+
 ## 7.0.0
 
 - Tighten: Require `Promise` to have a type
