@@ -33,13 +33,13 @@
     "eslint-plugin-compat": "^3.1.1",
     "eslint-plugin-eslint-comments": "^3.1.1",
     "eslint-plugin-import": "^2.17.3",
-    "eslint-plugin-jsdoc": "^7.2.3",
+    "eslint-plugin-jsdoc": "^8.0.0",
     "eslint-plugin-markdown": "^1.0.0",
     "eslint-plugin-no-use-extend-native": "^0.4.0",
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-unicorn": "^9.0.0",
+    "eslint-plugin-unicorn": "^9.1.0",
     "typescript": "^3.5.1"
   },
   "devDependencies": {
@@ -49,13 +49,13 @@
     "eslint-plugin-compat": "^3.1.1",
     "eslint-plugin-eslint-comments": "^3.1.1",
     "eslint-plugin-import": "^2.17.3",
-    "eslint-plugin-jsdoc": "^7.2.3",
+    "eslint-plugin-jsdoc": "^8.0.0",
     "eslint-plugin-markdown": "^1.0.0",
     "eslint-plugin-no-use-extend-native": "^0.4.0",
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-unicorn": "^9.0.0",
+    "eslint-plugin-unicorn": "^9.1.0",
     "typescript": "^3.5.1"
   }
 }
