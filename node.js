@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["ash-nazg", "plugin:node/recommended-module"],
+  extends: ["@passport-next/eslint-config-passport-next", "plugin:node/recommended-module"],
   plugins: ["node"],
   rules: {
     "node/file-extension-in-import": ["error"],

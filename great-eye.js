@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["ash-nazg/sauron"],
+  extends: ["@passport-next/eslint-config-passport-next/sauron"],
   settings: {
     preferredTypes: {
       number: {

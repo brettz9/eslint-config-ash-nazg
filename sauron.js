@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["ash-nazg"],
+  extends: ["@passport-next/eslint-config-passport-next"],
   settings: {
     jsdoc: {
       forceRequireReturn: true,

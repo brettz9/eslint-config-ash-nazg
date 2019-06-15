@@ -1,4 +1,13 @@
-# eslint-config-ash-nazg
+# @passport-next/eslint-config-passport-next
+
+Forked from https://github.com/brettz9/eslint-config-ash-nazg
+
+Status:
+[![NPM version](https://img.shields.io/npm/v/@passport-next/eslint-config-passport-next.svg)](https://www.npmjs.com/package/@passport-next/eslint-config-passport-next)
+[![Build Status](https://travis-ci.org/passport-next/skel.svg?branch=master)](https://travis-ci.org/passport-next/eslint-config-passport-next)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b828067546e03aadbe57/maintainability)](https://codeclimate.com/github/passport-next/eslint-config-passport-next/maintainability)
+[![Dependencies](https://david-dm.org/eslint-config-passport-next.png)](https://david-dm.org/passport-next/eslint-config-passport-next)
+
 
 A ruthless--though not arbitrary--degree of control for your kingdom!
 
