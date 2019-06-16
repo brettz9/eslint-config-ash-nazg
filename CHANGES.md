@@ -1,5 +1,55 @@
 # eslint-config-ash-nazg CHANGES
 
+## 8.0.0
+
+- Breaking change [`index.js`]: require `@extends` in place of `@augments`
+- Breaking change [`sauron`]: `preferredTypes` to prefer Typescript-friendly
+  `any` instead of `Any`
+- Change [`index.js`]: Reorder `extends` (what should be
+  backward-compatibly) and avoid adding to `plugins` except where needed
+- Change [`index.js`]: Make explicit deriving from `promise/recommended`,
+    `import/recommended`, and `jsdoc/recommended`, though disabling rules
+    we don't want (and removing some explicit rule additions which are
+    now inherited); though not currently deriving from its `es2019` config,
+    we are disabling some `@mysticatea/eslint-plugin` rules, as though we
+    were inheriting only those rules which it doesn't inherit from other
+    plugins/configs. In the absence of inheriting the config, we are also
+    therefore adding some of its rules manually. Should be
+    backward-compatible.
+- Update [\*]: Fix config extension paths for ESLint 6
+
+- Fix [`index.js`] (tighten): Ensure `no-use-extend-native` is being applied
+- Fix [`explicitly-unused.js`]: Remove those which were (or now are) in
+  other configs like `sauron`
+
+- Enhancement [`index.js`] (tighten): Add plugin with its recommended
+  rules (`sonarjs`), disabling some
+- Enhancement [`index.js`] (tighten): Add `eslint-plugin-html` plugin
+    (though need to enable for HTML, e.g., `--ext .js,.md,.html`)
+- Enhancement [`index.js`] (tighten): Add plugin `array-func/all` with its
+  `all` rules (though disabling `array-func/prefer-array-from` for now)
+- Enhancement [`sauron`] (tighten): Add `prefer-named-capture-group`
+- Enhancement [`great-eye`] (tighten): Add `max-statements`,
+  `import/no-unused-modules`, and `sonarjs/cognitive-complexity`
+- Enhancement [`great-eye`] (tighten): Add `import/no-unused-modules` (with
+    `missingExports` and `unusedExports`)
+- Enhancement [`great-eye-node`]: Add new config which expands on `great-eye`
+  and `sauron-node`
+- Enhancement [`explicitly-unused.js`]: Add unused `@mysticatea` and
+  `eslint-comments` items and some deprecated rules
+- Enhancement [`inherited-rules/implicitly-included`]: Add these auto-built
+  configs to track rules that were inherited (and not disabled)
+- Enhancement [`inherited-rules/unused`]: Add space for these auto-built
+  configs (currently none) to track if there are any rules in the plug-ins
+  and configs we have extended but have not either incorporated or
+  explicitly rejected.
+
+- Linting: Fix `.eslintrc` error
+- Docs: Indicate how to find which rules were inherited or rejected and
+  to calculate if any inherited ones are missing from our lists;
+  some doc fixes
+- npm: Update devDeps, peerDeps
+
 ## 7.0.1
 
 - Fix: For `Promise`, was reporting parents instead of children

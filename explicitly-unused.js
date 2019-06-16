@@ -1,6 +1,9 @@
 module.exports = {
   rules: {
-    "no-console": ["off"],
+    // This file is for indicating those rules available in inherited plugins
+    // which we have consciously not included (and not help catch any not
+    // so considered as part of our `build.js` routines). See the README for
+    // details on why we have decided not to include these.
     "array-element-newline": ["off"],
     "arrow-body-style": ["off"],
     "func-names": ["off"],
@@ -17,8 +20,6 @@ module.exports = {
     "max-lines-per-function": ["off"],
     "max-lines": ["off"],
     "max-params": ["off"],
-    "max-statements": ["off"],
-    "max-statements-per-line": ["off"],
     "multiline-comment-style": ["off"],
     "newline-per-chained-call": ["off"],
     "no-continue": ["off"],
@@ -28,10 +29,8 @@ module.exports = {
     "no-negated-condition": ["off"],
     "no-nested-ternary": ["off"],
     "no-param-reassign": ["off"],
-    "no-plusplus": ["off"],
     "no-restricted-imports": ["off"],
     "no-restricted-modules": ["off"],
-    "no-restricted-syntax": ["off"],
     "no-ternary": ["off"],
     "no-undefined": ["off"],
     "no-underscore-dangle": ["off"],
@@ -45,31 +44,46 @@ module.exports = {
     "sort-keys": ["off"],
     "sort-vars": ["off"],
 
-    "import/no-restricted-paths": ["off"],
-    "import/no-internal-modules": ["off"],
-    "import/no-cycle": ["off"],
-    "import/no-relative-parent-imports": ["off"],
-    "import/no-nodejs-modules": ["off"],
-    "import/exports-last": ["off"],
-    "import/no-namespace": ["off"],
-    "import/prefer-default-export": ["off"],
-    "import/max-dependencies": ["off"],
-    "import/no-unassigned-import": ["off"],
-    "import/no-default-export": ["off"],
-    "import/no-named-export": ["off"],
-    "import/group-exports": ["off"],
+    // Deprecated
+    "node/no-hide-core-modules": "off",
+    "node/no-unsupported-features": "off",
+    "import/imports-first": ["off"],
+
+    // NON-RECOMMENDED (so no need to add to `index.js`, etc. and override)
+
     "import/dynamic-import-chunkname": ["off"],
+    "import/exports-last": ["off"],
+    "import/group-exports": ["off"],
+    "import/max-dependencies": ["off"],
+    "import/no-cycle": ["off"],
+    "import/no-default-export": ["off"],
+    "import/no-internal-modules": ["off"],
+    "import/no-named-export": ["off"],
+    "import/no-namespace": ["off"],
+    "import/no-nodejs-modules": ["off"],
+    "import/no-relative-parent-imports": ["off"],
+    "import/no-restricted-paths": ["off"],
+    "import/no-unassigned-import": ["off"],
+    "import/prefer-default-export": ["off"],
 
     "promise/no-native": ["off"],
 
-    "jsdoc/check-alignment": ["off"],
-    "jsdoc/check-indentation": ["off"],
+    "@mysticatea/arrow-parens": "off",
+    "@mysticatea/no-instanceof-array": "off",
+    "@mysticatea/no-instanceof-wrapper": "off",
 
-    "jsdoc/newline-after-description": ["off"],
-    "jsdoc/no-undefined-types": ["off"],
+    "eslint-comments/no-restricted-disable": ["off"],
+    "eslint-comments/no-use": ["off"],
+
     "jsdoc/require-description-complete-sentence": ["off"],
     "jsdoc/require-hyphen-before-param-description": ["off"],
 
-    "@mysticatea/no-use-ignored-vars": ["off"]
+    // These rules are actually part of recommended, but since it is "off"
+    //   there, we don't include it in comparisons to show what is
+    //   inherited from `recommended` or unused from the plugin so we
+    //   need to add here
+    "jsdoc/no-types": ["off"],
+
+    "unicorn/no-unused-properties": ["off"]
   }
 };

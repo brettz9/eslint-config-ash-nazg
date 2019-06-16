@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["ash-nazg", "plugin:node/recommended-module"],
+  extends: ["./", "plugin:node/recommended-module"],
   plugins: ["node"],
   rules: {
     "node/file-extension-in-import": ["error"],

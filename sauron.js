@@ -1,16 +1,16 @@
 module.exports = {
-  extends: ["ash-nazg"],
+  extends: ["./"],
   settings: {
     jsdoc: {
       forceRequireReturn: true,
       preferredTypes: {
         "*": {
           message: "Use a more precise type or if necessary use `{{preferredType}}` or `ArbitraryCallbackResult`",
-          replacement: "Any"
+          replacement: "any"
         },
-        any: {
+        Any: {
           message: "Use a more precise type or if necessary use `{{preferredType}}` or `ArbitraryCallbackResult`",
-          replacement: "Any"
+          replacement: "any"
         },
         Function: {
           message: "Point to a `@callback` namepath or `{{replacement}}` if truly arbitrary in form",
@@ -46,6 +46,7 @@ module.exports = {
     "no-console": ["warn"],
     "no-empty-function": ["warn"],
     "no-shadow": ["warn", {"builtinGlobals": true, "hoist": "functions", "allow": ["parent", "top", "open", "close", "stop", "blur", "status", "name", "closed", "start"]}],
+    "prefer-named-capture-group": ["warn"],
     "prefer-numeric-literals": ["warn"],
     "require-unicode-regexp": ["warn"],
     "vars-on-top": ["warn"],
