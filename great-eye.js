@@ -4,7 +4,7 @@ module.exports = {
     preferredTypes: {
       number: {
         message: "Use `Integer` or `Float`"
-      },
+      }
     }
   },
   rules: {

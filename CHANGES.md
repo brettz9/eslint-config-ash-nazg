@@ -1,5 +1,11 @@
 # eslint-config-ash-nazg CHANGES
 
+## 8.0.1
+
+- Fix (jsdoc) [`sauron`]: `object` and `Array` `preferredTypes` were
+  reporting parents instead of children
+- Refactoring: Remove trailing commas
+
 ## 8.0.0
 
 - Breaking change [`index.js`]: require `@extends` in place of `@augments`

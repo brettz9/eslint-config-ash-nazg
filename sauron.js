@@ -23,11 +23,11 @@ module.exports = {
           message: "Prefer type form without dot",
           replacement: "<>"
         },
-        "object<>": {
+        object: {
           message: "Use the specific object type or `{{replacement}}` if truly arbitrary",
           replacement: "PlainObject"
         },
-        "Array<>": {
+        Array: {
           message: "Use `GenericArray` if it is truly arbitrary.",
           replacement: "GenericArray"
         }
@@ -65,6 +65,6 @@ module.exports = {
     "promise/valid-params": "warn",
     "promise/prefer-await-to-callbacks": "warn",
 
-    "unicorn/no-fn-reference-in-iterator": "warn",
+    "unicorn/no-fn-reference-in-iterator": "warn"
   }
 };
