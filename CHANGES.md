@@ -1,8 +1,13 @@
 # eslint-config-ash-nazg CHANGES
 
+## 8.0.3
+
+- npm: Bump `eslint-plugin-jsdoc` for dep. fix
+
 ## 8.0.2
 
-- npm: Bump eslint-plugin-jsdoc (getting latest jsdoctypeparser for jsdoc type improvements)
+- npm: Bump `eslint-plugin-jsdoc` (getting latest jsdoctypeparser for
+  jsdoc type improvements)
 
 ## 8.0.1
 
