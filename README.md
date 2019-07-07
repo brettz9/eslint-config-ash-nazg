@@ -417,7 +417,9 @@ appears, to Dark Lords.
 ### Rationale for including eslint-plugin-jsdoc rules which are not in `plugin:jsdoc/recommended`
 
 - `check-examples` - If examples are present, they ought to follow one's standards,
-  including if overrides are in place to loosen/tighten
+  including if overrides are in place to loosen/tighten. Set to match any Markdown
+  rules (`.md` extension) by default and excludes any example beginning with a
+  backtick.
 - `check-syntax` - Following jsdoc, not Closure syntax
 - `match-description` - Cleaner to see complete sentences which its default allows.
 - `require-returns-check` - If the return value doesn't match, there may be a problem.
@@ -460,7 +462,8 @@ may not all be under one's control).
     catch potential problems
 - `jsdoc/require-returns` (recommended) - Put in `ash-nazg/sauron` as
     it is more than just a consistent styling convention, and it is
-    not impossible to follow, but a bit difficult.
+    not impossible to follow, but a bit difficult. Added `forceRequireReturn`
+    option to ensure return type considered even if `void`/`undefined`.
 - `jsdoc/require-jsdoc` (recommended) - Imposes a heavy burden on
   preexisting large projects (added as "error" in `great-eye.js`)
 

@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 8.1.0
+
+- npm: Update eslint-plugin-jsdoc and move from settings to options
+  accordingly; document choice of options
+
 ## 8.0.3
 
 - npm: Bump `eslint-plugin-jsdoc` for dep. fix

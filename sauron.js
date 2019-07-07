@@ -2,7 +2,6 @@ module.exports = {
   extends: ["./"],
   settings: {
     jsdoc: {
-      forceRequireReturn: true,
       preferredTypes: {
         "*": {
           message: "Use a more precise type or if necessary use `{{preferredType}}` or `ArbitraryCallbackResult`",
@@ -55,7 +54,7 @@ module.exports = {
     "import/no-commonjs": "warn",
 
     "jsdoc/require-jsdoc": ["warn"],
-    "jsdoc/require-returns": ["warn"],
+    "jsdoc/require-returns": ["warn", {forceRequireReturn: true}],
 
     "promise/no-nesting": "warn",
     "promise/no-promise-in-callback": "warn",

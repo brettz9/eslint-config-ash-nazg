@@ -43,8 +43,6 @@ module.exports = {
   ],
   "settings": {
     "jsdoc": {
-      "matchingFileName": "dummy.md",
-      "rejectExampleCodeRegex": "^`",
       "tagNamePreference": {
         "augments": "extends"
       }
@@ -168,7 +166,10 @@ module.exports = {
     "jsdoc/require-jsdoc": ["off"],
     "jsdoc/require-returns": ["off"],
 
-    "jsdoc/check-examples": ["error"],
+    "jsdoc/check-examples": ["error", {
+      "matchingFileName": "dummy.md",
+      "rejectExampleCodeRegex": "^`"
+    }],
     "jsdoc/check-param-names": ["error"],
     "jsdoc/check-syntax": ["error"],
     "jsdoc/check-tag-names": ["error"],
