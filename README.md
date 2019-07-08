@@ -544,3 +544,6 @@ can be picky about giving up their *preh-shus*...
     1. [tweak for `no-new-object`](https://github.com/eslint/eslint/issues/11810)
     1. [allow npm_config_* with `no-process-env`](https://github.com/eslint/eslint/issues/11808)
     1. [to-do query tool/extractor](https://github.com/sindresorhus/eslint-plugin-unicorn/issues/238#issuecomment-506917348)
+- Review <https://github.com/dustinspecker/awesome-eslint#practices>
+- See if <https://github.com/sarbbottam/eslint-find-rules> may eliminate
+  need for our comparison code
