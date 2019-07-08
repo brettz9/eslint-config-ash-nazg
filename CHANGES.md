@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 8.2.0
+
+- npm: Bump eslint-plugin-jsdoc devDep/peerDep
+
 ## 8.1.0
 
 - npm: Update eslint-plugin-jsdoc and move from settings to options
