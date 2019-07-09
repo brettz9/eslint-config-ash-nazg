@@ -339,7 +339,7 @@ appears, to Dark Lords.
 - `jsdoc/require-description-complete-sentence` seems like a good idea, as
     English mistakes can be jarring as with bad styling, but this didn't
     seem to work too well. I use `jsdoc/match-description` with a special
-    value to capture this.
+    value to capture a subset of this.
 - `jsdoc/require-hyphen-before-param-description` - I can see its draw,
     but seems too pedantic to me for documentation.
 
