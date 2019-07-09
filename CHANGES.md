@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 8.3.0
+
+- npm: Bump eslint-plugin-jsdoc, typescript devDeps/peerDeps
+
 ## 8.2.0
 
 - npm: Bump eslint-plugin-jsdoc devDep/peerDep
