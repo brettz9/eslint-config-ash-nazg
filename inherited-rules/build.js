@@ -18,7 +18,10 @@ const isInherited = type === 'inherited';
 
 const left = {
   rules: {
-    ...cc.getLiteralConfigSync('explicitly-unused.js').rules,
+    ...(isInherited && rightModule !== 'eslint/conf/eslint-all'
+      ? null
+      : cc.getLiteralConfigSync('explicitly-unused.js').rules
+    ),
     ...cc.getLiteralConfigSync('index.js').rules,
     ...cc.getLiteralConfigSync('node.js').rules,
     ...cc.getLiteralConfigSync('sauron.js').rules,
@@ -68,11 +71,11 @@ const left = {
           join('./node_modules/', 'eslint-config-standard')
         ).rules
       }
-      : rightModule === 'eslint-config-standard'
+      : (rightModule === 'eslint-config-standard'
         ? {}
         : cc.getLiteralConfigSync(
           'node_modules/eslint/conf/eslint-recommended.js'
-        ).rules
+        ).rules)
     ),
     ...(!isInherited && config2
       ? cc.getLiteralConfigSync(
@@ -93,6 +96,7 @@ const left = {
     )
   }
 };
+
 const right = cc.getLiteralConfigSync(join('./node_modules/', rightModule));
 
 function getExtensions (config) {

@@ -2,12 +2,19 @@
 
 ## 8.4.0
 
+- Change: [`index.js`]: Explicitly reject items if we inherit from mysticatea
 - Enhancement: Add `eslint-conf_eslint-all.js` for showing
   non-eslint-recommended rules (e.g., by standard)
 - Build: Update "standard" and eslint-recommended comparison files as
   "standard" now incorporates more recommended rules (and removes a
   few of its own redundant ones)
+- Build: Only check `explicitly-unused` rules in comparison with unused,
+  not with inherited, as need to see which explicitly unused rules may
+  later become used
+- Build: Ensure removing files before testing
 - npm: Bump peerDeps/devDeps
+- Fix [`index.js`]: Disable `lines-between-class-members` as inherited
+  now from standard
 
 ## 8.3.0
 

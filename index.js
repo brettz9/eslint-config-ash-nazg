@@ -118,14 +118,19 @@ module.exports = {
 
     "semi": ["error", "always"],
     "indent": ["error", 2, {"outerIIFEBody": 0}],
-    "object-property-newline": ["off"],
-    "one-var": ["off"],
     "object-curly-spacing": ["error", "never"],
     "no-restricted-syntax": ["error", "[operator=instanceof]"],
 
+    // Disable standard
+    "object-property-newline": ["off"],
+    "one-var": ["off"],
+    "lines-between-class-members": "off",
+
+    // PROMISE
     "promise/no-new-statics": "error",
     "promise/prefer-await-to-then": "error",
 
+    // PROMISE DISABLE
     "promise/param-names": "off",
     "promise/no-native": "off",
     "promise/no-nesting": "off",
@@ -135,6 +140,7 @@ module.exports = {
     "promise/no-return-in-finally": "off",
     "promise/valid-params": "off",
 
+    // IMPORT
     "import/no-absolute-path": "error",
     "import/no-dynamic-require": "error",
     "import/no-self-import": "error",
@@ -156,6 +162,7 @@ module.exports = {
     "import/newline-after-import": "error",
     "import/no-anonymous-default-export": "error",
 
+    // JSDOC DISABLE
     "jsdoc/check-alignment": ["off"],
     "jsdoc/newline-after-description": ["off"],
     "jsdoc/no-undefined-types": ["off"],
@@ -166,6 +173,7 @@ module.exports = {
     "jsdoc/require-jsdoc": ["off"],
     "jsdoc/require-returns": ["off"],
 
+    // JSDOC
     "jsdoc/check-examples": ["error", {
       "matchingFileName": "dummy.md",
       "rejectExampleCodeRegex": "^`"
@@ -177,6 +185,7 @@ module.exports = {
     "jsdoc/match-description": ["error"],
     "jsdoc/valid-types": ["error"],
 
+    // Unicorn disable
     "unicorn/catch-error-name": "off",
     "unicorn/explicit-length-check": "off",
     "unicorn/filename-case": "off",
@@ -185,20 +194,38 @@ module.exports = {
     "unicorn/import-index": "off",
     "unicorn/prevent-abbreviations": "off",
 
+    // UNICORN
     "unicorn/custom-error-definition": "error",
     "unicorn/no-unsafe-regex": "error",
 
+    // `@mysticatea`
     "@mysticatea/block-scoped-var": "error",
-
-    "@mysticatea/no-use-ignored-vars": "off",
-    "@mysticatea/prettier": "off",
-    "@mysticatea/prefer-for-of": "off",
 
     // These should be inherited by `es2019` config, but we don't want to
     //   extend as it has other items we don't want (see comment at top)
     "@mysticatea/no-literal-call": "error",
     "@mysticatea/no-this-in-static": "error",
     "@mysticatea/no-useless-rest-spread": "error",
+
+    // `@mysticatea` disabled
+    "@mysticatea/no-use-ignored-vars": "off",
+    "@mysticatea/prettier": "off",
+    "@mysticatea/prefer-for-of": "off",
+
+    // Disable mysticatea items we don't want
+    "func-style": "off",
+    "init-declarations": "off",
+    "multiline-comment-style": "off",
+    "no-invalid-this": "off",
+    "no-param-reassign": "off",
+    "no-useless-concat": "off",
+    "padding-line-between-statements": "off",
+    "max-params": "off",
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off",
+    "prefer-template": "off",
+    "@mysticatea/no-instanceof-array": "off",
+    "@mysticatea/no-instanceof-wrapper": "off",
 
     // We're directly using `eslint-comments` and without this, these will
     //  mistakenly show up in our @mysticatea/eslint-plugin inherited list
@@ -210,11 +237,14 @@ module.exports = {
     "@mysticatea/eslint-comments/no-unused-enable": "off",
     "@mysticatea/eslint-comments/no-use": "off",
 
+    // eslint-comments
     "eslint-comments/no-unused-disable": "error",
     "eslint-comments/disable-enable-pair": ["error", {"allowWholeFile": true}],
 
+    // array-func
     "array-func/prefer-array-from": "off",
 
+    // SONARJS
     "sonarjs/max-switch-cases": "off",
     "sonarjs/no-collapsible-if": "off",
     "sonarjs/no-duplicate-string": "off",
@@ -223,6 +253,7 @@ module.exports = {
     "sonarjs/prefer-immediate-return": "off",
     "sonarjs/cognitive-complexity": "off",
 
+    // no-use-extend-native
     // Should not be needed here; see comment in `plugins`
     //   re: "no-use-extend-native" above
     "no-use-extend-native/no-use-extend-native": "error"
