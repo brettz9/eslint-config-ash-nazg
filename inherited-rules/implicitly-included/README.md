@@ -14,6 +14,10 @@ which we are tracking against, albeit with many additions and some changes).
 The eslint recommended list does include some which "standard" has not added,
 however.
 
+The eslint "all" rules list is not actually an inherited config but includes
+those inherited "standard" eslint rules which are in use but which are not
+eslint recommended ones.
+
 The files were generated using the very helpful tool,
 [eslint-compare-config](https://github.com/scottnonnenberg/eslint-compare-config).
 

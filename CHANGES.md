@@ -1,5 +1,14 @@
 # eslint-config-ash-nazg CHANGES
 
+## 8.4.0
+
+- Enhancement: Add `eslint-conf_eslint-all.js` for showing
+  non-eslint-recommended rules (e.g., by standard)
+- Build: Update "standard" and eslint-recommended comparison files as
+  "standard" now incorporates more recommended rules (and removes a
+  few of its own redundant ones)
+- npm: Bump peerDeps/devDeps
+
 ## 8.3.0
 
 - npm: Bump eslint-plugin-jsdoc, typescript devDeps/peerDeps
