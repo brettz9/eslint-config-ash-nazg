@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 8.5.0
+
+- npm: Update eslint-plugin-jsdoc
+
 ## 8.4.0
 
 - Change: [`index.js`]: Explicitly reject items if we inherit from mysticatea
