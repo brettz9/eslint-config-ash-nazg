@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 8.5.1
+
+- Fix: Avoid use of now removed template variables in messages calling
+  for replacement
+
 ## 8.5.0
 
 - npm: Update eslint-plugin-jsdoc

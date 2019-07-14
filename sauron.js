@@ -4,15 +4,15 @@ module.exports = {
     jsdoc: {
       preferredTypes: {
         "*": {
-          message: "Use a more precise type or if necessary use `{{preferredType}}` or `ArbitraryCallbackResult`",
+          message: "Use a more precise type or if necessary use `any` or `ArbitraryCallbackResult`",
           replacement: "any"
         },
         Any: {
-          message: "Use a more precise type or if necessary use `{{preferredType}}` or `ArbitraryCallbackResult`",
+          message: "Use a more precise type or if necessary use `any` or `ArbitraryCallbackResult`",
           replacement: "any"
         },
         Function: {
-          message: "Point to a `@callback` namepath or `{{replacement}}` if truly arbitrary in form",
+          message: "Point to a `@callback` namepath or `GenericCallback` if truly arbitrary in form",
           replacement: "GenericCallback"
         },
         Promise: {
@@ -23,7 +23,7 @@ module.exports = {
           replacement: "<>"
         },
         object: {
-          message: "Use the specific object type or `{{replacement}}` if truly arbitrary",
+          message: "Use the specific object type or `PlainObject` if truly arbitrary",
           replacement: "PlainObject"
         },
         Array: {
