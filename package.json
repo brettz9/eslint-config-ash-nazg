@@ -1,6 +1,6 @@
 {
   "name": "@passport-next/eslint-config-passport-next",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Passport Next eslint config common to all repos forked from https://github.com/brettz9/eslint-config-ash-nazg",
   "main": "index.js",
   "scripts": {
