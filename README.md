@@ -16,31 +16,24 @@ rule them all!**
 
 ## The rules
 
-See <https://eslint.org/docs/rules/> (or search for "error" within <https://github.com/eslint/eslint/blob/master/conf/eslint-recommended.js>)
-for the `eslint:recommended` rules we
-inherit (though see below for our two modifications to these).
-
-See <https://github.com/standard/eslint-config-standard/blob/master/eslintrc.json>
-for the `standard` rules we inherit (though see below for our handful of
-modifications).
-
 See [index.js](./index.js) (and [node.js](./node.js) for `ash-nazg/node`
 rules) for the rules we explicitly include (and see
 [sauron.js](./sauron.js) for the even stricter `ash-nazg/sauron` rules or
-[great-eye](./great-eye.js) for still stricter rules though which are
-probably best not used).
+[great-eye](./great-eye.js) (or [great-eye-node](./great-eye-node.js)) for
+still stricter rules though which are probably best not used).
 
 (See [explicitly-unused.js](./explicitly-unused.js) for the core and extended
 rules we don't include (rationale for non-inclusion below).)
 
-See [mysticatea/eslint-plugin](https://github.com/mysticatea/eslint-plugin)
-for a number of added rules (though with a few items disabled and enabled
-as per below), including all of `@mysticatea/eslint-comments/recommended`.
-
-See [eslint-plugin-no-use-extend-native](https://github.com/dustinspecker/eslint-plugin-no-use-extend-native) for one added rule.
-
-See [Recommended Unicorn rules](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/index.js#L20-L53)
-for other rules (though with a few items disabled and enabled as per below).
+- [Main rules](https://eslint.org/docs/rules/) (also search for "error" within <https://github.com/eslint/eslint/blob/master/conf/eslint-recommended.js>) for the `eslint:recommended` rules we inherit (though see below for our two modifications to these).
+- ["standard"](https://github.com/standard/eslint-config-standard/blob/master/eslintrc.json)
+rules we inherit (though see below for our handful of modifications).
+- [mysticatea/eslint-plugin](https://github.com/mysticatea/eslint-plugin)
+    for a number of added rules (though with a few items disabled and enabled
+    as per below), including all of `@mysticatea/eslint-comments/recommended`.
+- [eslint-plugin-no-use-extend-native](https://github.com/dustinspecker/eslint-plugin-no-use-extend-native) for one added rule.
+- [Recommended Unicorn rules](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/index.js#L20-L53) (a few items disabled and enabled as per below)
+- [eslint-plugin-array-func](https://github.com/freaktechnik/eslint-plugin-array-func#array-funcall-configuration) for further rules
 
 I've focused below on deviations because the original sites tend to
 already articulate the usefulness of the rules I *have* incorporated
@@ -60,7 +53,8 @@ an error and may possibly also require a high (and possibly tyrannical)
 degree of refactoring for existing projects. See below for the rationales
 for inclusion.
 
-The `ash-nazg/great-eye` config expands on `ash-nazg/sauron` to include
+The `ash-nazg/great-eye` and `ash-nazg/great-eye-node` configs expands on
+`ash-nazg/sauron` (and `ash-nazg/sauron-node`) to include
 rules which enforce good practices, but which are so cumbersome and may
 flag too much legitimate code that I personally won't regularly use them.
 Still, I like to track them here, including in the event that their
@@ -91,6 +85,27 @@ regular JavaScript practice (e.g., its enforced absence of semi-colons).
 productive restrictions, and in a few cases, offer greater latitude
 where some constraints are unduly confining.
 
+To see which rules from an extended config ended up enabled (we are
+typically inheriting "recommended" configs), see
+`/inherited-rules/implicitly-included`.
+
+To see which rules from the extended config we disabled, see our relevant
+config(s) (e.g., `index.js`).
+
+To see which rules from the plugin that each extended config derives from
+(i.e., the non-recommended rules of a plug-in), see `explicitly-unused.js`
+for ones we have consciously not used and see our relevant config(s)
+(e.g., `index.js`) for the ones we did add (alongside any recommended).
+
+The `unused` folder is used to capture any (non-recommended) rules which
+are not explicitly either enabled or within `explicitly-unused.js` (as
+might be found during an update of our config dependencies), but it is
+currently, and should hopefully remain, empty, as we wish to be
+consciously aware of all rules from inherited projects and whether we
+wished to include them. As far as new rules added to `recommended`, we
+can see these within diffs of `inherited-rules/implicitly-included`
+files (built during development by `npm run compare`).
+
 ## Rationales for inclusion of dependent plug-ins
 
 Besides incorporating more from ESLint core, we also add rules from
@@ -112,7 +127,14 @@ a few other (peer) dependencies.
   discussion of `overrides` helpful for tweaking rules for Markdown (and
   you may also wish to use `overrides`, for the `eslint-plugin-jsdoc`
   rule `check-examples` if you wish to lint your JSDoc examples according
-  to different standards).
+  to different standards). You must pass the file extension within the `--ext`
+  flag, e.g., `--ext .md,.js` to get this to take effect.
+- `eslint-plugin-html` - One basic use case is ensuring HTML
+    is linted, which is why this is expected. You may wish to use
+    `overrides` for HTML-specific rules or enable the plugin's
+    [own rules](https://github.com/BenoitZugmeyer/eslint-plugin-html#settings).
+    You must pass the file extension within the `--ext` flag, e.g.,
+    `--ext .html,.htm,.js` to get this to take effect.
 - `eslint-plugin-promise` - Besides being peer dependencies of `standard`,
   this has some additional useful rules we apply.
 
@@ -123,11 +145,11 @@ a few other (peer) dependencies.
 In comparison to `eslint:recommended`, ash-nazg only *adds* restrictions with
 the exceptions of:
 
-1. Loosening the requirement of `no-console` into a mere warning and only in
-  the stricter `ash-nazg/sauron` configuration. This is for the reason that
-  console logging is too useful for debugging (and sometimes for reporting
-  progress) to have to disable it at every turn and to distract one from
-  actual errors.
+1. Loosening the ESLint < 6 requirement of `no-console` into a mere warning
+  and only in the stricter `ash-nazg/sauron` configuration. This is for the
+  reason that console logging is too useful for debugging (and sometimes
+  for reporting progress) to have to disable it at every turn and to distract
+  one from actual errors.
 2. Change `no-empty` so that `allowEmptyCatch` is `true`. There are enough
   cases where one legitimately needs to suppress errors.
 
@@ -234,9 +256,6 @@ happy with it thus far).
 - `max-lines-per-function` - A bit tyrannical
 - `max-lines` - A bit tyrannical
 - `max-params` - Can be troublesome when one is forced to abide by some API
-- *`max-statements-per-line`* - Tyrannical when prohibiting single-line
-  `if (...) { continue; }`; might revisit if allowed for control statements
-- `max-statements` - A bit tyrannical
 - `multiline-comment-style` - Would be nice if allowed multiline
   "starred-block" OR "bare-block" given some one may wish as JSDoc-style
   and others not
@@ -253,8 +272,6 @@ happy with it thus far).
     duplicated assignment code
 - `no-param-reassign` - Can be helpful, but not convenient, including when
     making defaults against more than `undefined` (e.g., `null`)
-- *`no-plusplus`* - Would be nice if there were an option to allow if not
-    combined inline with other expressions
 - `no-restricted-imports` - Project-specific
 - `no-restricted-modules` - Project-specific
 - *`no-restricted-properties`* - Might expand the list
@@ -317,50 +334,38 @@ a bit early with Node 12.
 `promise/no-native` is disabled as promises are essential--even, it
 appears, to Dark Lords.
 
+`promise/param-names` can be too tyrannical in some cases.
+
 #### Rationale for suppressing some `eslint-plugin-jsdoc` rules
 
-- `jsdoc/check-alignment` - A pretty good practice, but that that important;
-    put into `ash-nazg/great-eye`.
-- `jsdoc/check-indentation` - A pretty good practice, but that that important;
-    put into `ash-nazg/great-eye`.
-- `jsdoc/newline-after-description` - I can see its draw,
+- `jsdoc/no-types` - Types have utility in jsdoc unless using TypeScript
+- `jsdoc/newline-after-description` (recommended) - I can see its draw,
     but seems too pedantic to me for documentation.
-- `jsdoc/no-undefined-types` - I'd like something like this, but since it
-    [isn't aware](https://github.com/gajus/eslint-plugin-jsdoc/issues/99)
+- `jsdoc/no-undefined-types` (recommended) - I'd like something like this,
+    but since it [isn't aware](https://github.com/gajus/eslint-plugin-jsdoc/issues/99)
     of all of one's `@typedef`s, etc., it is too restrictive for me at this
     time.
 - `jsdoc/require-description-complete-sentence` seems like a good idea, as
     English mistakes can be jarring as with bad styling, but this didn't
     seem to work too well. I use `jsdoc/match-description` with a special
-    value to capture this.
+    value to capture a subset of this.
 - `jsdoc/require-hyphen-before-param-description` - I can see its draw,
     but seems too pedantic to me for documentation.
-- `jsdoc/require-description` - Though a very good practices, this is
-    difficult for large code bases to implement and even cumbersome
-    for new ones to have to follow for lesser parameters, so that's
-    why they are not even in `ash-nazg/sauron`, though if you feel
-    you can succeed at imposing such rigor for your hordes of
-    developer minions, by all means, have a hand at it (you can use the
-    `ash-nazg/great-eye` config for these)...
-- `jsdoc/require-param-description` - See `jsdoc/require-description`.
-- `jsdoc/require-returns-description` - See `jsdoc/require-description`.
-- `jsdoc/require-returns` - Put in `ash-nazg/sauron` as it is more than
-    just a consistent styling convention, and it is not impossible to
-    follow, but a bit difficult.
-- `jsdoc/require-example` - See `jsdoc/require-description`.
 
-### Rationale for disabling some `plugin:unicorn/recommended` rules
+### Rationale for disabling some `unicorn` rules
+
+(The following are recommended rules unless otherwise noted.)
 
 - `catch-error-name` - It can actually be useful to use different
     error names to indicate what time of error may be expected.
 - `explicit-length-check` - Seems wasteful.
-- `prevent-abbreviations` - Very cumbersome for frequent conventions such
-  as `e` for `event`
 - *`filename-case`* - Looks potentially useful with `camelCase`.
 - `throw-new-error` - Potentially confining.
 - `no-unreadable-array-destructuring` - Better to use this than multiple lines
 - `import-index` - While understandable, seems may cause more trouble in
     making it harder to find references to `index`.
+- `no-unused-properties` - While no doubt useful, it won't catch all cases,
+    sounds computationally expensive, and may better be done with TypeScript
 
 ### Rationale for including some Unicorn rules which are disabled in `plugin:unicorn/recommended`
 
@@ -378,7 +383,7 @@ appears, to Dark Lords.
 `eslint-comments/disable-enable-pair` - If at top, behavior is clear, and
     no need to reenable within doc
 
-### Rationale for not including some `@mysticatea/eslint-plugin` rules
+### Rationale for not including some `plugin:@mysticatea/es2019` rules
 
 - `@mysticatea/arrow-parens` - Covered by other rules
 - `@mysticatea/no-instanceof-array` - Covered by our blocking of all
@@ -396,10 +401,34 @@ appears, to Dark Lords.
 - `@mysticatea/no-use-ignored-vars` - Relies on a regex (for pseudo-privates)
     which can be useful
 
+### Rationale for not including some `array-func` rules
+
+- `array-func/prefer-array-from` - While it may benefit performance, it is
+    more sleek to use the spread operator. Would like to know how much it
+    impacts performance before enabling.
+
+### Rationale for not including some `sonarjs` rules
+
+(All sonarjs rules are currently "recommended" rules as well.)
+
+- `max-switch-cases` - Sounds too arbitrary.
+- `no-collapsible-if` - Sometimes more logically clear or made in preparation
+  for future expansion
+- `no-duplicate-string` - Often used in test files and repeated in fairly
+  minor instances or instances repeated but spread out within a large file
+- `no-identical-functions` - Often used in test files and repeated by fairly
+  minor functions or functions repeated but spread out within a large file
+- `no-small-switch` - Too useful to start a pattern to which one intends to add later.
+- `prefer-immediate-return` - Can be useful for documenting even if method name
+    should be descriptive, especially if there are different returns with subtly
+    different results
+
 ### Rationale for including eslint-plugin-jsdoc rules which are not in `plugin:jsdoc/recommended`
 
 - `check-examples` - If examples are present, they ought to follow one's standards,
-  including if overrides are in place to loosen/tighten
+  including if overrides are in place to loosen/tighten. Set to match any Markdown
+  rules (`.md` extension) by default and excludes any example beginning with a
+  backtick.
 - `check-syntax` - Following jsdoc, not Closure syntax
 - `match-description` - Cleaner to see complete sentences which its default allows.
 - `require-returns-check` - If the return value doesn't match, there may be a problem.
@@ -440,7 +469,12 @@ may not all be under one's control).
     may be used within repeating events
 - `unicorn/no-fn-reference-in-iterator` - May be cumbersome though does
     catch potential problems
-- `jsdoc/require-jsdoc` - Imposes a heavy burden on preexisting large projects
+- `jsdoc/require-returns` (recommended) - Put in `ash-nazg/sauron` as
+    it is more than just a consistent styling convention, and it is
+    not impossible to follow, but a bit difficult. Added `forceRequireReturn`
+    option to ensure return type considered even if `void`/`undefined`.
+- `jsdoc/require-jsdoc` (recommended) - Imposes a heavy burden on
+  preexisting large projects (added as "error" in `great-eye.js`)
 
 The `forceRequireReturn` setting was also applied therein as it may be
 cumbersome to add to all returns or not favored as a requirement in
@@ -456,11 +490,37 @@ for projects to specify all child types.
     out code
 - `complexity` - A generally good practice, but can be work to refactor,
     and sometimes impractical to enforce.
+- *`max-statements-per-line`* - Tyrannical when prohibiting single-line
+  `if (...) { continue; }`; might revisit if allowed for control statements
+- `max-statements` - A bit tyrannical even if good for clear code
 - `no-magic-numbers` - Very helpful for clear code, but cumbersome,
     and sometimes very cumbersome.
+- *`no-plusplus`* - Would be nice if there were an option to allow if not
+    combined inline with other expressions
 - `no-warning-comments` - Good to catch to-dos, but better to search or
   parse code as a separate process rather than polluting one's ESLint
   warnings--some to-dos are ok to be left for the long term
+- `import/no-unused-modules` - Useful (for `missingExports` at least),
+  but doesn't catch dynamic imports and reports for other deliberately
+  non-modular scripts
+- `jsdoc/check-alignment` (recommended) - A pretty good practice, but not
+    that important.
+- `jsdoc/check-indentation` - A pretty good practice, but that that important.
+- `jsdoc/require-description` - Though a very good practices, this is
+    difficult for large code bases to implement and even cumbersome
+    for new ones to have to follow for lesser parameters, so that's
+    why they are not even in `ash-nazg/sauron`, though if you feel
+    you can succeed at imposing such rigor for your hordes of
+    developer minions, by all means, have a hand at it...
+- `jsdoc/require-param-description` (recommended) - See
+  `jsdoc/require-description`.
+- `jsdoc/require-returns-description` (recommended) - See
+  `jsdoc/require-description`.
+- `jsdoc/require-example` - See `jsdoc/require-description`.
+- `sonarjs/cognitive-complexity` - As with `complexity` perhaps (though may
+    add to sauron if demonstrates not to be too oppressive)
+- `unicorn/prevent-abbreviations` - Very cumbersome for frequent conventions such
+  as `e` for `event`
 
 The `preferredTypes` setting was enabled here for integer/float as it can
 be cumbersome for projects to distinguish.
@@ -484,3 +544,15 @@ rules (or possibly add a few ones mentioned in my non-inclusion sections),
 feel free to file issues if you really feel there are compelling reasons
 for different defaults. But again, I have to add caution that ring bearers
 can be picky about giving up their *preh-shus*...
+
+## To-dos
+
+- Waiting: Add [eslint-plugin-no-constructor-bind](https://github.com/markalfred/eslint-plugin-no-constructor-bind)
+    when class properties start landing
+- Add own rules:
+    1. [tweak for `no-new-object`](https://github.com/eslint/eslint/issues/11810)
+    1. [allow npm_config_* with `no-process-env`](https://github.com/eslint/eslint/issues/11808)
+    1. [to-do query tool/extractor](https://github.com/sindresorhus/eslint-plugin-unicorn/issues/238#issuecomment-506917348)
+- Review <https://github.com/dustinspecker/awesome-eslint#practices>
+- See if <https://github.com/sarbbottam/eslint-find-rules> may eliminate
+  need for our comparison code

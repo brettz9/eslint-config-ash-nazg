@@ -1,19 +1,18 @@
 module.exports = {
-  extends: ["@passport-next/eslint-config-passport-next"],
+  extends: ["./"],
   settings: {
     jsdoc: {
-      forceRequireReturn: true,
       preferredTypes: {
         "*": {
-          message: "Use a more precise type or if necessary use `{{preferredType}}` or `ArbitraryCallbackResult`",
-          replacement: "Any"
+          message: "Use a more precise type or if necessary use `any` or `ArbitraryCallbackResult`",
+          replacement: "any"
         },
-        any: {
-          message: "Use a more precise type or if necessary use `{{preferredType}}` or `ArbitraryCallbackResult`",
-          replacement: "Any"
+        Any: {
+          message: "Use a more precise type or if necessary use `any` or `ArbitraryCallbackResult`",
+          replacement: "any"
         },
         Function: {
-          message: "Point to a `@callback` namepath or `{{replacement}}` if truly arbitrary in form",
+          message: "Point to a `@callback` namepath or `GenericCallback` if truly arbitrary in form",
           replacement: "GenericCallback"
         },
         Promise: {
@@ -23,11 +22,11 @@ module.exports = {
           message: "Prefer type form without dot",
           replacement: "<>"
         },
-        "object<>": {
-          message: "Use the specific object type or `{{replacement}}` if truly arbitrary",
+        object: {
+          message: "Use the specific object type or `PlainObject` if truly arbitrary",
           replacement: "PlainObject"
         },
-        "Array<>": {
+        Array: {
           message: "Use `GenericArray` if it is truly arbitrary.",
           replacement: "GenericArray"
         }
@@ -46,6 +45,7 @@ module.exports = {
     "no-console": ["warn"],
     "no-empty-function": ["warn"],
     "no-shadow": ["warn", {"builtinGlobals": true, "hoist": "functions", "allow": ["parent", "top", "open", "close", "stop", "blur", "status", "name", "closed", "start"]}],
+    "prefer-named-capture-group": ["warn"],
     "prefer-numeric-literals": ["warn"],
     "require-unicode-regexp": ["warn"],
     "vars-on-top": ["warn"],
@@ -54,7 +54,7 @@ module.exports = {
     "import/no-commonjs": "warn",
 
     "jsdoc/require-jsdoc": ["warn"],
-    "jsdoc/require-returns": ["warn"],
+    "jsdoc/require-returns": ["warn", {forceRequireReturn: true}],
 
     "promise/no-nesting": "warn",
     "promise/no-promise-in-callback": "warn",
@@ -64,6 +64,6 @@ module.exports = {
     "promise/valid-params": "warn",
     "promise/prefer-await-to-callbacks": "warn",
 
-    "unicorn/no-fn-reference-in-iterator": "warn",
+    "unicorn/no-fn-reference-in-iterator": "warn"
   }
 };

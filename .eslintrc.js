@@ -1,44 +1,45 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "es6": true,
-        "node": true
+    env: {
+        browser: true,
+        commonjs: true,
+        es6: true,
+        node: true
     },
-    "extends": "eslint:recommended",
-    "plugins": ["eslint-plugin-jsdoc", "eslint-plugin-markdown"],
-    "parserOptions": {
-        "ecmaVersion": 2018
+    extends: ['eslint:recommended'],
+    plugins: ['jsdoc', 'markdown'],
+    parserOptions: {
+        ecmaVersion: 2018,
+        sourceType: 'module'
     },
-    "overrides": {
-      files: ["**/*.md"],
+    overrides: [{
+      files: ['**/*.md'],
       rules: {
-        "eol-last": ["off"],
-        "no-console": ["off"],
-        "no-undef": ["off"],
-        "no-unused-vars": ["warn"],
-        "padded-blocks": ["off"],
-        "import/unambiguous": ["off"],
-        "import/no-unresolved": ["off"],
-        "node/no-missing-import": ["off"]
+        'eol-last': ['off'],
+        'no-console': ['off'],
+        'no-undef': ['off'],
+        'no-unused-vars': ['warn'],
+        'padded-blocks': ['off'],
+        'import/unambiguous': ['off'],
+        'import/no-unresolved': ['off'],
+        'node/no-missing-import': ['off']
       }
-    },
-    "rules": {
-        "indent": [
-            "error",
+    }],
+    rules: {
+        indent: [
+            'error',
             2
         ],
-        "linebreak-style": [
-            "error",
-            "unix"
+        'linebreak-style': [
+            'error',
+            'unix'
         ],
-        "quotes": [
-            "error",
-            "double"
+        quotes: [
+            'error',
+            'double'
         ],
-        "semi": [
-            "error",
-            "always"
+        semi: [
+            'error',
+            'always'
         ]
     }
 };
