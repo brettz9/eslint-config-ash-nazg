@@ -357,6 +357,7 @@ appears, to Dark Lords.
     making it harder to find references to `index`.
 - `no-unused-properties` - While no doubt useful, it won't catch all cases,
     sounds computationally expensive, and may better be done with TypeScript
+- `no-keyword-prefix` - See no need.
 
 ### Rationale for including some Unicorn rules which are disabled in `plugin:unicorn/recommended`
 

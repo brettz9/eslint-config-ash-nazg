@@ -83,6 +83,7 @@ module.exports = {
     //   need to add here
     "jsdoc/no-types": ["off"],
 
-    "unicorn/no-unused-properties": ["off"]
+    "unicorn/no-unused-properties": ["off"],
+    "unicorn/no-keyword-prefix": ["off"]
   }
 };

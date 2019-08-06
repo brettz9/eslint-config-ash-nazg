@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 8.5.2
+
+- npm: Update peer and devDeps (including import, jsdoc, and unicorn plugins)
+
 ## 8.5.1
 
 - Fix: Avoid use of now removed template variables in messages calling
