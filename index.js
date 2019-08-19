@@ -61,7 +61,6 @@ module.exports = {
     "consistent-return": ["error"],
     "dot-notation": ["error"],
     "func-name-matching": ["error"],
-    "function-call-argument-newline": ["error", "never"],
     "function-paren-newline": ["error", "consistent"],
     "global-require": ["error"],
     "guard-for-in": ["error"],

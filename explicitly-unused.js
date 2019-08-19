@@ -6,6 +6,7 @@ module.exports = {
     // details on why we have decided not to include these.
     "array-element-newline": ["off"],
     "arrow-body-style": ["off"],
+    "function-call-argument-newline": ["off"],
     "func-names": ["off"],
     "func-style": ["off"],
     "id-blacklist": ["off"],

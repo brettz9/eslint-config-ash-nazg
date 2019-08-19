@@ -172,8 +172,6 @@ While these are not part of `standard` or `eslint-recommended`, I've noted
 here why we have deviated from the defaults set by ESLint for those applying
 the rule.
 
-- `function-call-argument-newline` - "Never" is the usual convention and
-  terser.
 - `function-paren-newline` - The default multiline can get too long whereas
     "consistent" can be clean and short.
 - `multiline-ternary` - Inline ternary can be very readable when not

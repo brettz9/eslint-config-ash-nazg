@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 8.7.0
+
+- Enhancement [`index.js`] (tighten): remove rule
+  `function-call-argument-newline` (oppressive)
+
 ## 8.6.0
 
 - Enhancement [`index.js`] (tighten): apply rule
