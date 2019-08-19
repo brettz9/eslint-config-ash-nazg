@@ -1,5 +1,15 @@
 # eslint-config-ash-nazg CHANGES
 
+## 8.6.0
+
+- Enhancement [`index.js`] (tighten): apply rule
+  `function-call-argument-newline` set to `never`
+- Enhancement [`index.js`]: apply rule `no-label-var` for comparison purposes
+  (though already a part of `eslint:recommended`)
+- Enhancement [`index.js`]: Disable `object-curly-newline` since added to
+  "standard"
+- npm: Update devDeps/peerDeps
+
 ## 8.5.2
 
 - npm: Update peer and devDeps (including import, jsdoc, and unicorn plugins)

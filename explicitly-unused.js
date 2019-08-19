@@ -34,7 +34,6 @@ module.exports = {
     "no-undefined": ["off"],
     "no-underscore-dangle": ["off"],
     "no-useless-concat": ["off"],
-    "object-curly-newline": ["off"],
     "one-var-declaration-per-line": ["off"],
     "padding-line-between-statements": ["off"],
     "prefer-arrow-callback": ["off"],

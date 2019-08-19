@@ -61,6 +61,7 @@ module.exports = {
     "consistent-return": ["error"],
     "dot-notation": ["error"],
     "func-name-matching": ["error"],
+    "function-call-argument-newline": ["error", "never"],
     "function-paren-newline": ["error", "consistent"],
     "global-require": ["error"],
     "guard-for-in": ["error"],
@@ -122,6 +123,7 @@ module.exports = {
     "no-restricted-syntax": ["error", "[operator=instanceof]"],
 
     // Disable standard
+    "object-curly-newline": ["off"],
     "object-property-newline": ["off"],
     "one-var": ["off"],
     "lines-between-class-members": "off",
@@ -200,6 +202,10 @@ module.exports = {
 
     // `@mysticatea`
     "@mysticatea/block-scoped-var": "error",
+
+    // Adding here for comparison purposes only (already added by
+    //   eslint:recommended and would be added by `es2019` config)
+    "no-label-var": "error",
 
     // These should be inherited by `es2019` config, but we don't want to
     //   extend as it has other items we don't want (see comment at top)
