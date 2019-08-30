@@ -1,5 +1,11 @@
 # eslint-config-ash-nazg CHANGES
 
+## 8.8.0
+
+- Update: Avoid `node/no-callback-literal` which duplicates
+  `standard/no-callback-literal`
+- npm: Update devDeps/peerDeps
+
 ## 8.7.0
 
 - Enhancement [`index.js`] (tighten): remove rule

@@ -65,6 +65,8 @@ module.exports = {
     "import/no-unassigned-import": ["off"],
     "import/prefer-default-export": ["off"],
 
+    "node/no-callback-literal": ["off"],
+
     "promise/no-native": ["off"],
 
     "@mysticatea/arrow-parens": "off",
