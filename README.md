@@ -322,6 +322,9 @@ happy with it thus far).
 `node/prefer-promises/dns` and `node/prefer-promises/fs` are good, but
 a bit early with Node 12.
 
+`node/no-callback-literal` duplicates `standard/no-callback-literal`
+(and is not recommended anyhow).
+
 `promise/no-native` is disabled as promises are essential--even, it
 appears, to Dark Lords.
 
