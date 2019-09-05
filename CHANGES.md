@@ -1,7 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 8.9.0
 
+- Enhancement [`index.js`]: Update node plugin with recommended update;
+  adds `node/no-exports-assign`
 - npm: Update devDeps/peerDeps
 
 ## 8.8.0
