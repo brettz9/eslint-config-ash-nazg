@@ -28,7 +28,6 @@ module.exports = {
     "no-floating-decimal": "error",
     "no-implied-eval": "error",
     "no-iterator": "error",
-    "no-label-var": "error",
     "no-labels": "error",
     "no-lone-blocks": "error",
     "no-mixed-operators": "error",

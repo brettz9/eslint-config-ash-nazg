@@ -6,6 +6,7 @@ module.exports = {
     // details on why we have decided not to include these.
     "array-element-newline": ["off"],
     "arrow-body-style": ["off"],
+    "function-call-argument-newline": ["off"],
     "func-names": ["off"],
     "func-style": ["off"],
     "id-blacklist": ["off"],
@@ -34,7 +35,6 @@ module.exports = {
     "no-undefined": ["off"],
     "no-underscore-dangle": ["off"],
     "no-useless-concat": ["off"],
-    "object-curly-newline": ["off"],
     "one-var-declaration-per-line": ["off"],
     "padding-line-between-statements": ["off"],
     "prefer-arrow-callback": ["off"],
@@ -65,6 +65,8 @@ module.exports = {
     "import/no-unassigned-import": ["off"],
     "import/prefer-default-export": ["off"],
 
+    "node/no-callback-literal": ["off"],
+
     "promise/no-native": ["off"],
 
     "@mysticatea/arrow-parens": "off",
@@ -83,6 +85,7 @@ module.exports = {
     //   need to add here
     "jsdoc/no-types": ["off"],
 
-    "unicorn/no-unused-properties": ["off"]
+    "unicorn/no-unused-properties": ["off"],
+    "unicorn/no-keyword-prefix": ["off"]
   }
 };

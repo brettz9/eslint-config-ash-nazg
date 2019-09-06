@@ -331,6 +331,9 @@ happy with it thus far).
 `node/prefer-promises/dns` and `node/prefer-promises/fs` are good, but
 a bit early with Node 12.
 
+`node/no-callback-literal` duplicates `standard/no-callback-literal`
+(and is not recommended anyhow).
+
 `promise/no-native` is disabled as promises are essential--even, it
 appears, to Dark Lords.
 
@@ -366,6 +369,7 @@ appears, to Dark Lords.
     making it harder to find references to `index`.
 - `no-unused-properties` - While no doubt useful, it won't catch all cases,
     sounds computationally expensive, and may better be done with TypeScript
+- `no-keyword-prefix` - See no need.
 
 ### Rationale for including some Unicorn rules which are disabled in `plugin:unicorn/recommended`
 
