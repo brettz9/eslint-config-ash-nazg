@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 9.0.1
+
+- Fix: Remove `unicorn/consistent-function-scoping` as prematurely added
+
 ## 9.0.0
 
 - Breaking change: Require >= node 8.10.0

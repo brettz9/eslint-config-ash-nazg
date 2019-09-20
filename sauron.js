@@ -64,7 +64,6 @@ module.exports = {
     "promise/valid-params": "warn",
     "promise/prefer-await-to-callbacks": "warn",
 
-    "unicorn/no-fn-reference-in-iterator": "warn",
-    "unicorn/consistent-function-scoping": "error"
+    "unicorn/no-fn-reference-in-iterator": "warn"
   }
 };

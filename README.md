@@ -366,6 +366,11 @@ appears, to Dark Lords.
     sounds computationally expensive, and may better be done with TypeScript
 - `no-keyword-prefix` - See no need.
 - `no-nested-ternary` - As with eslint's `no-nested-ternary`
+- `consistent-function-scoping` - Though this can be useful, and it
+  shouldn't be difficult to manually hoist functions upward, besides taking
+  some time to refactor, this often removes functions from a logical
+  grouping, and may even increase bugs, as one may be tempted to move out
+  a function whose dependency is no longer wrapped with it.
 
 ### Rationale for including some Unicorn rules which are disabled in `plugin:unicorn/recommended`
 
@@ -469,8 +474,6 @@ may not all be under one's control).
     may be used within repeating events
 - `unicorn/no-fn-reference-in-iterator` - May be cumbersome though does
     catch potential problems
-- `unicorn/consistent-function-scoping` - May take some time to refactor,
-  even if it shouldn't be difficult to manually hoist functions upward
 - `jsdoc/require-returns` (recommended) - Put in `ash-nazg/sauron` as
     it is more than just a consistent styling convention, and it is
     not impossible to follow, but a bit difficult. Added `forceRequireReturn`
