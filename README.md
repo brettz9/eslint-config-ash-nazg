@@ -180,6 +180,10 @@ the rule.
   `allowEmptyCatch`
 - `no-mixed-requires` - Grouping is more organized, while calls are
     compellingly convenient
+- `no-warning-comments` - As per `great-eye` discussion of this rule,
+  to-dos can be useful, but we nevertheless include the rule with `terms`
+  set to `fixme` and `xxx` so we reject these other forms of `todo`. To
+  also reject `todo`, see `great-eye`.
 - `no-restricted-globals` - Use example defaults for `event` (and
     `fdescribe`) as convenient
 - `no-restricted-properties` - Use example default of restricting
@@ -361,6 +365,7 @@ appears, to Dark Lords.
 - `no-unused-properties` - While no doubt useful, it won't catch all cases,
     sounds computationally expensive, and may better be done with TypeScript
 - `no-keyword-prefix` - See no need.
+- `no-nested-ternary` - As with eslint's `no-nested-ternary`
 
 ### Rationale for including some Unicorn rules which are disabled in `plugin:unicorn/recommended`
 
@@ -378,7 +383,7 @@ appears, to Dark Lords.
 `eslint-comments/disable-enable-pair` - If at top, behavior is clear, and
     no need to reenable within doc
 
-### Rationale for not including some `plugin:@mysticatea/es2019` rules
+### Rationale for not including some `plugin:@mysticatea/es2020` rules
 
 - `@mysticatea/arrow-parens` - Covered by other rules
 - `@mysticatea/no-instanceof-array` - Covered by our blocking of all
@@ -464,6 +469,8 @@ may not all be under one's control).
     may be used within repeating events
 - `unicorn/no-fn-reference-in-iterator` - May be cumbersome though does
     catch potential problems
+- `unicorn/consistent-function-scoping` - May take some time to refactor,
+  even if it shouldn't be difficult to manually hoist functions upward
 - `jsdoc/require-returns` (recommended) - Put in `ash-nazg/sauron` as
     it is more than just a consistent styling convention, and it is
     not impossible to follow, but a bit difficult. Added `forceRequireReturn`
@@ -492,7 +499,8 @@ for projects to specify all child types.
     and sometimes very cumbersome.
 - *`no-plusplus`* - Would be nice if there were an option to allow if not
     combined inline with other expressions
-- `no-warning-comments` - Good to catch to-dos, but better to search or
+- `no-warning-comments` (with default value on `terms` option blocking
+  "todo") - Good to catch to-dos, but better to search or
   parse code as a separate process rather than polluting one's ESLint
   warnings--some to-dos are ok to be left for the long term
 - `import/no-unused-modules` - Useful (for `missingExports` at least),

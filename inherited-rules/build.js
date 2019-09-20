@@ -62,10 +62,10 @@ const left = {
         /*
         // Todo: This has no effect due to need to process `extends` as below;
         //   we're not using now anyways as we've disabled auto-inheriting from
-        //   `es2019`
+        //   `es2020`
         ...cc.getLiteralConfigSync(
           join('./node_modules/', '@mysticatea/eslint-plugin')
-        ).configs.es2019.rules,
+        ).configs.es2020.rules,
         */
         ...cc.getLiteralConfigSync(
           join('./node_modules/', 'eslint-config-standard')
@@ -107,6 +107,11 @@ function getExtensions (config) {
     // Todo: This should support external extensions, but have no need now
     // No cyclic detection
     extension = extension.replace(/plugin:.*\//, '');
+    if (!right.configs[extension]) {
+      // Todo: We are missing some as a result of this; evident in
+      //  @mysticatea/eslint-plugin which imports
+      return obj;
+    }
     return {
       ...obj,
       ...getExtensions(right.configs[extension]),
@@ -167,15 +172,15 @@ Object.entries(rightConfig.rules).forEach(([key, val]) => {
 });
 if (!isInherited && !preferredConfig && rightModule === '@mysticatea/eslint-plugin') {
   /*
-  We removed `2019` from the end of the `@mysticatea/eslint-plugin` unused
+  We removed `2020` from the end of the `@mysticatea/eslint-plugin` unused
   `package.json` script as we had to manually add the rules we wanted (see
   the comment at the top of this project's root `index.js`) since none of its
-  configs (including the `2019` config which might otherwise be ideal) expose
+  configs (including the `2020` config which might otherwise be ideal) expose
   all rules (and only those rules) which are unique to the plugin.
   We do the following show which items are unused.
   To show which items if we were extending it, one can run `unused:@mysticatea-old`,
   but we are not adding this to the regular `unused` script as we don't want
-  to show its items as unused (as we are not extending es2019).
+  to show its items as unused (as we are not extending es2020).
   */
   Object.keys(rightConfig.rules).forEach((rule) => {
     // We are not interested in including rules it adds from other configs,

@@ -1,5 +1,23 @@
 # eslint-config-ash-nazg CHANGES
 
+## 9.0.0
+
+- Breaking change: Require >= node 8.10.0
+- Enhancement [`index.js`] (tighten): Add new rules: `default-param-last`,
+  `no-import-assign`, `prefer-regex-literals`
+- Enhancement [`index.js`] (tighten): Inherit new rules from unicorn:
+  `prefer-dataset`, `prefer-reflect-apply`
+- Enhancement [`index.js`]: `unicorn/expiring-todo-comments` but allowing
+  for no conditions
+- Enhancement [`index.js`]: Add `no-warning-comments` with terms set to `fixme`
+  and `xxx` so as to block these (in favor of `todo`)
+- Enhancement [`great-eye`]: `unicorn/expiring-todo-comments` and insisting
+  on conditions
+- Enhancement [`sauron`]: `unicorn/consistent-function-scoping`
+- Testing: Compare to es2020
+- npm: Bump `@mysticatea/eslint-plugin`, `eslint-plugin-jsdoc`,
+  `eslint-plugin-unicorn`, `typescript`, `eslint` devDeps/peerDeps
+
 ## 8.9.0
 
 - Enhancement [`index.js`]: Update node plugin with recommended update;

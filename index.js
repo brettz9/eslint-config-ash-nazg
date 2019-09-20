@@ -8,7 +8,7 @@ module.exports = {
     //   we don't want; filed the following to get an "all" config instead
     //   showing only rules specific to the plugin:
     //     https://github.com/mysticatea/eslint-plugin/issues/21
-    // "plugin:@mysticatea/es2019",
+    // "plugin:@mysticatea/es2020",
 
     "eslint:recommended",
     // These may override "standard" which includes their rules,
@@ -59,6 +59,7 @@ module.exports = {
     "callback-return": ["error"],
     "computed-property-spacing": ["error"],
     "consistent-return": ["error"],
+    "default-param-last": ["error"],
     "dot-notation": ["error"],
     "func-name-matching": ["error"],
     "function-paren-newline": ["error", "consistent"],
@@ -81,6 +82,7 @@ module.exports = {
     "no-extra-label": ["error"],
     "no-implicit-coercion": ["error"],
     "no-implicit-globals": ["error"],
+    "no-import-assign": ["error"],
     "no-lonely-if": ["error"],
     "no-loop-func": ["error"],
     "no-mixed-requires": ["error", {"grouping": true, "allowCall": true}],
@@ -100,12 +102,14 @@ module.exports = {
     "no-sync": ["error"],
     "no-var": ["error"],
     "no-void": ["error"],
+    "no-warning-comments": ["error", {terms: ["fixme", "xxx"]}],
     "nonblock-statement-body-position": ["error"],
     "object-shorthand": ["error", "always", {"avoidExplicitReturnArrows": true}],
     "operator-assignment": ["error"],
     "prefer-const": ["error"],
     "prefer-destructuring": ["error", {"object": true}],
     "prefer-object-spread": ["error"],
+    "prefer-regex-literals": ["error"],
     "prefer-rest-params": ["error"],
     "prefer-spread": ["error"],
     "quote-props": ["error", "as-needed"],
@@ -188,8 +192,10 @@ module.exports = {
 
     // Unicorn disable
     "unicorn/catch-error-name": "off",
+    "unicorn/consistent-function-scoping": "off",
     "unicorn/explicit-length-check": "off",
     "unicorn/filename-case": "off",
+    "unicorn/no-nested-ternary": "off",
     "unicorn/no-unreadable-array-destructuring": "off",
     "unicorn/throw-new-error": "off",
     "unicorn/import-index": "off",
@@ -199,14 +205,16 @@ module.exports = {
     "unicorn/custom-error-definition": "error",
     "unicorn/no-unsafe-regex": "error",
 
+    "unicorn/expiring-todo-comments": ["error", {"allowWarningComments": true, "terms": ["todo"]}],
+
     // `@mysticatea`
     "@mysticatea/block-scoped-var": "error",
 
     // Adding here for comparison purposes only (already added by
-    //   eslint:recommended and would be added by `es2019` config)
+    //   eslint:recommended and would be added by `es2020` config)
     "no-label-var": "error",
 
-    // These should be inherited by `es2019` config, but we don't want to
+    // These should be inherited by `es2020` config, but we don't want to
     //   extend as it has other items we don't want (see comment at top)
     "@mysticatea/no-literal-call": "error",
     "@mysticatea/no-this-in-static": "error",
