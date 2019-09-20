@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "unused:@mysticatea": "node -r esm inherited-rules/build unused @mysticatea/eslint-plugin",
-    "unused:@mysticatea-old": "node -r esm inherited-rules/build unused @mysticatea/eslint-plugin es2019",
+    "unused:@mysticatea-old": "node -r esm inherited-rules/build unused @mysticatea/eslint-plugin es2020",
     "unused:array-func": "node -r esm inherited-rules/build unused eslint-plugin-array-func all",
     "unused:compat": "node -r esm inherited-rules/build unused eslint-plugin-compat recommended",
     "unused:eslint-comments": "node -r esm inherited-rules/build unused eslint-plugin-eslint-comments recommended",
@@ -35,7 +35,7 @@
     "inherited:unicorn": "node -r esm inherited-rules/build inherited eslint-plugin-unicorn recommended",
     "inherited:eslint-recommended": "node -r esm inherited-rules/build inherited eslint/conf/eslint-recommended",
     "inherited:eslint": "node -r esm inherited-rules/build inherited eslint/conf/eslint-all",
-    "inherited:@mysticatea": "node -r esm inherited-rules/build inherited @mysticatea/eslint-plugin es2019",
+    "inherited:@mysticatea": "node -r esm inherited-rules/build inherited @mysticatea/eslint-plugin es2020",
     "inherited": "rm inherited-rules/implicitly-included/*.js && npm run inherited:array-func && npm run inherited:compat && npm run inherited:eslint-comments && npm run inherited:html && npm run inherited:import && npm run inherited:jsdoc && npm run inherited:markdown && npm run inherited:no-use-extend-native && npm run inherited:node && npm run inherited:promise && npm run inherited:sonarjs && npm run inherited:standard && npm run inherited:unicorn && npm run inherited:eslint-recommended && npm run inherited:eslint && npm run inherited:@mysticatea",
     "compare": "npm run inherited && npm run unused",
     "eslint": "eslint --report-unused-disable-directives --ext js,md .",
@@ -59,47 +59,47 @@
   },
   "homepage": "https://github.com/passport-next/eslint-config-passport-next#readme",
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">= 8.10.0"
   },
   "dependencies": {},
   "peerDependencies": {
-    "@mysticatea/eslint-plugin": "^11.0.0",
-    "eslint": "^6.3.0",
+    "@mysticatea/eslint-plugin": "^12.0.0",
+    "eslint": "^6.4.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-array-func": "^3.1.3",
     "eslint-plugin-compat": "^3.3.0",
     "eslint-plugin-eslint-comments": "^3.1.2",
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jsdoc": "^15.9.1",
+    "eslint-plugin-jsdoc": "^15.9.2",
     "eslint-plugin-markdown": "^1.0.0",
     "eslint-plugin-no-use-extend-native": "^0.4.1",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-sonarjs": "^0.4.0",
     "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-unicorn": "^10.0.0",
-    "typescript": "^3.6.2"
+    "eslint-plugin-unicorn": "^11.0.1",
+    "typescript": "^3.6.3"
   },
   "devDependencies": {
-    "@mysticatea/eslint-plugin": "^11.0.0",
+    "@mysticatea/eslint-plugin": "^12.0.0",
     "@scottnonnenberg/eslint-compare-config": "^1.0.1",
-    "eslint": "^6.3.0",
+    "eslint": "^6.4.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-array-func": "^3.1.3",
     "eslint-plugin-compat": "^3.3.0",
     "eslint-plugin-eslint-comments": "^3.1.2",
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jsdoc": "^15.9.1",
+    "eslint-plugin-jsdoc": "^15.9.2",
     "eslint-plugin-markdown": "^1.0.0",
     "eslint-plugin-no-use-extend-native": "^0.4.1",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-sonarjs": "^0.4.0",
     "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-unicorn": "^10.0.0",
+    "eslint-plugin-unicorn": "^11.0.1",
     "esm": "^3.2.25",
-    "typescript": "^3.6.2"
+    "typescript": "^3.6.3"
   }
 }
