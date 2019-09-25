@@ -200,6 +200,7 @@ module.exports = {
     "unicorn/throw-new-error": "off",
     "unicorn/import-index": "off",
     "unicorn/prevent-abbreviations": "off",
+    "unicorn/prefer-string-slice": "off",
 
     // UNICORN
     "unicorn/custom-error-definition": "error",
