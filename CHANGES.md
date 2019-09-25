@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 10.0.0
+
+- Enhancement [`sauron`] (tighten) Add Unicorn `prefer-string-slice` rule
+
 ## 9.0.1
 
 - Fix: Remove `unicorn/consistent-function-scoping` as prematurely added
