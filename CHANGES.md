@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- npm: update peerDeps/devDeps
+
 ## 10.0.0
 
 - Enhancement [`sauron`] (tighten) Add Unicorn `prefer-string-slice` rule
