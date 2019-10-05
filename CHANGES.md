@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 11.0.1
+
+- Fix [`index.js`]: Ensure is enforcing "single" for `quotes`
+
 ## 11.0.0
 
 - Enhancement [`index.js`] (loosen): Change `quotes` from `standard` approach

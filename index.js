@@ -113,7 +113,7 @@ module.exports = {
     "prefer-rest-params": ["error"],
     "prefer-spread": ["error"],
     "quote-props": ["error", "as-needed"],
-    "quotes": ["error", {
+    "quotes": ["error", "single", {
       avoidEscape: true,
       allowTemplateLiterals: true
     }],
