@@ -165,6 +165,9 @@ the exceptions of:
     above any used scopes (for `let` and `const`).
 5. `object-curly-spacing` - Not sure why `standard` switched from the default
     here.
+6. `quotes` - `avoidEscape` is too reasonable to avoid ugliness;
+    `allowTemplateLiterals` is useful to begin a pattern that may expend to
+    allow other quotes or dynamic variables.
 
 ## Rationale for changing required rules' configuration away from ESLint defaults
 

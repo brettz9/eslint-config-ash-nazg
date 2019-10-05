@@ -111,7 +111,6 @@ module.exports = {
     "operator-linebreak": "error",
     "padded-blocks": "error",
     "prefer-promise-reject-errors": "error",
-    "quotes": "error",
     "rest-spread-spacing": "error",
     "semi-spacing": "error",
     "space-before-blocks": "error",

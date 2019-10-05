@@ -113,6 +113,10 @@ module.exports = {
     "prefer-rest-params": ["error"],
     "prefer-spread": ["error"],
     "quote-props": ["error", "as-needed"],
+    "quotes": ["error", {
+      avoidEscape: true,
+      allowTemplateLiterals: true
+    }],
     "radix": ["error", "as-needed"],
     "require-await": ["error"],
     "semi-style": ["error"],

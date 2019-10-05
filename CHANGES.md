@@ -1,7 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 11.0.0
 
+- Enhancement [`index.js`] (loosen): Change `quotes` from `standard` approach
+  to add settings `avoidEscape: true` and `allowTemplateLiterals: true`.
 - npm: update peerDeps/devDeps
 
 ## 10.0.0
