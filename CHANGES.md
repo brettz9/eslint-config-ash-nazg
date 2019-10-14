@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- npm: Update peerDeps/devDeps
+
 ## 11.0.1
 
 - Fix [`index.js`]: Ensure is enforcing "single" for `quotes`
