@@ -2,6 +2,8 @@
 
 ## ?
 
+- Refactoring [`node`]: Remove redundant `plugins: ['node']` (recommended
+   config already includes)
 - npm: Update peerDeps/devDeps
 
 ## 11.0.1

@@ -1,6 +1,5 @@
 module.exports = {
   extends: ["./", "plugin:node/recommended-module"],
-  plugins: ["node"],
   rules: {
     "node/file-extension-in-import": ["error"],
     "node/exports-style": ["error", "module.exports"],
