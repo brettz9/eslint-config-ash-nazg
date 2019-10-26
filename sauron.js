@@ -16,7 +16,7 @@ module.exports = {
           replacement: "GenericCallback"
         },
         Promise: {
-          message: "Specify the specific Promise type, including, if necessary, the type `Any`",
+          message: "Specify the specific Promise type, including, if necessary, the type `Any`"
         },
         ".<>": {
           message: "Prefer type form without dot",
