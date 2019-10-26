@@ -36,7 +36,9 @@ not disparaging the utility of non-included rules.
 The `ash-nazg/node` config expands upon the regular `ash-nazg` rules to
 add rules specific to Node environments. Specifically,
 `plugin:node/recommended-module` has been adopted for now along with
-some stylistic choices.
+some stylistic choices. However, if you are using more CJS exports,
+you can override this by adding `plugin:node/recommended-script` to your
+`extends` array (after `ash-nazg`).
 
 The `ash-nazg/sauron` config expands upon the regular `ash-nazg` rules to
 indicate what are generally best practices but are less likely to be due to
