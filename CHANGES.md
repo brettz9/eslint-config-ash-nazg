@@ -1,6 +1,6 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 11.1.0
 
 - Refactoring [`node`]: Remove redundant `plugins: ['node']` (recommended
    config already includes)
