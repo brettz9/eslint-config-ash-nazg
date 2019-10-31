@@ -4,6 +4,8 @@
 
 - Refactoring [`node`]: Remove redundant `plugins: ['node']` (recommended
    config already includes)
+- Linting: Dog food our own linting rules
+- Docs: Mention use of `plugin:node/recommended-script`
 - npm: Update peerDeps/devDeps
 
 ## 11.0.1
