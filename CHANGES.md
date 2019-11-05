@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 11.2.0
+
+- Enhancement [`sauron`] (tighten): Ensure checking `Object`
+- npm: Update peerDeps/devDeps
+
 ## 11.1.0
 
 - Refactoring [`node`]: Remove redundant `plugins: ['node']` (recommended

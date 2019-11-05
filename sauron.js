@@ -22,6 +22,10 @@ module.exports = {
           message: "Prefer type form without dot",
           replacement: "<>"
         },
+        Object: {
+          message: "Use the specific object type or `PlainObject` if truly arbitrary",
+          replacement: "PlainObject"
+        },
         object: {
           message: "Use the specific object type or `PlainObject` if truly arbitrary",
           replacement: "PlainObject"
