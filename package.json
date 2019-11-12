@@ -61,7 +61,7 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "@mysticatea/eslint-plugin": "^12.0.0",
+    "@mysticatea/eslint-plugin": "^13.0.0",
     "eslint": "^6.6.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-array-func": "^3.1.3",
@@ -80,7 +80,7 @@
     "typescript": "^3.7.2"
   },
   "devDependencies": {
-    "@mysticatea/eslint-plugin": "^12.0.0",
+    "@mysticatea/eslint-plugin": "^13.0.0",
     "@scottnonnenberg/eslint-compare-config": "^1.0.1",
     "eslint": "^6.6.0",
     "eslint-config-standard": "^14.1.0",
