@@ -1,5 +1,8 @@
 module.exports = {
   rules: {
+    "jsdoc/check-access": "warn",
+    "jsdoc/check-values": "warn",
+    "jsdoc/empty-tags": "warn",
     "jsdoc/implements-on-classes": "warn",
     "jsdoc/require-param": "warn",
     "jsdoc/require-param-name": "warn",

@@ -1,8 +1,15 @@
 # eslint-config-ash-nazg CHANGES
 
+## 11.4.0
+
+- Enhancement [`index.js`] (tighten): By update, gain new
+    `eslint-plugin-jsdoc` rules
+- Maintenance: Add `.editorconfig`
+- npm: Update peerDeps/devDeps
+
 ## 11.3.0
 
-- Enhancement [`index.js`]: By update, gain new `sonarjs` rules:
+- Enhancement [`index.js`] (tighten): By update, gain new `sonarjs` rules:
   `no-collection-size-mischeck` `no-redundant-jump`,
   `no-same-line-conditional`, `no-unused-collection`
 - npm: Update peerDeps/devDeps
