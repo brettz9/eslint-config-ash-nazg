@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 11.5.0
+
+- npm: Update peerDeps/devDeps
+
 ## 11.4.0
 
 - Enhancement [`index.js`] (tighten): By update, gain new
@@ -229,7 +233,7 @@
 - Tighten (`great-eye`): Add `preferredTypes`
 - Tighten (`sauron`): Add `forceRequireReturn` and `preferredTypes`
 - Tighten: Add `require-returns-check`
-- Loosen: `allowOverrideWithoutParam`, `allowImplementsWithoutParam`,  
+- Loosen: `allowOverrideWithoutParam`, `allowImplementsWithoutParam`,
   `allowAugmentsExtendsWithoutParam` all `true` by default
 - Tighten: Set `rejectExampleCodeRegex` to ``^``` to allow avoiding example <!-- `-->
 - Change: Set `matchingFileName` to `dummy.md` so that it will match any
