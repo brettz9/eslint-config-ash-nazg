@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- npm: Update devDeps/peerDeps
+
 ## 11.5.0
 
 - npm: Update peerDeps/devDeps
