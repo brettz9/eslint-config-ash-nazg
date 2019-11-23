@@ -361,21 +361,22 @@ appears, to Dark Lords.
 
 - `catch-error-name` - It can actually be useful to use different
     error names to indicate what time of error may be expected.
-- `explicit-length-check` - Seems wasteful.
-- *`filename-case`* - Looks potentially useful with `camelCase`.
-- `throw-new-error` - Potentially confining.
-- `no-unreadable-array-destructuring` - Better to use this than multiple lines
-- `import-index` - While understandable, seems may cause more trouble in
-    making it harder to find references to `index`.
-- `no-unused-properties` - While no doubt useful, it won't catch all cases,
-    sounds computationally expensive, and may better be done with TypeScript
-- `no-keyword-prefix` - See no need.
-- `no-nested-ternary` - As with eslint's `no-nested-ternary`
 - `consistent-function-scoping` - Though this can be useful, and it
   shouldn't be difficult to manually hoist functions upward, besides taking
   some time to refactor, this often removes functions from a logical
   grouping, and may even increase bugs, as one may be tempted to move out
   a function whose dependency is no longer wrapped with it.
+- `explicit-length-check` - Seems wasteful.
+- *`filename-case`* - Looks potentially useful with `camelCase`.
+- `import-index` - While understandable, seems may cause more trouble in
+    making it harder to find references to `index`.
+- `no-keyword-prefix` - See no need.
+- `no-nested-ternary` - As with eslint's `no-nested-ternary`
+- `no-unreadable-array-destructuring` - Better to use this than multiple lines
+- `no-unused-properties` - While no doubt useful, it won't catch all cases,
+    sounds computationally expensive, and may better be done with TypeScript
+- `prefer-exponentiation` - Now present in eslint core
+- `throw-new-error` - Potentially confining.
 
 ### Rationale for including some Unicorn rules which are disabled in `plugin:unicorn/recommended`
 

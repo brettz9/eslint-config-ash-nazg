@@ -64,6 +64,7 @@ module.exports = {
     "func-name-matching": ["error"],
     "function-paren-newline": ["error", "consistent"],
     "global-require": ["error"],
+    "grouped-accessor-pairs": ["error"],
     "guard-for-in": ["error"],
     "implicit-arrow-linebreak": ["error"],
     "jsx-quotes": ["error"],
@@ -74,6 +75,8 @@ module.exports = {
     "no-bitwise": ["error"],
     "no-buffer-constructor": ["error"],
     "no-confusing-arrow": ["error"],
+    "no-constructor-return": ["error"],
+    "no-dupe-else-if": ["error"],
     "no-div-regex": ["error"],
     "no-duplicate-imports": ["error"],
     "no-else-return": ["error"],
@@ -99,6 +102,7 @@ module.exports = {
       "message": "Please use `Object.defineProperty` instead."
     }],
     "no-script-url": ["error"],
+    "no-setter-return": ["error"],
     "no-sync": ["error"],
     "no-var": ["error"],
     "no-void": ["error"],
@@ -108,6 +112,7 @@ module.exports = {
     "operator-assignment": ["error"],
     "prefer-const": ["error"],
     "prefer-destructuring": ["error", {"object": true}],
+    "prefer-exponentiation-operator": ["error"],
     "prefer-object-spread": ["error"],
     "prefer-regex-literals": ["error"],
     "prefer-rest-params": ["error"],
@@ -205,6 +210,7 @@ module.exports = {
     "unicorn/import-index": "off",
     "unicorn/prevent-abbreviations": "off",
     "unicorn/prefer-string-slice": "off",
+    "unicorn/prefer-exponentiation": "off",
 
     // UNICORN
     "unicorn/custom-error-definition": "error",

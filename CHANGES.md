@@ -1,7 +1,12 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 12.0.0
 
+- Enhancement [`index.js`] (tighten): Add new eslint rules
+  (`grouped-accessor-pairs`, `no-constructor-return`, `no-dupe-else-if`,
+  `no-setter-return`, `prefer-exponentiation-operator`)
+- Change: Disabled `unicorn/prefer-exponentiation-operator` in favor of
+  now built-in `prefer-exponentiation-operator`
 - npm: Update devDeps/peerDeps
 
 ## 11.5.0
