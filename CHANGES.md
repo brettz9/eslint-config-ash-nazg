@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- npm: Update devDeps/peerDeps
+
 ## 12.0.0
 
 - Enhancement [`index.js`] (tighten): Add new eslint rules
