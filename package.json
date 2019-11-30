@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ash-nazg",
-  "version": "12.0.0",
+  "version": "13.0.0",
   "description": "An expansion and tweaking of the \"standard\" config style for ESLint",
   "main": "index.js",
   "scripts": {
@@ -76,7 +76,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-sonarjs": "^0.5.0",
     "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-unicorn": "^13.0.0",
+    "eslint-plugin-unicorn": "^14.0.0",
     "typescript": "^3.7.2"
   },
   "devDependencies": {
@@ -96,7 +96,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-sonarjs": "^0.5.0",
     "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-unicorn": "^13.0.0",
+    "eslint-plugin-unicorn": "^14.0.0",
     "esm": "^3.2.25",
     "typescript": "^3.7.2"
   }

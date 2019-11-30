@@ -1,7 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 13.0.0
 
+- Enhancement [`index.js`] (tighten): Add new unicorn rules
+  (`prefer-negative-index`, `prefer-trim-start-end`)
 - npm: Update devDeps/peerDeps
 
 ## 12.0.0
