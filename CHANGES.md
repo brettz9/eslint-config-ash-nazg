@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- npm: Update devDeps/peerDeps
+
 ## 13.0.0
 
 - Enhancement [`index.js`] (tighten): Add new unicorn rules
