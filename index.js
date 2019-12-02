@@ -211,6 +211,7 @@ module.exports = {
     "unicorn/prevent-abbreviations": "off",
     "unicorn/prefer-string-slice": "off",
     "unicorn/prefer-exponentiation": "off",
+    "unicorn/regex-shorthand": "off",
 
     // UNICORN
     "unicorn/custom-error-definition": "error",

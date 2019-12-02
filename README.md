@@ -376,6 +376,9 @@ appears, to Dark Lords.
 - `no-unused-properties` - While no doubt useful, it won't catch all cases,
     sounds computationally expensive, and may better be done with TypeScript
 - `prefer-exponentiation` - Now present in eslint core
+- `regex-shorthand` - With current behavior of sorting character class content,
+  is too oppressive; see [Unicorn issue #453](https://github.com/sindresorhus/eslint-plugin-unicorn/issues/453)
+  and [regexp-tree issue #199](https://github.com/DmitrySoshnikov/regexp-tree/issues/199).
 - `throw-new-error` - Potentially confining.
 
 ### Rationale for including some Unicorn rules which are disabled in `plugin:unicorn/recommended`

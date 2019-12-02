@@ -1,7 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 13.1.0
 
+- Enhancement [`index.js`] (loosen): Disable `regex-shorthand` until such
+  time as it may provide option not to sort character classes
 - npm: Update devDeps/peerDeps
 
 ## 13.0.0

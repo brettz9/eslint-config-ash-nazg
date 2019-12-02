@@ -27,7 +27,6 @@ module.exports = {
     "unicorn/prefer-starts-ends-with": "error",
     "unicorn/prefer-text-content": "error",
     "unicorn/prefer-trim-start-end": "error",
-    "unicorn/prefer-type-error": "error",
-    "unicorn/regex-shorthand": "error"
+    "unicorn/prefer-type-error": "error"
   }
 };
