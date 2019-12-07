@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- npm: Update devDeps/peerDeps
+
 ## 13.1.0
 
 - Enhancement [`index.js`] (loosen): Disable `regex-shorthand` until such
