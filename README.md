@@ -329,6 +329,9 @@ happy with it thus far).
 
 #### Rationale for disabled Node and Promise rules
 
+`no-process-exit` (added by Node recommended) - has a version in Unicorn
+which allows in CLI apps.
+
 `node/prefer-promises/dns` and `node/prefer-promises/fs` are good, but
 a bit early with Node 12.
 

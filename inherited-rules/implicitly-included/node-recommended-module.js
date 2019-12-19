@@ -1,6 +1,5 @@
 module.exports = {
   rules: {
-    "no-process-exit": "error",
     "node/no-deprecated-api": "error",
     "node/no-extraneous-import": "error",
     "node/no-extraneous-require": "error",

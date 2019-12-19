@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 14.0.2
+
+- Fix (loosen): Disable `no-process-exit` since `unicorn/no-process-exit`
+  allows in CLI apps
+
 ## 14.0.1
 
 - Fix: Ensure `eslint-plugin-no-unsanitized` is added as a peerdep.
