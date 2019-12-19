@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 14.0.1
+
+- Fix: Ensure `eslint-plugin-no-unsanitized` is added as a peerdep.
+
 ## 14.0.0
 
 - Enhancement [`sauron.js`] (tighten): Add new `eslint-plugin-no-unsanitized`
