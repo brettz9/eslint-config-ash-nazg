@@ -23,6 +23,7 @@ rules we inherit (though see below for our handful of modifications).
     for a number of added rules (though with a few items disabled and enabled
     as per below), including all of `@mysticatea/eslint-comments/recommended`.
 - [eslint-plugin-no-use-extend-native](https://github.com/dustinspecker/eslint-plugin-no-use-extend-native) for one added rule.
+- [eslint-plugin-no-unsanitized](https://github.com/mozilla/eslint-plugin-no-unsanitized) for two added rules.
 - [Recommended Unicorn rules](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/index.js#L20-L53) (a few items disabled and enabled as per below)
 - [eslint-plugin-array-func](https://github.com/freaktechnik/eslint-plugin-array-func#array-funcall-configuration) for further rules
 

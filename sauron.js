@@ -1,5 +1,7 @@
 module.exports = {
-  extends: ["./"],
+  extends: ["./", "plugin:no-unsanitized/DOM"],
+  // Todo: Should not need: https://github.com/mozilla/eslint-plugin-no-unsanitized/pull/112
+  plugins: ["no-unsanitized"],
   settings: {
     jsdoc: {
       preferredTypes: {

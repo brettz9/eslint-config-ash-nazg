@@ -1,7 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 14.0.0
 
+- Enhancement [`sauron.js`] (tighten): Add new `eslint-plugin-no-unsanitized`
+  rules
 - npm: Update devDeps/peerDeps
 
 ## 13.1.0
