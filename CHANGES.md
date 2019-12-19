@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 14.0.3
+
+- Fix: Disable `no-process-exit` in Node config
+
 ## 14.0.2
 
 - Fix (loosen): Disable `no-process-exit` since `unicorn/no-process-exit`

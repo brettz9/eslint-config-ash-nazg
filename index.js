@@ -140,10 +140,6 @@ module.exports = {
     "one-var": ["off"],
     "lines-between-class-members": "off",
 
-    // Disable Node-added
-    // (Use Unicorn extension instead which allows in CLI apps)
-    "no-process-exit": "off",
-
     // PROMISE
     "promise/no-new-statics": "error",
     "promise/prefer-await-to-then": "error",
