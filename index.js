@@ -204,14 +204,14 @@ module.exports = {
     "unicorn/consistent-function-scoping": "off",
     "unicorn/explicit-length-check": "off",
     "unicorn/filename-case": "off",
+    "unicorn/import-index": "off",
     "unicorn/no-nested-ternary": "off",
     "unicorn/no-unreadable-array-destructuring": "off",
-    "unicorn/throw-new-error": "off",
-    "unicorn/import-index": "off",
     "unicorn/prevent-abbreviations": "off",
-    "unicorn/prefer-string-slice": "off",
     "unicorn/prefer-exponentiation": "off",
+    "unicorn/prefer-string-slice": "off",
     "unicorn/regex-shorthand": "off",
+    "unicorn/throw-new-error": "off",
 
     // UNICORN
     "unicorn/custom-error-definition": "error",
@@ -236,8 +236,10 @@ module.exports = {
     "@mysticatea/no-use-ignored-vars": "off",
     "@mysticatea/prettier": "off",
     "@mysticatea/prefer-for-of": "off",
+    "@mysticatea/no-instanceof-array": "off",
+    "@mysticatea/no-instanceof-wrapper": "off",
 
-    // Disable mysticatea items we don't want
+    // Disable other mysticatea items we don't want
     "func-style": "off",
     "init-declarations": "off",
     "multiline-comment-style": "off",
@@ -249,8 +251,6 @@ module.exports = {
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off",
     "prefer-template": "off",
-    "@mysticatea/no-instanceof-array": "off",
-    "@mysticatea/no-instanceof-wrapper": "off",
 
     // We're directly using `eslint-comments` and without this, these will
     //  mistakenly show up in our @mysticatea/eslint-plugin inherited list

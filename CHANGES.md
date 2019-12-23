@@ -1,5 +1,17 @@
 # eslint-config-ash-nazg CHANGES
 
+## 15.0.0
+
+- Enhancement [`index.js`] (tighten): Now includes
+  `unicorn/prefer-modern-dom-apis` by inheritance
+- Enhancement [`index.js`] (loosen): Now excludes
+  `require-atomic-updates` which was problematic
+- Docs: Clarify some missing or misplaced descriptions for rationales on
+  disabled rules
+- Enhancement [`explicitly-unused.js`]: Add `lines-between-class-members`
+  and `require-atomic-updates`
+- npm: Update peerDeps/devDeps
+
 ## 14.0.3
 
 - Fix: Disable `no-process-exit` in Node config

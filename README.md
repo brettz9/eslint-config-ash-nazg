@@ -171,6 +171,10 @@ the exceptions of:
 6. `quotes` - `avoidEscape` is too reasonable to avoid ugliness;
     `allowTemplateLiterals` is useful to begin a pattern that may expend to
     allow other quotes or dynamic variables.
+7. `object-curly-newline` - Doesn't allow `let f = {foo () {
+    dosomething();
+}};`
+8. `lines-between-class-members` - Don't feel any need for it
 
 ## Rationale for changing required rules' configuration away from ESLint defaults
 
@@ -178,6 +182,9 @@ While these are not part of `standard` or `eslint-recommended`, I've noted
 here why we have deviated from the defaults set by ESLint for those applying
 the rule.
 
+- `array-bracket-newline` - Switched to "consistent" over "always" as
+    sometimes nice to be a little condensed, especially when representing
+    HTML as JSON within Jamilih (or JsonML) templates.
 - `function-paren-newline` - The default multiline can get too long whereas
     "consistent" can be clean and short.
 - `multiline-ternary` - Inline ternary can be very readable when not
@@ -214,6 +221,8 @@ the rule.
     non-iterable ‘array-like’ objects.
 - `quote-props` - Changed to "as-needed" as properties more verbose and
     uglier with quoting
+- `radix` - We're only dealing with ES5+ environments, so the radix is
+    redundant for base 10.
 - `import/order` - Enforcing "builtin", "external", "internal" and then
   ["parent", "sibling", "index"] in any order as these may be
   project-specific.
@@ -229,17 +238,12 @@ some `standard` rules further which I have not had time to examine (but
 it would probably be toward the stricter rather than looser as I have been
 happy with it thus far).
 
-- *`array-bracket-newline`* - Switched to "consistent" over "always" as
-    sometimes nice to be a little condensed, especially when representing
-    HTML as JSON within Jamilih (or JsonML) templates.
 - *`array-element-newline`* - While the "consistent" option would be nice,
     it doesn't work well to keep up with a max width and the desire to avoid
     excessive height `[\n a, b, \n c, d\n]`
 - `arrow-body-style` - With `as-needed` and `requireReturnForObjectLiteral`,
     this seems reasonable, but too often in debugging, one needs to add
     brackets to do any logging.
-- `radix` - We're only dealing with ES5+ environments, so the radix is
-    redundant for base 10.
 - *`func-names`* - Too prohibitive, though if applied to methods only, it may
     be useful (though with object shorthand, less necessary)
 - `func-style` - Declarations are simpler so appealing also. If enabling,
@@ -251,7 +255,6 @@ happy with it thus far).
     cumbersome and seemingly wasteful at times
 - `line-comment-position` - Too inflexible to enforce either way
 - `lines-around-comment` - Irksome to me
-- `lines-between-class-members` - Don't feel any need for it
 - `max-classes-per-file` - A bit tyrannical
 - `max-depth` - Sounds good but tyrannical
 - `max-lines-per-function` - A bit tyrannical
@@ -260,10 +263,11 @@ happy with it thus far).
 - `multiline-comment-style` - Would be nice if allowed multiline
   "starred-block" OR "bare-block" given some one may wish as JSDoc-style
   and others not
-- `newline-after-var` - Not very flexible
-- `newline-before-return` - Not very flexible
+- `newline-after-var` - Not very flexible (deprecated)
+- `newline-before-return` - Not very flexible (deprecated)
 - `newline-per-chained-call` - Not flexible in practice
 - `no-continue` - Can be convenient
+- `no-inline-comments` - Can be faster and more succint
 - `no-invalid-this` - Sounds good but not useful for element event
   handlers/jQuery
 - `no-multi-assign` - Sounds good, but can be burdensome
@@ -275,24 +279,19 @@ happy with it thus far).
     making defaults against more than `undefined` (e.g., `null`)
 - `no-restricted-imports` - Project-specific
 - `no-restricted-modules` - Project-specific
-- *`no-restricted-properties`* - Might expand the list
-- *`no-restricted-syntax`* - Project-specific unless some forms exist which
-    should be deprecated
 - `no-ternary` - Not useful
 - `no-undefined` - `undefined` is ok for ES6 modules and strict code, so using
     `no-global-assign` and `no-shadow-restricted-names` instead
 - `no-underscore-dangle` - Too restrictive
 - `no-useless-concat` - Too restrictive when one has certain formatting one
     wishes to draw out
-- *`object-curly-newline`* - Doesn't allow `let f = {foo () {
-    dosomething();
-}};`
 - `one-var-declaration-per-line` - Sounds good, but too cumbersome for small
   integer or boolean inits, and the indented next lines are not as
   immediately clear that they belong to the declaration.
 - *`padding-line-between-statements`* - Might revisit
 - `prefer-arrow-callback` - Not compelling
 - `prefer-template` - Sounds good, but too cumbersome in practice
+- `require-atomic-updates` - Many false positives
 - *`sort-imports`* - Would be useful with "warn" if could sort by
   multiple/single type and sort members while avoiding alphabetical
   sorting across imports which seems too rigid
@@ -343,6 +342,18 @@ appears, to Dark Lords.
 
 `promise/param-names` can be too tyrannical in some cases.
 
+`promise/no-nesting` - can be useful to nest sometimes
+
+`promise/no-promise-in-callback` - May be difficult to apply (Note: Is disabled in `index.js` but enabled in `sauron.js`)
+
+`promise/no-callback-in-promise` - May be difficult to apply (Note: Is disabled in `index.js` but enabled in `sauron.js`)
+
+`promise/avoid-new` - Can be useful or even necessary for APIs missing Promise version (Note: Is disabled in `index.js` but enabled in `sauron.js`; could use `promisify`)
+
+`promise/no-return-in-finally` - (Note: Is disabled in `index.js` but enabled in `sauron.js`)
+
+`promise/valid-params` - (Note: Is disabled in `index.js` but enabled in `sauron.js`)
+
 #### Rationale for suppressing some `eslint-plugin-jsdoc` rules
 
 - `jsdoc/no-types` - Types have utility in jsdoc unless using TypeScript
@@ -380,6 +391,8 @@ appears, to Dark Lords.
 - `no-unused-properties` - While no doubt useful, it won't catch all cases,
     sounds computationally expensive, and may better be done with TypeScript
 - `prefer-exponentiation` - Now present in eslint core
+- `prefer-string-slice` - Added to Sauron but can be cumbersome to change for
+  old projects
 - `regex-shorthand` - With current behavior of sorting character class content,
   is too oppressive; see [Unicorn issue #453](https://github.com/sindresorhus/eslint-plugin-unicorn/issues/453)
   and [regexp-tree issue #199](https://github.com/DmitrySoshnikov/regexp-tree/issues/199).
