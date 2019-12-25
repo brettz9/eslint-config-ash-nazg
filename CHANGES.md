@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- npm: Update peerDeps/devDeps
+
 ## 15.0.0
 
 - Enhancement [`index.js`] (tighten): Now includes
