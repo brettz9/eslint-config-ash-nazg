@@ -1,8 +1,8 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 16.0.0
 
-- npm: Update peerDeps/devDeps
+- npm: Update peerDeps/devDeps (including breaking node plugin change)
 
 ## 15.0.0
 

@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ash-nazg",
-  "version": "15.0.0",
+  "version": "16.0.0",
   "description": "An expansion and tweaking of the \"standard\" config style for ESLint",
   "main": "index.js",
   "scripts": {
@@ -75,7 +75,7 @@
     "eslint-plugin-markdown": "^1.0.1",
     "eslint-plugin-no-unsanitized": "^3.0.2",
     "eslint-plugin-no-use-extend-native": "^0.4.1",
-    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-sonarjs": "^0.5.0",
     "eslint-plugin-standard": "^4.0.1",
@@ -96,7 +96,7 @@
     "eslint-plugin-markdown": "^1.0.1",
     "eslint-plugin-no-unsanitized": "^3.0.2",
     "eslint-plugin-no-use-extend-native": "^0.4.1",
-    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-sonarjs": "^0.5.0",
     "eslint-plugin-standard": "^4.0.1",
