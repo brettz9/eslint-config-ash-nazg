@@ -5,6 +5,13 @@ A ruthless--though not arbitrary--degree of control for your kingdom!
 **[One ring](https://en.wikipedia.org/wiki/One_Ring) to
 rule them all!**
 
+## Installation
+
+```sh
+npm i -D eslint-config-ash-nazg
+install-peerdeps -d eslint-config-ash-nazg
+```
+
 ## The rules
 
 See [index.js](./index.js) (and [node.js](./node.js) for `ash-nazg/node`
