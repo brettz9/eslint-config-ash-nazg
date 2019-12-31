@@ -1,12 +1,21 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
-
 <!--
 Waiting on https://github.com/standard/eslint-config-standard/pull/160
 as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated-in-lhs
 -->
+
+## 16.1.0
+
+- Enhancement [`index.js`] (tighten): Now includes `jsdoc` plugin update,
+  with `check-property-names`, `require-property`, `require-property-name`,
+  `require-property-type` rules (though disabling
+  `require-property-description` and avoiding `require-file-overview`).
+- Enhancement [`index.js`] (loosen): Add `exemptTagContexts` option for
+  `typedef` with `object` or `PlainObject` (so can have as a base type
+    without complaint)
 - npm: Fix build to properly remove files (no current effect)
+- npm: Update peerDeps/devDeps
 
 ## 16.0.0
 

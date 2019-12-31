@@ -186,6 +186,7 @@ module.exports = {
     "jsdoc/require-example": ["off"],
     "jsdoc/require-jsdoc": ["off"],
     "jsdoc/require-returns": ["off"],
+    "jsdoc/require-property-description": "off",
 
     // JSDOC
     "jsdoc/check-examples": ["error", {
@@ -195,7 +196,14 @@ module.exports = {
     "jsdoc/check-param-names": ["error"],
     "jsdoc/check-syntax": ["error"],
     "jsdoc/check-tag-names": ["error"],
-    "jsdoc/check-types": ["error"],
+    "jsdoc/check-types": ["error", {
+      exemptTagContexts: [
+        {
+          tag: "typedef",
+          types: ["object", "PlainObject"]
+        }
+      ]
+    }],
     "jsdoc/match-description": ["error"],
     "jsdoc/valid-types": ["error"],
 
