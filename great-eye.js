@@ -22,6 +22,7 @@ module.exports = {
     "jsdoc/check-indentation": ["warn"],
     "jsdoc/require-description": ["warn"],
     "jsdoc/require-param-description": ["warn"],
+    "jsdoc/require-property-description": ["warn"],
     "jsdoc/require-returns-description": ["warn"],
     "jsdoc/require-example": ["warn"],
     "jsdoc/require-jsdoc": ["error"],

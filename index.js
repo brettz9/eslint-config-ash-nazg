@@ -204,7 +204,9 @@ module.exports = {
         }
       ]
     }],
-    "jsdoc/match-description": ["error"],
+    "jsdoc/match-description": ["error", {
+      contexts: ['any']
+    }],
     "jsdoc/valid-types": ["error"],
 
     // Unicorn disable

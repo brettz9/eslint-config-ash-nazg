@@ -5,6 +5,13 @@ Waiting on https://github.com/standard/eslint-config-standard/pull/160
 as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated-in-lhs
 -->
 
+## 16.2.0
+
+- Enhancement [`great-eye`] (tighten): Add `jsdoc/require-property-description`
+- Enhancement [`index`] (tighten): For `match-description`, add with
+  `contexts: ['any']`
+- Docs: Explain exclusions
+
 ## 16.1.0
 
 - Enhancement [`index.js`] (tighten): Now includes `jsdoc` plugin update,

@@ -470,6 +470,7 @@ appears, to Dark Lords.
 - `check-syntax` - Following jsdoc, not Closure syntax
 - `match-description` - Cleaner to see complete sentences which its default allows.
 - `require-returns-check` - If the return value doesn't match, there may be a problem.
+- `require-file-overview` - Don't need `@file` in every file.
 
 ### Rationale for only including some rules within `ash-nazg/sauron`
 
@@ -554,6 +555,8 @@ for projects to specify all child types.
 - `jsdoc/require-param-description` (recommended) - See
   `jsdoc/require-description`.
 - `jsdoc/require-returns-description` (recommended) - See
+  `jsdoc/require-description`.
+- `jsdoc/require-property-description` (recommended) - See
   `jsdoc/require-description`.
 - `jsdoc/require-example` - See `jsdoc/require-description`.
 - `sonarjs/cognitive-complexity` - As with `complexity` perhaps (though may
