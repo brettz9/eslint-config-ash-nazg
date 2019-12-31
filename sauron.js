@@ -60,7 +60,23 @@ module.exports = {
     "import/no-commonjs": "warn",
 
     "jsdoc/require-jsdoc": ["warn"],
-    "jsdoc/require-returns": ["warn", {forceRequireReturn: true}],
+
+    "jsdoc/implements-on-classes": ["error", {
+      contexts: ["any"]
+    }],
+    "jsdoc/require-returns": ["warn", {
+      forceRequireReturn: true,
+      contexts: ["any"]
+    }],
+    "jsdoc/require-param-name": ["warn", {
+      contexts: ["any"]
+    }],
+    "jsdoc/require-param-type": ["warn", {
+      contexts: ["any"]
+    }],
+    "jsdoc/require-returns-type": ["warn", {
+      contexts: ["any"]
+    }],
 
     "promise/no-nesting": "warn",
     "promise/no-promise-in-callback": "warn",

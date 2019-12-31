@@ -5,6 +5,15 @@ Waiting on https://github.com/standard/eslint-config-standard/pull/160
 as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated-in-lhs
 -->
 
+## 16.3.0
+
+- Enhancement [`sauron`] (tighten): Added `contexts: ['any']` for
+  `require-param-name`, `require-param-type`, and `require-returns-type`
+  so as to document virtual functions (e.g., with `@implements`)
+- Enhancement [`sauron`] (tighten): Added `implements-on-classes` with
+  `contexts: ['any']`
+- npm: Update peerDeps/devDeps
+
 ## 16.2.0
 
 - Enhancement [`great-eye`] (tighten): Add `jsdoc/require-property-description`

@@ -511,9 +511,20 @@ may not all be under one's control).
 - `jsdoc/require-returns` (recommended) - Put in `ash-nazg/sauron` as
     it is more than just a consistent styling convention, and it is
     not impossible to follow, but a bit difficult. Added `forceRequireReturn`
-    option to ensure return type considered even if `void`/`undefined`.
+    option to ensure return type considered even if `void`/`undefined`
+    and added `contexts: ['any']` so it checks virtual functions
+    (e.g., with `@implements`).
 - `jsdoc/require-jsdoc` (recommended) - Imposes a heavy burden on
   preexisting large projects (added as "error" in `great-eye.js`)
+- `jsdoc/require-param-name` (recommended): Expanded this to
+  `contexts: ['any']`; see description for `jsdoc/require-jsdoc`.
+- `jsdoc/require-param-type` (recommended): Expanded this to
+  `contexts: ['any']`; see description for `jsdoc/require-jsdoc`.
+- `jsdoc/require-returns-type` (recommended): Expanded this to
+  `contexts: ['any']`; see description for `jsdoc/require-jsdoc`.
+- `jsdoc/implements-on-classes` - Added with `contexts: ['any']`;
+    see description for `jsdoc/require-jsdoc`. Better to be
+    TypeScript-compatible.
 
 The `forceRequireReturn` setting was also applied therein as it may be
 cumbersome to add to all returns or not favored as a requirement in

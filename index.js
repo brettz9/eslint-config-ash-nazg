@@ -205,7 +205,7 @@ module.exports = {
       ]
     }],
     "jsdoc/match-description": ["error", {
-      contexts: ['any']
+      contexts: ["any"]
     }],
     "jsdoc/valid-types": ["error"],
 
