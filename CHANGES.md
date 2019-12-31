@@ -1,5 +1,13 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+<!--
+Waiting on https://github.com/standard/eslint-config-standard/pull/160
+as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated-in-lhs
+-->
+- npm: Fix build to properly remove files (no current effect)
+
 ## 16.0.0
 
 - npm: Update peerDeps/devDeps (including breaking node plugin change)

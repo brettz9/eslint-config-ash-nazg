@@ -20,7 +20,7 @@
     "unused:unicorn": "node -r esm inherited-rules/build unused eslint-plugin-unicorn recommended",
     "unused:no-unsanitized": "node -r esm inherited-rules/build unused eslint-plugin-no-unsanitized DOM",
     "unused:eslint": "node -r esm inherited-rules/build unused eslint/conf/eslint-all",
-    "unused": "rm inherited-rules/unused/*.js & npm run unused:@mysticatea && npm run unused:array-func && npm run unused:compat && npm run unused:eslint-comments && npm run unused:html && npm run unused:import && npm run unused:jsdoc && npm run unused:markdown && npm run unused:no-use-extend-native && npm run unused:node && npm run unused:promise && npm run unused:sonarjs && npm run unused:unicorn && npm run unused:no-unsanitized && npm run unused:eslint",
+    "unused": "rimraf inherited-rules/unused/*.js & npm run unused:@mysticatea && npm run unused:array-func && npm run unused:compat && npm run unused:eslint-comments && npm run unused:html && npm run unused:import && npm run unused:jsdoc && npm run unused:markdown && npm run unused:no-use-extend-native && npm run unused:node && npm run unused:promise && npm run unused:sonarjs && npm run unused:unicorn && npm run unused:no-unsanitized && npm run unused:eslint",
     "inherited:array-func": "node -r esm inherited-rules/build inherited eslint-plugin-array-func all",
     "inherited:compat": "node -r esm inherited-rules/build inherited eslint-plugin-compat recommended",
     "inherited:eslint-comments": "node -r esm inherited-rules/build inherited eslint-plugin-eslint-comments recommended",
@@ -38,7 +38,7 @@
     "inherited:eslint": "node -r esm inherited-rules/build inherited eslint/conf/eslint-all",
     "inherited:@mysticatea": "node -r esm inherited-rules/build inherited @mysticatea/eslint-plugin es2020",
     "inherited:no-unsanitized": "node -r esm inherited-rules/build inherited eslint-plugin-no-unsanitized DOM",
-    "inherited": "rm inherited-rules/implicitly-included/*.js && npm run inherited:array-func && npm run inherited:compat && npm run inherited:eslint-comments && npm run inherited:html && npm run inherited:import && npm run inherited:jsdoc && npm run inherited:markdown && npm run inherited:no-use-extend-native && npm run inherited:node && npm run inherited:promise && npm run inherited:sonarjs && npm run inherited:standard && npm run inherited:unicorn && npm run inherited:eslint-recommended && npm run inherited:eslint && npm run inherited:@mysticatea && npm run inherited:no-unsanitized",
+    "inherited": "rimraf inherited-rules/implicitly-included/*.js && npm run inherited:array-func && npm run inherited:compat && npm run inherited:eslint-comments && npm run inherited:html && npm run inherited:import && npm run inherited:jsdoc && npm run inherited:markdown && npm run inherited:no-use-extend-native && npm run inherited:node && npm run inherited:promise && npm run inherited:sonarjs && npm run inherited:standard && npm run inherited:unicorn && npm run inherited:eslint-recommended && npm run inherited:eslint && npm run inherited:@mysticatea && npm run inherited:no-unsanitized",
     "compare": "npm run inherited && npm run unused",
     "eslint": "eslint --ext js,md,html .",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -102,6 +102,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-unicorn": "^15.0.1",
     "esm": "^3.2.25",
+    "rimraf": "^3.0.0",
     "typescript": "^3.7.4"
   }
 }
