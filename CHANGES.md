@@ -5,8 +5,11 @@ Waiting on https://github.com/standard/eslint-config-standard/pull/160
 as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated-in-lhs
 -->
 
-## ?
+## 16.4.0
 
+- Enhancement [`index`] (change): Remove `matchingFileName` option on
+  `jsdoc/check-examples` in favor of new default which follows path of
+  containing file, though still with ".md" extension
 - npm: Update peerDeps/devDeps
 
 ## 16.3.0

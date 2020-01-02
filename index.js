@@ -190,7 +190,6 @@ module.exports = {
 
     // JSDOC
     "jsdoc/check-examples": ["error", {
-      "matchingFileName": "dummy.md",
       "rejectExampleCodeRegex": "^`"
     }],
     "jsdoc/check-param-names": ["error"],
