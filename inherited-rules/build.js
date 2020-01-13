@@ -1,10 +1,12 @@
 /* eslint quotes: ["error", "single"] */
+/* eslint-disable no-sync, no-console */
 
 // Note: we don't have an "unused:standard" script as it directly imports all rules
 
 import 'eslint'; // Needed by eslint-plugin-html
 import fs from 'fs';
 import {join} from 'path';
+// eslint-disable-next-line node/no-unpublished-import
 import cc from '@scottnonnenberg/eslint-compare-config';
 
 const [, , type, rightModule, preferredConfig, config2] = process.argv;
@@ -99,6 +101,11 @@ const left = {
 
 const right = cc.getLiteralConfigSync(join('./node_modules/', rightModule));
 
+/**
+ *
+ * @param {PlainObject} config
+ * @returns {PlainObject[]}
+ */
 function getExtensions (config) {
   if (!config.extends) {
     return [];
@@ -106,7 +113,7 @@ function getExtensions (config) {
   return config.extends.reduce((obj, extension) => {
     // Todo: This should support external extensions, but have no need now
     // No cyclic detection
-    extension = extension.replace(/plugin:.*\//, '');
+    extension = extension.replace(/plugin:.*\//u, '');
     if (!right.configs[extension]) {
       // Todo: We are missing some as a result of this; evident in
       //  @mysticatea/eslint-plugin which imports
@@ -132,7 +139,7 @@ if (preferredConfig && right.configs && right.configs[preferredConfig].extends) 
 
 // console.log('left', left); throw new Error('exit');
 
-const prefix = rightModule.replace(/eslint-plugin-/, '');
+const prefix = rightModule.replace(/eslint-plugin-/u, '');
 
 const rightConfig = isInherited &&
   // If we are checking inherited, some configs, like "standard", are not rule
@@ -141,7 +148,7 @@ const rightConfig = isInherited &&
   //   "no-use-extend-native" are missing rules
   typeof Object.values(right.rules || {})[0] !== 'string'
   // rightModule.includes('plugin')
-  ? right.configs && right.configs[preferredConfig] || {rules: {}}
+  ? (right.configs && right.configs[preferredConfig]) || {rules: {}}
   // Get all rules when seeing which are unused
   : {rules: Object.keys(right.rules || {}).reduce((obj, ruleName) => {
     obj[prefix + '/' + ruleName] = 'error'; // Just add something
@@ -195,7 +202,7 @@ if (!isInherited && !preferredConfig && rightModule === '@mysticatea/eslint-plug
 
 if (isInherited) {
   // We don't want to show as inherited those which we override
-  let leftRules = Object.keys(left.rules);
+  const leftRules = Object.keys(left.rules);
   console.log('leftRules', leftRules);
   Object.keys(rightConfig.rules).forEach((key) => {
     if (leftRules.includes(key)) {
@@ -250,9 +257,11 @@ if (isInherited || Object.keys(rightConfig.rules).length) {
     isInherited ? 'implicitly-included' : 'unused',
     getModulePath(rightModule, preferredConfig, isInherited)
   );
+  // eslint-disable-next-line node/prefer-promises/fs
   fs.writeFile(
     inheritedPath,
-    'module.exports = {\n  rules: ' + JSON.stringify(rightConfig.rules, null, 2).replace(/\n/g, '\n  ') + '\n};\n',
+    'module.exports = {\n  rules: ' + JSON.stringify(rightConfig.rules, null, 2).replace(/\n/gu, '\n  ') + '\n};\n',
+    // eslint-disable-next-line promise/prefer-await-to-callbacks
     (err) => {
       if (err) {
         console.error(err);
@@ -264,13 +273,19 @@ if (isInherited || Object.keys(rightConfig.rules).length) {
   // console.log('rulesMissingFromLeft', right.rules);
 }
 
-function getModulePath (rightModule, preferredConfig, isInherited) {
-  return rightModule.replace(
-    /(?:eslint-(?:config|plugin)-)?/,
+/**
+ * @param {string} rtModule
+ * @param {string} preferredCfg
+ * @param {boolean} isInheritd
+ * @returns {string}
+ */
+function getModulePath (rtModule, preferredCfg, isInheritd) {
+  return rtModule.replace(
+    /(?:eslint-(?:config|plugin)-)?/u,
     ''
-  ).replace(/\//g, '_') +
-    (isInherited && preferredConfig && preferredConfig !== '-'
-      ? '-' + preferredConfig
+  ).replace(/\//gu, '_') +
+    (isInheritd && preferredCfg && preferredCfg !== '-'
+      ? '-' + preferredCfg
       : ''
     ) + '.js';
 }

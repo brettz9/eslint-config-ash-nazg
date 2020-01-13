@@ -1,5 +1,7 @@
 module.exports = {
-  extends: ["./"],
+  extends: ["./", "plugin:no-unsanitized/DOM"],
+  // Todo: Should not need: https://github.com/mozilla/eslint-plugin-no-unsanitized/pull/112
+  plugins: ["no-unsanitized"],
   settings: {
     jsdoc: {
       preferredTypes: {
@@ -16,11 +18,15 @@ module.exports = {
           replacement: "GenericCallback"
         },
         Promise: {
-          message: "Specify the specific Promise type, including, if necessary, the type `Any`",
+          message: "Specify the specific Promise type, including, if necessary, the type `Any`"
         },
         ".<>": {
           message: "Prefer type form without dot",
           replacement: "<>"
+        },
+        Object: {
+          message: "Use the specific object type or `PlainObject` if truly arbitrary",
+          replacement: "PlainObject"
         },
         object: {
           message: "Use the specific object type or `PlainObject` if truly arbitrary",
@@ -54,7 +60,23 @@ module.exports = {
     "import/no-commonjs": "warn",
 
     "jsdoc/require-jsdoc": ["warn"],
-    "jsdoc/require-returns": ["warn", {forceRequireReturn: true}],
+
+    "jsdoc/implements-on-classes": ["error", {
+      contexts: ["any"]
+    }],
+    "jsdoc/require-returns": ["warn", {
+      forceRequireReturn: true,
+      contexts: ["any"]
+    }],
+    "jsdoc/require-param-name": ["warn", {
+      contexts: ["any"]
+    }],
+    "jsdoc/require-param-type": ["warn", {
+      contexts: ["any"]
+    }],
+    "jsdoc/require-returns-type": ["warn", {
+      contexts: ["any"]
+    }],
 
     "promise/no-nesting": "warn",
     "promise/no-promise-in-callback": "warn",

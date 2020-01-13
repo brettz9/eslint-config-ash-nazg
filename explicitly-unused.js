@@ -15,6 +15,7 @@ module.exports = {
     "init-declarations": ["off"],
     "line-comment-position": ["off"],
     "lines-around-comment": ["off"],
+    "lines-between-class-members": ["off"],
     "max-classes-per-file": ["off"],
     "max-depth": ["off"],
     "max-lines-per-function": ["off"],
@@ -39,6 +40,7 @@ module.exports = {
     "padding-line-between-statements": ["off"],
     "prefer-arrow-callback": ["off"],
     "prefer-template": ["off"],
+    "require-atomic-updates": ["off"],
     "sort-imports": ["off"],
     "sort-keys": ["off"],
     "sort-vars": ["off"],
@@ -78,6 +80,7 @@ module.exports = {
 
     "jsdoc/require-description-complete-sentence": ["off"],
     "jsdoc/require-hyphen-before-param-description": ["off"],
+    "jsdoc/require-file-overview": ["off"],
 
     // These rules are actually part of recommended, but since it is "off"
     //   there, we don't include it in comparisons to show what is

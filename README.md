@@ -14,6 +14,13 @@ A ruthless--though not arbitrary--degree of control for your kingdom!
 **[One ring](https://en.wikipedia.org/wiki/One_Ring) to
 rule them all!**
 
+## Installation
+
+```sh
+npm i -D eslint-config-ash-nazg
+install-peerdeps -d eslint-config-ash-nazg
+```
+
 ## The rules
 
 See [index.js](./index.js) (and [node.js](./node.js) for `ash-nazg/node`
@@ -32,6 +39,7 @@ rules we inherit (though see below for our handful of modifications).
     for a number of added rules (though with a few items disabled and enabled
     as per below), including all of `@mysticatea/eslint-comments/recommended`.
 - [eslint-plugin-no-use-extend-native](https://github.com/dustinspecker/eslint-plugin-no-use-extend-native) for one added rule.
+- [eslint-plugin-no-unsanitized](https://github.com/mozilla/eslint-plugin-no-unsanitized) for two added rules.
 - [Recommended Unicorn rules](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/index.js#L20-L53) (a few items disabled and enabled as per below)
 - [eslint-plugin-array-func](https://github.com/freaktechnik/eslint-plugin-array-func#array-funcall-configuration) for further rules
 
@@ -45,7 +53,9 @@ not disparaging the utility of non-included rules.
 The `ash-nazg/node` config expands upon the regular `ash-nazg` rules to
 add rules specific to Node environments. Specifically,
 `plugin:node/recommended-module` has been adopted for now along with
-some stylistic choices.
+some stylistic choices. However, if you are using more CJS exports,
+you can override this by adding `plugin:node/recommended-script` to your
+`extends` array (after `ash-nazg`).
 
 The `ash-nazg/sauron` config expands upon the regular `ash-nazg` rules to
 indicate what are generally best practices but are less likely to be due to
@@ -174,6 +184,13 @@ the exceptions of:
     above any used scopes (for `let` and `const`).
 5. `object-curly-spacing` - Not sure why `standard` switched from the default
     here.
+6. `quotes` - `avoidEscape` is too reasonable to avoid ugliness;
+    `allowTemplateLiterals` is useful to begin a pattern that may expend to
+    allow other quotes or dynamic variables.
+7. `object-curly-newline` - Doesn't allow `let f = {foo () {
+    dosomething();
+}};`
+8. `lines-between-class-members` - Don't feel any need for it
 
 ## Rationale for changing required rules' configuration away from ESLint defaults
 
@@ -181,6 +198,9 @@ While these are not part of `standard` or `eslint-recommended`, I've noted
 here why we have deviated from the defaults set by ESLint for those applying
 the rule.
 
+- `array-bracket-newline` - Switched to "consistent" over "always" as
+    sometimes nice to be a little condensed, especially when representing
+    HTML as JSON within Jamilih (or JsonML) templates.
 - `function-paren-newline` - The default multiline can get too long whereas
     "consistent" can be clean and short.
 - `multiline-ternary` - Inline ternary can be very readable when not
@@ -217,6 +237,8 @@ the rule.
     non-iterable ‘array-like’ objects.
 - `quote-props` - Changed to "as-needed" as properties more verbose and
     uglier with quoting
+- `radix` - We're only dealing with ES5+ environments, so the radix is
+    redundant for base 10.
 - `import/order` - Enforcing "builtin", "external", "internal" and then
   ["parent", "sibling", "index"] in any order as these may be
   project-specific.
@@ -232,17 +254,12 @@ some `standard` rules further which I have not had time to examine (but
 it would probably be toward the stricter rather than looser as I have been
 happy with it thus far).
 
-- *`array-bracket-newline`* - Switched to "consistent" over "always" as
-    sometimes nice to be a little condensed, especially when representing
-    HTML as JSON within Jamilih (or JsonML) templates.
 - *`array-element-newline`* - While the "consistent" option would be nice,
     it doesn't work well to keep up with a max width and the desire to avoid
     excessive height `[\n a, b, \n c, d\n]`
 - `arrow-body-style` - With `as-needed` and `requireReturnForObjectLiteral`,
     this seems reasonable, but too often in debugging, one needs to add
     brackets to do any logging.
-- `radix` - We're only dealing with ES5+ environments, so the radix is
-    redundant for base 10.
 - *`func-names`* - Too prohibitive, though if applied to methods only, it may
     be useful (though with object shorthand, less necessary)
 - `func-style` - Declarations are simpler so appealing also. If enabling,
@@ -254,7 +271,6 @@ happy with it thus far).
     cumbersome and seemingly wasteful at times
 - `line-comment-position` - Too inflexible to enforce either way
 - `lines-around-comment` - Irksome to me
-- `lines-between-class-members` - Don't feel any need for it
 - `max-classes-per-file` - A bit tyrannical
 - `max-depth` - Sounds good but tyrannical
 - `max-lines-per-function` - A bit tyrannical
@@ -263,10 +279,11 @@ happy with it thus far).
 - `multiline-comment-style` - Would be nice if allowed multiline
   "starred-block" OR "bare-block" given some one may wish as JSDoc-style
   and others not
-- `newline-after-var` - Not very flexible
-- `newline-before-return` - Not very flexible
+- `newline-after-var` - Not very flexible (deprecated)
+- `newline-before-return` - Not very flexible (deprecated)
 - `newline-per-chained-call` - Not flexible in practice
 - `no-continue` - Can be convenient
+- `no-inline-comments` - Can be faster and more succint
 - `no-invalid-this` - Sounds good but not useful for element event
   handlers/jQuery
 - `no-multi-assign` - Sounds good, but can be burdensome
@@ -278,24 +295,19 @@ happy with it thus far).
     making defaults against more than `undefined` (e.g., `null`)
 - `no-restricted-imports` - Project-specific
 - `no-restricted-modules` - Project-specific
-- *`no-restricted-properties`* - Might expand the list
-- *`no-restricted-syntax`* - Project-specific unless some forms exist which
-    should be deprecated
 - `no-ternary` - Not useful
 - `no-undefined` - `undefined` is ok for ES6 modules and strict code, so using
     `no-global-assign` and `no-shadow-restricted-names` instead
 - `no-underscore-dangle` - Too restrictive
 - `no-useless-concat` - Too restrictive when one has certain formatting one
     wishes to draw out
-- *`object-curly-newline`* - Doesn't allow `let f = {foo () {
-    dosomething();
-}};`
 - `one-var-declaration-per-line` - Sounds good, but too cumbersome for small
   integer or boolean inits, and the indented next lines are not as
   immediately clear that they belong to the declaration.
 - *`padding-line-between-statements`* - Might revisit
 - `prefer-arrow-callback` - Not compelling
 - `prefer-template` - Sounds good, but too cumbersome in practice
+- `require-atomic-updates` - Many false positives
 - *`sort-imports`* - Would be useful with "warn" if could sort by
   multiple/single type and sort members while avoiding alphabetical
   sorting across imports which seems too rigid
@@ -332,6 +344,9 @@ happy with it thus far).
 
 #### Rationale for disabled Node and Promise rules
 
+`no-process-exit` (added by Node recommended) - has a version in Unicorn
+which allows in CLI apps.
+
 `node/prefer-promises/dns` and `node/prefer-promises/fs` are good, but
 a bit early with Node 12.
 
@@ -342,6 +357,18 @@ a bit early with Node 12.
 appears, to Dark Lords.
 
 `promise/param-names` can be too tyrannical in some cases.
+
+`promise/no-nesting` - can be useful to nest sometimes
+
+`promise/no-promise-in-callback` - May be difficult to apply (Note: Is disabled in `index.js` but enabled in `sauron.js`)
+
+`promise/no-callback-in-promise` - May be difficult to apply (Note: Is disabled in `index.js` but enabled in `sauron.js`)
+
+`promise/avoid-new` - Can be useful or even necessary for APIs missing Promise version (Note: Is disabled in `index.js` but enabled in `sauron.js`; could use `promisify`)
+
+`promise/no-return-in-finally` - (Note: Is disabled in `index.js` but enabled in `sauron.js`)
+
+`promise/valid-params` - (Note: Is disabled in `index.js` but enabled in `sauron.js`)
 
 #### Rationale for suppressing some `eslint-plugin-jsdoc` rules
 
@@ -365,21 +392,27 @@ appears, to Dark Lords.
 
 - `catch-error-name` - It can actually be useful to use different
     error names to indicate what time of error may be expected.
-- `explicit-length-check` - Seems wasteful.
-- *`filename-case`* - Looks potentially useful with `camelCase`.
-- `throw-new-error` - Potentially confining.
-- `no-unreadable-array-destructuring` - Better to use this than multiple lines
-- `import-index` - While understandable, seems may cause more trouble in
-    making it harder to find references to `index`.
-- `no-unused-properties` - While no doubt useful, it won't catch all cases,
-    sounds computationally expensive, and may better be done with TypeScript
-- `no-keyword-prefix` - See no need.
-- `no-nested-ternary` - As with eslint's `no-nested-ternary`
 - `consistent-function-scoping` - Though this can be useful, and it
   shouldn't be difficult to manually hoist functions upward, besides taking
   some time to refactor, this often removes functions from a logical
   grouping, and may even increase bugs, as one may be tempted to move out
   a function whose dependency is no longer wrapped with it.
+- `explicit-length-check` - Seems wasteful.
+- *`filename-case`* - Looks potentially useful with `camelCase`.
+- `import-index` - While understandable, seems may cause more trouble in
+    making it harder to find references to `index`.
+- `no-keyword-prefix` - See no need.
+- `no-nested-ternary` - As with eslint's `no-nested-ternary`
+- `no-unreadable-array-destructuring` - Better to use this than multiple lines
+- `no-unused-properties` - While no doubt useful, it won't catch all cases,
+    sounds computationally expensive, and may better be done with TypeScript
+- `prefer-exponentiation` - Now present in eslint core
+- `prefer-string-slice` - Added to Sauron but can be cumbersome to change for
+  old projects
+- `regex-shorthand` - With current behavior of sorting character class content,
+  is too oppressive; see [Unicorn issue #453](https://github.com/sindresorhus/eslint-plugin-unicorn/issues/453)
+  and [regexp-tree issue #199](https://github.com/DmitrySoshnikov/regexp-tree/issues/199).
+- `throw-new-error` - Potentially confining.
 
 ### Rationale for including some Unicorn rules which are disabled in `plugin:unicorn/recommended`
 
@@ -446,6 +479,7 @@ appears, to Dark Lords.
 - `check-syntax` - Following jsdoc, not Closure syntax
 - `match-description` - Cleaner to see complete sentences which its default allows.
 - `require-returns-check` - If the return value doesn't match, there may be a problem.
+- `require-file-overview` - Don't need `@file` in every file.
 
 ### Rationale for only including some rules within `ash-nazg/sauron`
 
@@ -486,9 +520,20 @@ may not all be under one's control).
 - `jsdoc/require-returns` (recommended) - Put in `ash-nazg/sauron` as
     it is more than just a consistent styling convention, and it is
     not impossible to follow, but a bit difficult. Added `forceRequireReturn`
-    option to ensure return type considered even if `void`/`undefined`.
+    option to ensure return type considered even if `void`/`undefined`
+    and added `contexts: ['any']` so it checks virtual functions
+    (e.g., with `@implements`).
 - `jsdoc/require-jsdoc` (recommended) - Imposes a heavy burden on
   preexisting large projects (added as "error" in `great-eye.js`)
+- `jsdoc/require-param-name` (recommended): Expanded this to
+  `contexts: ['any']`; see description for `jsdoc/require-jsdoc`.
+- `jsdoc/require-param-type` (recommended): Expanded this to
+  `contexts: ['any']`; see description for `jsdoc/require-jsdoc`.
+- `jsdoc/require-returns-type` (recommended): Expanded this to
+  `contexts: ['any']`; see description for `jsdoc/require-jsdoc`.
+- `jsdoc/implements-on-classes` - Added with `contexts: ['any']`;
+    see description for `jsdoc/require-jsdoc`. Better to be
+    TypeScript-compatible.
 
 The `forceRequireReturn` setting was also applied therein as it may be
 cumbersome to add to all returns or not favored as a requirement in
@@ -530,6 +575,8 @@ for projects to specify all child types.
 - `jsdoc/require-param-description` (recommended) - See
   `jsdoc/require-description`.
 - `jsdoc/require-returns-description` (recommended) - See
+  `jsdoc/require-description`.
+- `jsdoc/require-property-description` (recommended) - See
   `jsdoc/require-description`.
 - `jsdoc/require-example` - See `jsdoc/require-description`.
 - `sonarjs/cognitive-complexity` - As with `complexity` perhaps (though may

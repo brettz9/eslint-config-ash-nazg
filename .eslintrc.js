@@ -1,12 +1,21 @@
 module.exports = {
     env: {
-        browser: true,
         commonjs: true,
         es6: true,
         node: true
     },
-    extends: ['eslint:recommended'],
+    globals: {
+      __dirname: true,
+      module: true
+    },
+    extends: ['eslint:recommended', './sauron-node.js'],
     plugins: ['jsdoc', 'markdown'],
+    settings: {
+      polyfills: [
+        'Object.entries',
+        'Object.values'
+      ]
+    },
     parserOptions: {
         ecmaVersion: 2018,
         sourceType: 'module'
@@ -25,21 +34,10 @@ module.exports = {
       }
     }],
     rules: {
-        indent: [
-            'error',
-            2
-        ],
-        'linebreak-style': [
-            'error',
-            'unix'
-        ],
-        quotes: [
-            'error',
-            'double'
-        ],
-        semi: [
-            'error',
-            'always'
-        ]
+        quotes: ['error', 'double'],
+        'max-len': 'off',
+        'quote-props': 'off',
+        'import/unambiguous': 'off',
+        'import/no-commonjs': 'off'
     }
 };

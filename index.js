@@ -64,6 +64,7 @@ module.exports = {
     "func-name-matching": ["error"],
     "function-paren-newline": ["error", "consistent"],
     "global-require": ["error"],
+    "grouped-accessor-pairs": ["error"],
     "guard-for-in": ["error"],
     "implicit-arrow-linebreak": ["error"],
     "jsx-quotes": ["error"],
@@ -74,6 +75,8 @@ module.exports = {
     "no-bitwise": ["error"],
     "no-buffer-constructor": ["error"],
     "no-confusing-arrow": ["error"],
+    "no-constructor-return": ["error"],
+    "no-dupe-else-if": ["error"],
     "no-div-regex": ["error"],
     "no-duplicate-imports": ["error"],
     "no-else-return": ["error"],
@@ -99,6 +102,7 @@ module.exports = {
       "message": "Please use `Object.defineProperty` instead."
     }],
     "no-script-url": ["error"],
+    "no-setter-return": ["error"],
     "no-sync": ["error"],
     "no-var": ["error"],
     "no-void": ["error"],
@@ -108,11 +112,16 @@ module.exports = {
     "operator-assignment": ["error"],
     "prefer-const": ["error"],
     "prefer-destructuring": ["error", {"object": true}],
+    "prefer-exponentiation-operator": ["error"],
     "prefer-object-spread": ["error"],
     "prefer-regex-literals": ["error"],
     "prefer-rest-params": ["error"],
     "prefer-spread": ["error"],
     "quote-props": ["error", "as-needed"],
+    "quotes": ["error", "single", {
+      avoidEscape: true,
+      allowTemplateLiterals: true
+    }],
     "radix": ["error", "as-needed"],
     "require-await": ["error"],
     "semi-style": ["error"],
@@ -177,17 +186,26 @@ module.exports = {
     "jsdoc/require-example": ["off"],
     "jsdoc/require-jsdoc": ["off"],
     "jsdoc/require-returns": ["off"],
+    "jsdoc/require-property-description": "off",
 
     // JSDOC
     "jsdoc/check-examples": ["error", {
-      "matchingFileName": "dummy.md",
       "rejectExampleCodeRegex": "^`"
     }],
     "jsdoc/check-param-names": ["error"],
     "jsdoc/check-syntax": ["error"],
     "jsdoc/check-tag-names": ["error"],
-    "jsdoc/check-types": ["error"],
-    "jsdoc/match-description": ["error"],
+    "jsdoc/check-types": ["error", {
+      exemptTagContexts: [
+        {
+          tag: "typedef",
+          types: ["object", "PlainObject"]
+        }
+      ]
+    }],
+    "jsdoc/match-description": ["error", {
+      contexts: ["any"]
+    }],
     "jsdoc/valid-types": ["error"],
 
     // Unicorn disable
@@ -195,12 +213,14 @@ module.exports = {
     "unicorn/consistent-function-scoping": "off",
     "unicorn/explicit-length-check": "off",
     "unicorn/filename-case": "off",
+    "unicorn/import-index": "off",
     "unicorn/no-nested-ternary": "off",
     "unicorn/no-unreadable-array-destructuring": "off",
-    "unicorn/throw-new-error": "off",
-    "unicorn/import-index": "off",
     "unicorn/prevent-abbreviations": "off",
+    "unicorn/prefer-exponentiation": "off",
     "unicorn/prefer-string-slice": "off",
+    "unicorn/regex-shorthand": "off",
+    "unicorn/throw-new-error": "off",
 
     // UNICORN
     "unicorn/custom-error-definition": "error",
@@ -225,8 +245,10 @@ module.exports = {
     "@mysticatea/no-use-ignored-vars": "off",
     "@mysticatea/prettier": "off",
     "@mysticatea/prefer-for-of": "off",
+    "@mysticatea/no-instanceof-array": "off",
+    "@mysticatea/no-instanceof-wrapper": "off",
 
-    // Disable mysticatea items we don't want
+    // Disable other mysticatea items we don't want
     "func-style": "off",
     "init-declarations": "off",
     "multiline-comment-style": "off",
@@ -238,8 +260,6 @@ module.exports = {
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off",
     "prefer-template": "off",
-    "@mysticatea/no-instanceof-array": "off",
-    "@mysticatea/no-instanceof-wrapper": "off",
 
     // We're directly using `eslint-comments` and without this, these will
     //  mistakenly show up in our @mysticatea/eslint-plugin inherited list
