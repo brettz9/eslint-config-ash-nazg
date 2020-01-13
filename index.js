@@ -206,6 +206,7 @@ module.exports = {
     "jsdoc/match-description": ["error", {
       contexts: ["any"]
     }],
+    "jsdoc/no-bad-blocks": ["error"],
     "jsdoc/valid-types": ["error"],
 
     // Unicorn disable

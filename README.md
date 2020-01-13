@@ -375,6 +375,7 @@ appears, to Dark Lords.
 - `jsdoc/no-types` - Types have utility in jsdoc unless using TypeScript
 - `jsdoc/newline-after-description` (recommended) - I can see its draw,
     but seems too pedantic to me for documentation.
+- `jsdoc/no-defaults` - Haven't transitioned to TypeScript
 - `jsdoc/no-undefined-types` (recommended) - I'd like something like this,
     but since it [isn't aware](https://github.com/gajus/eslint-plugin-jsdoc/issues/99)
     of all of one's `@typedef`s, etc., it is too restrictive for me at this
@@ -478,6 +479,7 @@ appears, to Dark Lords.
   backtick.
 - `check-syntax` - Following jsdoc, not Closure syntax
 - `match-description` - Cleaner to see complete sentences which its default allows.
+- `no-bad-blocks` - Useful to catch blocks likely intended as jsdoc
 - `require-returns-check` - If the return value doesn't match, there may be a problem.
 - `require-file-overview` - Don't need `@file` in every file.
 

@@ -78,6 +78,7 @@ module.exports = {
     "eslint-comments/no-restricted-disable": ["off"],
     "eslint-comments/no-use": ["off"],
 
+    "jsdoc/no-defaults": ["off"],
     "jsdoc/require-description-complete-sentence": ["off"],
     "jsdoc/require-hyphen-before-param-description": ["off"],
     "jsdoc/require-file-overview": ["off"],
