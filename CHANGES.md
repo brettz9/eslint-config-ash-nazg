@@ -5,8 +5,10 @@ Waiting on https://github.com/standard/eslint-config-standard/pull/160
 as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated-in-lhs
 -->
 
-## ?
+## 16.5.0
 
+- Enhancement [`index.js`] (tighten): Add `jsdoc/no-bad-blocks`
+- Update: Add `jsdoc/no-defaults`
 - npm: Update peerDeps/devDeps
 
 ## 16.4.0
