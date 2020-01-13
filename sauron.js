@@ -59,7 +59,16 @@ module.exports = {
     "import/unambiguous": "warn",
     "import/no-commonjs": "warn",
 
-    "jsdoc/require-jsdoc": ["warn"],
+    "jsdoc/require-jsdoc": ["warn", {
+      require: {
+        // ArrowFunctionExpression: true,
+        ClassDeclaration: true,
+        ClassExpression: true,
+        FunctionDeclaration: true, // Default is true
+        // FunctionExpression: true,
+        MethodDefinition: true
+      }
+    }],
 
     "jsdoc/implements-on-classes": ["error", {
       contexts: ["any"]

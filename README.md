@@ -517,7 +517,14 @@ may not all be under one's control).
     and added `contexts: ['any']` so it checks virtual functions
     (e.g., with `@implements`).
 - `jsdoc/require-jsdoc` (recommended) - Imposes a heavy burden on
-  preexisting large projects (added as "error" in `great-eye.js`)
+  preexisting large projects (added as "error" in `great-eye.js`);
+  we have expanded its options there though to check on `ClassDeclaration`,
+  `ClassExpression`, and `MethodDefinition` in addition to
+  `FunctionDeclaration`. This may still `FunctionExpression` and
+  `ArrowFunctionExpression`, and these may admittedly be used on such as
+  exports, but until the context option discussed at
+  <https://github.com/gajus/eslint-plugin-jsdoc/issues/384> may be fixed,
+  that may be too oppressive to impose.
 - `jsdoc/require-param-name` (recommended): Expanded this to
   `contexts: ['any']`; see description for `jsdoc/require-jsdoc`.
 - `jsdoc/require-param-type` (recommended): Expanded this to
