@@ -10,6 +10,7 @@ as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated
 - Enhancement [`sauron.js`] (tighten): For `jsdoc/require-jsdoc`, target
   `ClassDeclaration`, `ClassExpression`, `MethodDefinition` in addition to
   `FunctionDeclaration`
+- npm: Update peerDeps/devDeps
 
 ## 16.5.0
 
