@@ -401,6 +401,7 @@ appears, to Dark Lords.
 - `prefer-exponentiation` - Now present in eslint core
 - `prefer-string-slice` - Added to Sauron but can be cumbersome to change for
   old projects
+- `prefer-replace-all` - Good but not available yet in Node (even 14)
 - `regex-shorthand` - With current behavior of sorting character class content,
   is too oppressive; see [Unicorn issue #453](https://github.com/sindresorhus/eslint-plugin-unicorn/issues/453)
   and [regexp-tree issue #199](https://github.com/DmitrySoshnikov/regexp-tree/issues/199).

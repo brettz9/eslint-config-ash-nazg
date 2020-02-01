@@ -218,7 +218,7 @@ module.exports = {
     "unicorn/no-nested-ternary": "off",
     "unicorn/no-unreadable-array-destructuring": "off",
     "unicorn/prevent-abbreviations": "off",
-    "unicorn/prefer-exponentiation": "off",
+    "unicorn/prefer-exponentiation-operator": "off",
     "unicorn/prefer-string-slice": "off",
     "unicorn/regex-shorthand": "off",
     "unicorn/throw-new-error": "off",

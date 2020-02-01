@@ -90,6 +90,7 @@ module.exports = {
     "jsdoc/no-types": ["off"],
 
     "unicorn/no-unused-properties": ["off"],
-    "unicorn/no-keyword-prefix": ["off"]
+    "unicorn/no-keyword-prefix": ["off"],
+    "unicorn/prefer-replace-all": "off"
   }
 };

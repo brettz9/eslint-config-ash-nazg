@@ -5,6 +5,11 @@ Waiting on https://github.com/standard/eslint-config-standard/pull/160
 as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated-in-lhs
 -->
 
+## 17.1.0
+
+- Fix: Disable Unicorn `prefer-exponentiation-operator` with proper name
+- npm: Update peerDeps/devDeps
+
 ## 17.0.0
 
 - Enhancement [`sauron.js`] (tighten): For `jsdoc/require-jsdoc`, target
