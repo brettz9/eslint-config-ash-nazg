@@ -17,6 +17,10 @@ module.exports = {
           message: "Point to a `@callback` namepath or `GenericCallback` if truly arbitrary in form",
           replacement: "GenericCallback"
         },
+        function: {
+          message: "Point to a `@callback` namepath or `GenericCallback` if truly arbitrary in form",
+          replacement: "GenericCallback"
+        },
         Promise: {
           message: "Specify the specific Promise type, including, if necessary, the type `Any`"
         },
@@ -33,6 +37,10 @@ module.exports = {
           replacement: "PlainObject"
         },
         Array: {
+          message: "Use `GenericArray` if it is truly arbitrary.",
+          replacement: "GenericArray"
+        },
+        array: {
           message: "Use `GenericArray` if it is truly arbitrary.",
           replacement: "GenericArray"
         }

@@ -5,6 +5,12 @@ Waiting on https://github.com/standard/eslint-config-standard/pull/160
 as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated-in-lhs
 -->
 
+## 17.2.0
+
+- Enhancement [`sauron.js`] (tighten): Offer replacements for
+  `function` and `array` lower-cased
+- npm: Update devDeps
+
 ## 17.1.0
 
 - Fix: Disable Unicorn `prefer-exponentiation-operator` with proper name
