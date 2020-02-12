@@ -17,6 +17,10 @@ module.exports = {
           message: "Point to a `@callback` namepath or `GenericCallback` if truly arbitrary in form",
           replacement: "GenericCallback"
         },
+        function: {
+          message: "Point to a `@callback` namepath or `GenericCallback` if truly arbitrary in form",
+          replacement: "GenericCallback"
+        },
         Promise: {
           message: "Specify the specific Promise type, including, if necessary, the type `Any`"
         },
@@ -33,6 +37,10 @@ module.exports = {
           replacement: "PlainObject"
         },
         Array: {
+          message: "Use `GenericArray` if it is truly arbitrary.",
+          replacement: "GenericArray"
+        },
+        array: {
           message: "Use `GenericArray` if it is truly arbitrary.",
           replacement: "GenericArray"
         }
@@ -59,7 +67,16 @@ module.exports = {
     "import/unambiguous": "warn",
     "import/no-commonjs": "warn",
 
-    "jsdoc/require-jsdoc": ["warn"],
+    "jsdoc/require-jsdoc": ["warn", {
+      require: {
+        // ArrowFunctionExpression: true,
+        ClassDeclaration: true,
+        ClassExpression: true,
+        FunctionDeclaration: true, // Default is true
+        // FunctionExpression: true,
+        MethodDefinition: true
+      }
+    }],
 
     "jsdoc/implements-on-classes": ["error", {
       contexts: ["any"]
