@@ -5,9 +5,9 @@ Waiting on https://github.com/standard/eslint-config-standard/pull/160
 as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated-in-lhs
 -->
 
-## ?
+## 17.3.0
 
-- npm: Update devDeps
+- npm: Update devDeps/peerDeps
 
 ## 17.2.0
 
