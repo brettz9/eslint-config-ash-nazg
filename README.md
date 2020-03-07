@@ -619,3 +619,8 @@ can be picky about giving up their *preh-shus*...
 - Review <https://github.com/dustinspecker/awesome-eslint#practices>
 - See if <https://github.com/sarbbottam/eslint-find-rules> may eliminate
   need for our comparison code
+- Rule for no functions with `this` (to use `class`)? Might adapt <https://github.com/matijs/eslint-plugin-this>?
+- To consider:
+  - <https://www.npmjs.com/package/eslint-plugin-const-case>
+  - <https://github.com/johnstonbl01/eslint-no-inferred-method-name> / <https://github.com/johnstonbl01/eslint-no-inferred-method-name/blob/master/docs/rules/no-inferred-method-name.md>
+  - <https://github.com/getify/eslint-plugin-proper-arrows>
