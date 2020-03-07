@@ -624,3 +624,12 @@ can be picky about giving up their *preh-shus*...
   - <https://www.npmjs.com/package/eslint-plugin-const-case>
   - <https://github.com/johnstonbl01/eslint-no-inferred-method-name> / <https://github.com/johnstonbl01/eslint-no-inferred-method-name/blob/master/docs/rules/no-inferred-method-name.md>
   - <https://github.com/getify/eslint-plugin-proper-arrows>
+  - <https://github.com/selaux/eslint-plugin-filenames>
+- See also `eslint-plugin-privileges` for plugins/config to add for security/transparency
+- Make plugins/tool config?
+  - <https://github.com/not-an-aardvark/eslint-plugin-eslint-plugin>
+  - <https://github.com/j-f1/eslint-docs>
+  - <https://github.com/jfmengels/eslint-rule-documentation>
+  - <https://github.com/sarbbottam/eslint-find-rules>
+  - <https://github.com/pimlie/eslint-multiplexer>
+  - <https://github.com/wagerfield/eslint-index>
