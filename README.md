@@ -626,7 +626,7 @@ can be picky about giving up their *preh-shus*...
   - <https://github.com/getify/eslint-plugin-proper-arrows>
   - <https://github.com/selaux/eslint-plugin-filenames>
 - See also `eslint-plugin-privileges` for plugins/config to add for security/transparency
-- Make plugins/tool config?
+- Make plugins/tool config/toolkit?
   - <https://github.com/not-an-aardvark/eslint-plugin-eslint-plugin>
   - <https://github.com/j-f1/eslint-docs>
   - <https://github.com/jfmengels/eslint-rule-documentation>
@@ -634,3 +634,4 @@ can be picky about giving up their *preh-shus*...
   - <https://github.com/pimlie/eslint-multiplexer>
   - <https://github.com/wagerfield/eslint-index>
   - <https://github.com/nickdeis/eslint-plugin-notice>
+  - <https://github.com/eslint/generator-eslint> (global install of `yo` also)
