@@ -633,3 +633,4 @@ can be picky about giving up their *preh-shus*...
   - <https://github.com/sarbbottam/eslint-find-rules>
   - <https://github.com/pimlie/eslint-multiplexer>
   - <https://github.com/wagerfield/eslint-index>
+  - <https://github.com/nickdeis/eslint-plugin-notice>
