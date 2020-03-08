@@ -635,3 +635,4 @@ can be picky about giving up their *preh-shus*...
   - <https://github.com/wagerfield/eslint-index>
   - <https://github.com/nickdeis/eslint-plugin-notice>
   - <https://github.com/eslint/generator-eslint> (global install of `yo` also)
+  - Note `eslint --print-config file` for getting at applied config for a file
