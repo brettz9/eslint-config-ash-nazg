@@ -405,7 +405,12 @@ appears, to Dark Lords.
 - `regex-shorthand` - With current behavior of sorting character class content,
   is too oppressive; see [Unicorn issue #453](https://github.com/sindresorhus/eslint-plugin-unicorn/issues/453)
   and [regexp-tree issue #199](https://github.com/DmitrySoshnikov/regexp-tree/issues/199).
+- `string-content` - Don't want the trouble of requiring formatted apostrophes (not recommended anyways).
 - `throw-new-error` - Potentially confining.
+
+### Rationale for altering default on Unicorn rules
+
+- `better-regex` - Character classes can be arranged for readability.
 
 ### Rationale for including some Unicorn rules which are disabled in `plugin:unicorn/recommended`
 

@@ -1,3 +1,4 @@
+"use strict";
 module.exports = {
   rules: {
     "array-func/from-map": "error",

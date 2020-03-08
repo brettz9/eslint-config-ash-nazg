@@ -1,3 +1,4 @@
+"use strict";
 module.exports = {
   rules: {
     "sonarjs/no-all-duplicated-branches": "error",

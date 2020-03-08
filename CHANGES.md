@@ -5,6 +5,16 @@ Waiting on https://github.com/standard/eslint-config-standard/pull/160
 as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated-in-lhs
 -->
 
+## 17.4.0
+
+- Update [`explicitly-unused.js`]: Add `unicorn/string-content` and
+  deprecated `unicorn/regex-shorthand`
+- Enhancement [`index.js`] (tighten): Add recommended `unicorn/better-regex`
+  but with option `sortCharacterClasses` set to `false`
+- Optimization: Use strict mode
+- Linting: Switch to single quotes; fix indent; add ignore file
+- npm: Update devDep/peerDep (unicorn) and `package-lock.json`
+
 ## 17.3.0
 
 - npm: Update devDeps/peerDeps

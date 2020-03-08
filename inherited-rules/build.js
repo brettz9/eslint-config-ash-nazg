@@ -260,7 +260,7 @@ if (isInherited || Object.keys(rightConfig.rules).length) {
   // eslint-disable-next-line node/prefer-promises/fs
   fs.writeFile(
     inheritedPath,
-    'module.exports = {\n  rules: ' + JSON.stringify(rightConfig.rules, null, 2).replace(/\n/gu, '\n  ') + '\n};\n',
+    '"use strict";\nmodule.exports = {\n  rules: ' + JSON.stringify(rightConfig.rules, null, 2).replace(/\n/gu, '\n  ') + '\n};\n',
     // eslint-disable-next-line promise/prefer-await-to-callbacks
     (err) => {
       if (err) {
