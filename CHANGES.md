@@ -7,7 +7,7 @@ as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated
 
 ## ?
 
-- npm: Update devDep./peerDep.
+- npm: Update devDeps./peerDeps.
 
 ## 17.4.0
 
