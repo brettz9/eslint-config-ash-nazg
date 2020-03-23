@@ -600,6 +600,14 @@ be cumbersome for projects to distinguish.
 - `strict` -  Included despite not being needed for modules, in
     case overriding.
 
+## Rationale for not including some non-recommended eslint rules
+
+- `no-return-await` - As per [this issue](https://github.com/standard/standard/issues/1442),
+  it causes problems with stack traces and fails to flag function return as
+  async (particularly in conjunction with `require-await` which effectively
+  enforces not using `async` on such functions either).
+- (This section is incomplete)
+
 ## Deprecated rule non-inclusion
 
 [Deprecated and removed items](https://eslint.org/docs/rules/) from ESLint

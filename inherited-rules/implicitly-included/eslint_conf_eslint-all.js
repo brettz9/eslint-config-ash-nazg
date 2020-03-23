@@ -44,7 +44,6 @@ module.exports = {
     "no-path-concat": "error",
     "no-proto": "error",
     "no-return-assign": "error",
-    "no-return-await": "error",
     "no-self-compare": "error",
     "no-sequences": "error",
     "no-tabs": "error",

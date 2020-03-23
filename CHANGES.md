@@ -5,8 +5,10 @@ Waiting on https://github.com/standard/eslint-config-standard/pull/160
 as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated-in-lhs
 -->
 
-## ?
+## 17.5.0
 
+- Enhancement [`index.js`] (loosen): Surface `standard`'s reasonable dropping of
+  '`no-return-await` (and add to `explicitly-unused`).
 - npm: Update devDeps./peerDeps.
 
 ## 17.4.0
