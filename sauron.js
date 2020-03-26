@@ -105,6 +105,7 @@ module.exports = {
     'promise/prefer-await-to-callbacks': 'warn',
 
     'unicorn/no-fn-reference-in-iterator': 'warn',
+    'unicorn/prefer-number-properties': 'warn',
     'unicorn/prefer-string-slice': 'error'
   }
 };

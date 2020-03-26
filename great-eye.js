@@ -31,6 +31,7 @@ module.exports = {
     'sonarjs/cognitive-complexity': 'warn',
 
     'unicorn/prevent-abbreviations': 'error',
-    'unicorn/expiring-todo-comments': ['warn', {'allowWarningComments': false, 'terms': ['todo']}]
+    'unicorn/expiring-todo-comments': ['warn', {'allowWarningComments': false, 'terms': ['todo']}],
+    'unicorn/prefer-set-has': 'error'
   }
 };

@@ -489,18 +489,18 @@ standards without the undue burden of having to refactor lots of code (which
 may not all be under one's control).
 
 - `class-methods-use-this` - Good for new code (though even here may need
-  disabling). May break existing APIs.
+    disabling). May break existing APIs.
 - `consistent-this` - A good practice, but sometimes, especially with jQuery
-  or DOM event handlers, and large functions where it can be difficult to
-  track what a generic `that` is in reference to, `this` may be more clearly
-  named as the object
+    or DOM event handlers, and large functions where it can be difficult to
+    track what a generic `that` is in reference to, `this` may be more clearly
+    named as the object
 - `default-case` - Refactoring code to know whether to throw or silently
-  ignore requires time.
+    ignore requires time.
 - `max-len` - May require a lot of refactoring.
 - `no-alert` - No quick easy replacement yet with poor `dialog` support.
 - `no-console` - Useful for debugging (and sometimes for reporting progress)
-  to have to disable it at every turn and to distract one from actual errors,
-  even for production.
+    to have to disable it at every turn and to distract one from actual errors,
+    even for production.
 - `no-empty-function` - Cumbersome to add comments within every no-op.
 - `no-shadow` - Can catch errors, but also some work to refactor (See also
     section "Rationale for changing required rules' configuration away
@@ -516,6 +516,8 @@ may not all be under one's control).
     may be used within repeating events
 - `unicorn/no-fn-reference-in-iterator` - May be cumbersome though does
     catch potential problems
+- `unicorn/prefer-number-properties` - Good but some refactoring needed (and not
+    always readily fixable).
 - `jsdoc/require-returns` (recommended) - Put in `ash-nazg/sauron` as
     it is more than just a consistent styling convention, and it is
     not impossible to follow, but a bit difficult. Added `forceRequireReturn`
@@ -523,14 +525,14 @@ may not all be under one's control).
     and added `contexts: ['any']` so it checks virtual functions
     (e.g., with `@implements`).
 - `jsdoc/require-jsdoc` (recommended) - Imposes a heavy burden on
-  preexisting large projects (added as "error" in `great-eye.js`);
-  we have expanded its options there though to check on `ClassDeclaration`,
-  `ClassExpression`, and `MethodDefinition` in addition to
-  `FunctionDeclaration`. This may still `FunctionExpression` and
-  `ArrowFunctionExpression`, and these may admittedly be used on such as
-  exports, but until the context option discussed at
-  <https://github.com/gajus/eslint-plugin-jsdoc/issues/384> may be fixed,
-  that may be too oppressive to impose.
+    preexisting large projects (added as "error" in `great-eye.js`);
+    we have expanded its options there though to check on `ClassDeclaration`,
+    `ClassExpression`, and `MethodDefinition` in addition to
+    `FunctionDeclaration`. This may still `FunctionExpression` and
+    `ArrowFunctionExpression`, and these may admittedly be used on such as
+    exports, but until the context option discussed at
+    <https://github.com/gajus/eslint-plugin-jsdoc/issues/384> may be fixed,
+    that may be too oppressive to impose.
 - `jsdoc/require-param-name` (recommended): Expanded this to
   `contexts: ['any']`; see description for `jsdoc/require-jsdoc`.
 - `jsdoc/require-param-type` (recommended): Expanded this to
@@ -589,6 +591,7 @@ for projects to specify all child types.
     add to sauron if demonstrates not to be too oppressive)
 - `unicorn/prevent-abbreviations` - Very cumbersome for frequent conventions such
   as `e` for `event`
+- `unicorn/prefer-set-has` - Very good, but troublesome to refactor.
 
 The `preferredTypes` setting was enabled here for integer/float as it can
 be cumbersome for projects to distinguish.

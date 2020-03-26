@@ -5,6 +5,13 @@ Waiting on https://github.com/standard/eslint-config-standard/pull/160
 as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated-in-lhs
 -->
 
+## 18.0.0
+
+- Enhancement [`sauron.js`] (tighten): Add `unicorn/prefer-number-properties`
+- Enhancement [`great-eye.js`] (tighten): Add `unicorn/unicorn/prefer-set-has`
+- Maintenance: 4 sp. for MD files
+- npm: Update devDeps./peerDeps.
+
 ## 17.5.0
 
 - Enhancement [`index.js`] (loosen): Surface `standard`'s reasonable dropping of
