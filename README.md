@@ -392,7 +392,7 @@ appears, to Dark Lords.
 (The following are recommended rules unless otherwise noted.)
 
 - `catch-error-name` - It can actually be useful to use different
-    error names to indicate what time of error may be expected.
+    error names to indicate what type of error may be expected.
 - `consistent-function-scoping` - Though this can be useful, and it
   shouldn't be difficult to manually hoist functions upward, besides taking
   some time to refactor, this often removes functions from a logical
@@ -414,7 +414,12 @@ appears, to Dark Lords.
 - `regex-shorthand` - With current behavior of sorting character class content,
   is too oppressive; see [Unicorn issue #453](https://github.com/sindresorhus/eslint-plugin-unicorn/issues/453)
   and [regexp-tree issue #199](https://github.com/DmitrySoshnikov/regexp-tree/issues/199).
+- `string-content` - Don't want the trouble of requiring formatted apostrophes (not recommended anyways).
 - `throw-new-error` - Potentially confining.
+
+### Rationale for altering default on Unicorn rules
+
+- `better-regex` - Character classes can be arranged for readability.
 
 ### Rationale for including some Unicorn rules which are disabled in `plugin:unicorn/recommended`
 
@@ -493,18 +498,18 @@ standards without the undue burden of having to refactor lots of code (which
 may not all be under one's control).
 
 - `class-methods-use-this` - Good for new code (though even here may need
-  disabling). May break existing APIs.
+    disabling). May break existing APIs.
 - `consistent-this` - A good practice, but sometimes, especially with jQuery
-  or DOM event handlers, and large functions where it can be difficult to
-  track what a generic `that` is in reference to, `this` may be more clearly
-  named as the object
+    or DOM event handlers, and large functions where it can be difficult to
+    track what a generic `that` is in reference to, `this` may be more clearly
+    named as the object
 - `default-case` - Refactoring code to know whether to throw or silently
-  ignore requires time.
+    ignore requires time.
 - `max-len` - May require a lot of refactoring.
 - `no-alert` - No quick easy replacement yet with poor `dialog` support.
 - `no-console` - Useful for debugging (and sometimes for reporting progress)
-  to have to disable it at every turn and to distract one from actual errors,
-  even for production.
+    to have to disable it at every turn and to distract one from actual errors,
+    even for production.
 - `no-empty-function` - Cumbersome to add comments within every no-op.
 - `no-shadow` - Can catch errors, but also some work to refactor (See also
     section "Rationale for changing required rules' configuration away
@@ -520,6 +525,8 @@ may not all be under one's control).
     may be used within repeating events
 - `unicorn/no-fn-reference-in-iterator` - May be cumbersome though does
     catch potential problems
+- `unicorn/prefer-number-properties` - Good but some refactoring needed (and not
+    always readily fixable).
 - `jsdoc/require-returns` (recommended) - Put in `ash-nazg/sauron` as
     it is more than just a consistent styling convention, and it is
     not impossible to follow, but a bit difficult. Added `forceRequireReturn`
@@ -527,14 +534,14 @@ may not all be under one's control).
     and added `contexts: ['any']` so it checks virtual functions
     (e.g., with `@implements`).
 - `jsdoc/require-jsdoc` (recommended) - Imposes a heavy burden on
-  preexisting large projects (added as "error" in `great-eye.js`);
-  we have expanded its options there though to check on `ClassDeclaration`,
-  `ClassExpression`, and `MethodDefinition` in addition to
-  `FunctionDeclaration`. This may still `FunctionExpression` and
-  `ArrowFunctionExpression`, and these may admittedly be used on such as
-  exports, but until the context option discussed at
-  <https://github.com/gajus/eslint-plugin-jsdoc/issues/384> may be fixed,
-  that may be too oppressive to impose.
+    preexisting large projects (added as "error" in `great-eye.js`);
+    we have expanded its options there though to check on `ClassDeclaration`,
+    `ClassExpression`, and `MethodDefinition` in addition to
+    `FunctionDeclaration`. This may still `FunctionExpression` and
+    `ArrowFunctionExpression`, and these may admittedly be used on such as
+    exports, but until the context option discussed at
+    <https://github.com/gajus/eslint-plugin-jsdoc/issues/384> may be fixed,
+    that may be too oppressive to impose.
 - `jsdoc/require-param-name` (recommended): Expanded this to
   `contexts: ['any']`; see description for `jsdoc/require-jsdoc`.
 - `jsdoc/require-param-type` (recommended): Expanded this to
@@ -593,6 +600,7 @@ for projects to specify all child types.
     add to sauron if demonstrates not to be too oppressive)
 - `unicorn/prevent-abbreviations` - Very cumbersome for frequent conventions such
   as `e` for `event`
+- `unicorn/prefer-set-has` - Very good, but troublesome to refactor.
 
 The `preferredTypes` setting was enabled here for integer/float as it can
 be cumbersome for projects to distinguish.
@@ -603,6 +611,14 @@ be cumbersome for projects to distinguish.
     case overriding.
 - `strict` -  Included despite not being needed for modules, in
     case overriding.
+
+## Rationale for not including some non-recommended eslint rules
+
+- `no-return-await` - As per [this issue](https://github.com/standard/standard/issues/1442),
+  it causes problems with stack traces and fails to flag function return as
+  async (particularly in conjunction with `require-await` which effectively
+  enforces not using `async` on such functions either).
+- (This section is incomplete)
 
 ## Deprecated rule non-inclusion
 
@@ -628,3 +644,20 @@ can be picky about giving up their *preh-shus*...
 - Review <https://github.com/dustinspecker/awesome-eslint#practices>
 - See if <https://github.com/sarbbottam/eslint-find-rules> may eliminate
   need for our comparison code
+- Rule for no functions with `this` (to use `class`)? Might adapt <https://github.com/matijs/eslint-plugin-this>?
+- To consider:
+  - <https://www.npmjs.com/package/eslint-plugin-const-case>
+  - <https://github.com/johnstonbl01/eslint-no-inferred-method-name> / <https://github.com/johnstonbl01/eslint-no-inferred-method-name/blob/master/docs/rules/no-inferred-method-name.md>
+  - <https://github.com/getify/eslint-plugin-proper-arrows>
+  - <https://github.com/selaux/eslint-plugin-filenames>
+- See also `eslint-plugin-privileges` for plugins/config to add for security/transparency
+- Make plugins/tool config/toolkit?
+  - <https://github.com/not-an-aardvark/eslint-plugin-eslint-plugin>
+  - <https://github.com/j-f1/eslint-docs>
+  - <https://github.com/jfmengels/eslint-rule-documentation>
+  - <https://github.com/sarbbottam/eslint-find-rules>
+  - <https://github.com/pimlie/eslint-multiplexer>
+  - <https://github.com/wagerfield/eslint-index>
+  - <https://github.com/nickdeis/eslint-plugin-notice>
+  - <https://github.com/eslint/generator-eslint> (global install of `yo` also)
+  - Note `eslint --print-config file` for getting at applied config for a file

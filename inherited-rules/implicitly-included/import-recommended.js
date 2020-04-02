@@ -1,3 +1,4 @@
+"use strict";
 module.exports = {
   rules: {
     "import/no-unresolved": "error",

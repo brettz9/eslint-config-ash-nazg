@@ -1,3 +1,4 @@
+"use strict";
 module.exports = {
   rules: {
     "accessor-pairs": "error",
@@ -78,7 +79,6 @@ module.exports = {
     "no-redeclare": "error",
     "no-regex-spaces": "error",
     "no-return-assign": "error",
-    "no-return-await": "error",
     "no-self-assign": "error",
     "no-self-compare": "error",
     "no-sequences": "error",
