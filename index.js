@@ -25,22 +25,15 @@ module.exports = {
     'plugin:compat/recommended',
     'plugin:array-func/all',
     'plugin:sonarjs/recommended',
-    'plugin:jsdoc/recommended'
+    'plugin:jsdoc/recommended',
+    'plugin:no-use-extend-native/recommended'
   ],
   'plugins': [
     // These have no rules
     'markdown',
     'html',
     // See above on why adding here instead of extending a config
-    '@mysticatea',
-    // Filed the following to avoid need for adding `plugins` for this as well
-    //  as adding the rule manually as we do below (will need to reference in
-    //  `package.json` if do so can show in `implicitly-included`):
-    // https://github.com/dustinspecker/eslint-plugin-no-use-extend-native/issues/125
-    'no-use-extend-native',
-    // Filed the following to avoid need for adding `plugins` for this as
-    //  well as `extends`: https://github.com/SonarSource/eslint-plugin-sonarjs/issues/117
-    'sonarjs'
+    '@mysticatea'
   ],
   'settings': {
     'jsdoc': {
@@ -57,14 +50,12 @@ module.exports = {
     'array-callback-return': ['error'],
     'arrow-parens': ['error'],
     'block-scoped-var': ['error'],
-    'callback-return': ['error'],
     'computed-property-spacing': ['error'],
     'consistent-return': ['error'],
     'default-param-last': ['error'],
     'dot-notation': ['error'],
     'func-name-matching': ['error'],
     'function-paren-newline': ['error', 'consistent'],
-    'global-require': ['error'],
     'grouped-accessor-pairs': ['error'],
     'guard-for-in': ['error'],
     'implicit-arrow-linebreak': ['error'],
@@ -89,8 +80,6 @@ module.exports = {
     'no-import-assign': ['error'],
     'no-lonely-if': ['error'],
     'no-loop-func': ['error'],
-    'no-mixed-requires': ['error', {'grouping': true, 'allowCall': true}],
-    'no-process-env': ['error'],
     'no-restricted-globals': ['error', {
       'name': 'event',
       'message': 'Use local event parameter instead (preferably as \'e\' or \'ev\').'
@@ -104,7 +93,6 @@ module.exports = {
     }],
     'no-script-url': ['error'],
     'no-setter-return': ['error'],
-    'no-sync': ['error'],
     'no-var': ['error'],
     'no-void': ['error'],
     'no-warning-comments': ['error', {terms: ['fixme', 'xxx']}],
@@ -289,11 +277,6 @@ module.exports = {
     'sonarjs/no-identical-functions': 'off',
     'sonarjs/no-small-switch': 'off',
     'sonarjs/prefer-immediate-return': 'off',
-    'sonarjs/cognitive-complexity': 'off',
-
-    // no-use-extend-native
-    // Should not be needed here; see comment in `plugins`
-    //   re: 'no-use-extend-native' above
-    'no-use-extend-native/no-use-extend-native': 'error'
+    'sonarjs/cognitive-complexity': 'off'
   }
 };

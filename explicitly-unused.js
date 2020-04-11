@@ -47,6 +47,14 @@ module.exports = {
     'sort-keys': 'off',
     'sort-vars': 'off',
 
+    // Node-specific rules that are apparently to be removed in ESLint 7
+    //  (have replacements we are using in eslint-plugin-node)
+    'callback-return': 'off',
+    'global-require': 'off',
+    'no-mixed-requires': 'off',
+    'no-process-env': 'off',
+    'no-sync': 'off',
+
     // Deprecated
     'node/no-hide-core-modules': 'off',
     'node/no-unsupported-features': 'off',
@@ -71,6 +79,8 @@ module.exports = {
     'import/prefer-default-export': 'off',
 
     'node/no-callback-literal': 'off',
+    'node/no-restricted-import': 'off',
+    'node/no-restricted-require': 'off',
 
     'promise/no-native': 'off',
 

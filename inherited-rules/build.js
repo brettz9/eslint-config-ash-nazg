@@ -1,5 +1,5 @@
 /* eslint quotes: ["error", "single"] */
-/* eslint-disable no-sync, no-console */
+/* eslint-disable node/no-sync, no-console */
 
 // Note: we don't have an "unused:standard" script as it directly imports all rules
 

@@ -5,6 +5,19 @@ Waiting on https://github.com/standard/eslint-config-standard/pull/160
 as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated-in-lhs
 -->
 
+## 19.0.0
+
+- Breaking change/Update: Move Node-specific rules out of `index.js`
+    into `node.js` (but as (non-deprecated) `eslint-plugin-node` equivalents
+    to ESLint rules)
+- Update [`explicitly-unused.js`]: Add (disabling of) new project-specific
+    `eslint-plugin-node` rules
+- Enhancement: Add new `sauron-node-script` which overrides use of Modules
+    to allow CommonJS
+- Refactoring: Simplify by included new `recommended` configs of `sonarjs`
+    and `no-use-extend-native`
+- npm: Update devDeps/peerDeps
+
 ## 18.0.0
 
 - Enhancement [`sauron.js`] (tighten): Add `unicorn/prefer-number-properties`

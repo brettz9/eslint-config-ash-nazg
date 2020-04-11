@@ -46,7 +46,8 @@ add rules specific to Node environments. Specifically,
 `plugin:node/recommended-module` has been adopted for now along with
 some stylistic choices. However, if you are using more CJS exports,
 you can override this by adding `plugin:node/recommended-script` to your
-`extends` array (after `ash-nazg`).
+`extends` array (after `ash-nazg`) or, for Sauron-Node, by using
+`sauron-node-script`.
 
 The `ash-nazg/sauron` config expands upon the regular `ash-nazg` rules to
 indicate what are generally best practices but are less likely to be due to
@@ -343,6 +344,10 @@ a bit early with Node 12.
 
 `node/no-callback-literal` duplicates `standard/no-callback-literal`
 (and is not recommended anyhow).
+
+`node/no-restricted-import` - project-specific
+
+`node/no-restricted-require` - project-specific
 
 `promise/no-native` is disabled as promises are essential--even, it
 appears, to Dark Lords.
