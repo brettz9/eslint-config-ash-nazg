@@ -5,6 +5,10 @@ Waiting on https://github.com/standard/eslint-config-standard/pull/160
 as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated-in-lhs
 -->
 
+## 20.0.0
+
+- npm: Update devDeps/peerDeps
+
 ## 19.0.0
 
 - Breaking change/Update: Move Node-specific rules out of `index.js`
