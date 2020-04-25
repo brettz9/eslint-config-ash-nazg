@@ -5,6 +5,12 @@ Waiting on https://github.com/standard/eslint-config-standard/pull/160
 as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated-in-lhs
 -->
 
+## 21.0.0
+
+- Update [index.js]: Disable new `unicorn/no-null`
+- Docs: Update explanation for `regex-shorthand`
+- npm: Update devDep./peerDep. (unicorn)
+
 ## 20.0.0
 
 - npm: Update devDeps/peerDeps

@@ -205,6 +205,7 @@ module.exports = {
     'unicorn/filename-case': 'off',
     'unicorn/import-index': 'off',
     'unicorn/no-nested-ternary': 'off',
+    'unicorn/no-null': 'off',
     'unicorn/no-unreadable-array-destructuring': 'off',
     'unicorn/prevent-abbreviations': 'off',
     'unicorn/prefer-exponentiation-operator': 'off',

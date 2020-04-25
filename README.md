@@ -400,6 +400,9 @@ appears, to Dark Lords.
     making it harder to find references to `index`.
 - `no-keyword-prefix` - See no need.
 - `no-nested-ternary` - As with eslint's `no-nested-ternary`
+- `no-null` - A good idea, but besides use of `null` in JSON, and semantic
+    arguments in favor (having an explicit, intentional empty value),
+    it makes for cleaner, quicker to understand code.
 - `no-unreadable-array-destructuring` - Better to use this than multiple lines
 - `no-unused-properties` - While no doubt useful, it won't catch all cases,
     sounds computationally expensive, and may better be done with TypeScript
@@ -407,9 +410,7 @@ appears, to Dark Lords.
 - `prefer-string-slice` - Added to Sauron but can be cumbersome to change for
   old projects
 - `prefer-replace-all` - Good but not available yet in Node (even 14)
-- `regex-shorthand` - With current behavior of sorting character class content,
-  is too oppressive; see [Unicorn issue #453](https://github.com/sindresorhus/eslint-plugin-unicorn/issues/453)
-  and [regexp-tree issue #199](https://github.com/DmitrySoshnikov/regexp-tree/issues/199).
+- `regex-shorthand` - Was renamed to `better-regex`.
 - `string-content` - Don't want the trouble of requiring formatted apostrophes (not recommended anyways).
 - `throw-new-error` - Potentially confining.
 
