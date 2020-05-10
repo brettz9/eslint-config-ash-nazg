@@ -5,6 +5,14 @@ Waiting on https://github.com/standard/eslint-config-standard/pull/160
 as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated-in-lhs
 -->
 
+## 22.0.0
+
+- Enhancement [`index.js`] (tighten): Add `default-case-last` and
+    `no-useless-backreference`
+- Update [`explicitly-unused.js`] (loosen): Add disabled
+    `no-restricted-exports` (ESLint 7 rule)
+- npm: Update devDeps/peerDeps
+
 ## 21.0.0
 
 - Update [index.js]: Disable new `unicorn/no-null`
