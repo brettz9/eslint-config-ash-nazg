@@ -5,6 +5,11 @@ Waiting on https://github.com/standard/eslint-config-standard/pull/160
 as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated-in-lhs
 -->
 
+## ?
+
+- npm: Remove explicit reference to new ESLint 7 recommended rules
+    (will automatically be set)
+
 ## 22.0.0
 
 - Enhancement [`index.js`] (tighten): Add `default-case-last` and

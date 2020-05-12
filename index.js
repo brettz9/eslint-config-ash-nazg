@@ -69,7 +69,6 @@ module.exports = {
     'no-buffer-constructor': ['error'],
     'no-confusing-arrow': ['error'],
     'no-constructor-return': ['error'],
-    'no-dupe-else-if': ['error'],
     'no-div-regex': ['error'],
     'no-duplicate-imports': ['error'],
     'no-else-return': ['error'],
@@ -78,7 +77,6 @@ module.exports = {
     'no-extra-label': ['error'],
     'no-implicit-coercion': ['error'],
     'no-implicit-globals': ['error'],
-    'no-import-assign': ['error'],
     'no-lonely-if': ['error'],
     'no-loop-func': ['error'],
     'no-restricted-globals': ['error', {
@@ -93,7 +91,6 @@ module.exports = {
       'message': 'Please use `Object.defineProperty` instead.'
     }],
     'no-script-url': ['error'],
-    'no-setter-return': ['error'],
     'no-useless-backreference': ['error'],
     'no-var': ['error'],
     'no-void': ['error'],
