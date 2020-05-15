@@ -205,12 +205,15 @@ module.exports = {
     'unicorn/import-index': 'off',
     'unicorn/no-nested-ternary': 'off',
     'unicorn/no-null': 'off',
+    'unicorn/no-reduce': 'off',
     'unicorn/no-unreadable-array-destructuring': 'off',
+    'unicorn/no-useless-undefined': 'off',
     'unicorn/prevent-abbreviations': 'off',
     'unicorn/prefer-exponentiation-operator': 'off',
     'unicorn/prefer-number-properties': 'off',
     'unicorn/prefer-set-has': 'off',
     'unicorn/prefer-string-slice': 'off',
+    'unicorn/prefer-optional-catch-binding': 'off',
     'unicorn/throw-new-error': 'off',
 
     // UNICORN

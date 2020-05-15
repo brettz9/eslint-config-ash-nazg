@@ -403,10 +403,21 @@ appears, to Dark Lords.
 - `no-null` - A good idea, but besides use of `null` in JSON, and semantic
     arguments in favor (having an explicit, intentional empty value),
     it makes for cleaner, quicker to understand code.
+- `no-reduce` - Though I can see some appeal to this (and `reduce` also
+    suffers from not being able to short-circuit), I like it for object
+    property accumulation, conditional array accumulation that can later be
+    flattened, etc. It also seems superfluous to add an extra `join` with
+    string concatenation.
 - `no-unreadable-array-destructuring` - Better to use this than multiple lines
 - `no-unused-properties` - While no doubt useful, it won't catch all cases,
     sounds computationally expensive, and may better be done with TypeScript
+- `no-useless-undefined` - I don't like the consequence of changing
+    `array-callback-return` to `allowImplicit`, and it can make clear that
+    use of `undefined` is deliberate.
 - `prefer-exponentiation` - Now present in eslint core
+- `prefer-optional-catch-binding` - Understandable rule, but extra work if
+    refactoring to add later, and the catch binding can also force
+    documentation of the error's purpose
 - `prefer-string-slice` - Added to Sauron but can be cumbersome to change for
   old projects
 - `prefer-replace-all` - Good but not available yet in Node (even 14)
