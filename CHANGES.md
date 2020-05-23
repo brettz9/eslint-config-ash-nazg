@@ -5,6 +5,11 @@ Waiting on https://github.com/standard/eslint-config-standard/pull/160
 as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated-in-lhs
 -->
 
+## 22.2.0
+
+- Enhancement: [`index.js`] (Tighten): Add `no-loss-of-precision`.
+- npm: Update peerDeps/devDeps.
+
 ## 22.1.0
 
 - Update [`index.js`]: Disable new Unicorn recommended rules

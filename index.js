@@ -79,6 +79,7 @@ module.exports = {
     'no-implicit-globals': ['error'],
     'no-lonely-if': ['error'],
     'no-loop-func': ['error'],
+    'no-loss-of-precision': ['error'],
     'no-restricted-globals': ['error', {
       'name': 'event',
       'message': 'Use local event parameter instead (preferably as \'e\' or \'ev\').'
