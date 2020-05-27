@@ -1,12 +1,13 @@
-/* eslint quotes: ["error", "single"] */
-/* eslint-disable node/no-sync, no-console */
+/* eslint quotes: ["error", "single"] -- not using JSON.stringify here */
+/* eslint-disable node/no-sync, no-console -- build script so sync and
+    console ok */
 
 // Note: we don't have an "unused:standard" script as it directly imports all rules
 
 import 'eslint'; // Needed by eslint-plugin-html
 import fs from 'fs';
 import {join} from 'path';
-// eslint-disable-next-line node/no-unpublished-import
+// eslint-disable-next-line node/no-unpublished-import -- dev script only
 import cc from '@scottnonnenberg/eslint-compare-config';
 
 const [, , type, rightModule, preferredConfig, config2] = process.argv;
@@ -257,11 +258,11 @@ if (isInherited || Object.keys(rightConfig.rules).length) {
     isInherited ? 'implicitly-included' : 'unused',
     getModulePath(rightModule, preferredConfig, isInherited)
   );
-  // eslint-disable-next-line node/prefer-promises/fs
+  // eslint-disable-next-line node/prefer-promises/fs -- needs higher Node version
   fs.writeFile(
     inheritedPath,
     '"use strict";\nmodule.exports = {\n  rules: ' + JSON.stringify(rightConfig.rules, null, 2).replace(/\n/gu, '\n  ') + '\n};\n',
-    // eslint-disable-next-line promise/prefer-await-to-callbacks
+    // eslint-disable-next-line promise/prefer-await-to-callbacks -- needs higher Node version to avoid
     (err) => {
       if (err) {
         console.error(err);

@@ -106,6 +106,8 @@ module.exports = {
 
     'unicorn/no-fn-reference-in-iterator': 'warn',
     'unicorn/prefer-number-properties': 'warn',
-    'unicorn/prefer-string-slice': 'error'
+    'unicorn/prefer-string-slice': 'error',
+
+    'eslint-comments/require-description': 'error'
   }
 };

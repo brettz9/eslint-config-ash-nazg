@@ -5,6 +5,13 @@ Waiting on https://github.com/standard/eslint-config-standard/pull/160
 as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated-in-lhs
 -->
 
+## 22.3.0
+
+- Enhancement [`sauron.js`] (Tighten): Add
+    `eslint-comments/require-description`
+- Linting: As per latest sauron
+- npm: Update peerDeps/devDeps.
+
 ## 22.2.0
 
 - Enhancement: [`index.js`] (Tighten): Add `no-loss-of-precision`.
