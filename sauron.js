@@ -95,6 +95,9 @@ module.exports = {
     'jsdoc/require-returns-type': ['warn', {
       contexts: ['any']
     }],
+    'jsdoc/require-throws': ['warn', {
+      contexts: ['any']
+    }],
 
     'promise/no-nesting': 'warn',
     'promise/no-promise-in-callback': 'warn',
