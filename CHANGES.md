@@ -5,6 +5,12 @@ Waiting on https://github.com/standard/eslint-config-standard/pull/160
 as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated-in-lhs
 -->
 
+## 22.5.0
+
+- Enhancement [`index.js`] (Tighten): Add `no-promise-executor-return`,
+    `no-unreachable-loop`
+- npm: Update peerDeps/devDeps.
+
 ## 22.4.0
 
 - Enhancement [`sauron.js`] (Tighten): Add `jsdoc/require-throws`

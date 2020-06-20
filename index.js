@@ -123,6 +123,9 @@ module.exports = {
     'object-curly-spacing': ['error', 'never'],
     'no-restricted-syntax': ['error', '[operator=instanceof]'],
 
+    'no-promise-executor-return': 'error',
+    'no-unreachable-loop': 'error',
+
     // Disable standard
     'object-curly-newline': ['off'],
     'object-property-newline': ['off'],
