@@ -654,18 +654,20 @@ can be picky about giving up their *preh-shus*...
   need for our comparison code
 - Rule for no functions with `this` (to use `class`)? Might adapt <https://github.com/matijs/eslint-plugin-this>?
 - To consider:
-  - <https://www.npmjs.com/package/eslint-plugin-const-case>
-  - <https://github.com/johnstonbl01/eslint-no-inferred-method-name> / <https://github.com/johnstonbl01/eslint-no-inferred-method-name/blob/master/docs/rules/no-inferred-method-name.md>
-  - <https://github.com/getify/eslint-plugin-proper-arrows>
-  - <https://github.com/selaux/eslint-plugin-filenames>
+    - <https://github.com/ota-meshi/eslint-plugin-regexp>
+    - <https://github.com/ota-meshi/eslint-plugin-jsonc>
+    - <https://www.npmjs.com/package/eslint-plugin-const-case>
+    - <https://github.com/johnstonbl01/eslint-no-inferred-method-name> / <https://github.com/johnstonbl01/eslint-no-inferred-method-name/blob/master/docs/rules/no-inferred-method-name.md>
+    - <https://github.com/getify/eslint-plugin-proper-arrows>
+    - <https://github.com/selaux/eslint-plugin-filenames>
 - See also `eslint-plugin-privileges` for plugins/config to add for security/transparency
 - Make plugins/tool config/toolkit?
-  - <https://github.com/not-an-aardvark/eslint-plugin-eslint-plugin>
-  - <https://github.com/j-f1/eslint-docs>
-  - <https://github.com/jfmengels/eslint-rule-documentation>
-  - <https://github.com/sarbbottam/eslint-find-rules>
-  - <https://github.com/pimlie/eslint-multiplexer>
-  - <https://github.com/wagerfield/eslint-index>
-  - <https://github.com/nickdeis/eslint-plugin-notice>
-  - <https://github.com/eslint/generator-eslint> (global install of `yo` also)
-  - Note `eslint --print-config file` for getting at applied config for a file
+    - <https://github.com/not-an-aardvark/eslint-plugin-eslint-plugin>
+    - <https://github.com/j-f1/eslint-docs>
+    - <https://github.com/jfmengels/eslint-rule-documentation>
+    - <https://github.com/sarbbottam/eslint-find-rules>
+    - <https://github.com/pimlie/eslint-multiplexer>
+    - <https://github.com/wagerfield/eslint-index>
+    - <https://github.com/nickdeis/eslint-plugin-notice>
+    - <https://github.com/eslint/generator-eslint> (global install of `yo` also)
+    - Note `eslint --print-config file` for getting at applied config for a file
