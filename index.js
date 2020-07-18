@@ -214,6 +214,7 @@ module.exports = {
     'unicorn/no-useless-undefined': 'off',
     'unicorn/prevent-abbreviations': 'off',
     'unicorn/prefer-exponentiation-operator': 'off',
+    'unicorn/prefer-flat-map': 'off',
     'unicorn/prefer-number-properties': 'off',
     'unicorn/prefer-set-has': 'off',
     'unicorn/prefer-string-slice': 'off',
