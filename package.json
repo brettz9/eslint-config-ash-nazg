@@ -64,14 +64,14 @@
   "dependencies": {},
   "peerDependencies": {
     "@mysticatea/eslint-plugin": "^13.0.0",
-    "eslint": "^7.5.0",
+    "eslint": "^7.7.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-array-func": "^3.1.7",
     "eslint-plugin-compat": "^3.8.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-html": "^6.0.2",
+    "eslint-plugin-html": "^6.0.3",
     "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsdoc": "^30.0.0",
+    "eslint-plugin-jsdoc": "^30.2.4",
     "eslint-plugin-markdown": "^1.0.2",
     "eslint-plugin-no-unsanitized": "^3.1.2",
     "eslint-plugin-no-use-extend-native": "^0.5.0",
@@ -80,19 +80,19 @@
     "eslint-plugin-sonarjs": "^0.5.0",
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-unicorn": "^21.0.0",
-    "typescript": "^3.9.7"
+    "typescript": "^4.0.2"
   },
   "devDependencies": {
     "@mysticatea/eslint-plugin": "^13.0.0",
     "@scottnonnenberg/eslint-compare-config": "^1.0.1",
-    "eslint": "^7.5.0",
+    "eslint": "^7.7.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-array-func": "^3.1.7",
     "eslint-plugin-compat": "^3.8.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-html": "^6.0.2",
+    "eslint-plugin-html": "^6.0.3",
     "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsdoc": "^30.0.0",
+    "eslint-plugin-jsdoc": "^30.2.4",
     "eslint-plugin-markdown": "^1.0.2",
     "eslint-plugin-no-unsanitized": "^3.1.2",
     "eslint-plugin-no-use-extend-native": "^0.5.0",
@@ -103,6 +103,6 @@
     "eslint-plugin-unicorn": "^21.0.0",
     "esm": "^3.2.25",
     "rimraf": "^3.0.2",
-    "typescript": "^3.9.7"
+    "typescript": "^4.0.2"
   }
 }
