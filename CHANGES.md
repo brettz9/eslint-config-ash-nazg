@@ -5,9 +5,10 @@ Waiting on https://github.com/standard/eslint-config-standard/pull/160
 as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated-in-lhs
 -->
 
-## ?
+## 22.8.0
 
 - npm: Update peerDeps/devDeps.
+- Update: Disable new Unicorn and jsdoc rules
 
 ## 22.7.0
 

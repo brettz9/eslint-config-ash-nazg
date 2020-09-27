@@ -184,6 +184,7 @@ module.exports = {
     'jsdoc/check-examples': ['error', {
       'rejectExampleCodeRegex': '^`'
     }],
+    'jsdoc/check-line-alignment': 'off',
     'jsdoc/check-param-names': ['error'],
     'jsdoc/check-syntax': ['error'],
     'jsdoc/check-tag-names': ['error'],
@@ -207,6 +208,7 @@ module.exports = {
     'unicorn/explicit-length-check': 'off',
     'unicorn/filename-case': 'off',
     'unicorn/import-index': 'off',
+    'unicorn/import-style': 'off',
     'unicorn/no-nested-ternary': 'off',
     'unicorn/no-null': 'off',
     'unicorn/no-reduce': 'off',

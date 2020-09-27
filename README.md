@@ -368,6 +368,7 @@ appears, to Dark Lords.
 
 #### Rationale for suppressing some `eslint-plugin-jsdoc` rules
 
+- `jsdoc/check-line-alignment` - More desirable default not yet implemented
 - `jsdoc/no-types` - Types have utility in jsdoc unless using TypeScript
 - `jsdoc/newline-after-description` (recommended) - I can see its draw,
     but seems too pedantic to me for documentation.
@@ -398,6 +399,7 @@ appears, to Dark Lords.
 - *`filename-case`* - Looks potentially useful with `camelCase`.
 - `import-index` - While understandable, seems may cause more trouble in
     making it harder to find references to `index`.
+- `import-style` - Using `eslint-plugin-import` instead
 - `no-keyword-prefix` - See no need.
 - `no-nested-ternary` - As with eslint's `no-nested-ternary`
 - `no-null` - A good idea, but besides use of `null` in JSON, and semantic
