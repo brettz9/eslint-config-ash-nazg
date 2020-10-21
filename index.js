@@ -182,7 +182,10 @@ module.exports = {
 
     // JSDOC
     'jsdoc/check-examples': ['error', {
-      'rejectExampleCodeRegex': '^`'
+      'rejectExampleCodeRegex': '^`',
+      checkDefaults: true,
+      checkParams: true,
+      checkProperties: true
     }],
     'jsdoc/check-line-alignment': 'off',
     'jsdoc/check-param-names': ['error'],
@@ -214,6 +217,7 @@ module.exports = {
     'unicorn/no-reduce': 'off',
     'unicorn/no-unreadable-array-destructuring': 'off',
     'unicorn/no-useless-undefined': 'off',
+    'unicorn/numeric-separators-style': 'off',
     'unicorn/prevent-abbreviations': 'off',
     'unicorn/prefer-exponentiation-operator': 'off',
     'unicorn/prefer-flat-map': 'off',

@@ -19,6 +19,7 @@ module.exports = {
     "unicorn/prefer-dataset": "error",
     "unicorn/prefer-event-key": "error",
     "unicorn/prefer-includes": "error",
+    "unicorn/prefer-math-trunc": "error",
     "unicorn/prefer-modern-dom-apis": "error",
     "unicorn/prefer-negative-index": "error",
     "unicorn/prefer-node-append": "error",
@@ -27,6 +28,7 @@ module.exports = {
     "unicorn/prefer-reflect-apply": "error",
     "unicorn/prefer-spread": "error",
     "unicorn/prefer-starts-ends-with": "error",
+    "unicorn/prefer-ternary": "error",
     "unicorn/prefer-text-content": "error",
     "unicorn/prefer-trim-start-end": "error",
     "unicorn/prefer-type-error": "error"

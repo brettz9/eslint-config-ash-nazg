@@ -30,6 +30,7 @@ module.exports = {
 
     'sonarjs/cognitive-complexity': 'warn',
 
+    'unicorn/numeric-separators-style': 'error',
     'unicorn/prevent-abbreviations': 'error',
     'unicorn/expiring-todo-comments': ['warn', {'allowWarningComments': false, 'terms': ['todo']}],
     'unicorn/prefer-set-has': 'error'

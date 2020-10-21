@@ -5,6 +5,14 @@ Waiting on https://github.com/standard/eslint-config-standard/pull/160
 as would like to remove deprecated rule https://eslint.org/docs/rules/no-negated-in-lhs
 -->
 
+## 22.9.0
+
+- Enhancement [`index.js`]: Add `checkDefaults`, `checkParams`, and
+    `checkProperties` to `jsdoc/check-examples` rule
+- Enhancement [`great-eye.js`]: Add `unicorn/numeric-separators-style` (but
+    disable in `index.js`)
+- npm: Update peerDeps/devDeps.
+
 ## 22.8.0
 
 - npm: Update peerDeps/devDeps.

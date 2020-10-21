@@ -608,6 +608,7 @@ for projects to specify all child types.
 - `jsdoc/require-example` - See `jsdoc/require-description`.
 - `sonarjs/cognitive-complexity` - As with `complexity` perhaps (though may
     add to sauron if demonstrates not to be too oppressive)
+- `unicorn/numeric-separators-style` - Good but may involve many changes.
 - `unicorn/prevent-abbreviations` - Very cumbersome for frequent conventions such
   as `e` for `event`
 - `unicorn/prefer-set-has` - Very good, but troublesome to refactor.
