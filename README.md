@@ -342,9 +342,6 @@ which allows in CLI apps.
 `node/prefer-promises/dns` and `node/prefer-promises/fs` are good, but
 a bit early with Node 12.
 
-`node/no-callback-literal` duplicates `standard/no-callback-literal`
-(and is not recommended anyhow).
-
 `node/no-restricted-import` - project-specific
 
 `node/no-restricted-require` - project-specific

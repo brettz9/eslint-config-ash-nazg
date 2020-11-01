@@ -31,6 +31,16 @@ const left = {
     ...cc.getLiteralConfigSync('sauron-node.js').rules,
     ...cc.getLiteralConfigSync('great-eye.js').rules,
     ...cc.getLiteralConfigSync('great-eye-node.js').rules,
+    ...(!isInherited && rightModule === 'eslint-plugin-node'
+      ? {
+        ...cc.getLiteralConfigSync(
+          join(__dirname, 'implicitly-included', getModulePath(
+            'eslint-config-standard'
+          ))
+        ).rules
+      }
+      : {}
+    ),
     ...(rightModule === '@mysticatea/eslint-plugin'
       ? {
         ...cc.getLiteralConfigSync(

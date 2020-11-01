@@ -14,7 +14,7 @@ module.exports = {
     './sauron-node.js',
     'plugin:node/recommended-script'
   ],
-  plugins: ['jsdoc', 'markdown'],
+  plugins: ['markdown'],
   settings: {
     polyfills: [
       'Object.entries',

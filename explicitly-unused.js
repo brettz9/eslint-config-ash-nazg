@@ -80,7 +80,6 @@ module.exports = {
     'import/no-unassigned-import': 'off',
     'import/prefer-default-export': 'off',
 
-    'node/no-callback-literal': 'off',
     'node/no-restricted-import': 'off',
     'node/no-restricted-require': 'off',
 
