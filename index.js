@@ -80,6 +80,7 @@ module.exports = {
     'no-lonely-if': ['error'],
     'no-loop-func': ['error'],
     'no-loss-of-precision': ['error'],
+    'no-nonoctal-decimal-escape': ['error'],
     'no-restricted-globals': ['error', {
       'name': 'event',
       'message': 'Use local event parameter instead (preferably as \'e\' or \'ev\').'
@@ -92,6 +93,7 @@ module.exports = {
       'message': 'Please use `Object.defineProperty` instead.'
     }],
     'no-script-url': ['error'],
+    'no-unsafe-optional-chaining': ['error'],
     'no-useless-backreference': ['error'],
     'no-var': ['error'],
     'no-void': ['error'],

@@ -121,6 +121,7 @@ function getExtensions (config) {
   if (!config.extends) {
     return [];
   }
+  // eslint-disable-next-line unicorn/no-array-reduce -- Convenient
   return config.extends.reduce((obj, extension) => {
     // Todo: This should support external extensions, but have no need now
     // No cyclic detection
@@ -161,6 +162,7 @@ const rightConfig = isInherited &&
   // rightModule.includes('plugin')
   ? (right.configs && right.configs[preferredConfig]) || {rules: {}}
   // Get all rules when seeing which are unused
+  // eslint-disable-next-line unicorn/no-array-reduce -- Convenient
   : {rules: Object.keys(right.rules || {}).reduce((obj, ruleName) => {
     obj[prefix + '/' + ruleName] = 'error'; // Just add something
     return obj;

@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 22.11.0
+
+- Enhancement [`index.js`]: Add `no-nonoctal-decimal-escape` and
+    `no-unsafe-optional-chaining`
+
 ## 22.10.0
 
 - Enhancement [`index.js`]: Apply latest standard; remove now unneeded
