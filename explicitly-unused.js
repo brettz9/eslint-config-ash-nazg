@@ -105,7 +105,21 @@ module.exports = {
 
     'unicorn/no-unused-properties': 'off',
     'unicorn/no-keyword-prefix': 'off',
+    'unicorn/prefer-string-replace-all': 'off',
+    'unicorn/string-content': 'off',
+
+    // Renamed
+    'unicorn/no-array-instanceof': 'off',
+    'unicorn/no-fn-reference-in-iterator': 'off',
+    'unicorn/no-reduce': 'off',
+    'unicorn/prefer-dataset': 'off',
+    'unicorn/prefer-node-append': 'off',
+    'unicorn/prefer-node-remove': 'off',
+    'unicorn/prefer-event-key': 'off',
+    'unicorn/prefer-flat-map': 'off',
     'unicorn/prefer-replace-all': 'off',
-    'unicorn/string-content': 'off'
+    'unicorn/prefer-starts-ends-with': 'off',
+    'unicorn/prefer-text-content': 'off',
+    'unicorn/prefer-trim-start-end': 'off'
   }
 };

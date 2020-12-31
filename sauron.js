@@ -105,7 +105,7 @@ module.exports = {
     'promise/valid-params': 'warn',
     'promise/prefer-await-to-callbacks': 'warn',
 
-    'unicorn/no-fn-reference-in-iterator': 'warn',
+    'unicorn/no-array-callback-reference': 'warn',
     'unicorn/prefer-number-properties': 'warn',
     'unicorn/prefer-string-slice': 'error',
 

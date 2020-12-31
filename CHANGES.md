@@ -1,9 +1,16 @@
 # eslint-config-ash-nazg CHANGES
 
-## 22.11.0
+## 23.0.0
 
-- Enhancement [`index.js`]: Add `no-nonoctal-decimal-escape` and
+- Enhancement [`index.js`] (tighten): Add `no-nonoctal-decimal-escape` and
     `no-unsafe-optional-chaining`
+- Enhancement [`index.js`] (tighten): Add `unicorn/prefer-array-some`,
+    `unicorn/prefer-date-now`, `unicorn/prefer-default-parameters`
+- Enhancement [`index.js`] (tighten): Use renamed Unicorn rules
+- Enhancement [`index.js`]: Avoid new Unicorn rules `no-lonely-if` and
+    `empty-brace-spaces`
+- Update [`explicitly-unused.js`]: Add renamed Unicorn rules
+- npm: Update peerDeps/devDeps.
 
 ## 22.10.0
 

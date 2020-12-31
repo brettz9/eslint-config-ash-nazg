@@ -392,34 +392,38 @@ appears, to Dark Lords.
   some time to refactor, this often removes functions from a logical
   grouping, and may even increase bugs, as one may be tempted to move out
   a function whose dependency is no longer wrapped with it.
+- `empty-brace-spaces` - Easier to build on and cleaner if allowing newlines
 - `explicit-length-check` - Seems wasteful.
 - *`filename-case`* - Looks potentially useful with `camelCase`.
 - `import-index` - While understandable, seems may cause more trouble in
     making it harder to find references to `index`.
 - `import-style` - Using `eslint-plugin-import` instead
-- `no-keyword-prefix` - See no need.
-- `no-nested-ternary` - As with eslint's `no-nested-ternary`
-- `no-null` - A good idea, but besides use of `null` in JSON, and semantic
-    arguments in favor (having an explicit, intentional empty value),
-    it makes for cleaner, quicker to understand code.
-- `no-reduce` - Though I can see some appeal to this (and `reduce` also
+- `no-array-reduce` - Though I can see some appeal to this (and `reduce` also
     suffers from not being able to short-circuit), I like it for object
     property accumulation, conditional array accumulation that can later be
     flattened, etc. It also seems superfluous to add an extra `join` with
     string concatenation.
+- `no-instanceof-array` - Covered by our blocking of all `instanceof`
+- `no-keyword-prefix` - See no need.
+- `no-lonely-if` - Nested ifs can be useful to catch and ignore.
+- `no-nested-ternary` - As with eslint's `no-nested-ternary`
+- `no-null` - A good idea, but besides use of `null` in JSON, and semantic
+    arguments in favor (having an explicit, intentional empty value),
+    it makes for cleaner, quicker to understand code.
 - `no-unreadable-array-destructuring` - Better to use this than multiple lines
 - `no-unused-properties` - While no doubt useful, it won't catch all cases,
     sounds computationally expensive, and may better be done with TypeScript
 - `no-useless-undefined` - I don't like the consequence of changing
     `array-callback-return` to `allowImplicit`, and it can make clear that
     use of `undefined` is deliberate.
+- `prefer-array-flat-map` - Present in `array-func`
 - `prefer-exponentiation` - Now present in eslint core
 - `prefer-optional-catch-binding` - Understandable rule, but extra work if
     refactoring to add later, and the catch binding can also force
     documentation of the error's purpose
 - `prefer-string-slice` - Added to Sauron but can be cumbersome to change for
   old projects
-- `prefer-replace-all` - Good but not available yet in Node (even 14)
+- `prefer-string-replace-all` - Good but not available yet in Node (even 14)
 - `regex-shorthand` - Was renamed to `better-regex`.
 - `string-content` - Don't want the trouble of requiring formatted apostrophes (not recommended anyways).
 - `throw-new-error` - Potentially confining.
@@ -530,7 +534,7 @@ may not all be under one's control).
     to label all files
 - `promise/prefer-await-to-callbacks` - Sometimes useful, but callbacks
     may be used within repeating events
-- `unicorn/no-fn-reference-in-iterator` - May be cumbersome though does
+- `unicorn/no-array-callback-reference` - May be cumbersome though does
     catch potential problems
 - `unicorn/prefer-number-properties` - Good but some refactoring needed (and not
     always readily fixable).
