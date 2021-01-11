@@ -1,6 +1,7 @@
 "use strict";
 module.exports = {
   rules: {
+    "unicorn/consistent-destructuring": "error",
     "unicorn/error-message": "error",
     "unicorn/escape-case": "error",
     "unicorn/new-for-builtins": "error",
@@ -9,6 +10,7 @@ module.exports = {
     "unicorn/no-for-loop": "error",
     "unicorn/no-hex-escape": "error",
     "unicorn/no-instanceof-array": "error",
+    "unicorn/no-new-array": "error",
     "unicorn/no-new-buffer": "error",
     "unicorn/no-object-as-default-parameter": "error",
     "unicorn/no-process-exit": "error",
@@ -16,6 +18,7 @@ module.exports = {
     "unicorn/number-literal-case": "error",
     "unicorn/prefer-add-event-listener": "error",
     "unicorn/prefer-array-find": "error",
+    "unicorn/prefer-array-index-of": "error",
     "unicorn/prefer-array-some": "error",
     "unicorn/prefer-date-now": "error",
     "unicorn/prefer-default-parameters": "error",
@@ -30,6 +33,7 @@ module.exports = {
     "unicorn/prefer-negative-index": "error",
     "unicorn/prefer-query-selector": "error",
     "unicorn/prefer-reflect-apply": "error",
+    "unicorn/prefer-regexp-test": "error",
     "unicorn/prefer-spread": "error",
     "unicorn/prefer-string-starts-ends-with": "error",
     "unicorn/prefer-string-trim-start-end": "error",

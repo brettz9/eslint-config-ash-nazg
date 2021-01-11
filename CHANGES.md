@@ -1,5 +1,11 @@
 # eslint-config-ash-nazg CHANGES
 
+## 24.0.0
+
+- Enhancement [`index.js`] (tighten): Uses all new Unicorn 26.0.0 rules
+- remark: remove remarkrc
+- npm: Update peerDeps/devDeps.
+
 ## 23.0.0
 
 - Enhancement [`index.js`] (tighten): Add `no-nonoctal-decimal-escape` and
