@@ -615,7 +615,8 @@ for projects to specify all child types.
 - `unicorn/prefer-set-has` - Very good, but troublesome to refactor.
 
 The `preferredTypes` setting was enabled here for integer/float as it can
-be cumbersome for projects to distinguish.
+be cumbersome for projects to distinguish and because `Promise` even
+subclassed doesn't indicate the rejector type.
 
 ## Rationale for including rules that might not seem necessary
 

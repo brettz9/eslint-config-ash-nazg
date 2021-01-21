@@ -3,8 +3,13 @@ module.exports = {
   extends: ['./sauron'],
   settings: {
     preferredTypes: {
+      'Promise.<>': {
+        message: 'Non-preferred @{{tagName}}{{tagValue}} type "Promise"; prefer a more specific `@interface`+`@class`-defined constructor (or use `typeof Promise` as its base type if using typescript mode) so that its resolve and reject functions can be specified: https://github.com/jsdoc/jsdoc/issues/509#issuecomment-764509057.',
+        replacement: false
+      },
       number: {
-        message: 'Use `Integer` or `Float`'
+        message: 'Use `Integer` or `Float`',
+        replacement: false
       }
     }
   },

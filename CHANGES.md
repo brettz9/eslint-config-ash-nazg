@@ -1,5 +1,11 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- Enhancement [`great-eye.js`] (tighten): Prevent plain use of even subclassed
+    `Promise<>` to instead use an interface where the specific resolver and
+    rejector can be documented.
+
 ## 24.0.0
 
 - Enhancement [`index.js`] (tighten): Uses all new Unicorn 26.0.0 rules
