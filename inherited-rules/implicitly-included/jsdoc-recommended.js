@@ -9,6 +9,8 @@ module.exports = {
     "jsdoc/require-property": "warn",
     "jsdoc/require-property-name": "warn",
     "jsdoc/require-property-type": "warn",
-    "jsdoc/require-returns-check": "warn"
+    "jsdoc/require-returns-check": "warn",
+    "jsdoc/require-yields": "warn",
+    "jsdoc/require-yields-check": "warn"
   }
 };

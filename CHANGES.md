@@ -1,10 +1,13 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 25.0.0
 
+- Enhancement [`index.js`] (tighten): Update new jsdoc and Unicorn rules,
+    though disable `unicorn/no-array-for-each`
 - Enhancement [`great-eye.js`] (tighten): Prevent plain use of even subclassed
     `Promise<>` to instead use an interface where the specific resolver and
     rejector can be documented.
+- npm: Update peerDeps/devDeps.
 
 ## 24.0.0
 

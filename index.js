@@ -215,6 +215,7 @@ module.exports = {
     'unicorn/filename-case': 'off',
     'unicorn/import-index': 'off',
     'unicorn/import-style': 'off',
+    'unicorn/no-array-for-each': 'off',
     'unicorn/no-lonely-if': 'off',
     'unicorn/no-nested-ternary': 'off',
     'unicorn/no-null': 'off',

@@ -403,6 +403,8 @@ appears, to Dark Lords.
     property accumulation, conditional array accumulation that can later be
     flattened, etc. It also seems superfluous to add an extra `join` with
     string concatenation.
+- `no-array-for-each` - Writing code for `forEach` allows later refactoring,
+    e.g., to move out of the block.
 - `no-instanceof-array` - Covered by our blocking of all `instanceof`
 - `no-keyword-prefix` - See no need.
 - `no-lonely-if` - Nested ifs can be useful to catch and ignore.
