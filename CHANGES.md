@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 25.1.0
+
+- Enhancement: Enforce type on `yields`
+
 ## 25.0.0
 
 - Enhancement [`index.js`] (tighten): Update new jsdoc and Unicorn rules,

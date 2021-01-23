@@ -37,7 +37,14 @@ module.exports = {
   ],
   'settings': {
     'jsdoc': {
-      'tagNamePreference': {
+      structuredTags: {
+        yields: {
+          name: 'text',
+          required: ['type'],
+          type: true
+        }
+      },
+      tagNamePreference: {
         'augments': 'extends'
       }
     }
