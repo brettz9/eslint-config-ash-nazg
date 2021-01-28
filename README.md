@@ -662,6 +662,7 @@ can be picky about giving up their *preh-shus*...
 - Rule for no functions with `this` (to use `class`)? Might adapt <https://github.com/matijs/eslint-plugin-this>?
 - To consider:
     - <https://github.com/ota-meshi/eslint-plugin-regexp>
+    - <https://github.com/BrainMaestro/eslint-plugin-optimize-regex> (Catches basic errors like `/{/u` and `/(/` too)
     - <https://github.com/ota-meshi/eslint-plugin-jsonc>
     - <https://www.npmjs.com/package/eslint-plugin-const-case>
     - <https://github.com/johnstonbl01/eslint-no-inferred-method-name> / <https://github.com/johnstonbl01/eslint-no-inferred-method-name/blob/master/docs/rules/no-inferred-method-name.md>
