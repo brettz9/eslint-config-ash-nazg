@@ -474,9 +474,9 @@ appears, to Dark Lords.
     more sleek to use the spread operator. Would like to know how much it
     impacts performance before enabling.
 
-### Rationale for not including some `sonarjs` rules
+### Rationale for not including some `radar` rules
 
-(All sonarjs rules are currently "recommended" rules as well.)
+(All radar rules are currently "recommended" rules as well.)
 
 - `max-switch-cases` - Sounds too arbitrary.
 - `no-collapsible-if` - Sometimes more logically clear or made in preparation
@@ -609,7 +609,7 @@ for projects to specify all child types.
 - `jsdoc/require-property-description` (recommended) - See
   `jsdoc/require-description`.
 - `jsdoc/require-example` - See `jsdoc/require-description`.
-- `sonarjs/cognitive-complexity` - As with `complexity` perhaps (though may
+- `radar/cognitive-complexity` - As with `complexity` perhaps (though may
     add to sauron if demonstrates not to be too oppressive)
 - `unicorn/numeric-separators-style` - Good but may involve many changes.
 - `unicorn/prevent-abbreviations` - Very cumbersome for frequent conventions such

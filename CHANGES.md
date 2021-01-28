@@ -1,5 +1,12 @@
 # eslint-config-ash-nazg CHANGES
 
+## 26.0.0
+
+- Breaking enhancement: Switch from SonarJS to Radar, a maintained fork which
+    doesn't warn when using ESLint 7 for `peerDependencies`. Changes
+    `inherited-rules/implicitly-included/sonars-recommended.js` to
+    `inherited-rules/implicitly-included/radar-recommended.js`
+
 ## 25.1.0
 
 - Enhancement: Enforce type on `yields`

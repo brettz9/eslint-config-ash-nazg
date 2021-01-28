@@ -24,7 +24,7 @@ module.exports = {
     'plugin:eslint-comments/recommended',
     'plugin:compat/recommended',
     'plugin:array-func/all',
-    'plugin:sonarjs/recommended',
+    'plugin:radar/recommended',
     'plugin:jsdoc/recommended',
     'plugin:no-use-extend-native/recommended'
   ],
@@ -296,13 +296,13 @@ module.exports = {
     // array-func
     'array-func/prefer-array-from': 'off',
 
-    // SONARJS
-    'sonarjs/max-switch-cases': 'off',
-    'sonarjs/no-collapsible-if': 'off',
-    'sonarjs/no-duplicate-string': 'off',
-    'sonarjs/no-identical-functions': 'off',
-    'sonarjs/no-small-switch': 'off',
-    'sonarjs/prefer-immediate-return': 'off',
-    'sonarjs/cognitive-complexity': 'off'
+    // Radar
+    'radar/max-switch-cases': 'off',
+    'radar/no-collapsible-if': 'off',
+    'radar/no-duplicate-string': 'off',
+    'radar/no-identical-functions': 'off',
+    'radar/no-small-switch': 'off',
+    'radar/prefer-immediate-return': 'off',
+    'radar/cognitive-complexity': 'off'
   }
 };
