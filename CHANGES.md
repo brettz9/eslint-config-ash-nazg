@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 26.1.0
+
+- npm: Update peerDeps/devDeps.
+
 ## 26.0.0
 
 - Breaking enhancement: Switch from SonarJS to Radar, a maintained fork which
