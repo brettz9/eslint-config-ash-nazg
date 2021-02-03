@@ -59,9 +59,11 @@
   },
   "homepage": "https://github.com/brettz9/eslint-config-ash-nazg#readme",
   "engines": {
-    "node": ">=8.10.0"
+    "node": ">=10.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "semver": "^6.3.0"
+  },
   "peerDependencies": {
     "@mysticatea/eslint-plugin": "^13.0.0",
     "eslint": "^7.19.0",

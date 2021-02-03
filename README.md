@@ -339,6 +339,8 @@ happy with it thus far).
 `no-process-exit` (added by Node recommended) - has a version in Unicorn
 which allows in CLI apps.
 
+`node/global-require` - Redundant with `import/no-dynamic-require`
+
 `node/prefer-promises/dns` and `node/prefer-promises/fs` are good, but
 a bit early with Node 12.
 

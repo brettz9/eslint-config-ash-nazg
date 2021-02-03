@@ -1,6 +1,10 @@
 'use strict';
 
 module.exports = {
+  env: {
+    // At least likely to be polyglot
+    'shared-node-browser': true
+  },
   extends: [
     // This plugin's rules are overridden by following configs (except for
     //   its own rules), so including first; we also don't want its disabling

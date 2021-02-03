@@ -1,6 +1,13 @@
 'use strict';
+
+const {env, ecmaVersion} = require('./detectEnv.js');
+
 module.exports = {
   extends: ['./index.js', 'plugin:node/recommended-module'],
+  env,
+  parserOptions: {
+    ecmaVersion
+  },
   rules: {
     // Disable Node-added
     // (Use Unicorn extension instead which allows in CLI apps)
@@ -24,7 +31,6 @@ module.exports = {
 
     // Enable eslint-plugin-node equivalents
     'node/callback-return': 'error',
-    'node/global-require': 'error',
     'node/handle-callback-err': 'error',
     'node/no-new-require': 'error',
     'node/no-path-concat': 'error',
@@ -32,7 +38,11 @@ module.exports = {
     'node/no-sync': 'error',
     // Override this one's default options
     'node/no-mixed-requires': ['error', {grouping: true, allowCall: true}],
+
     // For this, we want the unicorn extension
-    'node/no-process-exit': 'off'
+    'node/no-process-exit': 'off',
+
+    // For this, we want the import extension
+    'node/global-require': 'off'
   }
 };
