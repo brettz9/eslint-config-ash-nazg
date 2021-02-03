@@ -45,13 +45,13 @@ module.exports = {
     files: ['inherited-rules/**'],
     rules: {
       // Uses JSON.stringify
-      quotes: ['error', 'double']
+      quotes: ['error', 'double'],
+      'quote-props': 'off'
     }
   }],
   rules: {
     quotes: ['error', 'single'],
     'max-len': 'off',
-    'quote-props': 'off',
     'import/unambiguous': 'off',
     'import/no-commonjs': 'off'
   }

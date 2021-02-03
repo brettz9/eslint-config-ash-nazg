@@ -1,6 +1,7 @@
 'use strict';
+
 module.exports = {
-  'extends': [
+  extends: [
     // This plugin's rules are overridden by following configs (except for
     //   its own rules), so including first; we also don't want its disabling
     //   of some, e.g., recommended rules
@@ -28,15 +29,15 @@ module.exports = {
     'plugin:jsdoc/recommended',
     'plugin:no-use-extend-native/recommended'
   ],
-  'plugins': [
+  plugins: [
     // These have no rules
     'markdown',
     'html',
     // See above on why adding here instead of extending a config
     '@mysticatea'
   ],
-  'settings': {
-    'jsdoc': {
+  settings: {
+    jsdoc: {
       structuredTags: {
         yields: {
           name: 'text',
@@ -45,11 +46,11 @@ module.exports = {
         }
       },
       tagNamePreference: {
-        'augments': 'extends'
+        augments: 'extends'
       }
     }
   },
-  'rules': {
+  rules: {
     // RULES SHOULD ONLY BE DIFFERENT FROM INHERITED (ENABLING, DISABLING, CHANGING)
 
     'array-bracket-newline': ['error', 'consistent'],
@@ -79,7 +80,7 @@ module.exports = {
     'no-div-regex': ['error'],
     'no-duplicate-imports': ['error'],
     'no-else-return': ['error'],
-    'no-empty': ['error', {'allowEmptyCatch': true}],
+    'no-empty': ['error', {allowEmptyCatch: true}],
     'no-eq-null': ['error'],
     'no-extra-label': ['error'],
     'no-implicit-coercion': ['error'],
@@ -89,15 +90,15 @@ module.exports = {
     'no-loss-of-precision': ['error'],
     'no-nonoctal-decimal-escape': ['error'],
     'no-restricted-globals': ['error', {
-      'name': 'event',
-      'message': 'Use local event parameter instead (preferably as \'e\' or \'ev\').'
+      name: 'event',
+      message: 'Use local event parameter instead (preferably as \'e\' or \'ev\').'
     }, {
-      'name': 'fdescribe',
-      'message': 'Do not commit fdescribe. Use describe instead.'
+      name: 'fdescribe',
+      message: 'Do not commit fdescribe. Use describe instead.'
     }],
     'no-restricted-properties': ['error', {
-      'property': '__defineGetter__',
-      'message': 'Please use `Object.defineProperty` instead.'
+      property: '__defineGetter__',
+      message: 'Please use `Object.defineProperty` instead.'
     }],
     'no-script-url': ['error'],
     'no-unsafe-optional-chaining': ['error'],
@@ -106,29 +107,29 @@ module.exports = {
     'no-void': ['error'],
     'no-warning-comments': ['error', {terms: ['fixme', 'xxx']}],
     'nonblock-statement-body-position': ['error'],
-    'object-shorthand': ['error', 'always', {'avoidExplicitReturnArrows': true}],
+    'object-shorthand': ['error', 'always', {avoidExplicitReturnArrows: true}],
     'operator-assignment': ['error'],
     'prefer-const': ['error'],
-    'prefer-destructuring': ['error', {'object': true}],
+    'prefer-destructuring': ['error', {object: true}],
     'prefer-exponentiation-operator': ['error'],
     'prefer-object-spread': ['error'],
     'prefer-regex-literals': ['error'],
     'prefer-rest-params': ['error'],
     'prefer-spread': ['error'],
     'quote-props': ['error', 'as-needed'],
-    'quotes': ['error', 'single', {
+    quotes: ['error', 'single', {
       avoidEscape: true,
       allowTemplateLiterals: true
     }],
-    'radix': ['error', 'as-needed'],
+    radix: ['error', 'as-needed'],
     'require-await': ['error'],
     'semi-style': ['error'],
-    'strict': ['error'],
+    strict: ['off'],
     'switch-colon-spacing': ['error'],
     'wrap-regex': ['error'],
 
-    'semi': ['error', 'always'],
-    'indent': ['error', 2, {'outerIIFEBody': 0}],
+    semi: ['error', 'always'],
+    indent: ['error', 2, {outerIIFEBody: 0}],
     'object-curly-spacing': ['error', 'never'],
     'no-restricted-syntax': ['error', '[operator=instanceof]'],
 
@@ -167,8 +168,8 @@ module.exports = {
     'import/no-mutable-exports': 'error',
     'import/no-amd': 'error',
 
-    'import/extensions': ['error', 'always', {'ignorePackages': true}],
-    'import/order': ['error', {'groups': [
+    'import/extensions': ['error', 'always', {ignorePackages: true}],
+    'import/order': ['error', {groups: [
       'builtin',
       'external',
       'internal',
@@ -191,7 +192,7 @@ module.exports = {
 
     // JSDOC
     'jsdoc/check-examples': ['error', {
-      'rejectExampleCodeRegex': '^`',
+      rejectExampleCodeRegex: '^`',
       checkDefaults: true,
       checkParams: true,
       checkProperties: true
@@ -244,7 +245,7 @@ module.exports = {
     'unicorn/custom-error-definition': 'error',
     'unicorn/no-unsafe-regex': 'error',
 
-    'unicorn/expiring-todo-comments': ['error', {'allowWarningComments': true, 'terms': ['todo']}],
+    'unicorn/expiring-todo-comments': ['error', {allowWarningComments: true, terms: ['todo']}],
 
     // `@mysticatea`
     '@mysticatea/block-scoped-var': 'error',
@@ -291,7 +292,7 @@ module.exports = {
 
     // eslint-comments
     'eslint-comments/no-unused-disable': 'error',
-    'eslint-comments/disable-enable-pair': ['error', {'allowWholeFile': true}],
+    'eslint-comments/disable-enable-pair': ['error', {allowWholeFile: true}],
 
     // array-func
     'array-func/prefer-array-from': 'off',

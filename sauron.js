@@ -1,6 +1,7 @@
 'use strict';
+
 module.exports = {
-  extends: ['./', 'plugin:no-unsanitized/DOM'],
+  extends: ['./index.js', 'plugin:no-unsanitized/DOM'],
   settings: {
     jsdoc: {
       preferredTypes: {
@@ -51,13 +52,13 @@ module.exports = {
     'consistent-this': ['warn'],
     'default-case': ['warn'],
     'max-len': ['warn', {
-      'ignoreUrls': true,
-      'ignoreRegExpLiterals': true
+      ignoreUrls: true,
+      ignoreRegExpLiterals: true
     }],
     'no-alert': ['warn'],
     'no-console': ['warn'],
     'no-empty-function': ['warn'],
-    'no-shadow': ['warn', {'builtinGlobals': true, 'hoist': 'functions', 'allow': ['parent', 'top', 'open', 'close', 'stop', 'blur', 'status', 'name', 'closed', 'start']}],
+    'no-shadow': ['warn', {builtinGlobals: true, hoist: 'functions', allow: ['parent', 'top', 'open', 'close', 'stop', 'blur', 'status', 'name', 'closed', 'start']}],
     'prefer-named-capture-group': ['warn'],
     'prefer-numeric-literals': ['warn'],
     'require-unicode-regexp': ['warn'],

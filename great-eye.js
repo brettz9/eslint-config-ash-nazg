@@ -1,6 +1,7 @@
 'use strict';
+
 module.exports = {
-  extends: ['./sauron'],
+  extends: ['./sauron.js'],
   settings: {
     preferredTypes: {
       'Promise.<>': {
@@ -15,7 +16,7 @@ module.exports = {
   },
   rules: {
     'capitalized-comments': ['warn'],
-    'complexity': ['warn'],
+    complexity: ['warn'],
     'max-statements': ['warn'],
     'max-statements-per-line': ['warn'],
     'no-magic-numbers': ['warn'],
@@ -37,7 +38,7 @@ module.exports = {
 
     'unicorn/numeric-separators-style': 'error',
     'unicorn/prevent-abbreviations': 'error',
-    'unicorn/expiring-todo-comments': ['warn', {'allowWarningComments': false, 'terms': ['todo']}],
+    'unicorn/expiring-todo-comments': ['warn', {allowWarningComments: false, terms: ['todo']}],
     'unicorn/prefer-set-has': 'error'
   }
 };

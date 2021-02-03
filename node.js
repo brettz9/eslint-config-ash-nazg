@@ -1,6 +1,6 @@
 'use strict';
 module.exports = {
-  extends: ['./', 'plugin:node/recommended-module'],
+  extends: ['./index.js', 'plugin:node/recommended-module'],
   rules: {
     // Disable Node-added
     // (Use Unicorn extension instead which allows in CLI apps)
@@ -31,7 +31,7 @@ module.exports = {
     'node/no-process-env': 'error',
     'node/no-sync': 'error',
     // Override this one's default options
-    'node/no-mixed-requires': ['error', {'grouping': true, 'allowCall': true}],
+    'node/no-mixed-requires': ['error', {grouping: true, allowCall: true}],
     // For this, we want the unicorn extension
     'node/no-process-exit': 'off'
   }

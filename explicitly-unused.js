@@ -1,4 +1,5 @@
 'use strict';
+
 module.exports = {
   rules: {
     // This file is for indicating those rules available in inherited plugins
