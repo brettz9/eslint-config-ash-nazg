@@ -36,6 +36,7 @@ module.exports = {
   }, {
     files: 'build.js',
     globals: {
+      // Todo: Get rid of this usage (and esm) with native Node only
       __dirname: true
     },
     extends: [

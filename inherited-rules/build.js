@@ -2,7 +2,8 @@
 /* eslint-disable node/no-sync, no-console -- build script so sync and
     console ok */
 
-// Note: we don't have an "unused:standard" script as it directly imports all rules
+// Note: we don't have an "unused:standard" script as it directly imports
+//  all rules
 
 import 'eslint'; // Needed by eslint-plugin-html
 import fs from 'fs';
@@ -139,7 +140,9 @@ function getExtensions (config) {
   }, {});
 }
 
-if (preferredConfig && right.configs && right.configs[preferredConfig].extends) {
+if (
+  preferredConfig && right.configs && right.configs[preferredConfig].extends
+) {
   // Since we're being forced to copy literal config, we have to add this
   //  manually (used in `array-func/all`):
   right.configs[preferredConfig].rules = {
@@ -155,9 +158,9 @@ const prefix = rightModule.replace(/eslint-plugin-/u, '');
 
 const rightConfig = isInherited &&
   // If we are checking inherited, some configs, like "standard", are not rule
-  //   functions but are just the rules with "error", etc., but we also want these
-  //   treated as included (through `right.rules`); however, other configs like
-  //   "no-use-extend-native" are missing rules
+  //   functions but are just the rules with "error", etc., but we also want
+  //   these treated as included (through `right.rules`); however, other
+  //   configs like "no-use-extend-native" are missing rules
   typeof Object.values(right.rules || {})[0] !== 'string'
   // rightModule.includes('plugin')
   ? (right.configs && right.configs[preferredConfig]) || {rules: {}}
@@ -189,7 +192,10 @@ Object.entries(rightConfig.rules).forEach(([key, val]) => {
     delete rightConfig.rules[keyReplaced];
   }
 });
-if (!isInherited && !preferredConfig && rightModule === '@mysticatea/eslint-plugin') {
+if (
+  !isInherited && !preferredConfig &&
+  rightModule === '@mysticatea/eslint-plugin'
+) {
   /*
   We removed `2020` from the end of the `@mysticatea/eslint-plugin` unused
   `package.json` script as we had to manually add the rules we wanted (see
@@ -197,9 +203,10 @@ if (!isInherited && !preferredConfig && rightModule === '@mysticatea/eslint-plug
   configs (including the `2020` config which might otherwise be ideal) expose
   all rules (and only those rules) which are unique to the plugin.
   We do the following show which items are unused.
-  To show which items if we were extending it, one can run `unused:@mysticatea-old`,
-  but we are not adding this to the regular `unused` script as we don't want
-  to show its items as unused (as we are not extending es2020).
+  To show which items if we were extending it, one can run
+  `unused:@mysticatea-old`, but we are not adding this to the regular `unused`
+  script as we don't want to show its items as unused (as we are not extending
+  es2020).
   */
   Object.keys(rightConfig.rules).forEach((rule) => {
     // We are not interested in including rules it adds from other configs,
@@ -210,7 +217,10 @@ if (!isInherited && !preferredConfig && rightModule === '@mysticatea/eslint-plug
   });
 }
 
-// console.log('rightConfig', Object.keys(rightConfig.rules).filter((r) => r.match(/eslint-config/)));
+// console.log(
+//   'rightConfig',
+//   Object.keys(rightConfig.rules).filter((r) => r.match(/eslint-config/))
+// );
 
 if (isInherited) {
   // We don't want to show as inherited those which we override
@@ -229,7 +239,9 @@ if (isInherited) {
         // Probably not a problem if has options (likely non-default)
         !left.rules[key][1]
       ) {
-        throw new Error('k' + '::' + key + '::' + JSON.stringify(left.rules[key]));
+        throw new Error(
+          'k' + '::' + key + '::' + JSON.stringify(left.rules[key])
+        );
       }
       const replacedKey = key.replace(rightModule + '/', '');
       delete rightConfig.rules[replacedKey];
@@ -269,10 +281,13 @@ if (isInherited || Object.keys(rightConfig.rules).length) {
     isInherited ? 'implicitly-included' : 'unused',
     getModulePath(rightModule, preferredConfig, isInherited)
   );
+
+  // eslint-disable-next-line max-len -- Too long
   // eslint-disable-next-line node/prefer-promises/fs -- needs higher Node version
   fs.writeFile(
     inheritedPath,
     '"use strict";\nmodule.exports = {\n  rules: ' + JSON.stringify(rightConfig.rules, null, 2).replace(/\n/gu, '\n  ') + '\n};\n',
+    // eslint-disable-next-line max-len -- Too long
     // eslint-disable-next-line promise/prefer-await-to-callbacks -- needs higher Node version to avoid
     (err) => {
       if (err) {
