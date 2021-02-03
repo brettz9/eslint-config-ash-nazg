@@ -661,6 +661,7 @@ can be picky about giving up their *preh-shus*...
   need for our comparison code
 - Rule for no functions with `this` (to use `class`)? Might adapt <https://github.com/matijs/eslint-plugin-this>?
 - To consider:
+    - <https://yeonjuan.github.io/html-eslint> Lint HTML itself
     - <https://github.com/ota-meshi/eslint-plugin-regexp>
     - <https://github.com/BrainMaestro/eslint-plugin-optimize-regex> (Catches basic errors like `/{/u` and `/(/` too)
     - <https://github.com/ota-meshi/eslint-plugin-jsonc>
