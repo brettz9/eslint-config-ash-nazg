@@ -1,5 +1,7 @@
 'use strict';
 
+// Move to own repo so can have `@babel/eslint-parser` and `@babel/eslint-plugin` as deps.
+
 // Adapted from MIT-licensed: https://github.com/futagoza/eslint-config-futagozaryuu/blob/master/packages/%40futagoza/eslint-config-core/stylistic-issues.js
 
 /**

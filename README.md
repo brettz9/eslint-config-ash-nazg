@@ -26,9 +26,9 @@ rules we don't include (rationale for non-inclusion below).)
 - [Main rules](https://eslint.org/docs/rules/) (also search for "error" within <https://github.com/eslint/eslint/blob/master/conf/eslint-recommended.js>) for the `eslint:recommended` rules we inherit (though see below for our two modifications to these).
 - ["standard"](https://github.com/standard/eslint-config-standard/blob/master/eslintrc.json)
 rules we inherit (though see below for our handful of modifications).
-- [mysticatea/eslint-plugin](https://github.com/mysticatea/eslint-plugin)
-    for a number of added rules (though with a few items disabled and enabled
-    as per below), including all of `@mysticatea/eslint-comments/recommended`.
+- [@brettz9/eslint-plugin](https://github.com/brettz9/eslint-plugin)
+    for a number of added rules
+- [eslint-comments/recommended](https://github.com/mysticatea/eslint-plugin-eslint-comments)
 - [eslint-plugin-no-use-extend-native](https://github.com/dustinspecker/eslint-plugin-no-use-extend-native) for one added rule.
 - [eslint-plugin-no-unsanitized](https://github.com/mozilla/eslint-plugin-no-unsanitized) for two added rules.
 - [Recommended Unicorn rules](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/index.js#L20-L53) (a few items disabled and enabled as per below)
@@ -452,22 +452,21 @@ appears, to Dark Lords.
 `eslint-comments/disable-enable-pair` - If at top, behavior is clear, and
     no need to reenable within doc
 
-### Rationale for not including some `plugin:@mysticatea/es2020` rules
+### Rationale for not including some `eslint-comments` rules
 
-- `@mysticatea/arrow-parens` - Covered by other rules
-- `@mysticatea/no-instanceof-array` - Covered by our blocking of all
+- `eslint-comments/no-restricted-disable` - See no need
+- `eslint-comments/no-use` - See no need
+
+### Rationale for not including some `plugin:@brettz9/es6` rules
+
+- `@brettz9/arrow-parens` - Covered by other rules
+- `@brettz9/no-instanceof-array` - Covered by our blocking of all
     `instanceof`
-- `@mysticatea/no-instanceof-wrapper` - Covered by our blocking of all
+- `@brettz9/no-instanceof-wrapper` - Covered by our blocking of all
     `instanceof`
-- `@mysticatea/prefer-for-of` - I prefer array extras for easier reuse,
+- `@brettz9/prefer-for-of` - I prefer array extras for easier reuse,
     currying, etc. than `for-of`
-- `@mysticatea/eslint-comments/no-restricted-disable` - See no need
-- `@mysticatea/eslint-comments/no-use` - See no need
-- `@mysticatea/eslint-plugin/*` - Project more generic than ESLint plugins
-- `@mysticatea/ts/*` - Not supporting TypeScript
-- `@mysticatea/vue/*` - Project more generic than Vue.js
-- `@mysticatea/prettier` - Not interested in imposing prettier
-- `@mysticatea/no-use-ignored-vars` - Relies on a regex (for pseudo-privates)
+- `@brettz9/no-use-ignored-vars` - Relies on a regex (for pseudo-privates)
     which can be useful
 
 ### Rationale for not including some `array-func` rules

@@ -42,17 +42,11 @@ const left = {
       }
       : {}
     ),
-    ...(rightModule === '@mysticatea/eslint-plugin'
+    ...(rightModule === '@brettz9/eslint-plugin'
       ? {
         ...cc.getLiteralConfigSync(
           join(__dirname, 'implicitly-included', getModulePath(
             'eslint-config-standard'
-          ))
-        ).rules,
-        // Adds `no-process-exit`
-        ...cc.getLiteralConfigSync(
-          join(__dirname, 'implicitly-included', getModulePath(
-            'eslint-plugin-node', 'recommended-module', true
           ))
         ).rules
       }
@@ -74,12 +68,10 @@ const left = {
       (!isInherited && rightModule === 'eslint/conf/eslint-all')
       ? {
         /*
-        // Todo: This has no effect due to need to process `extends` as below;
-        //   we're not using now anyways as we've disabled auto-inheriting from
-        //   `es2020`
+        // Todo: This has no effect due to need to process `extends` as below
         ...cc.getLiteralConfigSync(
-          join('./node_modules/', '@mysticatea/eslint-plugin')
-        ).configs.es2020.rules,
+          join('./node_modules/', '@brettz9/eslint-plugin')
+        ).configs.es6.rules,
         */
         ...cc.getLiteralConfigSync(
           join('./node_modules/', 'eslint-config-standard')
@@ -113,6 +105,7 @@ const left = {
 
 const right = cc.getLiteralConfigSync(join('./node_modules/', rightModule));
 
+const cache = {};
 /**
  *
  * @param {PlainObject} config
@@ -128,9 +121,17 @@ function getExtensions (config) {
     // No cyclic detection
     extension = extension.replace(/plugin:.*\//u, '');
     if (!right.configs[extension]) {
+      if (cache[preferredConfig]) {
+        return obj;
+      }
+      cache[preferredConfig] = right.configs[preferredConfig];
       // Todo: We are missing some as a result of this; evident in
-      //  @mysticatea/eslint-plugin which imports
-      return obj;
+      //  @brettz9/eslint-plugin which imports
+      return {
+        ...obj,
+        ...getExtensions(right.configs[preferredConfig]),
+        ...right.configs[preferredConfig].rules
+      };
     }
     return {
       ...obj,
@@ -156,66 +157,50 @@ if (
 
 const prefix = rightModule.replace(/eslint-plugin-/u, '');
 
-const rightConfig = isInherited &&
+const rightConfig = rightModule === '@brettz9/eslint-plugin'
+  ? {
+    rules: {
+      ...cc.getLiteralConfigSync(
+        join('./node_modules/', '@brettz9/eslint-plugin/lib/configs/_base.js')
+      ).rules,
+      ...cc.getLiteralConfigSync(
+        join(
+          './node_modules/',
+          '@brettz9/eslint-plugin/lib/configs/_override-es6.js'
+        )
+      ).rules
+    }
+  }
+  : isInherited &&
   // If we are checking inherited, some configs, like "standard", are not rule
   //   functions but are just the rules with "error", etc., but we also want
   //   these treated as included (through `right.rules`); however, other
   //   configs like "no-use-extend-native" are missing rules
   typeof Object.values(right.rules || {})[0] !== 'string'
   // rightModule.includes('plugin')
-  ? (right.configs && right.configs[preferredConfig]) || {rules: {}}
-  // Get all rules when seeing which are unused
-  : {rules: Object.keys(right.rules || {}).reduce((obj, ruleName) => {
-    obj[prefix + '/' + ruleName] = 'error'; // Just add something
-    return obj;
-  }, {})};
+    ? (right.configs && right.configs[preferredConfig]) || {rules: {}}
+    // Get all rules when seeing which are unused
+    : {rules: Object.keys(right.rules || {}).reduce((obj, ruleName) => {
+      obj[prefix + '/' + ruleName] = 'error'; // Just add something
+      return obj;
+    }, {})};
 
 // Without this block, these configs/plugins were including their prefixes
 //   in the rules (redundantly):
 // 1. inherited: standard
-// 2. unused: @mysticatea/eslint-plugin
+// 2. inherited/unused: @brettz9/eslint-plugin
 
 Object.entries(rightConfig.rules).forEach(([key, val]) => {
   let keyReplaced = key;
   if (key.startsWith(rightModule + '/')) {
     delete rightConfig.rules[key];
     keyReplaced = key.replace(rightModule + '/', '');
-    if (!isInherited &&
-      rightModule === '@mysticatea/eslint-plugin' && !keyReplaced.includes('/')
-    ) {
-      // For some reason, we need to add this back
-      keyReplaced = '@mysticatea/' + keyReplaced;
-    }
     rightConfig.rules[keyReplaced] = val;
   }
   if (val === 'off' || val[1] === 'off') {
     delete rightConfig.rules[keyReplaced];
   }
 });
-if (
-  !isInherited && !preferredConfig &&
-  rightModule === '@mysticatea/eslint-plugin'
-) {
-  /*
-  We removed `2020` from the end of the `@mysticatea/eslint-plugin` unused
-  `package.json` script as we had to manually add the rules we wanted (see
-  the comment at the top of this project's root `index.js`) since none of its
-  configs (including the `2020` config which might otherwise be ideal) expose
-  all rules (and only those rules) which are unique to the plugin.
-  We do the following show which items are unused.
-  To show which items if we were extending it, one can run
-  `unused:@mysticatea-old`, but we are not adding this to the regular `unused`
-  script as we don't want to show its items as unused (as we are not extending
-  es2020).
-  */
-  Object.keys(rightConfig.rules).forEach((rule) => {
-    // We are not interested in including rules it adds from other configs,
-    //   since we're currently not extending one of its configs.
-    if (!rule.startsWith('@mysticatea/') && rule.includes('/')) {
-      delete rightConfig.rules[rule];
-    }
-  });
-}
 
 // console.log(
 //   'rightConfig',
@@ -226,6 +211,7 @@ if (isInherited) {
   // We don't want to show as inherited those which we override
   const leftRules = Object.keys(left.rules);
   console.log('leftRules', leftRules);
+
   Object.keys(rightConfig.rules).forEach((key) => {
     if (leftRules.includes(key)) {
       if (

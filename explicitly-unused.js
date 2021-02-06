@@ -86,9 +86,9 @@ module.exports = {
 
     'promise/no-native': 'off',
 
-    '@mysticatea/arrow-parens': 'off',
-    '@mysticatea/no-instanceof-array': 'off',
-    '@mysticatea/no-instanceof-wrapper': 'off',
+    '@brettz9/arrow-parens': 'off',
+    '@brettz9/no-instanceof-array': 'off',
+    '@brettz9/no-instanceof-wrapper': 'off',
 
     'eslint-comments/no-restricted-disable': 'off',
     'eslint-comments/no-use': 'off',

@@ -4,6 +4,9 @@
  */
 'use strict';
 
+// Todo: Might move these very basic configs (Mocha, and add one for Node
+//   globals, etc.) to own repo
+
 module.exports = {
   overrides: [
     {

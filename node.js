@@ -3,7 +3,15 @@
 const {env, ecmaVersion} = require('./detectEnv.js');
 
 module.exports = {
-  extends: ['./index.js', 'plugin:node/recommended-module'],
+  extends: [
+    './index.js',
+    'plugin:node/recommended-module',
+    // Override `index.js`-set ES2015+ if ES5
+    ...(ecmaVersion < 2015
+      ? ['plugin:@brettz9/es5']
+      : ['plugin:@brettz9/es6']
+    )
+  ],
   env,
   parserOptions: {
     ecmaVersion

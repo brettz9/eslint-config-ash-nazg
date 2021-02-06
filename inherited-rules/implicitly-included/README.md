@@ -4,9 +4,8 @@ This directory includes an auto-built listing of those rules which are
 present in inherited configs (as errors or warnings) yet are not overridden
 by ash-nazg.
 
-Note that `@mysticatea/eslint-plugin` and `no-use-extend-native` rules
-are currently empty as they are not being directly inherited. (`html`
-and `markdown` currently have no rules.)
+Note that `no-use-extend-native` rules is currently empty as it is not being
+directly inherited. (`html` and `markdown` currently have no rules.)
 
 Note also that the eslint recommended rules deliberately do not include such
 rules as are included within "standard" (as that is currently the main config

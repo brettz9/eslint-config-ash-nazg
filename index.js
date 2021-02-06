@@ -7,14 +7,8 @@ module.exports = {
   },
   extends: [
     // This plugin's rules are overridden by following configs (except for
-    //   its own rules), so including first; we also don't want its disabling
-    //   of some, e.g., recommended rules
-    // Actually, we're disabling instead for now (and manually enabling in
-    //   `index.js` and adding to `plugins`), as has disabling and adds rules
-    //   we don't want; filed the following to get an 'all' config instead
-    //   showing only rules specific to the plugin:
-    //     https://github.com/mysticatea/eslint-plugin/issues/21
-    // 'plugin:@mysticatea/es2020',
+    //   its own rules), so including first
+    'plugin:@brettz9/es6',
 
     'eslint:recommended',
     // These may override 'standard' which includes their rules,
@@ -31,14 +25,13 @@ module.exports = {
     'plugin:array-func/all',
     'plugin:radar/recommended',
     'plugin:jsdoc/recommended',
-    'plugin:no-use-extend-native/recommended'
+    'plugin:no-use-extend-native/recommended',
+    './+modules.js'
   ],
   plugins: [
     // These have no rules
     'markdown',
-    'html',
-    // See above on why adding here instead of extending a config
-    '@mysticatea'
+    'html'
   ],
   settings: {
     jsdoc: {
@@ -54,6 +47,22 @@ module.exports = {
       }
     }
   },
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx', '*.vue'],
+      rules: {
+        'node/no-unsupported-features/es-syntax': 'off'
+      }
+    },
+    {
+      files: ['*.cjs'],
+      extends: ['./+script.js']
+    },
+    {
+      files: ['*.mjs', '*.ts', '*.tsx', '*.vue'],
+      extends: ['./+modules.js']
+    }
+  ],
   rules: {
     // RULES SHOULD ONLY BE DIFFERENT FROM INHERITED (ENABLING, DISABLING, CHANGING)
 
@@ -251,48 +260,15 @@ module.exports = {
 
     'unicorn/expiring-todo-comments': ['error', {allowWarningComments: true, terms: ['todo']}],
 
-    // `@mysticatea`
-    '@mysticatea/block-scoped-var': 'error',
-
     // Adding here for comparison purposes only (already added by
-    //   eslint:recommended and would be added by `es2020` config)
+    //   eslint:recommended)
     'no-label-var': 'error',
 
-    // These should be inherited by `es2020` config, but we don't want to
-    //   extend as it has other items we don't want (see comment at top)
-    '@mysticatea/no-literal-call': 'error',
-    '@mysticatea/no-this-in-static': 'error',
-    '@mysticatea/no-useless-rest-spread': 'error',
-
-    // `@mysticatea` disabled
-    '@mysticatea/no-use-ignored-vars': 'off',
-    '@mysticatea/prettier': 'off',
-    '@mysticatea/prefer-for-of': 'off',
-    '@mysticatea/no-instanceof-array': 'off',
-    '@mysticatea/no-instanceof-wrapper': 'off',
-
-    // Disable other mysticatea items we don't want
-    'func-style': 'off',
-    'init-declarations': 'off',
-    'multiline-comment-style': 'off',
-    'no-invalid-this': 'off',
-    'no-param-reassign': 'off',
-    'no-useless-concat': 'off',
-    'padding-line-between-statements': 'off',
-    'max-params': 'off',
-    'arrow-body-style': 'off',
-    'prefer-arrow-callback': 'off',
-    'prefer-template': 'off',
-
-    // We're directly using `eslint-comments` and without this, these will
-    //  mistakenly show up in our @mysticatea/eslint-plugin inherited list
-    '@mysticatea/eslint-comments/disable-enable-pair': 'off',
-    '@mysticatea/eslint-comments/no-aggregating-enable': 'off',
-    '@mysticatea/eslint-comments/no-duplicate-disable': 'off',
-    '@mysticatea/eslint-comments/no-unlimited-disable': 'off',
-    '@mysticatea/eslint-comments/no-unused-disable': 'off',
-    '@mysticatea/eslint-comments/no-unused-enable': 'off',
-    '@mysticatea/eslint-comments/no-use': 'off',
+    // `@brettz9` disabled
+    '@brettz9/no-use-ignored-vars': 'off',
+    '@brettz9/prefer-for-of': 'off',
+    '@brettz9/no-instanceof-array': 'off',
+    '@brettz9/no-instanceof-wrapper': 'off',
 
     // eslint-comments
     'eslint-comments/no-unused-disable': 'error',

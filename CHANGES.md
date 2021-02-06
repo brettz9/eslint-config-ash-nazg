@@ -1,5 +1,12 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- Switch from `@mysticatea` to `@brettz9` fork (fixes and simplifies
+    `peerDependencies` and removes extra code)
+- pnpm: Switch to pnpm
+- npm: Bump semver; peerDeps/devDeps.
+
 ## 26.1.0
 
 - npm: Update peerDeps/devDeps.
