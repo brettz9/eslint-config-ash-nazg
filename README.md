@@ -20,6 +20,14 @@ rules) for the rules we explicitly include (and see
 [great-eye](./great-eye.js) (or [great-eye-node](./great-eye-node.js)) for
 still stricter rules though which are probably best not used).
 
+`env` is set to automatically include `'shared-node-browser': true` given that
+most environments will be Node or a browser or a polyglot Node-browser. If you
+really don't want this, you can override by setting
+`'shared-node-browser': false`. Note that this setting only adds globals which
+are present in either Node or the browser; it won't falsely allow browser
+globals in a Node app or vice versa; you can use `env`'s `node: true` or
+`browser: true` if you want to support Node or browser globals.
+
 (See [explicitly-unused.js](./explicitly-unused.js) for the core and extended
 rules we don't include (rationale for non-inclusion below).)
 
@@ -49,6 +57,10 @@ you can override this by adding `plugin:node/recommended-script` to your
 `extends` array (after `ash-nazg`) or, for Sauron-Node, by using
 `sauron-node-script`.
 
+The `ash-nazg/node` configs also detect minimum Node from `engines` and set
+`env` to use the highest supported ES globals, e.g., `ES2021` (and also sets
+`node: true`) as well as sets `ecmaVersion`.
+
 The `ash-nazg/sauron` config expands upon the regular `ash-nazg` rules to
 indicate what are generally best practices but are less likely to be due to
 an error and may possibly also require a high (and possibly tyrannical)
@@ -65,6 +77,27 @@ config changes to make them less all-encompassing.
 The `ash-nazg/sauron-node` config incorporates both `ash-nazg/node` and
 `ash-nazg/sauron`. It adds specific rules of its own which may be unduly
 strict for `ash-nazg/node`.
+
+A few experimental configs have been added as well, though this might be
+removed or significantly modified in a future version:
+
+- `+script-node.js`: Applies script source type with Node; used by
+    `sauron-node-script`
+- `+script.js`: Applies script source type for non-Node; used by
+    `sauron-script`
+- `sauron-node-overrides.js`: `sauron-node` with `rc` and `mocha`
+- `sauron-node-script-overrides.js`): `sauron-node-script` with `rc` and
+    `mocha`
+- `sauron-overrides.js`: `sauron` with `rc` and `mocha`
+- `sauron-script.js`: `sauron` with `+script.js` file
+- `+babel.js`: Wraps a module to support equivalent babel/eslint-parser rules
+- `mocha.js`: Sets up Mocha (and `chai` global) on test directories
+    (via overrides)
+- `mocha-plus.js`: Strict but reasonable rules for checking Mocha/Chai (not
+    naming "sauron" as not bundling with Sauron)
+- `cypress.js`: Strict but reasonable rules for checking Cypress
+- `rc.js`: Config for using `overrides` to give Rollup and RC config files to
+    support modules where available (and script where not)
 
 ## Comparison to other "standards"
 

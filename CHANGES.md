@@ -13,7 +13,7 @@
 - Enhancement (`node.js`) [loosen]: Drop `node/global-require` as redundant
     with `import/no-dynamic-require`
 - Enhancement (`node.js`): Based on `engines: {node}` set
-    `env: {node: true, esX: true}` (extra ES globals as relevant to Node
+    `env: {node: true, es20XX: true}` (extra ES globals as relevant to Node
     version), `parserOptions` `ecmaVersion`
 - pnpm: Switch to pnpm
 - npm: Bump semver; peerDeps/devDeps.
