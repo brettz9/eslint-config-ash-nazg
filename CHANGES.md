@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 27.0.1
+
+- Fix: Avoid `postinstall` script which causes problems for non-pnpm dependents
+
 ## 27.0.0
 
 - Switch from `@mysticatea` to `@brettz9` fork (fixes and simplifies

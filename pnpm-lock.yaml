@@ -1,7 +1,7 @@
 dependencies:
   semver: 7.3.4
 devDependencies:
-  '@brettz9/eslint-plugin': 1.0.2_eslint@7.20.0
+  '@brettz9/eslint-plugin': 1.0.3_eslint@7.20.0
   '@scottnonnenberg/eslint-compare-config': 1.0.1
   eslint: 7.20.0
   eslint-config-standard: 16.0.2_b9128b9dfce9b0a9c071f37ef4a8d1e9
@@ -112,7 +112,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-oKrdZTld2im1z8bDwTOQvUbxKwE+854zc16qWZQlcTqMN00pWxHQ4ZeOq0yDMnisOpRykH2/5Qqcrk/OlbAjiQ==
-  /@brettz9/eslint-plugin/1.0.2_eslint@7.20.0:
+  /@brettz9/eslint-plugin/1.0.3_eslint@7.20.0:
     dependencies:
       eslint: 7.20.0
     dev: true
@@ -120,9 +120,8 @@ packages:
       node: '>=10.0.0'
     peerDependencies:
       eslint: '>=7.20.0'
-    requiresBuild: true
     resolution:
-      integrity: sha512-tJRiJ3ujDLxqOBKVjT/eO+UsIERyBjD5jiDkfZo5Dss6KlplsBEzF5IlA85l01ZNO7lx4aGKX6Hhum1LMXTUdg==
+      integrity: sha512-2ESGw4oZJ5IvkFitzRXzfdUY8hzSPSanQ8i+adzWMQPK7jxxUHkZ6GEslOd7GjHFZIcwqc1xVXVU0itf8zYFGA==
   /@eslint/eslintrc/0.3.0:
     dependencies:
       ajv: 6.12.6
@@ -2188,7 +2187,7 @@ packages:
     resolution:
       integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 specifiers:
-  '@brettz9/eslint-plugin': ^1.0.2
+  '@brettz9/eslint-plugin': ^1.0.3
   '@scottnonnenberg/eslint-compare-config': ^1.0.1
   eslint: ^7.20.0
   eslint-config-standard: ^16.0.2

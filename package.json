@@ -1,10 +1,9 @@
 {
   "name": "eslint-config-ash-nazg",
-  "version": "27.0.0",
+  "version": "27.0.1",
   "description": "An expansion and tweaking of the \"standard\" config style for ESLint",
   "main": "index.js",
   "scripts": {
-    "preinstall": "node --eval \"!process.env.npm_config_user_agent.startsWith('pnpm/')&&(console.log('Use \\`pnpm install\\` to install dependencies in this repository')||true)&&process.exit(1)\"",
     "unused:@brettz9": "node -r esm inherited-rules/build unused @brettz9/eslint-plugin es6",
     "unused:array-func": "node -r esm inherited-rules/build unused eslint-plugin-array-func all",
     "unused:compat": "node -r esm inherited-rules/build unused eslint-plugin-compat recommended",
@@ -65,7 +64,7 @@
     "semver": "^7.3.4"
   },
   "peerDependencies": {
-    "@brettz9/eslint-plugin": "^1.0.2",
+    "@brettz9/eslint-plugin": "^1.0.3",
     "eslint": "^7.20.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-array-func": "^3.1.7",
@@ -84,7 +83,7 @@
     "eslint-plugin-unicorn": "^28.0.0"
   },
   "devDependencies": {
-    "@brettz9/eslint-plugin": "^1.0.2",
+    "@brettz9/eslint-plugin": "^1.0.3",
     "@scottnonnenberg/eslint-compare-config": "^1.0.1",
     "eslint": "^7.20.0",
     "eslint-config-standard": "^16.0.2",
