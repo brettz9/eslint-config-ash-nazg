@@ -1,8 +1,7 @@
 'use strict';
+
 module.exports = {
-  extends: ['./', 'plugin:no-unsanitized/DOM'],
-  // Todo: Should not need: https://github.com/mozilla/eslint-plugin-no-unsanitized/pull/112
-  plugins: ['no-unsanitized'],
+  extends: ['./index.js', 'plugin:no-unsanitized/DOM'],
   settings: {
     jsdoc: {
       preferredTypes: {
@@ -53,13 +52,13 @@ module.exports = {
     'consistent-this': ['warn'],
     'default-case': ['warn'],
     'max-len': ['warn', {
-      'ignoreUrls': true,
-      'ignoreRegExpLiterals': true
+      ignoreUrls: true,
+      ignoreRegExpLiterals: true
     }],
     'no-alert': ['warn'],
     'no-console': ['warn'],
     'no-empty-function': ['warn'],
-    'no-shadow': ['warn', {'builtinGlobals': true, 'hoist': 'functions', 'allow': ['parent', 'top', 'open', 'close', 'stop', 'blur', 'status', 'name', 'closed', 'start']}],
+    'no-shadow': ['warn', {builtinGlobals: true, hoist: 'functions', allow: ['parent', 'top', 'open', 'close', 'stop', 'blur', 'status', 'name', 'closed', 'start']}],
     'prefer-named-capture-group': ['warn'],
     'prefer-numeric-literals': ['warn'],
     'require-unicode-regexp': ['warn'],
@@ -95,6 +94,9 @@ module.exports = {
     'jsdoc/require-returns-type': ['warn', {
       contexts: ['any']
     }],
+    'jsdoc/require-throws': ['warn', {
+      contexts: ['any']
+    }],
 
     'promise/no-nesting': 'warn',
     'promise/no-promise-in-callback': 'warn',
@@ -104,8 +106,10 @@ module.exports = {
     'promise/valid-params': 'warn',
     'promise/prefer-await-to-callbacks': 'warn',
 
-    'unicorn/no-fn-reference-in-iterator': 'warn',
+    'unicorn/no-array-callback-reference': 'warn',
     'unicorn/prefer-number-properties': 'warn',
-    'unicorn/prefer-string-slice': 'error'
+    'unicorn/prefer-string-slice': 'error',
+
+    'eslint-comments/require-description': 'error'
   }
 };

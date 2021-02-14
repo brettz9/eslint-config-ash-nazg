@@ -29,15 +29,23 @@ rules) for the rules we explicitly include (and see
 [great-eye](./great-eye.js) (or [great-eye-node](./great-eye-node.js)) for
 still stricter rules though which are probably best not used).
 
+`env` is set to automatically include `'shared-node-browser': true` given that
+most environments will be Node or a browser or a polyglot Node-browser. If you
+really don't want this, you can override by setting
+`'shared-node-browser': false`. Note that this setting only adds globals which
+are present in either Node or the browser; it won't falsely allow browser
+globals in a Node app or vice versa; you can use `env`'s `node: true` or
+`browser: true` if you want to support Node or browser globals.
+
 (See [explicitly-unused.js](./explicitly-unused.js) for the core and extended
 rules we don't include (rationale for non-inclusion below).)
 
 - [Main rules](https://eslint.org/docs/rules/) (also search for "error" within <https://github.com/eslint/eslint/blob/master/conf/eslint-recommended.js>) for the `eslint:recommended` rules we inherit (though see below for our two modifications to these).
 - ["standard"](https://github.com/standard/eslint-config-standard/blob/master/eslintrc.json)
 rules we inherit (though see below for our handful of modifications).
-- [mysticatea/eslint-plugin](https://github.com/mysticatea/eslint-plugin)
-    for a number of added rules (though with a few items disabled and enabled
-    as per below), including all of `@mysticatea/eslint-comments/recommended`.
+- [@brettz9/eslint-plugin](https://github.com/brettz9/eslint-plugin)
+    for a number of added rules
+- [eslint-comments/recommended](https://github.com/mysticatea/eslint-plugin-eslint-comments)
 - [eslint-plugin-no-use-extend-native](https://github.com/dustinspecker/eslint-plugin-no-use-extend-native) for one added rule.
 - [eslint-plugin-no-unsanitized](https://github.com/mozilla/eslint-plugin-no-unsanitized) for two added rules.
 - [Recommended Unicorn rules](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/index.js#L20-L53) (a few items disabled and enabled as per below)
@@ -55,7 +63,12 @@ add rules specific to Node environments. Specifically,
 `plugin:node/recommended-module` has been adopted for now along with
 some stylistic choices. However, if you are using more CJS exports,
 you can override this by adding `plugin:node/recommended-script` to your
-`extends` array (after `ash-nazg`).
+`extends` array (after `ash-nazg`) or, for Sauron-Node, by using
+`sauron-node-script`.
+
+The `ash-nazg/node` configs also detect minimum Node from `engines` and set
+`env` to use the highest supported ES globals, e.g., `ES2021` (and also sets
+`node: true`) as well as sets `ecmaVersion`.
 
 The `ash-nazg/sauron` config expands upon the regular `ash-nazg` rules to
 indicate what are generally best practices but are less likely to be due to
@@ -73,6 +86,27 @@ config changes to make them less all-encompassing.
 The `ash-nazg/sauron-node` config incorporates both `ash-nazg/node` and
 `ash-nazg/sauron`. It adds specific rules of its own which may be unduly
 strict for `ash-nazg/node`.
+
+A few experimental configs have been added as well, though this might be
+removed or significantly modified in a future version:
+
+- `+script-node.js`: Applies script source type with Node; used by
+    `sauron-node-script`
+- `+script.js`: Applies script source type for non-Node; used by
+    `sauron-script`
+- `sauron-node-overrides.js`: `sauron-node` with `rc` and `mocha`
+- `sauron-node-script-overrides.js`): `sauron-node-script` with `rc` and
+    `mocha`
+- `sauron-overrides.js`: `sauron` with `rc` and `mocha`
+- `sauron-script.js`: `sauron` with `+script.js` file
+- `+babel.js`: Wraps a module to support equivalent babel/eslint-parser rules
+- `mocha.js`: Sets up Mocha (and `chai` global) on test directories
+    (via overrides)
+- `mocha-plus.js`: Strict but reasonable rules for checking Mocha/Chai (not
+    naming "sauron" as not bundling with Sauron)
+- `cypress.js`: Strict but reasonable rules for checking Cypress
+- `rc.js`: Config for using `overrides` to give Rollup and RC config files to
+    support modules where available (and script where not)
 
 ## Comparison to other "standards"
 
@@ -347,11 +381,14 @@ happy with it thus far).
 `no-process-exit` (added by Node recommended) - has a version in Unicorn
 which allows in CLI apps.
 
+`node/global-require` - Redundant with `import/no-dynamic-require`
+
 `node/prefer-promises/dns` and `node/prefer-promises/fs` are good, but
 a bit early with Node 12.
 
-`node/no-callback-literal` duplicates `standard/no-callback-literal`
-(and is not recommended anyhow).
+`node/no-restricted-import` - project-specific
+
+`node/no-restricted-require` - project-specific
 
 `promise/no-native` is disabled as promises are essential--even, it
 appears, to Dark Lords.
@@ -372,6 +409,7 @@ appears, to Dark Lords.
 
 #### Rationale for suppressing some `eslint-plugin-jsdoc` rules
 
+- `jsdoc/check-line-alignment` - More desirable default not yet implemented
 - `jsdoc/no-types` - Types have utility in jsdoc unless using TypeScript
 - `jsdoc/newline-after-description` (recommended) - I can see its draw,
     but seems too pedantic to me for documentation.
@@ -393,27 +431,47 @@ appears, to Dark Lords.
 
 - `catch-error-name` - It can actually be useful to use different
     error names to indicate what type of error may be expected.
+- `consistent-destructuring` - In practice can be cumbersome
 - `consistent-function-scoping` - Though this can be useful, and it
   shouldn't be difficult to manually hoist functions upward, besides taking
   some time to refactor, this often removes functions from a logical
   grouping, and may even increase bugs, as one may be tempted to move out
   a function whose dependency is no longer wrapped with it.
+- `empty-brace-spaces` - Easier to build on and cleaner if allowing newlines
 - `explicit-length-check` - Seems wasteful.
 - *`filename-case`* - Looks potentially useful with `camelCase`.
 - `import-index` - While understandable, seems may cause more trouble in
     making it harder to find references to `index`.
+- `import-style` - Using `eslint-plugin-import` instead
+- `no-array-reduce` - Though I can see some appeal to this (and `reduce` also
+    suffers from not being able to short-circuit), I like it for object
+    property accumulation, conditional array accumulation that can later be
+    flattened, etc. It also seems superfluous to add an extra `join` with
+    string concatenation.
+- `no-array-for-each` - Writing code for `forEach` allows later refactoring,
+    e.g., to move out of the block.
+- `no-instanceof-array` - Covered by our blocking of all `instanceof`
 - `no-keyword-prefix` - See no need.
+- `no-lonely-if` - Nested ifs can be useful to catch and ignore.
 - `no-nested-ternary` - As with eslint's `no-nested-ternary`
+- `no-null` - A good idea, but besides use of `null` in JSON, and semantic
+    arguments in favor (having an explicit, intentional empty value),
+    it makes for cleaner, quicker to understand code.
 - `no-unreadable-array-destructuring` - Better to use this than multiple lines
 - `no-unused-properties` - While no doubt useful, it won't catch all cases,
     sounds computationally expensive, and may better be done with TypeScript
+- `no-useless-undefined` - I don't like the consequence of changing
+    `array-callback-return` to `allowImplicit`, and it can make clear that
+    use of `undefined` is deliberate.
+- `prefer-array-flat-map` - Present in `array-func`
 - `prefer-exponentiation` - Now present in eslint core
+- `prefer-optional-catch-binding` - Understandable rule, but extra work if
+    refactoring to add later, and the catch binding can also force
+    documentation of the error's purpose
 - `prefer-string-slice` - Added to Sauron but can be cumbersome to change for
   old projects
-- `prefer-replace-all` - Good but not available yet in Node (even 14)
-- `regex-shorthand` - With current behavior of sorting character class content,
-  is too oppressive; see [Unicorn issue #453](https://github.com/sindresorhus/eslint-plugin-unicorn/issues/453)
-  and [regexp-tree issue #199](https://github.com/DmitrySoshnikov/regexp-tree/issues/199).
+- `prefer-string-replace-all` - Good but not available yet in Node (even 14)
+- `regex-shorthand` - Was renamed to `better-regex`.
 - `string-content` - Don't want the trouble of requiring formatted apostrophes (not recommended anyways).
 - `throw-new-error` - Potentially confining.
 
@@ -437,22 +495,21 @@ appears, to Dark Lords.
 `eslint-comments/disable-enable-pair` - If at top, behavior is clear, and
     no need to reenable within doc
 
-### Rationale for not including some `plugin:@mysticatea/es2020` rules
+### Rationale for not including some `eslint-comments` rules
 
-- `@mysticatea/arrow-parens` - Covered by other rules
-- `@mysticatea/no-instanceof-array` - Covered by our blocking of all
+- `eslint-comments/no-restricted-disable` - See no need
+- `eslint-comments/no-use` - See no need
+
+### Rationale for not including some `plugin:@brettz9/es6` rules
+
+- `@brettz9/arrow-parens` - Covered by other rules
+- `@brettz9/no-instanceof-array` - Covered by our blocking of all
     `instanceof`
-- `@mysticatea/no-instanceof-wrapper` - Covered by our blocking of all
+- `@brettz9/no-instanceof-wrapper` - Covered by our blocking of all
     `instanceof`
-- `@mysticatea/prefer-for-of` - I prefer array extras for easier reuse,
+- `@brettz9/prefer-for-of` - I prefer array extras for easier reuse,
     currying, etc. than `for-of`
-- `@mysticatea/eslint-comments/no-restricted-disable` - See no need
-- `@mysticatea/eslint-comments/no-use` - See no need
-- `@mysticatea/eslint-plugin/*` - Project more generic than ESLint plugins
-- `@mysticatea/ts/*` - Not supporting TypeScript
-- `@mysticatea/vue/*` - Project more generic than Vue.js
-- `@mysticatea/prettier` - Not interested in imposing prettier
-- `@mysticatea/no-use-ignored-vars` - Relies on a regex (for pseudo-privates)
+- `@brettz9/no-use-ignored-vars` - Relies on a regex (for pseudo-privates)
     which can be useful
 
 ### Rationale for not including some `array-func` rules
@@ -461,9 +518,9 @@ appears, to Dark Lords.
     more sleek to use the spread operator. Would like to know how much it
     impacts performance before enabling.
 
-### Rationale for not including some `sonarjs` rules
+### Rationale for not including some `radar` rules
 
-(All sonarjs rules are currently "recommended" rules as well.)
+(All radar rules are currently "recommended" rules as well.)
 
 - `max-switch-cases` - Sounds too arbitrary.
 - `no-collapsible-if` - Sometimes more logically clear or made in preparation
@@ -523,7 +580,7 @@ may not all be under one's control).
     to label all files
 - `promise/prefer-await-to-callbacks` - Sometimes useful, but callbacks
     may be used within repeating events
-- `unicorn/no-fn-reference-in-iterator` - May be cumbersome though does
+- `unicorn/no-array-callback-reference` - May be cumbersome though does
     catch potential problems
 - `unicorn/prefer-number-properties` - Good but some refactoring needed (and not
     always readily fixable).
@@ -596,14 +653,16 @@ for projects to specify all child types.
 - `jsdoc/require-property-description` (recommended) - See
   `jsdoc/require-description`.
 - `jsdoc/require-example` - See `jsdoc/require-description`.
-- `sonarjs/cognitive-complexity` - As with `complexity` perhaps (though may
+- `radar/cognitive-complexity` - As with `complexity` perhaps (though may
     add to sauron if demonstrates not to be too oppressive)
+- `unicorn/numeric-separators-style` - Good but may involve many changes.
 - `unicorn/prevent-abbreviations` - Very cumbersome for frequent conventions such
   as `e` for `event`
 - `unicorn/prefer-set-has` - Very good, but troublesome to refactor.
 
 The `preferredTypes` setting was enabled here for integer/float as it can
-be cumbersome for projects to distinguish.
+be cumbersome for projects to distinguish and because `Promise` even
+subclassed doesn't indicate the rejector type.
 
 ## Rationale for including rules that might not seem necessary
 
@@ -646,18 +705,22 @@ can be picky about giving up their *preh-shus*...
   need for our comparison code
 - Rule for no functions with `this` (to use `class`)? Might adapt <https://github.com/matijs/eslint-plugin-this>?
 - To consider:
-  - <https://www.npmjs.com/package/eslint-plugin-const-case>
-  - <https://github.com/johnstonbl01/eslint-no-inferred-method-name> / <https://github.com/johnstonbl01/eslint-no-inferred-method-name/blob/master/docs/rules/no-inferred-method-name.md>
-  - <https://github.com/getify/eslint-plugin-proper-arrows>
-  - <https://github.com/selaux/eslint-plugin-filenames>
+    - <https://yeonjuan.github.io/html-eslint> Lint HTML itself
+    - <https://github.com/ota-meshi/eslint-plugin-regexp>
+    - <https://github.com/BrainMaestro/eslint-plugin-optimize-regex> (Catches basic errors like `/{/u` and `/(/` too)
+    - <https://github.com/ota-meshi/eslint-plugin-jsonc>
+    - <https://www.npmjs.com/package/eslint-plugin-const-case>
+    - <https://github.com/johnstonbl01/eslint-no-inferred-method-name> / <https://github.com/johnstonbl01/eslint-no-inferred-method-name/blob/master/docs/rules/no-inferred-method-name.md>
+    - <https://github.com/getify/eslint-plugin-proper-arrows>
+    - <https://github.com/selaux/eslint-plugin-filenames>
 - See also `eslint-plugin-privileges` for plugins/config to add for security/transparency
 - Make plugins/tool config/toolkit?
-  - <https://github.com/not-an-aardvark/eslint-plugin-eslint-plugin>
-  - <https://github.com/j-f1/eslint-docs>
-  - <https://github.com/jfmengels/eslint-rule-documentation>
-  - <https://github.com/sarbbottam/eslint-find-rules>
-  - <https://github.com/pimlie/eslint-multiplexer>
-  - <https://github.com/wagerfield/eslint-index>
-  - <https://github.com/nickdeis/eslint-plugin-notice>
-  - <https://github.com/eslint/generator-eslint> (global install of `yo` also)
-  - Note `eslint --print-config file` for getting at applied config for a file
+    - <https://github.com/not-an-aardvark/eslint-plugin-eslint-plugin>
+    - <https://github.com/j-f1/eslint-docs>
+    - <https://github.com/jfmengels/eslint-rule-documentation>
+    - <https://github.com/sarbbottam/eslint-find-rules>
+    - <https://github.com/pimlie/eslint-multiplexer>
+    - <https://github.com/wagerfield/eslint-index>
+    - <https://github.com/nickdeis/eslint-plugin-notice>
+    - <https://github.com/eslint/generator-eslint> (global install of `yo` also)
+    - Note `eslint --print-config file` for getting at applied config for a file

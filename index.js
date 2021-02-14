@@ -1,15 +1,14 @@
 'use strict';
+
 module.exports = {
-  'extends': [
+  env: {
+    // At least likely to be polyglot
+    'shared-node-browser': true
+  },
+  extends: [
     // This plugin's rules are overridden by following configs (except for
-    //   its own rules), so including first; we also don't want its disabling
-    //   of some, e.g., recommended rules
-    // Actually, we're disabling instead for now (and manually enabling in
-    //   `index.js` and adding to `plugins`), as has disabling and adds rules
-    //   we don't want; filed the following to get an 'all' config instead
-    //   showing only rules specific to the plugin:
-    //     https://github.com/mysticatea/eslint-plugin/issues/21
-    // 'plugin:@mysticatea/es2020',
+    //   its own rules), so including first
+    'plugin:@brettz9/es6',
 
     'eslint:recommended',
     // These may override 'standard' which includes their rules,
@@ -24,32 +23,47 @@ module.exports = {
     'plugin:eslint-comments/recommended',
     'plugin:compat/recommended',
     'plugin:array-func/all',
-    'plugin:sonarjs/recommended',
-    'plugin:jsdoc/recommended'
+    'plugin:radar/recommended',
+    'plugin:jsdoc/recommended',
+    'plugin:no-use-extend-native/recommended',
+    './+modules.js'
   ],
-  'plugins': [
+  plugins: [
     // These have no rules
     'markdown',
-    'html',
-    // See above on why adding here instead of extending a config
-    '@mysticatea',
-    // Filed the following to avoid need for adding `plugins` for this as well
-    //  as adding the rule manually as we do below (will need to reference in
-    //  `package.json` if do so can show in `implicitly-included`):
-    // https://github.com/dustinspecker/eslint-plugin-no-use-extend-native/issues/125
-    'no-use-extend-native',
-    // Filed the following to avoid need for adding `plugins` for this as
-    //  well as `extends`: https://github.com/SonarSource/eslint-plugin-sonarjs/issues/117
-    'sonarjs'
+    'html'
   ],
-  'settings': {
-    'jsdoc': {
-      'tagNamePreference': {
-        'augments': 'extends'
+  settings: {
+    jsdoc: {
+      structuredTags: {
+        yields: {
+          name: 'text',
+          required: ['type'],
+          type: true
+        }
+      },
+      tagNamePreference: {
+        augments: 'extends'
       }
     }
   },
-  'rules': {
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx', '*.vue'],
+      rules: {
+        'node/no-unsupported-features/es-syntax': 'off'
+      }
+    },
+    {
+      files: ['*.cjs'],
+      extends: ['./+script.js']
+    },
+    {
+      files: ['*.mjs', '*.ts', '*.tsx', '*.vue'],
+      extends: ['./+modules.js']
+    }
+  ],
+  rules: {
     // RULES SHOULD ONLY BE DIFFERENT FROM INHERITED (ENABLING, DISABLING, CHANGING)
 
     'array-bracket-newline': ['error', 'consistent'],
@@ -57,14 +71,13 @@ module.exports = {
     'array-callback-return': ['error'],
     'arrow-parens': ['error'],
     'block-scoped-var': ['error'],
-    'callback-return': ['error'],
     'computed-property-spacing': ['error'],
     'consistent-return': ['error'],
+    'default-case-last': ['error'],
     'default-param-last': ['error'],
     'dot-notation': ['error'],
     'func-name-matching': ['error'],
     'function-paren-newline': ['error', 'consistent'],
-    'global-require': ['error'],
     'grouped-accessor-pairs': ['error'],
     'guard-for-in': ['error'],
     'implicit-arrow-linebreak': ['error'],
@@ -77,63 +90,64 @@ module.exports = {
     'no-buffer-constructor': ['error'],
     'no-confusing-arrow': ['error'],
     'no-constructor-return': ['error'],
-    'no-dupe-else-if': ['error'],
     'no-div-regex': ['error'],
     'no-duplicate-imports': ['error'],
     'no-else-return': ['error'],
-    'no-empty': ['error', {'allowEmptyCatch': true}],
+    'no-empty': ['error', {allowEmptyCatch: true}],
     'no-eq-null': ['error'],
     'no-extra-label': ['error'],
     'no-implicit-coercion': ['error'],
     'no-implicit-globals': ['error'],
-    'no-import-assign': ['error'],
     'no-lonely-if': ['error'],
     'no-loop-func': ['error'],
-    'no-mixed-requires': ['error', {'grouping': true, 'allowCall': true}],
-    'no-process-env': ['error'],
+    'no-loss-of-precision': ['error'],
+    'no-nonoctal-decimal-escape': ['error'],
     'no-restricted-globals': ['error', {
-      'name': 'event',
-      'message': 'Use local event parameter instead (preferably as \'e\' or \'ev\').'
+      name: 'event',
+      message: 'Use local event parameter instead (preferably as \'e\' or \'ev\').'
     }, {
-      'name': 'fdescribe',
-      'message': 'Do not commit fdescribe. Use describe instead.'
+      name: 'fdescribe',
+      message: 'Do not commit fdescribe. Use describe instead.'
     }],
     'no-restricted-properties': ['error', {
-      'property': '__defineGetter__',
-      'message': 'Please use `Object.defineProperty` instead.'
+      property: '__defineGetter__',
+      message: 'Please use `Object.defineProperty` instead.'
     }],
     'no-script-url': ['error'],
-    'no-setter-return': ['error'],
-    'no-sync': ['error'],
+    'no-unsafe-optional-chaining': ['error'],
+    'no-useless-backreference': ['error'],
     'no-var': ['error'],
     'no-void': ['error'],
     'no-warning-comments': ['error', {terms: ['fixme', 'xxx']}],
     'nonblock-statement-body-position': ['error'],
-    'object-shorthand': ['error', 'always', {'avoidExplicitReturnArrows': true}],
+    'object-shorthand': ['error', 'always', {avoidExplicitReturnArrows: true}],
     'operator-assignment': ['error'],
     'prefer-const': ['error'],
-    'prefer-destructuring': ['error', {'object': true}],
+    'prefer-destructuring': ['error', {object: true}],
     'prefer-exponentiation-operator': ['error'],
     'prefer-object-spread': ['error'],
     'prefer-regex-literals': ['error'],
     'prefer-rest-params': ['error'],
     'prefer-spread': ['error'],
     'quote-props': ['error', 'as-needed'],
-    'quotes': ['error', 'single', {
+    quotes: ['error', 'single', {
       avoidEscape: true,
       allowTemplateLiterals: true
     }],
-    'radix': ['error', 'as-needed'],
+    radix: ['error', 'as-needed'],
     'require-await': ['error'],
     'semi-style': ['error'],
-    'strict': ['error'],
+    strict: ['off'],
     'switch-colon-spacing': ['error'],
     'wrap-regex': ['error'],
 
-    'semi': ['error', 'always'],
-    'indent': ['error', 2, {'outerIIFEBody': 0}],
+    semi: ['error', 'always'],
+    indent: ['error', 2, {outerIIFEBody: 0}],
     'object-curly-spacing': ['error', 'never'],
     'no-restricted-syntax': ['error', '[operator=instanceof]'],
+
+    'no-promise-executor-return': 'error',
+    'no-unreachable-loop': 'error',
 
     // Disable standard
     'object-curly-newline': ['off'],
@@ -167,8 +181,8 @@ module.exports = {
     'import/no-mutable-exports': 'error',
     'import/no-amd': 'error',
 
-    'import/extensions': ['error', 'always', {'ignorePackages': true}],
-    'import/order': ['error', {'groups': [
+    'import/extensions': ['error', 'always', {ignorePackages: true}],
+    'import/order': ['error', {groups: [
       'builtin',
       'external',
       'internal',
@@ -191,8 +205,12 @@ module.exports = {
 
     // JSDOC
     'jsdoc/check-examples': ['error', {
-      'rejectExampleCodeRegex': '^`'
+      rejectExampleCodeRegex: '^`',
+      checkDefaults: true,
+      checkParams: true,
+      checkProperties: true
     }],
+    'jsdoc/check-line-alignment': 'off',
     'jsdoc/check-param-names': ['error'],
     'jsdoc/check-syntax': ['error'],
     'jsdoc/check-tag-names': ['error'],
@@ -212,17 +230,28 @@ module.exports = {
 
     // Unicorn disable
     'unicorn/catch-error-name': 'off',
+    'unicorn/consistent-destructuring': 'off',
     'unicorn/consistent-function-scoping': 'off',
+    'unicorn/empty-brace-spaces': 'off',
     'unicorn/explicit-length-check': 'off',
     'unicorn/filename-case': 'off',
     'unicorn/import-index': 'off',
+    'unicorn/import-style': 'off',
+    'unicorn/no-array-for-each': 'off',
+    'unicorn/no-lonely-if': 'off',
     'unicorn/no-nested-ternary': 'off',
+    'unicorn/no-null': 'off',
+    'unicorn/no-array-reduce': 'off',
     'unicorn/no-unreadable-array-destructuring': 'off',
+    'unicorn/no-useless-undefined': 'off',
+    'unicorn/numeric-separators-style': 'off',
     'unicorn/prevent-abbreviations': 'off',
+    'unicorn/prefer-array-flat-map': 'off',
     'unicorn/prefer-exponentiation-operator': 'off',
     'unicorn/prefer-number-properties': 'off',
     'unicorn/prefer-set-has': 'off',
     'unicorn/prefer-string-slice': 'off',
+    'unicorn/prefer-optional-catch-binding': 'off',
     'unicorn/throw-new-error': 'off',
 
     // UNICORN
@@ -230,70 +259,32 @@ module.exports = {
     'unicorn/custom-error-definition': 'error',
     'unicorn/no-unsafe-regex': 'error',
 
-    'unicorn/expiring-todo-comments': ['error', {'allowWarningComments': true, 'terms': ['todo']}],
-
-    // `@mysticatea`
-    '@mysticatea/block-scoped-var': 'error',
+    'unicorn/expiring-todo-comments': ['error', {allowWarningComments: true, terms: ['todo']}],
 
     // Adding here for comparison purposes only (already added by
-    //   eslint:recommended and would be added by `es2020` config)
+    //   eslint:recommended)
     'no-label-var': 'error',
 
-    // These should be inherited by `es2020` config, but we don't want to
-    //   extend as it has other items we don't want (see comment at top)
-    '@mysticatea/no-literal-call': 'error',
-    '@mysticatea/no-this-in-static': 'error',
-    '@mysticatea/no-useless-rest-spread': 'error',
-
-    // `@mysticatea` disabled
-    '@mysticatea/no-use-ignored-vars': 'off',
-    '@mysticatea/prettier': 'off',
-    '@mysticatea/prefer-for-of': 'off',
-    '@mysticatea/no-instanceof-array': 'off',
-    '@mysticatea/no-instanceof-wrapper': 'off',
-
-    // Disable other mysticatea items we don't want
-    'func-style': 'off',
-    'init-declarations': 'off',
-    'multiline-comment-style': 'off',
-    'no-invalid-this': 'off',
-    'no-param-reassign': 'off',
-    'no-useless-concat': 'off',
-    'padding-line-between-statements': 'off',
-    'max-params': 'off',
-    'arrow-body-style': 'off',
-    'prefer-arrow-callback': 'off',
-    'prefer-template': 'off',
-
-    // We're directly using `eslint-comments` and without this, these will
-    //  mistakenly show up in our @mysticatea/eslint-plugin inherited list
-    '@mysticatea/eslint-comments/disable-enable-pair': 'off',
-    '@mysticatea/eslint-comments/no-aggregating-enable': 'off',
-    '@mysticatea/eslint-comments/no-duplicate-disable': 'off',
-    '@mysticatea/eslint-comments/no-unlimited-disable': 'off',
-    '@mysticatea/eslint-comments/no-unused-disable': 'off',
-    '@mysticatea/eslint-comments/no-unused-enable': 'off',
-    '@mysticatea/eslint-comments/no-use': 'off',
+    // `@brettz9` disabled
+    '@brettz9/no-use-ignored-vars': 'off',
+    '@brettz9/prefer-for-of': 'off',
+    '@brettz9/no-instanceof-array': 'off',
+    '@brettz9/no-instanceof-wrapper': 'off',
 
     // eslint-comments
     'eslint-comments/no-unused-disable': 'error',
-    'eslint-comments/disable-enable-pair': ['error', {'allowWholeFile': true}],
+    'eslint-comments/disable-enable-pair': ['error', {allowWholeFile: true}],
 
     // array-func
     'array-func/prefer-array-from': 'off',
 
-    // SONARJS
-    'sonarjs/max-switch-cases': 'off',
-    'sonarjs/no-collapsible-if': 'off',
-    'sonarjs/no-duplicate-string': 'off',
-    'sonarjs/no-identical-functions': 'off',
-    'sonarjs/no-small-switch': 'off',
-    'sonarjs/prefer-immediate-return': 'off',
-    'sonarjs/cognitive-complexity': 'off',
-
-    // no-use-extend-native
-    // Should not be needed here; see comment in `plugins`
-    //   re: 'no-use-extend-native' above
-    'no-use-extend-native/no-use-extend-native': 'error'
+    // Radar
+    'radar/max-switch-cases': 'off',
+    'radar/no-collapsible-if': 'off',
+    'radar/no-duplicate-string': 'off',
+    'radar/no-identical-functions': 'off',
+    'radar/no-small-switch': 'off',
+    'radar/prefer-immediate-return': 'off',
+    'radar/cognitive-complexity': 'off'
   }
 };

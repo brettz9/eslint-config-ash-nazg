@@ -1,4 +1,5 @@
 'use strict';
+
 module.exports = {
   rules: {
     // This file is for indicating those rules available in inherited plugins
@@ -11,6 +12,7 @@ module.exports = {
     'func-names': 'off',
     'func-style': 'off',
     'id-blacklist': 'off',
+    'id-denylist': 'off',
     'id-length': 'off',
     'id-match': 'off',
     'init-declarations': 'off',
@@ -31,9 +33,10 @@ module.exports = {
     'no-negated-condition': 'off',
     'no-nested-ternary': 'off',
     'no-param-reassign': 'off',
-    'no-return-await': 'off',
+    'no-restricted-exports': 'off',
     'no-restricted-imports': 'off',
     'no-restricted-modules': 'off',
+    'no-return-await': 'off',
     'no-ternary': 'off',
     'no-undefined': 'off',
     'no-underscore-dangle': 'off',
@@ -46,6 +49,14 @@ module.exports = {
     'sort-imports': 'off',
     'sort-keys': 'off',
     'sort-vars': 'off',
+
+    // Node-specific rules that are apparently to be removed in ESLint 7
+    //  (have replacements we are using in eslint-plugin-node)
+    'callback-return': 'off',
+    'global-require': 'off',
+    'no-mixed-requires': 'off',
+    'no-process-env': 'off',
+    'no-sync': 'off',
 
     // Deprecated
     'node/no-hide-core-modules': 'off',
@@ -70,13 +81,14 @@ module.exports = {
     'import/no-unassigned-import': 'off',
     'import/prefer-default-export': 'off',
 
-    'node/no-callback-literal': 'off',
+    'node/no-restricted-import': 'off',
+    'node/no-restricted-require': 'off',
 
     'promise/no-native': 'off',
 
-    '@mysticatea/arrow-parens': 'off',
-    '@mysticatea/no-instanceof-array': 'off',
-    '@mysticatea/no-instanceof-wrapper': 'off',
+    '@brettz9/arrow-parens': 'off',
+    '@brettz9/no-instanceof-array': 'off',
+    '@brettz9/no-instanceof-wrapper': 'off',
 
     'eslint-comments/no-restricted-disable': 'off',
     'eslint-comments/no-use': 'off',
@@ -94,7 +106,21 @@ module.exports = {
 
     'unicorn/no-unused-properties': 'off',
     'unicorn/no-keyword-prefix': 'off',
+    'unicorn/prefer-string-replace-all': 'off',
+    'unicorn/string-content': 'off',
+
+    // Renamed
+    'unicorn/no-array-instanceof': 'off',
+    'unicorn/no-fn-reference-in-iterator': 'off',
+    'unicorn/no-reduce': 'off',
+    'unicorn/prefer-dataset': 'off',
+    'unicorn/prefer-node-append': 'off',
+    'unicorn/prefer-node-remove': 'off',
+    'unicorn/prefer-event-key': 'off',
+    'unicorn/prefer-flat-map': 'off',
     'unicorn/prefer-replace-all': 'off',
-    'unicorn/string-content': 'off'
+    'unicorn/prefer-starts-ends-with': 'off',
+    'unicorn/prefer-text-content': 'off',
+    'unicorn/prefer-trim-start-end': 'off'
   }
 };

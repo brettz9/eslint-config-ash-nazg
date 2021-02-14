@@ -1,16 +1,22 @@
 'use strict';
+
 module.exports = {
-  extends: ['./sauron'],
+  extends: ['./sauron.js'],
   settings: {
     preferredTypes: {
+      'Promise.<>': {
+        message: 'Non-preferred @{{tagName}}{{tagValue}} type "Promise"; prefer a more specific `@interface`+`@class`-defined constructor (or use `typeof Promise` as its base type if using typescript mode) so that its resolve and reject functions can be specified: https://github.com/jsdoc/jsdoc/issues/509#issuecomment-764509057.',
+        replacement: false
+      },
       number: {
-        message: 'Use `Integer` or `Float`'
+        message: 'Use `Integer` or `Float`',
+        replacement: false
       }
     }
   },
   rules: {
     'capitalized-comments': ['warn'],
-    'complexity': ['warn'],
+    complexity: ['warn'],
     'max-statements': ['warn'],
     'max-statements-per-line': ['warn'],
     'no-magic-numbers': ['warn'],
@@ -28,10 +34,11 @@ module.exports = {
     'jsdoc/require-example': ['warn'],
     'jsdoc/require-jsdoc': ['error'],
 
-    'sonarjs/cognitive-complexity': 'warn',
+    'radar/cognitive-complexity': 'warn',
 
+    'unicorn/numeric-separators-style': 'error',
     'unicorn/prevent-abbreviations': 'error',
-    'unicorn/expiring-todo-comments': ['warn', {'allowWarningComments': false, 'terms': ['todo']}],
+    'unicorn/expiring-todo-comments': ['warn', {allowWarningComments: false, terms: ['todo']}],
     'unicorn/prefer-set-has': 'error'
   }
 };

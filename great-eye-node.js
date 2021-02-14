@@ -1,6 +1,6 @@
 'use strict';
+
 module.exports = {
-  extends: ['./great-eye', './sauron-node'],
-  rules: {
-  }
+  extends: ['./great-eye.js', './sauron-node.js'],
+  rules: {}
 };
