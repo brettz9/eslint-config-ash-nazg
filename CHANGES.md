@@ -1,11 +1,46 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 27.0.0
 
 - Switch from `@mysticatea` to `@brettz9` fork (fixes and simplifies
     `peerDependencies` and removes extra code)
+- Enhancement (`index.js`) [loosen]: Disable sometimes cumbersome
+    `unicorn/consistent-destructuring`
+- Enhancement (`index.js`) [loosen]: Add `shared-node-browser` env for
+    polyglot-friendly globals (other globals specific to envrionment are not
+    whitelisted); to actually prevent these, will now need to set
+    `shared-node-browser` `env` to `false`.
+- Enhancement (`node.js`) [loosen]: Drop `node/global-require` as redundant
+    with `import/no-dynamic-require`
+- Enhancement (`node.js`): Based on `engines: {node}` set
+    `env: {node: true, esX: true}` (extra ES globals as relevant to Node
+    version), `parserOptions` `ecmaVersion`
 - pnpm: Switch to pnpm
 - npm: Bump semver; peerDeps/devDeps.
+- npm: Bump engines to Node 10
+
+**Experimental additions**:
+- Enhancement (`+script-node.js`): Add file for applying script
+    source type with Node; used by `sauron-node-script`
+- Enhancement (`+script.js`): Add file for applying script source
+    type for non-Node; used by `sauron-script`
+- Enhancement (`sauron-node-overrides.js`): `sauron-node` with `rc` and `mocha`
+- Enhancement (`sauron-node-script-overrides.js`): `sauron-node-script` with
+    `rc` and `mocha`
+- Enhancement (`sauron-overrides.js`): `sauron` with `rc` and `mocha`
+- Enhancement (`sauron-script.js`): `sauron` with `+script.js`
+    file
+- Enhancement (`+babel.js`): Add file for wrapping a module to support
+    equivalent babel/eslint-parser rules
+- Enhancement (`mocha.js`): Sets up Mocha (and `chai` global) on test
+    directories (via overrides)
+- Enhancement (`mocha-plus.js`): Strict but reasonable rules for checking
+    Mocha/Chai (not naming "sauron" as not bundling with Sauron)
+- Enhancement (`cypress.js`): Strict but reasonable rules for checking Cypress
+- Enhancement (`rc.js`): Add config for using `overrides` to give Rollup
+    and RC config files to support modules where available (and script where
+    not)
+- Refactoring (`sauron-node-script.js`): Use new `+script-node.js` file
 
 ## 26.1.0
 

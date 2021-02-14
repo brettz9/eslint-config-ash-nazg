@@ -230,6 +230,7 @@ module.exports = {
 
     // Unicorn disable
     'unicorn/catch-error-name': 'off',
+    'unicorn/consistent-destructuring': 'off',
     'unicorn/consistent-function-scoping': 'off',
     'unicorn/empty-brace-spaces': 'off',
     'unicorn/explicit-length-check': 'off',

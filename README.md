@@ -389,6 +389,7 @@ appears, to Dark Lords.
 
 - `catch-error-name` - It can actually be useful to use different
     error names to indicate what type of error may be expected.
+- `consistent-destructuring` - In practice can be cumbersome
 - `consistent-function-scoping` - Though this can be useful, and it
   shouldn't be difficult to manually hoist functions upward, besides taking
   some time to refactor, this often removes functions from a logical

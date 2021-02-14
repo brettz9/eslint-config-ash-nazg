@@ -1,7 +1,6 @@
 "use strict";
 module.exports = {
   rules: {
-    "unicorn/consistent-destructuring": "error",
     "unicorn/error-message": "error",
     "unicorn/escape-case": "error",
     "unicorn/new-for-builtins": "error",
