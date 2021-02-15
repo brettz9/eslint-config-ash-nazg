@@ -29,8 +29,9 @@ module.exports = {
     './+modules.js'
   ],
   plugins: [
-    // These have no rules
+    // Avoid its `recommended` config
     'markdown',
+    // This has no rules
     'html'
   ],
   settings: {

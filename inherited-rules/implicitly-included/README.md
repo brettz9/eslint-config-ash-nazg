@@ -5,7 +5,10 @@ present in inherited configs (as errors or warnings) yet are not overridden
 by ash-nazg.
 
 Note that `no-use-extend-native` rules is currently empty as it is not being
-directly inherited. (`html` and `markdown` currently have no rules.)
+directly inherited. (`html` currently has no rules and we are not using those
+of `markdown` given that we have our own defaults to apply and think some
+of its `recommended` are better handled with options rather than ignoring
+the rules entirely and possibly allowing mistaken examples/documentation.)
 
 Note also that the eslint recommended rules deliberately do not include such
 rules as are included within "standard" (as that is currently the main config

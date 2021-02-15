@@ -158,18 +158,23 @@ a few other (peer) dependencies.
   used. We also avoid some of `eslint-plugin-jsdoc` stricter checking
   requirements for descriptions.
 - `eslint-plugin-markdown` - Another basic use case is ensuring code
-  snippets are linted, which is why this is expected. You may find its
+  snippets are linted, which is why this is expected. You may find ESLint's
   discussion of `overrides` helpful for tweaking rules for Markdown (and
   you may also wish to use `overrides`, for the `eslint-plugin-jsdoc`
   rule `check-examples` if you wish to lint your JSDoc examples according
-  to different standards). You must pass the file extension within the `--ext`
-  flag, e.g., `--ext .md,.js` to get this to take effect.
+  to different standards). In ESLint 7 it is no longer necessary to pass the
+  file extension within the `--ext` flag, e.g., `--ext js,md` to get this
+  to take effect when used in `overrides[].files`.
 - `eslint-plugin-html` - One basic use case is ensuring HTML
     is linted, which is why this is expected. You may wish to use
     `overrides` for HTML-specific rules or enable the plugin's
     [own rules](https://github.com/BenoitZugmeyer/eslint-plugin-html#settings).
-    You must pass the file extension within the `--ext` flag, e.g.,
-    `--ext .html,.htm,.js` to get this to take effect.
+    In ESLint 7 it is no longer necessary to pass the
+    file extension within the `--ext` flag, e.g., `--ext js,html` to get this
+    to take effect when used in `overrides[].files`. (The HTML plugin lacks
+    the Markdown plugin's ability to treat separate blocks differentially, but
+    [an issue](https://github.com/BenoitZugmeyer/eslint-plugin-html/issues/139)
+    was filed requesting support.)
 - `eslint-plugin-promise` - Besides being peer dependencies of `standard`,
   this has some additional useful rules we apply.
 
