@@ -1,5 +1,13 @@
 # eslint-config-ash-nazg CHANGES
 
+## 29.0.0
+
+- npm: Update devDeps/peerDeps (to allow `rc.js` and its targeting of Markdown
+    per `eslint-plugin-markdown`'s 2.0 use of ESLint 7's new processor API
+    to be used alongside the updated `eslint-plugin-jsdoc` with its linting of
+    `@example` according to the expectations of the same ESLint 7 processor
+    API)
+
 ## 28.0.1
 
 - Fix (`rc.js`): Ensure properly using new Markdown API

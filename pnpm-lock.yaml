@@ -10,7 +10,7 @@ devDependencies:
   eslint-plugin-eslint-comments: 3.2.0_eslint@7.20.0
   eslint-plugin-html: 6.1.1
   eslint-plugin-import: 2.22.1_eslint@7.20.0
-  eslint-plugin-jsdoc: 31.6.1_eslint@7.20.0
+  eslint-plugin-jsdoc: 32.0.0_eslint@7.20.0
   eslint-plugin-markdown: 2.0.0_eslint@7.20.0
   eslint-plugin-no-unsanitized: 3.1.4_eslint@7.20.0
   eslint-plugin-no-use-extend-native: 0.5.0
@@ -741,7 +741,7 @@ packages:
       eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0
     resolution:
       integrity: sha512-8K7JjINHOpH64ozkAhpT3sd+FswIZTfMZTjdx052pnWrgRCVfp8op9tbjpAk3DdUeI/Ba4C8OjdC0r90erHEOw==
-  /eslint-plugin-jsdoc/31.6.1_eslint@7.20.0:
+  /eslint-plugin-jsdoc/32.0.0_eslint@7.20.0:
     dependencies:
       comment-parser: 1.1.2
       debug: 4.3.1
@@ -757,7 +757,7 @@ packages:
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0
     resolution:
-      integrity: sha512-5hCV3u+1VSEUMyfdTl+dpWsioD7tqQr2ILQw+KbXrF42AVxCLO8gnNLR6zDCDjqGGpt79V1sgY0RRchCWuCigg==
+      integrity: sha512-AfGe3gqJlcxyRKUjhLzPTUnEMlVVlWJCAh2N0leJndpMflyh0W7zP09+b6NQHBHk7GyR/JY0bXiSswN3QX9Lhg==
   /eslint-plugin-markdown/2.0.0_eslint@7.20.0:
     dependencies:
       eslint: 7.20.0
@@ -2192,7 +2192,7 @@ specifiers:
   eslint-plugin-eslint-comments: ^3.2.0
   eslint-plugin-html: ^6.1.1
   eslint-plugin-import: ^2.22.1
-  eslint-plugin-jsdoc: ^31.6.1
+  eslint-plugin-jsdoc: ^32.0.0
   eslint-plugin-markdown: ^2.0.0
   eslint-plugin-no-unsanitized: ^3.1.4
   eslint-plugin-no-use-extend-native: ^0.5.0
