@@ -1,12 +1,14 @@
 # eslint-config-ash-nazg CHANGES
 
+## 28.0.1
+
+- Fix (`rc.js`): Ensure properly using new Markdown API
+- Docs: Mention inclusion of "md" in `---ext` if latter is explicit
+
 ## 28.0.0
 
 - Update to use `eslint-plugin-markdown` 2.0.0, with its updated use of
-    ESLint's processor API, see <https://github.com/eslint/eslint-plugin-markdown/tree/v2.0.0#migrating-from-eslint-plugin-markdown-v1> for migrating
-    (need to add `processor: 'markdown/markdown'` to your Markdown `overrides`
-    blocks, but you can now differentially treat individual fenced blocks
-    and not rely on the plugin needing to hard-code supported languages)
+    ESLint's processor API, see <https://github.com/eslint/eslint-plugin-markdown/tree/v2.0.0#migrating-from-eslint-plugin-markdown-v1> for migrating.
 - Update (`rc.js`): Use new Markdown API
 
 ## 27.0.1

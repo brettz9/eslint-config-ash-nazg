@@ -164,14 +164,16 @@ a few other (peer) dependencies.
   rule `check-examples` if you wish to lint your JSDoc examples according
   to different standards). In ESLint 7 it is no longer necessary to pass the
   file extension within the `--ext` flag, e.g., `--ext js,md` to get this
-  to take effect when used in `overrides[].files`.
+  to take effect when used in `overrides[].files` (though it does seem to
+  be required to include `md` if you do use `--ext`).
 - `eslint-plugin-html` - One basic use case is ensuring HTML
     is linted, which is why this is expected. You may wish to use
     `overrides` for HTML-specific rules or enable the plugin's
     [own rules](https://github.com/BenoitZugmeyer/eslint-plugin-html#settings).
     In ESLint 7 it is no longer necessary to pass the
     file extension within the `--ext` flag, e.g., `--ext js,html` to get this
-    to take effect when used in `overrides[].files`. (The HTML plugin lacks
+    to take effect when used in `overrides[].files` (though it does seem to
+    be required to include `md` if you do use `--ext`). (The HTML plugin lacks
     the Markdown plugin's ability to treat separate blocks differentially, but
     [an issue](https://github.com/BenoitZugmeyer/eslint-plugin-html/issues/139)
     was filed requesting support.)

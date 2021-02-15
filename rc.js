@@ -44,7 +44,10 @@ module.exports = {
     },
     {
       files: '**/*.{md,mkdn,mdown,markdown}',
-      processor: 'markdown/markdown',
+      processor: 'markdown/markdown'
+    },
+    {
+      files: '**/*.md/*.js',
       rules: {
         'node/no-missing-require': ['error', {allowModules: [
           // eslint-disable-next-line import/no-dynamic-require -- Meant to be flexible
