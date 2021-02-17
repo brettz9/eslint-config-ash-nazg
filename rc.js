@@ -15,6 +15,7 @@ module.exports = {
         '**/scripts/**/*',
         '.babelrc.js',
         '.eslintrc.js',
+        '.eslintrc.cjs',
         'webpack.config.js',
         '**/.vuepress/config.js',
         '*.webpack.config.js'
@@ -23,6 +24,7 @@ module.exports = {
         './sauron-node-script.js'
       ],
       rules: {
+        'compat/compat': 'off',
         'no-console': 'off',
         'node/no-process-env': 'off',
         'node/no-unpublished-import': 'off'
@@ -38,6 +40,7 @@ module.exports = {
         './sauron-node.js'
       ],
       rules: {
+        'compat/compat': 'off',
         'no-console': 'off',
         'import/no-anonymous-default-export': 'off',
         'node/no-process-env': 'off',
@@ -60,6 +63,7 @@ module.exports = {
     {
       files: 'build/**',
       rules: {
+        'compat/compat': 'off',
         'node/no-unpublished-import': 'off'
       }
     }
