@@ -24,7 +24,8 @@ module.exports = {
       ],
       rules: {
         'no-console': 'off',
-        'node/no-process-env': 'off'
+        'node/no-process-env': 'off',
+        'node/no-unpublished-import': 'off'
       }
     },
     {
@@ -39,7 +40,8 @@ module.exports = {
       rules: {
         'no-console': 'off',
         'import/no-anonymous-default-export': 'off',
-        'node/no-process-env': 'off'
+        'node/no-process-env': 'off',
+        'node/no-unpublished-import': 'off'
       }
     },
     {
@@ -53,6 +55,12 @@ module.exports = {
           // eslint-disable-next-line import/no-dynamic-require -- Meant to be flexible
           require(join(process.cwd(), 'package.json')).name
         ]}]
+      }
+    },
+    {
+      files: 'build/**',
+      rules: {
+        'node/no-unpublished-import': 'off'
       }
     }
   ]

@@ -1,9 +1,10 @@
 {
   "name": "eslint-config-ash-nazg",
-  "version": "29.0.0",
+  "version": "29.1.0",
   "description": "An expansion and tweaking of the \"standard\" config style for ESLint",
   "main": "index.js",
   "scripts": {
+    "prepublishOnly": "pnpm i",
     "unused:@brettz9": "node -r esm inherited-rules/build unused @brettz9/eslint-plugin es6",
     "unused:array-func": "node -r esm inherited-rules/build unused eslint-plugin-array-func all",
     "unused:compat": "node -r esm inherited-rules/build unused eslint-plugin-compat recommended",

@@ -1,5 +1,13 @@
 # eslint-config-ash-nazg CHANGES
 
+## 29.1.0
+
+- Enhancement [rc.js] (loosen): disable `node/no-unpublished-import` for config
+    and build directory files
+- Refactoring [node.js]: Disable `node/no-missing-import` as redundant with
+    `import/no-unresolved`
+- npm: Add `prepublishOnly` script
+
 ## 29.0.0
 
 - npm: Update devDeps/peerDeps (to allow `rc.js` and its targeting of Markdown

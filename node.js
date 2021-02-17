@@ -51,6 +51,7 @@ module.exports = {
     'node/no-process-exit': 'off',
 
     // For this, we want the import extension
-    'node/global-require': 'off'
+    'node/global-require': 'off',
+    'node/no-missing-import': 'off'
   }
 };
