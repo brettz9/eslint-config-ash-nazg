@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 29.4.0
+
+- Enhancement (`node.js`) [loosen]: Add `node/global-require` and instead drop
+    `import/no-dynamic-require` as the redundant one (didn't seem as accurate)
+
 ## 29.3.0
 
 - Enhancement [`sauron-script-overrides.js`]: Add new config
@@ -12,8 +17,8 @@
 
 ## 29.1.0
 
-- Enhancement [`rc.js`] (loosen): Disable `node/no-unpublished-import` for config
-    and build directory files
+- Enhancement [`rc.js`] (loosen): Disable `node/no-unpublished-import` for
+    config and build directory files
 - Refactoring [`node.js`]: Disable `node/no-missing-import` as redundant with
     `import/no-unresolved`
 - npm: Add `prepublishOnly` script

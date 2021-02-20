@@ -39,6 +39,7 @@ module.exports = {
 
     // Enable eslint-plugin-node equivalents
     'node/callback-return': 'error',
+    'node/global-require': 'error',
     'node/handle-callback-err': 'error',
     'node/no-new-require': 'error',
     'node/no-path-concat': 'error',
@@ -51,7 +52,6 @@ module.exports = {
     'node/no-process-exit': 'off',
 
     // For this, we want the import extension
-    'node/global-require': 'off',
     'node/no-missing-import': 'off'
   }
 };
