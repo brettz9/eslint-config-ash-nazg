@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 29.5.0
+
+- Fix: Override `.ncurc.js`, `.3rdparty-eslintrc.js`, and `**/jsdoc-config.js`
+- Add experimental configs `rc-module.js` and `rc-script.js`
+
 ## 29.4.0
 
 - Enhancement (`node.js`) [loosen]: Add `node/global-require` and instead drop

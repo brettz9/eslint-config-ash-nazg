@@ -16,19 +16,16 @@ module.exports = {
         '.babelrc.js',
         '.eslintrc.js',
         '.eslintrc.cjs',
+        '.ncurc.js',
+        '.3rdparty-eslintrc.js',
+        '**/jsdoc-config.js',
         'webpack.config.js',
         '**/.vuepress/config.js',
         '*.webpack.config.js'
       ],
       extends: [
-        './sauron-node-script.js'
-      ],
-      rules: {
-        'compat/compat': 'off',
-        'no-console': 'off',
-        'node/no-process-env': 'off',
-        'node/no-unpublished-import': 'off'
-      }
+        './rc-script.js'
+      ]
     },
     {
       files: [
@@ -37,15 +34,8 @@ module.exports = {
         '*.rollup.config.js'
       ],
       extends: [
-        './sauron-node.js'
-      ],
-      rules: {
-        'compat/compat': 'off',
-        'no-console': 'off',
-        'import/no-anonymous-default-export': 'off',
-        'node/no-process-env': 'off',
-        'node/no-unpublished-import': 'off'
-      }
+        './rc-module.js'
+      ]
     },
     {
       files: '**/*.{md,mkdn,mdown,markdown}',
