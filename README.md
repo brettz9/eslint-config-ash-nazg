@@ -90,6 +90,7 @@ removed or significantly modified in a future version:
     `mocha`
 - `sauron-overrides.js`: `sauron` with `rc` and `mocha`
 - `sauron-script.js`: `sauron` with `+script.js` file
+- `sauron-script-overrides.js`: `sauron-script` with `rc` and `mocha`
 - `+babel.js`: Wraps a module to support equivalent babel/eslint-parser rules
 - `mocha.js`: Sets up Mocha (and `chai` global) on test directories
     (via overrides)

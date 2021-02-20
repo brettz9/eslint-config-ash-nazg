@@ -5,7 +5,6 @@ module.exports = {
     "node/no-extraneous-import": "error",
     "node/no-extraneous-require": "error",
     "node/no-exports-assign": "error",
-    "node/no-missing-import": "error",
     "node/no-missing-require": "error",
     "node/no-unpublished-bin": "error",
     "node/no-unpublished-import": "error",

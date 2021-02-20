@@ -1,15 +1,20 @@
 # eslint-config-ash-nazg CHANGES
 
+## 29.3.0
+
+- Enhancement [`sauron-script-overrides.js`]: Add new config
+- npm: Update peerDeps/devDeps.
+
 ## 29.2.0
 
-- Enhancement [rc.js] (loosen): Disable `compat/compat` for RC/build files;
+- Enhancement [`rc.js`] (loosen): Disable `compat/compat` for RC/build files;
     check `.eslintrc.cjs` also
 
 ## 29.1.0
 
-- Enhancement [rc.js] (loosen): Disable `node/no-unpublished-import` for config
+- Enhancement [`rc.js`] (loosen): Disable `node/no-unpublished-import` for config
     and build directory files
-- Refactoring [node.js]: Disable `node/no-missing-import` as redundant with
+- Refactoring [`node.js`]: Disable `node/no-missing-import` as redundant with
     `import/no-unresolved`
 - npm: Add `prepublishOnly` script
 
