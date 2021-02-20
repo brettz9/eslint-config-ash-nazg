@@ -172,6 +172,7 @@ module.exports = {
 
     // IMPORT
     'import/no-absolute-path': 'error',
+    'import/no-dynamic-require': 'error',
     'import/no-self-import': 'error',
     'import/no-useless-path-segments': 'error',
     'import/no-named-as-default': 'error',
@@ -285,9 +286,6 @@ module.exports = {
     'radar/no-identical-functions': 'off',
     'radar/no-small-switch': 'off',
     'radar/prefer-immediate-return': 'off',
-    'radar/cognitive-complexity': 'off',
-
-    // Import
-    'import/no-dynamic-require': 'off'
+    'radar/cognitive-complexity': 'off'
   }
 };

@@ -349,7 +349,6 @@ happy with it thus far).
 
 #### Rationale for disabled import rules
 
-- `import/no-dynamic-require` - Redundant with `node/global-require`
 - `import/no-restricted-paths` - Project-specific
 - `import/no-internal-modules` - Don't see any advantage
 - `import/no-cycle` - Don't see a problem with cyclic imports in ESM

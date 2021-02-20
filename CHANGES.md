@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 29.6.0
+
+- Enhancement (`node.js`) [tighten]: Resume adding `import/dynamic-require`
+    as `node/global-require` doesn't flag dynamic global requires
+
 ## 29.5.0
 
 - Fix: Override `.ncurc.js`, `.3rdparty-eslintrc.js`, and `**/jsdoc-config.js`
