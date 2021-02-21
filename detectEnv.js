@@ -80,7 +80,7 @@ const getEcmaVersionForNodeVersion = (nodeVersion) => {
 const detectNodeVersion = (packagePath) => {
   let nodeVersion = '5';
   try {
-    // eslint-disable-next-line node/global-require -- Ensure available synchronously
+    // eslint-disable-next-line node/global-require, import/no-dynamic-require -- Ensure available synchronously
     const {engines: {node}} = require(packagePath);
     nodeVersion = semver.minVersion(node);
   } catch (err) {}
