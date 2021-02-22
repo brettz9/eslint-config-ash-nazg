@@ -17,6 +17,9 @@ module.exports = {
       // Are all of these redundant with `env: {mocha: true}`?
       globals: {
         chai: 'readonly',
+        expect: 'readonly',
+        assert: 'readonly',
+        should: 'readonly',
 
         after: 'readonly',
         afterEach: 'readonly',

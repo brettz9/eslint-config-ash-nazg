@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 29.7.0
+
+- Enhancement (`mocha.js`): Add `expect`, `assert`, `should` globals.
+- Enhancement (`mocha-plus.js`): Add `chai-assert-bdd` plugin
+
 ## 29.6.0
 
 - Enhancement (`node.js`) [tighten]: Resume adding `import/dynamic-require`

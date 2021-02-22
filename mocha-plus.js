@@ -5,6 +5,9 @@ module.exports = {
   overrides: [
     {
       files: ['**/test/**', '**/tests/**', 'cypress/integration/**'],
+      plugins: [
+        'chai-assert-bdd'
+      ],
       extends: [
         'plugin:mocha/recommended',
         'plugin:mocha-cleanup/recommended-no-limits',
