@@ -8,7 +8,10 @@ module.exports = {
   env,
   extends: ['plugin:node/recommended-script'],
   parserOptions: {
-    ecmaVersion
+    ecmaVersion,
+    ecmaFeatures: {
+      globalReturn: true
+    }
   },
   rules: {
     'import/no-commonjs': 'off',

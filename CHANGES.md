@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 29.8.0
+
+- Fix (`sauron-node-script`/`+script-node.js`): Add `globalReturn: true`
+- npm: Update peerDeps/devDeps.
+
 ## 29.7.0
 
 - Enhancement (`mocha.js`): Add `expect`, `assert`, `should` globals.
