@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 29.8.1
+
+- Fix (`rc.js` and overrides): apply to `.mocharc.js`
+
 ## 29.8.0
 
 - Fix (`sauron-node-script`/`+script-node.js`): Add `globalReturn: true`

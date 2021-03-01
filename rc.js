@@ -16,6 +16,7 @@ module.exports = {
         '.babelrc.js',
         '.eslintrc.js',
         '.eslintrc.cjs',
+        '.mocharc.js',
         '.ncurc.js',
         '.3rdparty-eslintrc.js',
         '**/jsdoc-config.js',
