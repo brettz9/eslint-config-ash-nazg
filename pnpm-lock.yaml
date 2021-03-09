@@ -17,7 +17,6 @@ devDependencies:
   eslint-plugin-node: 11.1.0_eslint@7.20.0
   eslint-plugin-promise: 4.3.1
   eslint-plugin-radar: 0.2.1_eslint@7.20.0
-  eslint-plugin-standard: 4.1.0_eslint@7.20.0
   eslint-plugin-unicorn: 28.0.2_eslint@7.20.0
   esm: 3.2.25
   rimraf: 3.0.2
@@ -821,14 +820,6 @@ packages:
       eslint: '>= 3.0.0 <= 7.x.x'
     resolution:
       integrity: sha512-aOc1MK6ddL45X6mS6zEqFIKy/c/qnwjhNycDecaFMw5acUsD744ZCZf2cG7yxLhMv71mBSwr6pZdu+26+Zzk5A==
-  /eslint-plugin-standard/4.1.0_eslint@7.20.0:
-    dependencies:
-      eslint: 7.20.0
-    dev: true
-    peerDependencies:
-      eslint: '>=5.0.0'
-    resolution:
-      integrity: sha512-ZL7+QRixjTR6/528YNGyDotyffm5OQst/sGxKDwGb9Uqs4In5Egi4+jbobhqJoyoCM6/7v/1A5fhQ7ScMtDjaQ==
   /eslint-plugin-unicorn/28.0.2_eslint@7.20.0:
     dependencies:
       ci-info: 2.0.0
@@ -2200,7 +2191,6 @@ specifiers:
   eslint-plugin-node: ^11.1.0
   eslint-plugin-promise: ^4.3.1
   eslint-plugin-radar: ^0.2.1
-  eslint-plugin-standard: ^4.1.0
   eslint-plugin-unicorn: ^28.0.2
   esm: ^3.2.25
   rimraf: ^3.0.2

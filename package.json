@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ash-nazg",
-  "version": "29.8.1",
+  "version": "29.8.2",
   "description": "An expansion and tweaking of the \"standard\" config style for ESLint",
   "main": "index.js",
   "scripts": {
@@ -80,7 +80,6 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-radar": "^0.2.1",
-    "eslint-plugin-standard": "^4.1.0",
     "eslint-plugin-unicorn": "^28.0.2"
   },
   "devDependencies": {
@@ -100,7 +99,6 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-radar": "^0.2.1",
-    "eslint-plugin-standard": "^4.1.0",
     "eslint-plugin-unicorn": "^28.0.2",
     "esm": "^3.2.25",
     "rimraf": "^3.0.2"

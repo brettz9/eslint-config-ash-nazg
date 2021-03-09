@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 29.8.2
+
+- npm: Remove now redundant `eslint-plugin-standard`
+
 ## 29.8.1
 
 - Fix (`rc.js` and overrides): apply to `.mocharc.js`
