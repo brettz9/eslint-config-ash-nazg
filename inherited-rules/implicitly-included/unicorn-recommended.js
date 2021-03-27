@@ -14,6 +14,7 @@ module.exports = {
     "unicorn/no-new-buffer": "error",
     "unicorn/no-object-as-default-parameter": "error",
     "unicorn/no-process-exit": "error",
+    "unicorn/no-static-only-class": "error",
     "unicorn/no-this-assignment": "error",
     "unicorn/no-zero-fractions": "error",
     "unicorn/number-literal-case": "error",

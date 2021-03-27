@@ -1,5 +1,12 @@
 # eslint-config-ash-nazg CHANGES
 
+## 29.9.0
+
+- Enhancement (`index.js`) [tighten]: Add Unicorn's `no-static-only-class`
+- Enhancement (`index.js`) [loosen]: Make explicit avoidal of Unicorn's new
+    `prefer-array-flat` until Node 12
+- npm: Update `semver` and peerDeps/devDeps.
+
 ## 29.8.2
 
 - npm: Remove now redundant `eslint-plugin-standard`

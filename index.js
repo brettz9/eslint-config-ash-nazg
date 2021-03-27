@@ -246,6 +246,10 @@ module.exports = {
     'unicorn/no-unreadable-array-destructuring': 'off',
     'unicorn/no-useless-undefined': 'off',
     'unicorn/numeric-separators-style': 'off',
+
+    // Todo [engine:node@>12]: Set to `error` or if unicorn/recommended has
+    //  it, remove this line
+    'unicorn/prefer-array-flat': 'off',
     'unicorn/prevent-abbreviations': 'off',
     'unicorn/prefer-array-flat-map': 'off',
     'unicorn/prefer-exponentiation-operator': 'off',
