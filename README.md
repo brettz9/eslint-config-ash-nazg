@@ -712,6 +712,7 @@ can be picky about giving up their *preh-shus*...
     - <https://github.com/johnstonbl01/eslint-no-inferred-method-name> / <https://github.com/johnstonbl01/eslint-no-inferred-method-name/blob/master/docs/rules/no-inferred-method-name.md>
     - <https://github.com/getify/eslint-plugin-proper-arrows>
     - <https://github.com/selaux/eslint-plugin-filenames>
+    - <https://github.com/kantord/eslint-plugin-write-good-comments>
 - See also `eslint-plugin-privileges` for plugins/config to add for security/transparency
 - Make plugins/tool config/toolkit?
     - <https://github.com/not-an-aardvark/eslint-plugin-eslint-plugin>
