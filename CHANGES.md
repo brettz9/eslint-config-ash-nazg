@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 29.10.0
+
+- npm: Update peerDeps/devDeps
+
 ## 29.9.0
 
 - Enhancement (`index.js`) [tighten]: Add Unicorn's `no-static-only-class`
