@@ -12,7 +12,7 @@ specifiers:
   eslint-plugin-import: ^2.22.1
   eslint-plugin-jsdoc: ^32.3.0
   eslint-plugin-markdown: ^2.0.1
-  eslint-plugin-no-unsanitized: ^3.1.4
+  eslint-plugin-no-unsanitized: ^3.1.5
   eslint-plugin-no-use-extend-native: ^0.5.0
   eslint-plugin-node: ^11.1.0
   eslint-plugin-promise: ^5.1.0
@@ -37,7 +37,7 @@ devDependencies:
   eslint-plugin-import: 2.22.1_eslint@7.24.0
   eslint-plugin-jsdoc: 32.3.0_eslint@7.24.0
   eslint-plugin-markdown: 2.0.1_eslint@7.24.0
-  eslint-plugin-no-unsanitized: 3.1.4_eslint@7.24.0
+  eslint-plugin-no-unsanitized: 3.1.5_eslint@7.24.0
   eslint-plugin-no-use-extend-native: 0.5.0
   eslint-plugin-node: 11.1.0_eslint@7.24.0
   eslint-plugin-promise: 5.1.0_eslint@7.24.0
@@ -854,8 +854,8 @@ packages:
       unified: 6.2.0
     dev: true
 
-  /eslint-plugin-no-unsanitized/3.1.4_eslint@7.24.0:
-    resolution: {integrity: sha512-WF1+eZo2Sh+bQNjZuVNwT0dA61zuJORsLh+1Sww7+O6GOPw+WPWIIRfTWNqrmaXaDMhM4SXAqYPcNlhRMiH13g==}
+  /eslint-plugin-no-unsanitized/3.1.5_eslint@7.24.0:
+    resolution: {integrity: sha512-s/6w++p1590h/H/dE2Wo660bOkaM/3OEK14Y7xm1UT0bafxkKw1Cq0ksjxkxLdH/WWd014DlsLKuD6CyNrR2Dw==}
     peerDependencies:
       eslint: ^5 || ^6 || ^7
     dependencies:

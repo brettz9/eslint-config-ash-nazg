@@ -14,6 +14,9 @@ module.exports = {
     }
   },
   rules: {
+    // Allow for Node or Unicorn
+    'no-process-exit': 'off',
+
     'import/no-commonjs': 'off',
     strict: ['error']
   }
