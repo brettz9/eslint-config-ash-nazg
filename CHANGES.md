@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 29.11.0
+
+- npm: Update peerDeps/devDeps
+
 ## 29.10.1
 
 - Fix (`+script-node.js`) [loosen]: Disable `no-process-exit` which the

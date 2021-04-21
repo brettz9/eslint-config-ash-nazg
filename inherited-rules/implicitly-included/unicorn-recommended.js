@@ -39,6 +39,7 @@ module.exports = {
     "unicorn/prefer-spread": "error",
     "unicorn/prefer-string-starts-ends-with": "error",
     "unicorn/prefer-string-trim-start-end": "error",
+    "unicorn/prefer-switch": "error",
     "unicorn/prefer-ternary": "error",
     "unicorn/prefer-type-error": "error"
   }
