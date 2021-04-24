@@ -182,6 +182,10 @@ module.exports = {
     'import/no-mutable-exports': 'error',
     'import/no-amd': 'error',
 
+    'import/no-unresolved': ['error', {
+      ignore: ['fs/promises']
+    }],
+
     'import/extensions': ['error', 'always', {ignorePackages: true}],
     'import/order': ['error', {groups: [
       'builtin',

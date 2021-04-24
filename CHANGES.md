@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 29.12.1
+
+- Fix (`index.js`) [loosen]: Allow `fs/promises`
+
 ## 29.12.0
 
 - Enhancement (`index.js`) [loosen]: Disable new Unicorn `prefer-module` and

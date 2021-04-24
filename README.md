@@ -275,6 +275,8 @@ the rule.
 - `import/order` - Enforcing "builtin", "external", "internal" and then
   ["parent", "sibling", "index"] in any order as these may be
   project-specific.
+- `import/no-unresolved` - `fs/promises` should be allowed by default as a
+    Node module.
 
 ### Rationale for not including some rules
 
