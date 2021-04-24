@@ -464,6 +464,8 @@ appears, to Dark Lords.
     use of `undefined` is deliberate.
 - `prefer-array-flat-map` - Present in `array-func`
 - `prefer-exponentiation` - Now present in eslint core
+- `prefer-module` - Handling by different configs instead
+- `prefer-node-protocol` - Might revisit later if practice becomes adopted
 - `prefer-optional-catch-binding` - Understandable rule, but extra work if
     refactoring to add later, and the catch binding can also force
     documentation of the error's purpose

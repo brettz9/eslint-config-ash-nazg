@@ -253,6 +253,9 @@ module.exports = {
     'unicorn/prevent-abbreviations': 'off',
     'unicorn/prefer-array-flat-map': 'off',
     'unicorn/prefer-exponentiation-operator': 'off',
+    'unicorn/prefer-module': 'off',
+    'unicorn/prefer-node-protocol': 'off',
+
     'unicorn/prefer-number-properties': 'off',
     'unicorn/prefer-set-has': 'off',
     'unicorn/prefer-string-slice': 'off',

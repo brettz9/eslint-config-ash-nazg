@@ -1,5 +1,12 @@
 # eslint-config-ash-nazg CHANGES
 
+## 29.12.0
+
+- Enhancement (`index.js`) [loosen]: Disable new Unicorn `prefer-module` and
+    `prefer-node-protocol` rules
+- npm: Update peerDeps/devDeps
+- npm: Add `lint` script
+
 ## 29.11.0
 
 - npm: Update peerDeps/devDeps
