@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 29.13.0
+
+- npm: Update peerDeps/devDeps
+
 ## 29.12.1
 
 - Fix (`index.js`) [loosen]: Allow `fs/promises`
