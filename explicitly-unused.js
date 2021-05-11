@@ -104,6 +104,9 @@ module.exports = {
     //   need to add here
     'jsdoc/no-types': 'off',
 
+    'jsdoc/no-missing-syntax': 'off',
+    'jsdoc/no-restricted-syntax': 'off',
+
     'unicorn/no-unused-properties': 'off',
     'unicorn/no-keyword-prefix': 'off',
     'unicorn/prefer-string-replace-all': 'off',

@@ -464,6 +464,7 @@ appears, to Dark Lords.
 - `no-useless-undefined` - I don't like the consequence of changing
     `array-callback-return` to `allowImplicit`, and it can make clear that
     use of `undefined` is deliberate.
+- `prefer-array-flat` - Present in `array-func`
 - `prefer-array-flat-map` - Present in `array-func`
 - `prefer-exponentiation` - Now present in eslint core
 - `prefer-module` - Handling by different configs instead

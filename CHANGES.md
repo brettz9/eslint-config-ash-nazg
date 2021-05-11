@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 29.14.0
+
+- Enhancement (`index.js`) [tighten]: Add `jsdoc/require-asterisk-prefix`
+- npm: Update peerDeps/devDeps (brings in `unicorn/no-document-cookie` rule)
+
 ## 29.13.0
 
 - npm: Update peerDeps/devDeps

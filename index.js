@@ -207,6 +207,7 @@ module.exports = {
     'jsdoc/require-jsdoc': ['off'],
     'jsdoc/require-returns': ['off'],
     'jsdoc/require-property-description': 'off',
+    'jsdoc/check-line-alignment': 'off',
 
     // JSDOC
     'jsdoc/check-examples': ['error', {
@@ -215,7 +216,11 @@ module.exports = {
       checkParams: true,
       checkProperties: true
     }],
-    'jsdoc/check-line-alignment': 'off',
+    'jsdoc/require-asterisk-prefix': ['error', 'always', {
+      tags: {
+        any: ['example', 'license', 'copyright']
+      }
+    }],
     'jsdoc/check-param-names': ['error'],
     'jsdoc/check-syntax': ['error'],
     'jsdoc/check-tag-names': ['error'],
