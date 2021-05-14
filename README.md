@@ -352,10 +352,13 @@ happy with it thus far).
 #### Rationale for disabled import rules
 
 - `import/no-restricted-paths` - Project-specific
-- `import/no-internal-modules` - Don't see any advantage
+- `import/no-internal-modules` - Useful but have to specify, so
+    project-specific
+- `import/no-import-module-exports` - Seems redundant for normal CJS
 - `import/no-cycle` - Don't see a problem with cyclic imports in ESM
 - `import/no-nodejs-modules` - Useful for some projects, but not all
   including even client-side (though does offer `allow` option)
+- `import/no-relative-packages` - Not needed for general environments
 - `import/exports-last` - Has some reason for being, but nicer to see
   with declaration that the object is being exported. To find all, just
   search for "export"

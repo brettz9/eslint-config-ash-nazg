@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 29.15.0
+
+- npm: Update peerDeps/devDeps
+
 ## 29.14.0
 
 - Enhancement (`index.js`) [tighten]: Add `jsdoc/require-asterisk-prefix`
