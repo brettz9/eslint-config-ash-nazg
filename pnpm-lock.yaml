@@ -4,7 +4,7 @@ specifiers:
   '@brettz9/eslint-plugin': ^1.0.3
   '@scottnonnenberg/eslint-compare-config': ^1.0.1
   eslint: ^7.27.0
-  eslint-config-standard: ^16.0.2
+  eslint-config-standard: ^16.0.3
   eslint-plugin-array-func: ^3.1.7
   eslint-plugin-compat: ^3.9.0
   eslint-plugin-eslint-comments: ^3.2.0
@@ -29,7 +29,7 @@ devDependencies:
   '@brettz9/eslint-plugin': 1.0.3_eslint@7.27.0
   '@scottnonnenberg/eslint-compare-config': 1.0.1
   eslint: 7.27.0
-  eslint-config-standard: 16.0.2_54a118fc6338897394bb0683ed693a07
+  eslint-config-standard: 16.0.3_54a118fc6338897394bb0683ed693a07
   eslint-plugin-array-func: 3.1.7_eslint@7.27.0
   eslint-plugin-compat: 3.9.0_eslint@7.27.0
   eslint-plugin-eslint-comments: 3.2.0_eslint@7.27.0
@@ -739,13 +739,13 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-config-standard/16.0.2_54a118fc6338897394bb0683ed693a07:
-    resolution: {integrity: sha512-fx3f1rJDsl9bY7qzyX8SAtP8GBSk6MfXFaTfaGgk12aAYW4gJSyRm7dM790L6cbXv63fvjY4XeSzXnb4WM+SKw==}
+  /eslint-config-standard/16.0.3_54a118fc6338897394bb0683ed693a07:
+    resolution: {integrity: sha512-x4fmJL5hGqNJKGHSjnLdgA6U6h1YW/G2dW9fA+cyVur4SK6lyue8+UgNKWlZtUDTXvgKDD/Oa3GQjmB5kjtVvg==}
     peerDependencies:
       eslint: ^7.12.1
       eslint-plugin-import: ^2.22.1
       eslint-plugin-node: ^11.1.0
-      eslint-plugin-promise: ^4.2.1
+      eslint-plugin-promise: ^4.2.1 || ^5.0.0
     dependencies:
       eslint: 7.27.0
       eslint-plugin-import: 2.23.3_eslint@7.27.0
