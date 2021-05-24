@@ -60,9 +60,10 @@
   },
   "homepage": "https://github.com/brettz9/eslint-config-ash-nazg#readme",
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=16.0.0"
   },
   "dependencies": {
+    "eslint-define-config": "^1.0.8",
     "semver": "^7.3.5"
   },
   "peerDependencies": {

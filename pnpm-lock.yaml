@@ -5,6 +5,7 @@ specifiers:
   '@scottnonnenberg/eslint-compare-config': ^1.0.1
   eslint: ^7.27.0
   eslint-config-standard: ^16.0.2
+  eslint-define-config: ^1.0.8
   eslint-plugin-array-func: ^3.1.7
   eslint-plugin-compat: ^3.9.0
   eslint-plugin-eslint-comments: ^3.2.0
@@ -23,6 +24,7 @@ specifiers:
   semver: ^7.3.5
 
 dependencies:
+  eslint-define-config: 1.0.8
   semver: 7.3.5
 
 devDependencies:
@@ -752,6 +754,10 @@ packages:
       eslint-plugin-node: 11.1.0_eslint@7.27.0
       eslint-plugin-promise: 5.1.0_eslint@7.27.0
     dev: true
+
+  /eslint-define-config/1.0.8:
+    resolution: {integrity: sha512-Vfjv/3l112BQ0s+Ua+WGNxtEyxj++IaFCiBkhjT1wlBWtbHpuZcI0t8eCnJZnJrdv0b9n2GK0mcmQsPRRjVCXg==}
+    dev: false
 
   /eslint-import-resolver-node/0.3.4:
     resolution: {integrity: sha512-ogtf+5AB/O+nM6DIeBUNr2fuT7ot9Qg/1harBfBtaP13ekEWFQEEMP94BCB7zaNW3gyY+8SHYF00rnqYwXKWOA==}
