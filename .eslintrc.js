@@ -1,4 +1,5 @@
 'use strict';
+
 module.exports = {
   extends: [
     './sauron-node-script-overrides.js'

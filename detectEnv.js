@@ -35,7 +35,7 @@
 const {join} = require('path');
 const semver = require('semver');
 
-const getEnvForEcmaVersion = (ecmaVersion, {node = true} = {}) => {
+const getEnvForEcmaVersion = ({ecmaVersion, nodeVersion, node = true}) => {
   // Though redundant with `ecmaVersion` for `parserOptions`, also sets globals
   const env = ecmaVersion >= 2021
     ? {
@@ -62,19 +62,21 @@ const getEnvForEcmaVersion = (ecmaVersion, {node = true} = {}) => {
 };
 
 const getEcmaVersionForNodeVersion = (nodeVersion) => {
-  return semver.satisfies(nodeVersion, '>=14.0.0')
-    ? 2020
-    : (semver.satisfies(nodeVersion, '>=12.0.0')
-      ? 2019
-      : (semver.satisfies(nodeVersion, '>=10.0.0')
-        ? 2018
-        : (semver.satisfies(nodeVersion, '>=8.0.0')
-          ? 2017
-          : (semver.satisfies(nodeVersion, '>=7.0.0')
-            ? 2016
+  return semver.satisfies(nodeVersion, '>=15.0.0')
+    ? 2021
+    : semver.satisfies(nodeVersion, '>=14.0.0')
+      ? 2020
+      : (semver.satisfies(nodeVersion, '>=12.0.0')
+        ? 2019
+        : (semver.satisfies(nodeVersion, '>=10.0.0')
+          ? 2018
+          : (semver.satisfies(nodeVersion, '>=8.0.0')
+            ? 2017
             : (semver.satisfies(nodeVersion, '>=7.0.0')
-              ? 2015
-              : 5)))));
+              ? 2016
+              : (semver.satisfies(nodeVersion, '>=7.0.0')
+                ? 2015
+                : 5)))));
 };
 
 const detectNodeVersion = (packagePath) => {
@@ -87,11 +89,15 @@ const detectNodeVersion = (packagePath) => {
   return nodeVersion;
 };
 
-const nodeVersion = detectNodeVersion(join(process.cwd(), 'package.json'));
-const ecmaVersion = getEcmaVersionForNodeVersion(nodeVersion);
-const env = getEnvForEcmaVersion(ecmaVersion);
+const getEnvAndEcmaVersionForCwd = (cwd) => {
+  const nodeVersion = detectNodeVersion(join(cwd, 'package.json'));
+  const ecmaVersion = getEcmaVersionForNodeVersion(nodeVersion);
+  const env = getEnvForEcmaVersion({ecmaVersion, nodeVersion});
+  return {env, ecmaVersion};
+};
 
 module.exports = {
   detectNodeVersion, getEcmaVersionForNodeVersion, getEnvForEcmaVersion,
-  env, ecmaVersion
+  getEnvAndEcmaVersionForCwd,
+  ...getEnvAndEcmaVersionForCwd(process.cwd())
 };
