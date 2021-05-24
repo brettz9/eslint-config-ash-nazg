@@ -5,12 +5,15 @@ module.exports = {
     "jsdoc/check-property-names": "warn",
     "jsdoc/check-values": "warn",
     "jsdoc/empty-tags": "warn",
+    "jsdoc/multiline-blocks": "warn",
+    "jsdoc/no-multi-asterisks": "warn",
     "jsdoc/require-param": "warn",
     "jsdoc/require-property": "warn",
     "jsdoc/require-property-name": "warn",
     "jsdoc/require-property-type": "warn",
     "jsdoc/require-returns-check": "warn",
     "jsdoc/require-yields": "warn",
-    "jsdoc/require-yields-check": "warn"
+    "jsdoc/require-yields-check": "warn",
+    "jsdoc/tag-lines": "warn"
   }
 };

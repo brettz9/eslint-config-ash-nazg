@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 29.16.0
+
+- npm: Update devDeps./peerDeps. (adds new jsdoc rules)
+
 ## 29.15.0
 
 - npm: Update peerDeps/devDeps
