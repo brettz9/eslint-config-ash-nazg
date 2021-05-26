@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 29.16.2
+
+- npm: Require latest `eslint-plugin-markdown` (without vulnerabilities)
+
 ## 29.16.1
 
 - npm: Require latest `eslint-config-standard` patch
