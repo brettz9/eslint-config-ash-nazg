@@ -668,6 +668,7 @@ for projects to specify all child types.
 - `unicorn/prevent-abbreviations` - Very cumbersome for frequent conventions such
   as `e` for `event`
 - `unicorn/prefer-set-has` - Very good, but troublesome to refactor.
+- `unicorn/prefer-object-has-own` - Good but only available by polyfill
 
 The `preferredTypes` setting was enabled here for integer/float as it can
 be cumbersome for projects to distinguish and because `Promise` even

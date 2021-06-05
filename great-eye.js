@@ -39,6 +39,7 @@ module.exports = {
     'unicorn/numeric-separators-style': 'error',
     'unicorn/prevent-abbreviations': 'error',
     'unicorn/expiring-todo-comments': ['warn', {allowWarningComments: false, terms: ['todo']}],
-    'unicorn/prefer-set-has': 'error'
+    'unicorn/prefer-set-has': 'error',
+    'unicorn/prefer-object-has-own': 'error'
   }
 };

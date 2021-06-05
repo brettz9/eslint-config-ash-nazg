@@ -1,5 +1,11 @@
 # eslint-config-ash-nazg CHANGES
 
+## 29.17.0
+
+- Enhancement (`great-eye.js`) [tighten]: Expect
+    `unicorn/prefer-object-has-own`
+- npm: Update devDeps./peerDeps. (new unicorn rules)
+
 ## 29.16.2
 
 - npm: Require latest `eslint-plugin-markdown` (without vulnerabilities)

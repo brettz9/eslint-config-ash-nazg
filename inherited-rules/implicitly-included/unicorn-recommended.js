@@ -34,6 +34,7 @@ module.exports = {
     "unicorn/prefer-math-trunc": "error",
     "unicorn/prefer-modern-dom-apis": "error",
     "unicorn/prefer-negative-index": "error",
+    "unicorn/prefer-prototype-methods": "error",
     "unicorn/prefer-query-selector": "error",
     "unicorn/prefer-reflect-apply": "error",
     "unicorn/prefer-regexp-test": "error",
@@ -42,6 +43,8 @@ module.exports = {
     "unicorn/prefer-string-trim-start-end": "error",
     "unicorn/prefer-switch": "error",
     "unicorn/prefer-ternary": "error",
-    "unicorn/prefer-type-error": "error"
+    "unicorn/prefer-type-error": "error",
+    "unicorn/require-array-join-separator": "error",
+    "unicorn/require-number-to-fixed-digits-argument": "error"
   }
 };
