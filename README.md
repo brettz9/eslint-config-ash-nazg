@@ -387,6 +387,9 @@ which allows in CLI apps.
 
 `node/no-missing-import` - Redundant with `import/no-unresolved`
 
+`node/file-extension-in-import` - Redundant with `import/extensions` and has no
+`ignorePackages` option currently.
+
 `node/prefer-promises/dns` and `node/prefer-promises/fs` are good, but
 a bit early with Node 12.
 

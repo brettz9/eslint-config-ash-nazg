@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 29.17.1
+
+- Fix (`node.js`) [loosen]: Disable `node/file-extension-in-import`
+
 ## 29.17.0
 
 - Enhancement (`great-eye.js`) [tighten]: Expect
