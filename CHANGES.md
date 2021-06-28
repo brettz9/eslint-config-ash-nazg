@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- npm: Update devDeps./peerDeps.
+
 ## 29.17.1
 
 - Fix (`node.js`) [loosen]: Disable `node/file-extension-in-import`

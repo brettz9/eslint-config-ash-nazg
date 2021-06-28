@@ -100,6 +100,7 @@ module.exports = {
     'jsdoc/require-description-complete-sentence': 'off',
     'jsdoc/require-hyphen-before-param-description': 'off',
     'jsdoc/require-file-overview': 'off',
+    'jsdoc/match-name': 'off',
 
     // These rules are actually part of recommended, but since it is 'off'
     //   there, we don't include it in comparisons to show what is
