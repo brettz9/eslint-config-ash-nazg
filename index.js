@@ -266,6 +266,7 @@ module.exports = {
     'unicorn/prefer-node-protocol': 'off',
 
     'unicorn/prefer-number-properties': 'off',
+    'unicorn/prefer-prototype-methods': 'off',
     'unicorn/prefer-set-has': 'off',
     'unicorn/prefer-string-slice': 'off',
     'unicorn/prefer-optional-catch-binding': 'off',

@@ -474,15 +474,18 @@ appears, to Dark Lords.
     use of `undefined` is deliberate.
 - `prefer-array-flat` - Present in `array-func`
 - `prefer-array-flat-map` - Present in `array-func`
+- `prefer-at` - Not widely available
 - `prefer-exponentiation` - Now present in eslint core
 - `prefer-module` - Handling by different configs instead
 - `prefer-node-protocol` - Might revisit later if practice becomes adopted
 - `prefer-optional-catch-binding` - Understandable rule, but extra work if
     refactoring to add later, and the catch binding can also force
     documentation of the error's purpose
+- `prefer-prototype-methods` - Sometimes a bit cumbersome
 - `prefer-string-slice` - Added to Sauron but can be cumbersome to change for
   old projects
 - `prefer-string-replace-all` - Good but not available yet in Node (even 14)
+- `prefer-top-level-await` - Good requires Babel currently
 - `regex-shorthand` - Was renamed to `better-regex`.
 - `string-content` - Don't want the trouble of requiring formatted apostrophes (not recommended anyways).
 - `throw-new-error` - Potentially confining.

@@ -10,14 +10,14 @@ specifiers:
   eslint-plugin-eslint-comments: ^3.2.0
   eslint-plugin-html: ^6.1.2
   eslint-plugin-import: ^2.23.4
-  eslint-plugin-jsdoc: ^35.4.0
+  eslint-plugin-jsdoc: ^35.4.1
   eslint-plugin-markdown: ^2.2.0
   eslint-plugin-no-unsanitized: ^3.1.5
   eslint-plugin-no-use-extend-native: ^0.5.0
   eslint-plugin-node: ^11.1.0
   eslint-plugin-promise: ^5.1.0
   eslint-plugin-radar: ^0.2.1
-  eslint-plugin-unicorn: ^33.0.1
+  eslint-plugin-unicorn: ^34.0.0
   esm: ^3.2.25
   rimraf: ^3.0.2
   semver: ^7.3.5
@@ -35,14 +35,14 @@ devDependencies:
   eslint-plugin-eslint-comments: 3.2.0_eslint@7.29.0
   eslint-plugin-html: 6.1.2
   eslint-plugin-import: 2.23.4_eslint@7.29.0
-  eslint-plugin-jsdoc: 35.4.0_eslint@7.29.0
+  eslint-plugin-jsdoc: 35.4.1_eslint@7.29.0
   eslint-plugin-markdown: 2.2.0_eslint@7.29.0
   eslint-plugin-no-unsanitized: 3.1.5_eslint@7.29.0
   eslint-plugin-no-use-extend-native: 0.5.0
   eslint-plugin-node: 11.1.0_eslint@7.29.0
   eslint-plugin-promise: 5.1.0_eslint@7.29.0
   eslint-plugin-radar: 0.2.1_eslint@7.29.0
-  eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
+  eslint-plugin-unicorn: 34.0.0_eslint@7.29.0
   esm: 3.2.25
   rimraf: 3.0.2
 
@@ -264,13 +264,13 @@ packages:
       eslint: 7.29.0
     dev: true
 
-  /@es-joy/jsdoccomment/0.8.0-alpha.2:
-    resolution: {integrity: sha512-fjRY13Bh8sxDZkzO27U2R9L6xFqkh5fAbHuMGvGLXLfrTes8nTTMyOi6wIPt+CG0XPAxEUge8cDjhG+0aag6ew==}
+  /@es-joy/jsdoccomment/0.8.0:
+    resolution: {integrity: sha512-Xd3GzYsL2sz2pcdtYt5Q0Wz1ol/o9Nt2UQL4nFPDcaEomvPmwjJsbjkKx1SKhl2h3TgwazNBLdcNr2m0UiGiFA==}
     engines: {node: '>=10.0.0'}
     dependencies:
       comment-parser: 1.1.5
       esquery: 1.4.0
-      jsdoc-type-pratt-parser: 1.0.0-alpha.23
+      jsdoc-type-pratt-parser: 1.0.4
     dev: true
 
   /@eslint/eslintrc/0.4.2:
@@ -516,8 +516,8 @@ packages:
     resolution: {integrity: sha512-mKKUkUbhPpQlCOfIuZkvSEgktjPFIsZKRRbC6KWVEMvlzblj3i3asQv5ODsrwt0N3pHAEvjP8KTQPHkp0+6jOg==}
     dev: true
 
-  /ci-info/3.1.1:
-    resolution: {integrity: sha512-kdRWLBIJwdsYJWYJFtAFFYxybguqeF91qpZaggjG5Nf8QKdizFG2hjqvaTXbxFIcYbSaD74KpAXv6BSm17DHEQ==}
+  /ci-info/3.2.0:
+    resolution: {integrity: sha512-dVqRX7fLUm8J6FgHJ418XuIgDLZDkYcDFTeL6TA2gt5WlIZUQrrH6EZrNClwT/H0FateUsZkGIOPRrLbP+PR9A==}
     dev: true
 
   /clean-regexp/1.0.0:
@@ -848,13 +848,13 @@ packages:
       tsconfig-paths: 3.9.0
     dev: true
 
-  /eslint-plugin-jsdoc/35.4.0_eslint@7.29.0:
-    resolution: {integrity: sha512-0cr+NkPTxpTiMCtYOd8W5fd2IyC/CmaTHKb+0bzkpP9p8HfmJ3B2/M6FWj97rQJOLwLMkx+g2MIEZsrttpbFmQ==}
+  /eslint-plugin-jsdoc/35.4.1_eslint@7.29.0:
+    resolution: {integrity: sha512-lnpu2Bj+ta2eAqwCWnb6f3Xjc78TWKo/oMCpDH5NfpPhYnePNtGZJzoAMgU5uo9BQqmXJ8pql8aiodOhg82ofw==}
     engines: {node: '>=12'}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0
     dependencies:
-      '@es-joy/jsdoccomment': 0.8.0-alpha.2
+      '@es-joy/jsdoccomment': 0.8.0
       comment-parser: 1.1.5
       debug: 4.3.1
       eslint: 7.29.0
@@ -931,18 +931,17 @@ packages:
       eslint: 7.29.0
     dev: true
 
-  /eslint-plugin-unicorn/33.0.1_eslint@7.29.0:
-    resolution: {integrity: sha512-VxX/L/9DUEyB3D0v00185LrgsB5/fBwkgA4IC7ehHRu5hFSgA6VecmdpFybhsr4GQ/Y1iyXMHf6q+JKvcR2MwA==}
+  /eslint-plugin-unicorn/34.0.0_eslint@7.29.0:
+    resolution: {integrity: sha512-O2S5Y823IymGWjFG1sa+F3zZYa8F9NukNT0qZfsAnLciY9721/kKxAsfSomlFR3o+8OfohytHdVVKGb3sNy7dA==}
     engines: {node: '>=12'}
     peerDependencies:
-      eslint: '>=7.23.0'
+      eslint: '>=7.28.0'
     dependencies:
-      ci-info: 3.1.1
+      ci-info: 3.2.0
       clean-regexp: 1.0.0
       eslint: 7.29.0
       eslint-template-visitor: 2.3.2_eslint@7.29.0
       eslint-utils: 3.0.0_eslint@7.29.0
-      import-modules: 2.1.0
       is-builtin-module: 3.1.0
       lodash: 4.17.21
       pluralize: 8.0.0
@@ -1284,11 +1283,6 @@ packages:
       resolve-from: 4.0.0
     dev: true
 
-  /import-modules/2.1.0:
-    resolution: {integrity: sha512-8HEWcnkbGpovH9yInoisxaSoIg9Brbul+Ju3Kqe2UsYDUBJD/iQjSgEj0zPcTDPKfPp2fs5xlv1i+JSye/m1/A==}
-    engines: {node: '>=8'}
-    dev: true
-
   /imurmurhash/0.1.4:
     resolution: {integrity: sha1-khi5srkoojixPcT7a21XbyMUU+o=}
     engines: {node: '>=0.8.19'}
@@ -1445,10 +1439,6 @@ packages:
     dependencies:
       argparse: 1.0.10
       esprima: 4.0.1
-    dev: true
-
-  /jsdoc-type-pratt-parser/1.0.0-alpha.23:
-    resolution: {integrity: sha512-COtimMd97eo5W0h6R9ISFj9ufg/9EiAzVAeQpKBJ1xJs/x8znWE155HGBDR2rwOuZsCes1gBXGmFVfvRZxGrhg==}
     dev: true
 
   /jsdoc-type-pratt-parser/1.0.4:

@@ -5,6 +5,7 @@ module.exports = {
     "unicorn/escape-case": "error",
     "unicorn/new-for-builtins": "error",
     "unicorn/no-abusive-eslint-disable": "error",
+    "unicorn/no-array-method-this-argument": "error",
     "unicorn/no-array-push-push": "error",
     "unicorn/no-console-spaces": "error",
     "unicorn/no-document-cookie": "error",
@@ -34,7 +35,6 @@ module.exports = {
     "unicorn/prefer-math-trunc": "error",
     "unicorn/prefer-modern-dom-apis": "error",
     "unicorn/prefer-negative-index": "error",
-    "unicorn/prefer-prototype-methods": "error",
     "unicorn/prefer-query-selector": "error",
     "unicorn/prefer-reflect-apply": "error",
     "unicorn/prefer-regexp-test": "error",
@@ -45,6 +45,7 @@ module.exports = {
     "unicorn/prefer-ternary": "error",
     "unicorn/prefer-type-error": "error",
     "unicorn/require-array-join-separator": "error",
-    "unicorn/require-number-to-fixed-digits-argument": "error"
+    "unicorn/require-number-to-fixed-digits-argument": "error",
+    "unicorn/require-post-message-target-origin": "error"
   }
 };

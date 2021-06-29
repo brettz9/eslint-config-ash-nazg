@@ -1,8 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 29.18.0
 
-- npm: Update devDeps./peerDeps.
+- Enhancement (`index.js`) [loosen]: Disable somewhat cumbersome
+    `unicorn/prefer-prototype-methods`
+- npm: Update devDeps./peerDeps. (new Unicorn rules)
 
 ## 29.17.1
 
