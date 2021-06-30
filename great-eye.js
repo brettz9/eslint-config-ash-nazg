@@ -34,7 +34,7 @@ module.exports = {
     'jsdoc/require-example': ['warn'],
     'jsdoc/require-jsdoc': ['error'],
 
-    'radar/cognitive-complexity': 'warn',
+    'sonarjs/cognitive-complexity': 'warn',
 
     'unicorn/numeric-separators-style': 'error',
     'unicorn/prevent-abbreviations': 'error',

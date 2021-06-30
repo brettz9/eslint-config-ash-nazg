@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 30.0.0
+
+- Breaking change: Restore using `eslint-plugin-sonarjs` which is again being
+    actively updated/maintained.
+
 ## 29.18.0
 
 - Enhancement (`index.js`) [loosen]: Disable somewhat cumbersome
