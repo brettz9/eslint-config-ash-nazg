@@ -17,7 +17,7 @@ specifiers:
   eslint-plugin-node: ^11.1.0
   eslint-plugin-promise: ^5.1.0
   eslint-plugin-sonarjs: ^0.8.0-125
-  eslint-plugin-unicorn: ^34.0.0
+  eslint-plugin-unicorn: ^34.0.1
   esm: ^3.2.25
   rimraf: ^3.0.2
   semver: ^7.3.5
@@ -42,7 +42,7 @@ devDependencies:
   eslint-plugin-node: 11.1.0_eslint@7.29.0
   eslint-plugin-promise: 5.1.0_eslint@7.29.0
   eslint-plugin-sonarjs: 0.8.0-125_eslint@7.29.0
-  eslint-plugin-unicorn: 34.0.0_eslint@7.29.0
+  eslint-plugin-unicorn: 34.0.1_eslint@7.29.0
   esm: 3.2.25
   rimraf: 3.0.2
 
@@ -931,8 +931,8 @@ packages:
       eslint: 7.29.0
     dev: true
 
-  /eslint-plugin-unicorn/34.0.0_eslint@7.29.0:
-    resolution: {integrity: sha512-O2S5Y823IymGWjFG1sa+F3zZYa8F9NukNT0qZfsAnLciY9721/kKxAsfSomlFR3o+8OfohytHdVVKGb3sNy7dA==}
+  /eslint-plugin-unicorn/34.0.1_eslint@7.29.0:
+    resolution: {integrity: sha512-GUBtRYRhPVOW/GDu6QtOjrneSZxY/MulOT8puJU+47VKCzNmMgS/iHO2gZqoQ7KPMrpNYlebUlvCWy3IR1USVQ==}
     engines: {node: '>=12'}
     peerDependencies:
       eslint: '>=7.28.0'

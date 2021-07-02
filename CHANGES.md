@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 30.0.1
+
+- Fix: Missing `eslint-plugin-sonarjs` under `peerDependencies`
+- npm: Update devDeps./peerDeps. (Unicorn patch)
+
 ## 30.0.0
 
 - Breaking change: Restore using `eslint-plugin-sonarjs` which is again being
