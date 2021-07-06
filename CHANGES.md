@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 30.1.0
+
+- npm: Update devDeps./peerDeps. (new SonarJS rules)
+
 ## 30.0.1
 
 - Fix: Missing `eslint-plugin-sonarjs` under `peerDependencies`

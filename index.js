@@ -303,6 +303,8 @@ module.exports = {
     'sonarjs/no-identical-functions': 'off',
     'sonarjs/no-small-switch': 'off',
     'sonarjs/prefer-immediate-return': 'off',
-    'sonarjs/cognitive-complexity': 'off'
+    'sonarjs/cognitive-complexity': 'off',
+    'sonarjs/no-nested-switch': 'off',
+    'sonarjs/no-nested-template-literals': 'off'
   }
 };

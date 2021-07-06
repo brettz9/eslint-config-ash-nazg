@@ -535,8 +535,11 @@ appears, to Dark Lords.
 
 ### Rationale for not including some `sonarjs` rules
 
-(All sonarjs rules are currently "recommended" rules as well.)
+(All sonarjs rules are currently "recommended" rules as well except as noted.)
 
+- `elseif-without-else` - Good rationale but burdensome (not recommended)
+- `no-nested-switch` - Arbitrary and not helpful for cleaner code
+- `no-nested-template-literals` - Somewhat reasonable, but also arbitrary
 - `max-switch-cases` - Sounds too arbitrary.
 - `no-collapsible-if` - Sometimes more logically clear or made in preparation
   for future expansion

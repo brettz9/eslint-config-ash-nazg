@@ -111,6 +111,8 @@ module.exports = {
     'jsdoc/no-missing-syntax': 'off',
     'jsdoc/no-restricted-syntax': 'off',
 
+    'sonarjs/elseif-without-else': 'off',
+
     'unicorn/no-unused-properties': 'off',
     'unicorn/no-keyword-prefix': 'off',
     'unicorn/prefer-at': 'off',
