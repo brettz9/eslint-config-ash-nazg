@@ -1,5 +1,11 @@
 # eslint-config-ash-nazg CHANGES
 
+## 31.0.0
+
+- Enhancement [`sauron.js`] (tighten): Set `lexicalBindings` to `true` to avoid
+    browser globals
+- npm: Update devDeps./peerDeps.
+
 ## 30.1.0
 
 - npm: Update devDeps./peerDeps. (new SonarJS rules)

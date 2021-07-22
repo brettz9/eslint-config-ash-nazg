@@ -64,6 +64,8 @@ module.exports = {
     'require-unicode-regexp': ['warn'],
     'vars-on-top': ['warn'],
 
+    'no-implicit-globals': ['error', {lexicalBindings: true}],
+
     'import/unambiguous': 'warn',
     'import/no-commonjs': 'warn',
 
