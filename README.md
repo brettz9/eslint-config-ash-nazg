@@ -580,6 +580,8 @@ may not all be under one's control).
     named as the object
 - `default-case` - Refactoring code to know whether to throw or silently
     ignore requires time.
+- `no-implicit-globals` with `lexicalBindings` to `true` - Light browser
+    apps might now want
 - `max-len` - May require a lot of refactoring.
 - `no-alert` - No quick easy replacement yet with poor `dialog` support.
 - `no-console` - Useful for debugging (and sometimes for reporting progress)
@@ -641,6 +643,9 @@ for projects to specify all child types.
     out code
 - `complexity` - A generally good practice, but can be work to refactor,
     and sometimes impractical to enforce.
+- `no-shadow` with `hoist: 'all'` - A person should generally be able to track
+    what they have in a function and it can be useful to reuse the variable
+    name, but to really prevent any possible confusion, this should be set.
 - *`max-statements-per-line`* - Tyrannical when prohibiting single-line
   `if (...) { continue; }`; might revisit if allowed for control statements
 - `max-statements` - A bit tyrannical even if good for clear code

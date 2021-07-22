@@ -23,6 +23,8 @@ module.exports = {
     'no-plusplus': ['warn'],
     'no-warning-comments': ['warn'],
 
+    'no-shadow': ['warn', {builtinGlobals: true, hoist: 'all', allow: ['parent', 'top', 'open', 'close', 'stop', 'blur', 'status', 'name', 'closed', 'start']}],
+
     'import/no-unused-modules': ['warn', {missingExports: true, unusedExports: true}],
 
     'jsdoc/check-alignment': ['warn'],

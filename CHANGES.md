@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- Enhancement [`great-eye.js`] (tighten): set `hoist: 'all'` for `no-shadow`
+
 ## 31.0.0
 
 - Enhancement [`sauron.js`] (tighten): Set `lexicalBindings` to `true` to avoid
