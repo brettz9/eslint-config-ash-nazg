@@ -1,8 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 31.1.0
 
 - Enhancement [`great-eye.js`] (tighten): set `hoist: 'all'` for `no-shadow`
+- npm: Update devDeps./peerDeps.
 
 ## 31.0.0
 

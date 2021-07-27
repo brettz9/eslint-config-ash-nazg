@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ash-nazg",
-  "version": "31.0.0",
+  "version": "31.1.0",
   "description": "An expansion and tweaking of the \"standard\" config style for ESLint",
   "main": "index.js",
   "scripts": {
@@ -74,7 +74,7 @@
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-html": "^6.1.2",
     "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-jsdoc": "^35.5.0",
+    "eslint-plugin-jsdoc": "^36.0.3",
     "eslint-plugin-markdown": "^2.2.0",
     "eslint-plugin-no-unsanitized": "^3.1.5",
     "eslint-plugin-no-use-extend-native": "^0.5.0",
@@ -93,7 +93,7 @@
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-html": "^6.1.2",
     "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-jsdoc": "^35.5.0",
+    "eslint-plugin-jsdoc": "^36.0.3",
     "eslint-plugin-markdown": "^2.2.0",
     "eslint-plugin-no-unsanitized": "^3.1.5",
     "eslint-plugin-no-use-extend-native": "^0.5.0",
