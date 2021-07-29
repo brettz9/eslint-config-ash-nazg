@@ -1,8 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 31.1.1
 
 - Fix: For untyped `Promise` messages, fix casing of "any"
+- Fix: update devDeps./peerDeps (jsdoc patch)
 
 ## 31.1.0
 
