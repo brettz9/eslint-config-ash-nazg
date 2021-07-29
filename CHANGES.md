@@ -3,6 +3,7 @@
 ## 31.1.1
 
 - Fix: For untyped `Promise` messages, fix casing of "any"
+- Fix: Clarify that replacing Array could also point to specific array type
 - Fix: update devDeps./peerDeps (jsdoc patch)
 
 ## 31.1.0
