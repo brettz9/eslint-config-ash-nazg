@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- Fix: For untyped `Promise` messages, fix casing of "any"
+
 ## 31.1.0
 
 - Enhancement [`great-eye.js`] (tighten): set `hoist: 'all'` for `no-shadow`
