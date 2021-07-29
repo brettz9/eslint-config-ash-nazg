@@ -37,11 +37,11 @@ module.exports = {
           replacement: 'PlainObject'
         },
         Array: {
-          message: 'Use `GenericArray` if it is truly arbitrary.',
+          message: 'Use the specific array type or `GenericArray` if it is truly arbitrary.',
           replacement: 'GenericArray'
         },
         array: {
-          message: 'Use `GenericArray` if it is truly arbitrary.',
+          message: 'Use the specific array type or `GenericArray` if it is truly arbitrary.',
           replacement: 'GenericArray'
         }
       }
