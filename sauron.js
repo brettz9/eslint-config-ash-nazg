@@ -85,6 +85,7 @@ module.exports = {
     }],
     'jsdoc/require-returns': ['warn', {
       forceRequireReturn: true,
+      forceReturnsWithAsync: true,
       contexts: ['any']
     }],
     'jsdoc/require-param-name': ['warn', {

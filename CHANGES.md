@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- Enhancement [`sauron.js`] (tighten): Add `forceReturnsWithAsync`
+
 ## 31.1.1
 
 - Fix: For untyped `Promise` messages, fix casing of "any"
