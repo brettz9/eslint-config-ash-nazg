@@ -37,7 +37,6 @@ module.exports = {
     "unicorn/prefer-math-trunc": "error",
     "unicorn/prefer-modern-dom-apis": "error",
     "unicorn/prefer-negative-index": "error",
-    "unicorn/prefer-object-from-entries": "error",
     "unicorn/prefer-query-selector": "error",
     "unicorn/prefer-reflect-apply": "error",
     "unicorn/prefer-regexp-test": "error",

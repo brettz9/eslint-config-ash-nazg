@@ -478,6 +478,8 @@ appears, to Dark Lords.
 - `prefer-exponentiation` - Now present in eslint core
 - `prefer-module` - Handling by different configs instead
 - `prefer-node-protocol` - Might revisit later if practice becomes adopted
+- `prefer-object-from-entries` - Too many false positives (e.g., non-simple
+    objects)
 - `prefer-optional-catch-binding` - Understandable rule, but extra work if
     refactoring to add later, and the catch binding can also force
     documentation of the error's purpose

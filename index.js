@@ -264,8 +264,8 @@ module.exports = {
     'unicorn/prefer-exponentiation-operator': 'off',
     'unicorn/prefer-module': 'off',
     'unicorn/prefer-node-protocol': 'off',
-
     'unicorn/prefer-number-properties': 'off',
+    'unicorn/prefer-object-from-entries': 'off',
     'unicorn/prefer-prototype-methods': 'off',
     'unicorn/prefer-set-has': 'off',
     'unicorn/prefer-string-slice': 'off',

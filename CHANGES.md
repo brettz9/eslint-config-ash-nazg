@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 31.2.1
+
+- Fix [`index.js`] (loosen): Disable `unicorn/prefer-object-from-entries`
+
 ## 31.2.0
 
 - Enhancement [`sauron.js`] (tighten): Add `forceReturnsWithAsync`
