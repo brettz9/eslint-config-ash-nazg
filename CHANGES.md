@@ -1,8 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 31.2.0
 
 - Enhancement [`sauron.js`] (tighten): Add `forceReturnsWithAsync`
+- npm: Update devDeps./peerDeps. (new Unicorn rules)
 
 ## 31.1.1
 
