@@ -116,6 +116,7 @@ module.exports = {
     }],
     'no-script-url': ['error'],
     'no-unsafe-optional-chaining': ['error'],
+    'no-unused-private-class-members': ['error'],
     'no-useless-backreference': ['error'],
     'no-var': ['error'],
     'no-void': ['error'],
@@ -210,12 +211,16 @@ module.exports = {
     'jsdoc/check-line-alignment': 'off',
 
     // JSDOC
+    // Disable until ESLint 8 supports
+    'jsdoc/check-examples': 0,
+    /*
     'jsdoc/check-examples': ['error', {
       rejectExampleCodeRegex: '^`',
       checkDefaults: true,
       checkParams: true,
       checkProperties: true
     }],
+    */
     'jsdoc/require-asterisk-prefix': ['error', 'always', {
       tags: {
         any: ['example', 'license', 'copyright']
@@ -270,6 +275,7 @@ module.exports = {
     'unicorn/prefer-set-has': 'off',
     'unicorn/prefer-string-slice': 'off',
     'unicorn/prefer-optional-catch-binding': 'off',
+    'unicorn/template-indent': 'off',
     'unicorn/throw-new-error': 'off',
 
     // UNICORN

@@ -1,5 +1,17 @@
 # eslint-config-ash-nazg CHANGES
 
+## 32.0.0
+
+- Breaking change: Disables `jsdoc/check-examples` due to it not yet working
+    in ESLint 8 (should re-enable when supported)
+- Enhancement [`index.js`] (tighten): Add new ESLint core
+    `no-unused-private-class-members` rule
+- Enhancement [`index.js`] (tighten): Add unicorn
+    `no-invalid-remove-event-listener` and `no-useless-fallback-in-spread`
+    rules
+- Build: Use native ESM
+- npm: Update devDeps/peerDeps.
+
 ## 31.2.2
 
 - npm: Update devDeps/peerDeps.

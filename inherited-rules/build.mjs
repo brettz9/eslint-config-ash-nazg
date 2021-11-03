@@ -7,9 +7,12 @@
 
 import 'eslint'; // Needed by eslint-plugin-html
 import fs from 'fs';
-import {join} from 'path';
+import {fileURLToPath} from 'url';
+import {join, dirname} from 'path';
 // eslint-disable-next-line node/no-unpublished-import -- dev script only
 import cc from '@scottnonnenberg/eslint-compare-config';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const [, , type, rightModule, preferredConfig, config2] = process.argv;
 

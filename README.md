@@ -490,6 +490,7 @@ appears, to Dark Lords.
 - `prefer-top-level-await` - Good requires Babel currently
 - `regex-shorthand` - Was renamed to `better-regex`.
 - `string-content` - Don't want the trouble of requiring formatted apostrophes (not recommended anyways).
+- `template-indent` - Although attractive, requires tooling to be reliable.
 - `throw-new-error` - Potentially confining.
 
 ### Rationale for altering default on Unicorn rules
