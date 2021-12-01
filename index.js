@@ -257,6 +257,7 @@ module.exports = {
     'unicorn/no-nested-ternary': 'off',
     'unicorn/no-null': 'off',
     'unicorn/no-array-reduce': 'off',
+    'unicorn/no-await-expression-member': 'off',
     'unicorn/no-unreadable-array-destructuring': 'off',
     'unicorn/no-useless-undefined': 'off',
     'unicorn/numeric-separators-style': 'off',
@@ -267,6 +268,7 @@ module.exports = {
 
     'unicorn/prevent-abbreviations': 'off',
     'unicorn/prefer-exponentiation-operator': 'off',
+    'unicorn/prefer-export-from': 'off',
     'unicorn/prefer-module': 'off',
     'unicorn/prefer-node-protocol': 'off',
     'unicorn/prefer-number-properties': 'off',
@@ -282,6 +284,7 @@ module.exports = {
     'unicorn/better-regex': ['error', {sortCharacterClasses: false}],
     'unicorn/custom-error-definition': 'error',
     'unicorn/no-unsafe-regex': 'error',
+    'unicorn/require-post-message-target-origin': 'error',
 
     'unicorn/expiring-todo-comments': ['error', {allowWarningComments: true, terms: ['todo']}],
 

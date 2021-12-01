@@ -459,6 +459,8 @@ appears, to Dark Lords.
     string concatenation.
 - `no-array-for-each` - Writing code for `forEach` allows later refactoring,
     e.g., to move out of the block.
+- `no-await-expression-member` - A bit confining for convenience for only a
+    little gain
 - `no-instanceof-array` - Covered by our blocking of all `instanceof`
 - `no-keyword-prefix` - See no need.
 - `no-lonely-if` - Nested ifs can be useful to catch and ignore.
@@ -476,6 +478,8 @@ appears, to Dark Lords.
 - `prefer-array-flat-map` - Present in `array-func`
 - `prefer-at` - Not widely available
 - `prefer-exponentiation` - Now present in eslint core
+- `prefer-export-from` - Understandable but cumbersome when importing anyways
+    and have to use another style
 - `prefer-module` - Handling by different configs instead
 - `prefer-node-protocol` - Might revisit later if practice becomes adopted
 - `prefer-object-from-entries` - Too many false positives (e.g., non-simple
@@ -502,6 +506,7 @@ appears, to Dark Lords.
 - `unicorn/custom-error-definition` - Does not seem confining.
 - `unicorn/no-unsafe-regex` - Seems like something to watch for, though
     I may revisit if this reports too many common expressions.
+- `unicorn/require-post-message-target-origin` - Useful for common cases
 
 ### Rationale for including eslint-comments rules which are not in `plugin:eslint-comments/recommended`
 

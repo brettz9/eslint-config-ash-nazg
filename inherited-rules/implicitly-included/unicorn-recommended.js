@@ -9,6 +9,7 @@ module.exports = {
     "unicorn/no-array-push-push": "error",
     "unicorn/no-console-spaces": "error",
     "unicorn/no-document-cookie": "error",
+    "unicorn/no-empty-file": "error",
     "unicorn/no-for-loop": "error",
     "unicorn/no-hex-escape": "error",
     "unicorn/no-instanceof-array": "error",
@@ -28,6 +29,7 @@ module.exports = {
     "unicorn/prefer-array-find": "error",
     "unicorn/prefer-array-index-of": "error",
     "unicorn/prefer-array-some": "error",
+    "unicorn/prefer-code-point": "error",
     "unicorn/prefer-date-now": "error",
     "unicorn/prefer-default-parameters": "error",
     "unicorn/prefer-dom-node-append": "error",
@@ -49,7 +51,6 @@ module.exports = {
     "unicorn/prefer-ternary": "error",
     "unicorn/prefer-type-error": "error",
     "unicorn/require-array-join-separator": "error",
-    "unicorn/require-number-to-fixed-digits-argument": "error",
-    "unicorn/require-post-message-target-origin": "error"
+    "unicorn/require-number-to-fixed-digits-argument": "error"
   }
 };

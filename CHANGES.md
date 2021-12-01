@@ -1,5 +1,11 @@
 # eslint-config-ash-nazg CHANGES
 
+## 32.1.0
+
+- Enhancement [`index.js`] (tighten): Add Unicorn's `no-empty-file` and
+    `prefer-code-point`
+- npm: Update devDeps/peerDeps.
+
 ## 32.0.0
 
 - Breaking change: Disables `jsdoc/check-examples` due to it not yet working
