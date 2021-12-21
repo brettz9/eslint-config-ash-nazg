@@ -44,6 +44,7 @@ module.exports = {
     'one-var-declaration-per-line': 'off',
     'padding-line-between-statements': 'off',
     'prefer-arrow-callback': 'off',
+    'prefer-object-has-own': 'off',
     'prefer-template': 'off',
     'require-atomic-updates': 'off',
     'sort-imports': 'off',

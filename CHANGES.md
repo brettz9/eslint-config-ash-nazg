@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 32.2.0
+
+- Update [`explicitly-unused.js`]: Add eslint rule
+- npm: Update devDeps/peerDeps.
+
 ## 32.1.0
 
 - Enhancement [`index.js`] (tighten): Add Unicorn's `no-empty-file` and

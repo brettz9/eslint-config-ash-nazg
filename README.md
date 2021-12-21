@@ -709,6 +709,7 @@ subclassed doesn't indicate the rejector type.
   it causes problems with stack traces and fails to flag function return as
   async (particularly in conjunction with `require-await` which effectively
   enforces not using `async` on such functions either).
+- `prefer-object-has-own` - Not yet supported in all Node
 - (This section is incomplete)
 
 ## Deprecated rule non-inclusion
