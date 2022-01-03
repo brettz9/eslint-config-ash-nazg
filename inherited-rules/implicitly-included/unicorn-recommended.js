@@ -19,9 +19,11 @@ module.exports = {
     "unicorn/no-object-as-default-parameter": "error",
     "unicorn/no-process-exit": "error",
     "unicorn/no-static-only-class": "error",
+    "unicorn/no-thenable": "error",
     "unicorn/no-this-assignment": "error",
     "unicorn/no-useless-fallback-in-spread": "error",
     "unicorn/no-useless-length-check": "error",
+    "unicorn/no-useless-promise-resolve-reject": "error",
     "unicorn/no-useless-spread": "error",
     "unicorn/no-zero-fractions": "error",
     "unicorn/number-literal-case": "error",
@@ -37,6 +39,7 @@ module.exports = {
     "unicorn/prefer-dom-node-remove": "error",
     "unicorn/prefer-dom-node-text-content": "error",
     "unicorn/prefer-includes": "error",
+    "unicorn/prefer-json-parse-buffer": "error",
     "unicorn/prefer-keyboard-event-key": "error",
     "unicorn/prefer-math-trunc": "error",
     "unicorn/prefer-modern-dom-apis": "error",
@@ -50,6 +53,7 @@ module.exports = {
     "unicorn/prefer-switch": "error",
     "unicorn/prefer-ternary": "error",
     "unicorn/prefer-type-error": "error",
+    "unicorn/relative-url-style": "error",
     "unicorn/require-array-join-separator": "error",
     "unicorn/require-number-to-fixed-digits-argument": "error"
   }

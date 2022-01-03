@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 32.3.0
+
+- npm: Update devDeps/peerDeps. (including new rules from Unicorn)
+
 ## 32.2.0
 
 - Update [`explicitly-unused.js`]: Add eslint rule
