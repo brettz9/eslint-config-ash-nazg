@@ -111,6 +111,7 @@ module.exports = {
 
     'jsdoc/no-missing-syntax': 'off',
     'jsdoc/no-restricted-syntax': 'off',
+    'jsdoc/sort-tags': 'off',
 
     'sonarjs/elseif-without-else': 'off',
 

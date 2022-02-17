@@ -431,6 +431,8 @@ appears, to Dark Lords.
     value to capture a subset of this.
 - `jsdoc/require-hyphen-before-param-description` - I can see its draw,
     but seems too pedantic to me for documentation.
+- `jsdoc/sort-tags` - A bit oppressive (and probably a bit unstable still
+    as a new rule); might revisit
 - `jsdoc/no-missing-syntax` - Nothing currently wish to enforce
 - `jsdoc/no-restricted-syntax` - Nothing currently wish to enforce
 

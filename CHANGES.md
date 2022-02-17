@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 32.4.0
+
+- npm: Update devDeps/peerDeps. (including new rule from Unicorn)
+- Update [`explicitly-unused.js`]: Add new `jsdoc/sort-tags`
+
 ## 32.3.0
 
 - npm: Update devDeps/peerDeps. (including new rules from Unicorn)
