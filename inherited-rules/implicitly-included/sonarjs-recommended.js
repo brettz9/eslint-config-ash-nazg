@@ -11,7 +11,6 @@ module.exports = {
     "sonarjs/no-identical-conditions": "error",
     "sonarjs/no-identical-expressions": "error",
     "sonarjs/no-ignored-return": "error",
-    "sonarjs/no-inverted-boolean-check": "error",
     "sonarjs/no-one-iteration-loop": "error",
     "sonarjs/no-redundant-boolean": "error",
     "sonarjs/no-redundant-jump": "error",

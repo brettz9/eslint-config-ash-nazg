@@ -306,6 +306,7 @@ module.exports = {
     'array-func/prefer-array-from': 'off',
 
     // SonarJS
+    'sonarjs/no-inverted-boolean-check': 'error',
     'sonarjs/max-switch-cases': 'off',
     'sonarjs/no-collapsible-if': 'off',
     'sonarjs/no-duplicate-string': 'off',
