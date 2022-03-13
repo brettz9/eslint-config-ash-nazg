@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 32.6.0
+
+- npm: Update devDeps/peerDeps.
+
 ## 32.5.0
 
 - Restore `sonarjs/no-inverted-boolean-check` despite now removal from
