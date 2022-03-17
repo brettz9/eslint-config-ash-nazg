@@ -100,8 +100,6 @@ module.exports = {
   detectNodeVersion, getEcmaVersionForNodeVersion, getEnvForEcmaVersion,
   getEnvAndEcmaVersionForCwd,
   ...getEnvAndEcmaVersionForCwd(
-    typeof atom === 'undefined'
-      ? process.cwd()
-      : (atom?.workspace?.getCenter()?.paneContainer?.activePane?.activeItem?.getDirectoryPath() || process.cwd())
+    process.cwd()
   )
 };

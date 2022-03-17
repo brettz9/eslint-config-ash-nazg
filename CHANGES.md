@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- refactor: revert Atom release; code not helpful
+
 ## 32.7.1
 
 - fix: bug in `undefined` check

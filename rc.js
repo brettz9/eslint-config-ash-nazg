@@ -47,12 +47,7 @@ module.exports = {
       rules: {
         'node/no-missing-require': ['error', {allowModules: [
           // eslint-disable-next-line node/global-require, import/no-dynamic-require -- Meant to be flexible
-          require(join(
-            typeof atom === 'undefined'
-              ? process.cwd()
-              : (atom?.workspace?.getCenter()?.paneContainer?.activePane?.activeItem?.getDirectoryPath() || process.cwd()),
-            'package.json'
-          )).name
+          require(join(process.cwd(), 'package.json')).name
         ]}]
       }
     },
