@@ -3,6 +3,7 @@
 ## 32.7.0
 
 - feat: Attempt Atom-friendly release
+- npm: Update devDeps/peerDeps.
 
 ## 32.6.0
 
