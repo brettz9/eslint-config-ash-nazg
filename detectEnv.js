@@ -99,5 +99,9 @@ const getEnvAndEcmaVersionForCwd = (cwd) => {
 module.exports = {
   detectNodeVersion, getEcmaVersionForNodeVersion, getEnvForEcmaVersion,
   getEnvAndEcmaVersionForCwd,
-  ...getEnvAndEcmaVersionForCwd(process.cwd())
+  ...getEnvAndEcmaVersionForCwd(
+    typeof atom === undefined
+      ? process.cwd()
+      : atom?.workspace?.getCenter()?.paneContainer?.activePane?.activeItem?.getDirectoryPath() || process.cwd()
+  )
 };

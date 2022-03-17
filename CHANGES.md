@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 32.7.0
+
+- feat: Attempt Atom-friendly release
+
 ## 32.6.0
 
 - npm: Update devDeps/peerDeps.
