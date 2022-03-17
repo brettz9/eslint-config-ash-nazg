@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 32.7.1
+
+- fix: bug in `undefined` check
+
 ## 32.7.0
 
 - feat: Attempt Atom-friendly release
