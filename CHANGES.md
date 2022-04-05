@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 32.12.0
+
+- fix(sauron): prevent `object<>` lower-case
+
 ## 32.11.0
 
 - fix(sauron): do allow `object` for now with `preferredTypes`

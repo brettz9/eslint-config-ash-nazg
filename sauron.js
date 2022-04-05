@@ -37,6 +37,12 @@ module.exports = {
           message: 'Use the specific object type or add `object` to a typedef if truly arbitrary',
           replacement: 'object'
         },
+
+        'object<>': {
+          message: 'Use the upper-case form for current TypeScript JSDoc compatibility and generic-like appearance for a parent',
+          replacement: 'Object<>'
+        },
+
         // May be useful as a standard root placeholder so the child params can be
         //   documented and not needing to use a typedef; filed https://github.com/gajus/eslint-plugin-jsdoc/issues/863
         // object: {
