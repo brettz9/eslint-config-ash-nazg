@@ -184,7 +184,7 @@ module.exports = {
     'import/no-amd': 'error',
 
     'import/no-unresolved': ['error', {
-      ignore: ['fs/promises', '@uce/reactive']
+      ignore: ['fs/promises', '@uce', '@uce/reactive']
     }],
 
     'import/extensions': ['error', 'always', {ignorePackages: true}],

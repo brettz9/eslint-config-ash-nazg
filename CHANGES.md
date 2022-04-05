@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 32.13.0
+
+- feat(index): support `@uce` as virtual module
+
 ## 32.12.0
 
 - fix(sauron): prevent `object<>` lower-case
