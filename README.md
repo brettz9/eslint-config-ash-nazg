@@ -276,7 +276,8 @@ the rule.
   ["parent", "sibling", "index"] in any order as these may be
   project-specific.
 - `import/no-unresolved` - `fs/promises` should be allowed by default as a
-    Node module.
+    Node module. `@uce/reactive` is just a virtual package (as used by
+    `uce-template`.
 
 ### Rationale for not including some rules
 
