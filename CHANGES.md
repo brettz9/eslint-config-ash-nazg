@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 32.11.0
+
+- fix(sauron): do allow `object` for now with `preferredTypes`
+
 ## 32.10.0
 
 - fix(index, sauron): realign preferences for `Object`, etc., and exempting

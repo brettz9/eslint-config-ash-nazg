@@ -37,10 +37,12 @@ module.exports = {
           message: 'Use the specific object type or add `object` to a typedef if truly arbitrary',
           replacement: 'object'
         },
-        object: {
-          message: 'Use the specific object type or add to a typedef if truly arbitrary',
-          replacement: false
-        },
+        // May be useful as a standard root placeholder so the child params can be
+        //   documented and not needing to use a typedef; filed https://github.com/gajus/eslint-plugin-jsdoc/issues/863
+        // object: {
+        //   message: 'Use the specific object type or add to a typedef if truly arbitrary',
+        //   replacement: false
+        // },
         Array: {
           message: 'Use the specific array type or add it to a typedef if it is truly arbitrary.',
           replacement: false
