@@ -28,14 +28,6 @@ module.exports = {
           message: 'Prefer type form without dot',
           replacement: '<>'
         },
-        Object: {
-          message: 'Use the specific object type or `PlainObject` if truly arbitrary',
-          replacement: 'PlainObject'
-        },
-        object: {
-          message: 'Use the specific object type or `PlainObject` if truly arbitrary',
-          replacement: 'PlainObject'
-        },
         Array: {
           message: 'Use the specific array type or `GenericArray` if it is truly arbitrary.',
           replacement: 'GenericArray'

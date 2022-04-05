@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 32.9.0
+
+- fix: Drop preference for `PlainObject`; use TypeScript-compatible JS
+
 ## 32.8.0
 
 - feat: Update devDeps/peerDeps. (including new rules from Unicorn, a couple

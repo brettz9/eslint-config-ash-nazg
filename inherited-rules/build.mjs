@@ -111,8 +111,8 @@ const right = cc.getLiteralConfigSync(join('./node_modules/', rightModule));
 const cache = {};
 /**
  *
- * @param {PlainObject} config
- * @returns {PlainObject[]}
+ * @param {object} config
+ * @returns {object[]}
  */
 function getExtensions (config) {
   if (!config.extends) {
