@@ -6,35 +6,48 @@ module.exports = {
     jsdoc: {
       preferredTypes: {
         '*': {
-          message: 'Use a more precise type or if necessary use `any` or `ArbitraryCallbackResult`',
+          message: 'Use a more precise type or if necessary use `any` or add to a `typedef`.',
           replacement: 'any'
         },
+        any: {
+          message: 'Use a more precise type or if necessary use in a `typedef`',
+          replacement: false
+        },
         Any: {
-          message: 'Use a more precise type or if necessary use `any` or `ArbitraryCallbackResult`',
+          message: 'Use a more precise type or if necessary use `any` or add to a `typedef`.',
           replacement: 'any'
         },
         Function: {
-          message: 'Point to a `@callback` namepath or `GenericCallback` if truly arbitrary in form',
-          replacement: 'GenericCallback'
+          message: 'Point to a `@callback` namepath or add to a `typedef` if truly arbitrary in form',
+          replacement: false
         },
         function: {
-          message: 'Point to a `@callback` namepath or `GenericCallback` if truly arbitrary in form',
-          replacement: 'GenericCallback'
+          message: 'Point to a `@callback` namepath or add `Function` to a `typedef` if truly arbitrary in form',
+          replacement: 'Function'
         },
         Promise: {
-          message: 'Specify the specific Promise type, including, if necessary, the type `any`'
+          message: 'Specify the specific Promise type, including, if necessary, pointing to the type `any`',
+          replacement: false
         },
         '.<>': {
           message: 'Prefer type form without dot',
           replacement: '<>'
         },
+        Object: {
+          message: 'Use the specific object type or add `object` to a typedef if truly arbitrary',
+          replacement: 'object'
+        },
+        object: {
+          message: 'Use the specific object type or add to a typedef if truly arbitrary',
+          replacement: false
+        },
         Array: {
-          message: 'Use the specific array type or `GenericArray` if it is truly arbitrary.',
-          replacement: 'GenericArray'
+          message: 'Use the specific array type or add it to a typedef if it is truly arbitrary.',
+          replacement: false
         },
         array: {
-          message: 'Use the specific array type or `GenericArray` if it is truly arbitrary.',
-          replacement: 'GenericArray'
+          message: 'Use the specific array type or add `Array` to a typedef if it is truly arbitrary.',
+          replacement: false
         }
       }
     }

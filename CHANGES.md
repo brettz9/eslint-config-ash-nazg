@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 32.10.0
+
+- fix(index, sauron): realign preferences for `Object`, etc., and exempting
+    in `@typedef`
+
 ## 32.9.0
 
 - fix: Drop preference for `PlainObject`; use TypeScript-compatible JS

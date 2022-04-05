@@ -233,7 +233,7 @@ module.exports = {
       exemptTagContexts: [
         {
           tag: 'typedef',
-          types: ['object', 'PlainObject']
+          types: ['object', 'Array', 'Function', 'any']
         }
       ]
     }],
