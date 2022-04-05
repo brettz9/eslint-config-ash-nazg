@@ -473,6 +473,8 @@ appears, to Dark Lords.
 - `no-unreadable-array-destructuring` - Better to use this than multiple lines
 - `no-unused-properties` - While no doubt useful, it won't catch all cases,
     sounds computationally expensive, and may better be done with TypeScript
+- `no-useless-switch-case` - Still useful for flagging a viable value or
+    faciliating later expansion
 - `no-useless-undefined` - I don't like the consequence of changing
     `array-callback-return` to `allowImplicit`, and it can make clear that
     use of `undefined` is deliberate.
@@ -482,6 +484,7 @@ appears, to Dark Lords.
 - `prefer-exponentiation` - Now present in eslint core
 - `prefer-export-from` - Understandable but cumbersome when importing anyways
     and have to use another style
+- `prefer-json-parse-buffer` - Not recommended now and may be less performant
 - `prefer-module` - Handling by different configs instead
 - `prefer-node-protocol` - Might revisit later if practice becomes adopted
 - `prefer-object-from-entries` - Too many false positives (e.g., non-simple

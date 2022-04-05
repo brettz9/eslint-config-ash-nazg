@@ -184,7 +184,7 @@ module.exports = {
     'import/no-amd': 'error',
 
     'import/no-unresolved': ['error', {
-      ignore: ['fs/promises']
+      ignore: ['fs/promises', '@uce/reactive']
     }],
 
     'import/extensions': ['error', 'always', {ignorePackages: true}],
@@ -259,6 +259,7 @@ module.exports = {
     'unicorn/no-array-reduce': 'off',
     'unicorn/no-await-expression-member': 'off',
     'unicorn/no-unreadable-array-destructuring': 'off',
+    'unicorn/no-useless-switch-case': 'off',
     'unicorn/no-useless-undefined': 'off',
     'unicorn/numeric-separators-style': 'off',
 

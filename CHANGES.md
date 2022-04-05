@@ -1,7 +1,11 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 32.8.0
 
+- feat: Update devDeps/peerDeps. (including new rules from Unicorn, a couple
+    of which are disabled here)
+- feat(`index.js`): add virtual `@uce/reactive` to `import/no-unresolved`
+- feat(`explicitly-unused.js`): add `prefer-json-parse-buffer`
 - refactor: revert Atom release; code not helpful
 
 ## 32.7.1

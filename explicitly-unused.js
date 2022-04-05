@@ -118,6 +118,7 @@ module.exports = {
     'unicorn/no-unused-properties': 'off',
     'unicorn/no-keyword-prefix': 'off',
     'unicorn/prefer-at': 'off',
+    'unicorn/prefer-json-parse-buffer': 'off',
     'unicorn/prefer-string-replace-all': 'off',
     'unicorn/prefer-top-level-await': 'off',
     'unicorn/string-content': 'off',
