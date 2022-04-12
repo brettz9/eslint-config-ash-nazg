@@ -22,7 +22,8 @@ module.exports = {
         '**/jsdoc-config.js',
         'webpack.config.js',
         '**/.vuepress/config.js',
-        '*.webpack.config.js'
+        '*.webpack.config.js',
+        'web-ext-config.js'
       ],
       extends: [
         './rc-script.js'

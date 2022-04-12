@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- feat: web-ext config
+
 ## 32.13.0
 
 - feat(index): support `@uce` as virtual module
