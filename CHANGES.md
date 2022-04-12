@@ -1,8 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 32.14.0
 
-- feat: web-ext config
+- feat: `web-ext-config.js` file as CJS
+- chore: Update devDeps/peerDeps.
 
 ## 32.13.0
 
