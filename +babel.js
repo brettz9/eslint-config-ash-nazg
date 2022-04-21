@@ -37,7 +37,7 @@ module.exports = function (config) {
        * Require constructor names to begin with a capital letter.
        *
        * @see
-       * - http://eslint.org/docs/rules/new-cap
+       * - https://eslint.org/docs/rules/new-cap
        * - https://github.com/babel/babel/tree/master/eslint/babel-eslint-plugin#rules
        */
       '@babel/new-cap': config.rules['new-cap'] || 'off',
@@ -46,7 +46,7 @@ module.exports = function (config) {
        * Disallow `this` keywords outside of classes or class-like objects.
        *
        * @see
-       * - http://eslint.org/docs/rules/no-invalid-this
+       * - https://eslint.org/docs/rules/no-invalid-this
        * - https://github.com/babel/babel/tree/master/eslint/babel-eslint-plugin#rules
        */
       '@babel/no-invalid-this': config.rules['no-invalid-this'] || 'off',
@@ -55,7 +55,7 @@ module.exports = function (config) {
        * Disallow unused expressions.
        *
        * @see
-       * - http://eslint.org/docs/rules/no-unused-expressions
+       * - https://eslint.org/docs/rules/no-unused-expressions
        * - https://github.com/babel/babel/tree/master/eslint/babel-eslint-plugin#rules
        */
       '@babel/no-unused-expressions': config.rules['no-unused-expressions'] || 'off',
@@ -64,7 +64,7 @@ module.exports = function (config) {
        * Enforce consistent spacing inside braces (🔧 ).
        *
        * @see
-       * - http://eslint.org/docs/rules/object-curly-spacing
+       * - https://eslint.org/docs/rules/object-curly-spacing
        * - https://github.com/babel/babel/tree/master/eslint/babel-eslint-plugin#rules
        */
       '@babel/object-curly-spacing': config.rules['object-curly-spacing'] || 'off',
@@ -73,7 +73,7 @@ module.exports = function (config) {
        * Require or disallow semicolons instead of ASI (🔧).
        *
        * @see
-       * - http://eslint.org/docs/rules/semi
+       * - https://eslint.org/docs/rules/semi
        * - https://github.com/babel/babel/tree/master/eslint/babel-eslint-plugin#rules
        */
       '@babel/semi': config.rules.semi || 'off'
