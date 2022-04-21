@@ -6,7 +6,7 @@ const {env, ecmaVersion} = require('./detectEnv.js');
 
 module.exports = {
   env,
-  extends: ['plugin:node/recommended-script'],
+  extends: ['plugin:n/recommended-script'],
   parserOptions: {
     ecmaVersion,
     ecmaFeatures: {

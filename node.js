@@ -5,7 +5,7 @@ const {env, ecmaVersion} = require('./detectEnv.js');
 module.exports = {
   extends: [
     './index.js',
-    'plugin:node/recommended-module',
+    'plugin:n/recommended-module',
     // Override `index.js`-set ES2015+ if ES5
     ...(ecmaVersion < 2015
       ? ['plugin:@brettz9/es5']
@@ -20,37 +20,37 @@ module.exports = {
     // Disable Node-added
     // (Use Unicorn extension instead which allows in CLI apps)
     'no-process-exit': 'off',
-    'node/exports-style': ['error', 'module.exports'],
-    'node/prefer-global/buffer': ['error', 'always'],
-    'node/prefer-global/console': ['error', 'always'],
-    'node/prefer-global/process': ['error', 'always'],
-    'node/prefer-global/text-decoder': ['error', 'always'],
-    'node/prefer-global/text-encoder': ['error', 'always'],
-    'node/prefer-global/url-search-params': ['error', 'always'],
-    'node/prefer-global/url': ['error', 'always'],
+    'n/exports-style': ['error', 'module.exports'],
+    'n/prefer-global/buffer': ['error', 'always'],
+    'n/prefer-global/console': ['error', 'always'],
+    'n/prefer-global/process': ['error', 'always'],
+    'n/prefer-global/text-decoder': ['error', 'always'],
+    'n/prefer-global/text-encoder': ['error', 'always'],
+    'n/prefer-global/url-search-params': ['error', 'always'],
+    'n/prefer-global/url': ['error', 'always'],
 
     // Still in "standard" (move to `explicitly-unused` or remove
     //   when removed there); if they enable some of the
-    //   `eslint-plugin-node` equivalents, then remove them below
+    //   `eslint-plugin-n` equivalents, then remove them below
     'handle-callback-err': 'off',
     'no-new-require': 'off',
     'no-path-concat': 'off',
 
-    // Enable eslint-plugin-node equivalents
-    'node/callback-return': 'error',
-    'node/global-require': 'error',
-    'node/handle-callback-err': 'error',
-    'node/no-new-require': 'error',
-    'node/no-path-concat': 'error',
-    'node/no-process-env': 'error',
-    'node/no-sync': 'error',
+    // Enable eslint-plugin-n equivalents
+    'n/callback-return': 'error',
+    'n/global-require': 'error',
+    'n/handle-callback-err': 'error',
+    'n/no-new-require': 'error',
+    'n/no-path-concat': 'error',
+    'n/no-process-env': 'error',
+    'n/no-sync': 'error',
     // Override this one's default options
-    'node/no-mixed-requires': ['error', {grouping: true, allowCall: true}],
+    'n/no-mixed-requires': ['error', {grouping: true, allowCall: true}],
 
     // For this, we want the unicorn extension
-    'node/no-process-exit': 'off',
+    'n/no-process-exit': 'off',
 
     // For this, we want the import extension
-    'node/no-missing-import': 'off'
+    'n/no-missing-import': 'off'
   }
 };

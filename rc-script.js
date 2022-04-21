@@ -7,7 +7,7 @@ module.exports = {
   rules: {
     'compat/compat': 'off',
     'no-console': 'off',
-    'node/no-process-env': 'off',
-    'node/no-unpublished-import': 'off'
+    'n/no-process-env': 'off',
+    'n/no-unpublished-import': 'off'
   }
 };

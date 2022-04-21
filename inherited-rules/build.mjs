@@ -1,5 +1,5 @@
 /* eslint quotes: ["error", "single"] -- not using JSON.stringify here */
-/* eslint-disable node/no-sync, no-console -- build script so sync and
+/* eslint-disable n/no-sync, no-console -- build script so sync and
     console ok */
 
 // Note: we don't have an "unused:standard" script as it directly imports
@@ -9,7 +9,7 @@ import 'eslint'; // Needed by eslint-plugin-html
 import fs from 'fs';
 import {fileURLToPath} from 'url';
 import {join, dirname} from 'path';
-// eslint-disable-next-line node/no-unpublished-import -- dev script only
+// eslint-disable-next-line n/no-unpublished-import -- dev script only
 import cc from '@scottnonnenberg/eslint-compare-config';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -35,7 +35,7 @@ const left = {
     ...cc.getLiteralConfigSync('sauron-node.js').rules,
     ...cc.getLiteralConfigSync('great-eye.js').rules,
     ...cc.getLiteralConfigSync('great-eye-node.js').rules,
-    ...(!isInherited && rightModule === 'eslint-plugin-node'
+    ...(!isInherited && rightModule === 'eslint-plugin-n'
       ? {
         ...cc.getLiteralConfigSync(
           join(__dirname, 'implicitly-included', getModulePath(
@@ -62,7 +62,7 @@ const left = {
         // Adds `no-process-exit`
         ...cc.getLiteralConfigSync(
           join(__dirname, 'implicitly-included', getModulePath(
-            'eslint-plugin-node', 'recommended-module', true
+            'eslint-plugin-n', 'recommended-module', true
           ))
         ).rules
       }
@@ -272,7 +272,7 @@ if (isInherited || Object.keys(rightConfig.rules).length) {
   );
 
   // eslint-disable-next-line max-len -- Too long
-  // eslint-disable-next-line node/prefer-promises/fs -- needs higher Node version
+  // eslint-disable-next-line n/prefer-promises/fs -- needs higher Node version
   fs.writeFile(
     inheritedPath,
     '"use strict";\nmodule.exports = {\n  rules: ' + JSON.stringify(rightConfig.rules, null, 2).replace(/\n/gu, '\n  ') + '\n};\n',

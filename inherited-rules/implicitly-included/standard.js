@@ -129,9 +129,9 @@ module.exports = {
     "import/no-duplicates": "error",
     "import/no-named-default": "error",
     "import/no-webpack-loader-syntax": "error",
-    "node/no-callback-literal": "error",
-    "node/no-deprecated-api": "error",
-    "node/no-exports-assign": "error",
-    "node/process-exit-as-throw": "error"
+    "n/no-callback-literal": "error",
+    "n/no-deprecated-api": "error",
+    "n/no-exports-assign": "error",
+    "n/process-exit-as-throw": "error"
   }
 };

@@ -46,8 +46,8 @@ module.exports = {
     {
       files: '**/*.md/*.js',
       rules: {
-        'node/no-missing-require': ['error', {allowModules: [
-          // eslint-disable-next-line node/global-require, import/no-dynamic-require -- Meant to be flexible
+        'n/no-missing-require': ['error', {allowModules: [
+          // eslint-disable-next-line n/global-require, import/no-dynamic-require -- Meant to be flexible
           require(join(process.cwd(), 'package.json')).name
         ]}]
       }
@@ -56,7 +56,7 @@ module.exports = {
       files: 'build/**',
       rules: {
         'compat/compat': 'off',
-        'node/no-unpublished-import': 'off'
+        'n/no-unpublished-import': 'off'
       }
     }
   ]

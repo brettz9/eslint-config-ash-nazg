@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 33.0.0
+
+- feat: update `eslint-config-standard` and per this change, use
+    `eslint-plugin-n` in place of `eslint-plugin-node`
+
 ## 32.14.0
 
 - feat: `web-ext-config.js` file as CJS

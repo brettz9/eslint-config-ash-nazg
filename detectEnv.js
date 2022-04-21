@@ -15,8 +15,8 @@
  *   extends: [
  *     './someConfig.js',
  *
- *     // Good for use with `eslint-plugin-node`
- *     'plugin:node/recommended-module',
+ *     // Good for use with `eslint-plugin-n`
+ *     'plugin:n/recommended-module',
  *
  *     // Can use `ecmaVersion` for selecting a suitable config within a project which has different config
  *     //   for different version; e.g., set here to ES5 config if not ES6+
@@ -82,7 +82,7 @@ const getEcmaVersionForNodeVersion = (nodeVersion) => {
 const detectNodeVersion = (packagePath) => {
   let nodeVersion = '5';
   try {
-    // eslint-disable-next-line node/global-require, import/no-dynamic-require -- Ensure available synchronously
+    // eslint-disable-next-line n/global-require, import/no-dynamic-require -- Ensure available synchronously
     const {engines: {node}} = require(packagePath);
     nodeVersion = semver.minVersion(node);
   } catch (err) {}

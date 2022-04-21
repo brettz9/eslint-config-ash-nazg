@@ -3,7 +3,7 @@
 module.exports = {
   extends: ['./node.js', './sauron.js'],
   rules: {
-    'node/prefer-promises/dns': ['error'],
-    'node/prefer-promises/fs': ['error']
+    'n/prefer-promises/dns': ['error'],
+    'n/prefer-promises/fs': ['error']
   }
 };

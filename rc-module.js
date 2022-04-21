@@ -8,7 +8,7 @@ module.exports = {
     'compat/compat': 'off',
     'no-console': 'off',
     'import/no-anonymous-default-export': 'off',
-    'node/no-process-env': 'off',
-    'node/no-unpublished-import': 'off'
+    'n/no-process-env': 'off',
+    'n/no-unpublished-import': 'off'
   }
 };
