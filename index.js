@@ -87,6 +87,7 @@ module.exports = {
     'max-nested-callbacks': ['error'],
     'multiline-ternary': ['error', 'always-multiline'],
     'no-await-in-loop': ['error'],
+    'no-constant-binary-expression': 'error',
     'no-bitwise': ['error'],
     'no-buffer-constructor': ['error'],
     'no-confusing-arrow': ['error'],

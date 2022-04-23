@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 33.1.0
+
+- feat(`index.js`): add new `no-constant-binary-expression` rule
+- chore: Update devDeps/peerDeps.
+
 ## 33.0.0
 
 - feat: update `eslint-config-standard` and per this change, use
