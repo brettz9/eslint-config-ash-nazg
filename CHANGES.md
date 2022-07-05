@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 34.0.0
+
+- chore: Update devDeps/peerDeps. (including new rule from Unicorn)
+- chore(BREAKING): Update to Node 14.19.1
+
 ## 33.1.0
 
 - feat(`index.js`): add new `no-constant-binary-expression` rule
