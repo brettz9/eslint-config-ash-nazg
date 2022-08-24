@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 34.1.0
+
+- chore: Update devDeps/peerDeps.
+
 ## 34.0.0
 
 - chore: Update devDeps/peerDeps. (including new rule from Unicorn)

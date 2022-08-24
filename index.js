@@ -286,6 +286,7 @@ module.exports = {
     'unicorn/better-regex': ['error', {sortCharacterClasses: false}],
     'unicorn/custom-error-definition': 'error',
     'unicorn/no-unsafe-regex': 'error',
+    'unicorn/prefer-event-target': 'error',
     'unicorn/require-post-message-target-origin': 'error',
 
     'unicorn/expiring-todo-comments': ['error', {allowWarningComments: true, terms: ['todo']}],
