@@ -1,5 +1,12 @@
 # eslint-config-ash-nazg CHANGES
 
+## 34.2.0
+
+- feat(`explicitly-unused.js`): mention new ESLint rule
+- feat(`index.js`): disable new Unicorn recommended rule and allow
+    `no-unnecessary-await`
+- chore: update semver, devDeps/peerDeps.
+
 ## 34.1.0
 
 - chore: Update devDeps/peerDeps.

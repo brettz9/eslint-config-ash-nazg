@@ -19,6 +19,7 @@ module.exports = {
     'line-comment-position': 'off',
     'lines-around-comment': 'off',
     'lines-between-class-members': 'off',
+    'logical-assignment-operators': 'off',
     'max-classes-per-file': 'off',
     'max-depth': 'off',
     'max-lines-per-function': 'off',

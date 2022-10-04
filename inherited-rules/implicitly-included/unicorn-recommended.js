@@ -21,6 +21,7 @@ module.exports = {
     "unicorn/no-static-only-class": "error",
     "unicorn/no-thenable": "error",
     "unicorn/no-this-assignment": "error",
+    "unicorn/no-unnecessary-await": "error",
     "unicorn/no-unreadable-iife": "error",
     "unicorn/no-useless-fallback-in-spread": "error",
     "unicorn/no-useless-length-check": "error",

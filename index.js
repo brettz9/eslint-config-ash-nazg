@@ -279,6 +279,7 @@ module.exports = {
     'unicorn/prefer-set-has': 'off',
     'unicorn/prefer-string-slice': 'off',
     'unicorn/prefer-optional-catch-binding': 'off',
+    'unicorn/switch-case-braces': 'off',
     'unicorn/template-indent': 'off',
     'unicorn/throw-new-error': 'off',
 
