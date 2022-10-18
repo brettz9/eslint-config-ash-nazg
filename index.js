@@ -159,6 +159,7 @@ module.exports = {
     'lines-between-class-members': 'off',
 
     // PROMISE
+    'promise/no-multiple-resolved': 'error',
     'promise/no-new-statics': 'error',
     'promise/prefer-await-to-then': 'error',
 

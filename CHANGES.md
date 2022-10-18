@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 34.3.0
+
+- feat(`index.js`): add Promise plugin's `no-multiple-resolved`
+- chore: update devDeps/peerDeps.
+
 ## 34.2.0
 
 - feat(`explicitly-unused.js`): mention new ESLint rule
