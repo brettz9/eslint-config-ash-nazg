@@ -1,5 +1,11 @@
 # eslint-config-ash-nazg CHANGES
 
+## 34.4.0
+
+- feat(`index.js`): add new built-in rules
+- feat(`explicitly-unused.js`): disable new unused jsdoc rule
+- chore: update devDeps.
+
 ## 34.3.0
 
 - feat(`index.js`): add Promise plugin's `no-multiple-resolved`

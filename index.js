@@ -96,6 +96,7 @@ module.exports = {
     'no-duplicate-imports': ['error'],
     'no-else-return': ['error'],
     'no-empty': ['error', {allowEmptyCatch: true}],
+    'no-empty-static-block': 'error',
     'no-eq-null': ['error'],
     'no-extra-label': ['error'],
     'no-implicit-coercion': ['error'],
@@ -103,6 +104,7 @@ module.exports = {
     'no-lonely-if': ['error'],
     'no-loop-func': ['error'],
     'no-loss-of-precision': ['error'],
+    'no-new-native-nonconstructor': 'error',
     'no-nonoctal-decimal-escape': ['error'],
     'no-restricted-globals': ['error', {
       name: 'event',
