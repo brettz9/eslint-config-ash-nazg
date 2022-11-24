@@ -51,6 +51,7 @@ module.exports = {
     "unicorn/prefer-query-selector": "error",
     "unicorn/prefer-reflect-apply": "error",
     "unicorn/prefer-regexp-test": "error",
+    "unicorn/prefer-set-size": "error",
     "unicorn/prefer-spread": "error",
     "unicorn/prefer-string-starts-ends-with": "error",
     "unicorn/prefer-string-trim-start-end": "error",

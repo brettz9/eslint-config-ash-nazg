@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 34.5.0
+
+- feat(`index.js`): disable a few new Unicorn rules (inherting one other)
+
 ## 34.4.0
 
 - feat(`index.js`): add new built-in rules

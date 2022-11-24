@@ -467,10 +467,13 @@ appears, to Dark Lords.
 - `no-instanceof-array` - Covered by our blocking of all `instanceof`
 - `no-keyword-prefix` - See no need.
 - `no-lonely-if` - Nested ifs can be useful to catch and ignore.
+- `no-negated-condition` - Good but cumbersome
 - `no-nested-ternary` - As with eslint's `no-nested-ternary`
 - `no-null` - A good idea, but besides use of `null` in JSON, and semantic
     arguments in favor (having an explicit, intentional empty value),
     it makes for cleaner, quicker to understand code.
+- `no-typeof-undefined` - Ok but cumbersome, especially if global situation
+    is complicated
 - `no-unreadable-array-destructuring` - Better to use this than multiple lines
 - `no-unused-properties` - While no doubt useful, it won't catch all cases,
     sounds computationally expensive, and may better be done with TypeScript
