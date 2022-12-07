@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 34.6.0
+
+- chore: update devDeps/peerDeps.
+
 ## 34.5.0
 
 - feat(`index.js`): disable a few new Unicorn rules (inherting one other)
