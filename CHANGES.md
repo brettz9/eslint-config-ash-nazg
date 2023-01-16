@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 34.7.1
+
+- fix: update peerDeps.
+
 ## 34.7.0
 
 - feat(`index.js`): enable new `import/no-empty-named-blocks`
