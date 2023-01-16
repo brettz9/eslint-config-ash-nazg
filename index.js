@@ -178,6 +178,7 @@ module.exports = {
     // IMPORT
     'import/no-absolute-path': 'error',
     'import/no-dynamic-require': 'error',
+    'import/no-empty-named-blocks': 'error',
     'import/no-self-import': 'error',
     'import/no-useless-path-segments': 'error',
     'import/no-named-as-default': 'error',

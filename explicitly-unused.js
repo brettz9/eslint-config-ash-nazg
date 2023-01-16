@@ -68,6 +68,7 @@ module.exports = {
 
     // NON-RECOMMENDED (so no need to add to `index.js`, etc. and override)
 
+    'import/consistent-type-specifier-style': 'off',
     'import/dynamic-import-chunkname': 'off',
     'import/exports-last': 'off',
     'import/group-exports': 'off',

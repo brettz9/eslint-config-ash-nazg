@@ -1,5 +1,12 @@
 # eslint-config-ash-nazg CHANGES
 
+## 34.7.0
+
+- feat(`index.js`): enable new `import/no-empty-named-blocks`
+- feat(`explicitly-unused.js`): disable new
+    `import/consistent-type-specifier-style` rule
+- chore: update devDeps/peerDeps.
+
 ## 34.6.0
 
 - chore: update devDeps/peerDeps.
