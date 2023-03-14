@@ -31,7 +31,7 @@ globals in a Node app or vice versa; you can use `env`'s `node: true` or
 (See [explicitly-unused.js](./explicitly-unused.js) for the core and extended
 rules we don't include (rationale for non-inclusion below).)
 
-- [Main rules](https://eslint.org/docs/rules/) (also search for "error" within <https://github.com/eslint/eslint/blob/master/conf/eslint-recommended.js>) for the `eslint:recommended` rules we inherit (though see below for our two modifications to these).
+- [Main rules](https://eslint.org/docs/rules/) (also search for "error" within `eslint-recommended.js` of `@eslint/js`) for the `eslint:recommended` rules we inherit (though see below for our two modifications to these).
 - ["standard"](https://github.com/standard/eslint-config-standard/blob/master/eslintrc.json)
 rules we inherit (though see below for our handful of modifications).
 - [@brettz9/eslint-plugin](https://github.com/brettz9/eslint-plugin)

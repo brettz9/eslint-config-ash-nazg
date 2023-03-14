@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 34.8.0
+
+- chore: update devDeps/peerDeps.
+- chore: use new ESLint config package
+
 ## 34.7.1
 
 - fix: update peerDeps.

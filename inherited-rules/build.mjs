@@ -25,7 +25,7 @@ const isInherited = type === 'inherited';
 
 const left = {
   rules: {
-    ...(isInherited && rightModule !== 'eslint/conf/eslint-all'
+    ...(isInherited && rightModule !== '@eslint/js/src/configs/eslint-all'
       ? null
       : cc.getLiteralConfigSync('explicitly-unused.js').rules
     ),
@@ -54,10 +54,10 @@ const left = {
         ).rules
       }
       : null),
-    ...(rightModule === 'eslint/conf/eslint-all'
+    ...(rightModule === '@eslint/js/src/configs/eslint-all'
       ? {
         ...cc.getLiteralConfigSync(
-          'node_modules/eslint/conf/eslint-recommended.js'
+          'node_modules/@eslint/js/src/configs/eslint-recommended.js'
         ).rules,
         // Adds `no-process-exit`
         ...cc.getLiteralConfigSync(
@@ -67,8 +67,8 @@ const left = {
         ).rules
       }
       : null),
-    ...(rightModule === 'eslint/conf/eslint-recommended' ||
-      (!isInherited && rightModule === 'eslint/conf/eslint-all')
+    ...(rightModule === '@eslint/js/src/configs/eslint-recommended' ||
+      (!isInherited && rightModule === '@eslint/js/src/configs/eslint-all')
       ? {
         /*
         // Todo: This has no effect due to need to process `extends` as below
@@ -83,7 +83,7 @@ const left = {
       : (rightModule === 'eslint-config-standard'
         ? {}
         : cc.getLiteralConfigSync(
-          'node_modules/eslint/conf/eslint-recommended.js'
+          'node_modules/@eslint/js/src/configs/eslint-recommended.js'
         ).rules)
     ),
     ...(!isInherited && config2
