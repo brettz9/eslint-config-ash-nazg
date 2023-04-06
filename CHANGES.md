@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 34.9.1
+
+- fix: add missing cjs extensions to rc.js
+
 ## 34.9.0
 
 - chore: update devDeps/peerDeps.

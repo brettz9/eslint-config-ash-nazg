@@ -17,13 +17,16 @@ module.exports = {
         '.eslintrc.js',
         '.eslintrc.cjs',
         '.mocharc.js',
+        '.mocharc.cjs',
         '.ncurc.js',
+        '.ncurc.cjs',
         '.3rdparty-eslintrc.js',
         '**/jsdoc-config.js',
         'webpack.config.js',
         '**/.vuepress/config.js',
         '*.webpack.config.js',
-        'web-ext-config.js'
+        'web-ext-config.js',
+        'web-ext-config.cjs'
       ],
       extends: [
         './rc-script.js'
