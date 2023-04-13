@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 34.10.0
+
+- chore: update `semver`
+- refactor: disable new, unused JSDoc rules
+
 ## 34.9.1
 
 - fix: add missing cjs extensions to rc.js

@@ -418,6 +418,8 @@ appears, to Dark Lords.
 #### Rationale for suppressing some `eslint-plugin-jsdoc` rules
 
 - `jsdoc/check-line-alignment` - More desirable default not yet implemented
+- `jsdoc/informative-docs` - Too troublesome to deal with descriptions as it is
+- `jsdoc/no-blank-block-descriptions` - Bad for debugging
 - `jsdoc/no-types` - Types have utility in jsdoc unless using TypeScript
 - `jsdoc/newline-after-description` (recommended) - I can see its draw,
     but seems too pedantic to me for documentation.

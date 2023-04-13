@@ -105,12 +105,14 @@ module.exports = {
     'jsdoc/require-file-overview': 'off',
     'jsdoc/match-name': 'off',
 
+    'jsdoc/informative-docs': 'off',
+    'jsdoc/no-blank-block-descriptions': 'off',
+
     // These rules are actually part of recommended, but since it is 'off'
     //   there, we don't include it in comparisons to show what is
     //   inherited from `recommended` or unused from the plugin so we
     //   need to add here
     'jsdoc/no-types': 'off',
-
     'jsdoc/no-missing-syntax': 'off',
     'jsdoc/no-restricted-syntax': 'off',
     'jsdoc/sort-tags': 'off',
