@@ -226,6 +226,9 @@ module.exports = {
       checkProperties: true
     }],
     */
+    'jsdoc/tag-lines': ['warn', 'never', {
+      startLines: null
+    }],
     'jsdoc/require-asterisk-prefix': ['error', 'always', {
       tags: {
         any: ['example', 'license', 'copyright']

@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 34.11.0
+
+- chore: update `semver`, devDeps.
+- fix(`index.js`): change `tag-lines` to `startLines: null` to keep old behavior
+
 ## 34.10.0
 
 - chore: update `semver`

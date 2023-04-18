@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   semver:
-    specifier: ^7.4.0
-    version: 7.4.0
+    specifier: ^7.5.0
+    version: 7.5.0
 
 devDependencies:
   '@brettz9/eslint-plugin':
@@ -34,8 +34,8 @@ devDependencies:
     specifier: ^2.27.5
     version: 2.27.5(eslint@8.38.0)
   eslint-plugin-jsdoc:
-    specifier: ^41.1.1
-    version: 41.1.1(eslint@8.38.0)
+    specifier: ^43.0.5
+    version: 43.0.5(eslint@8.38.0)
   eslint-plugin-markdown:
     specifier: ^3.0.0
     version: 3.0.0(eslint@8.38.0)
@@ -353,7 +353,7 @@ packages:
   /builtins@5.0.1:
     resolution: {integrity: sha512-qwVpFEHNfhYJIzNRBvd2C1kyo6jz3ZSMPyyuR47OPdiKWlbYnZNyDWuyR175qDnAJLiCo5fBBqPb3RiXgWlkOQ==}
     dependencies:
-      semver: 7.4.0
+      semver: 7.5.0
     dev: true
 
   /call-bind@1.0.2:
@@ -836,9 +836,9 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-jsdoc@41.1.1(eslint@8.38.0):
-    resolution: {integrity: sha512-dfH97DKLGtQ5dgEMzd+GSUuY+xX/yyAfjML3O0pEWmMMpylsG6Ro65s4ziYXKmixiENYK9CTQxCVRGqZUFN2Mw==}
-    engines: {node: ^14 || ^16 || ^17 || ^18 || ^19}
+  /eslint-plugin-jsdoc@43.0.5(eslint@8.38.0):
+    resolution: {integrity: sha512-4+hN5jrwcElXwK+J6GiUYbgHl+C063lu1gR2ajUA1L4bs+rBsAoV37dP2gISfqzoU83VsY1/sSD4wvH87JHCsQ==}
+    engines: {node: ^14 || ^16 || ^17 || ^18 || ^19 || ^20}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0
     dependencies:
@@ -849,7 +849,7 @@ packages:
       escape-string-regexp: 4.0.0
       eslint: 8.38.0
       esquery: 1.5.0
-      semver: 7.4.0
+      semver: 7.5.0
       spdx-expression-parse: 3.0.1
     transitivePeerDependencies:
       - supports-color
@@ -881,7 +881,7 @@ packages:
       is-core-module: 2.11.0
       minimatch: 3.1.2
       resolve: 1.22.1
-      semver: 7.4.0
+      semver: 7.5.0
     dev: true
 
   /eslint-plugin-no-unsanitized@4.0.2(eslint@8.38.0):
@@ -941,7 +941,7 @@ packages:
       regexp-tree: 0.1.24
       regjsparser: 0.9.1
       safe-regex: 2.1.1
-      semver: 7.4.0
+      semver: 7.5.0
       strip-indent: 3.0.0
     dev: true
 
@@ -2062,8 +2062,8 @@ packages:
       lru-cache: 6.0.0
     dev: true
 
-  /semver@7.4.0:
-    resolution: {integrity: sha512-RgOxM8Mw+7Zus0+zcLEUn8+JfoLpj/huFTItQy2hsM4khuC1HYRDp0cU482Ewn/Fcy6bCjufD8vAj7voC66KQw==}
+  /semver@7.5.0:
+    resolution: {integrity: sha512-+XC0AD/R7Q2mPSRuy2Id0+CGTZ98+8f+KvwirxOKIEyid+XSx6HbC63p+O4IndTHuX5Z+JxQ0TghCkO5Cg/2HA==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
