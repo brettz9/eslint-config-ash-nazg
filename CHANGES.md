@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 34.11.1
+
+- fix: bump peer for `eslint-plugin-jsdoc`
+
 ## 34.11.0
 
 - chore: update `semver`, devDeps.
