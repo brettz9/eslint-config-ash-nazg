@@ -417,6 +417,7 @@ appears, to Dark Lords.
 
 #### Rationale for suppressing some `eslint-plugin-jsdoc` rules
 
+- `jsdoc/no-blank-blocks` - Too useful to progressively build docs with blank ones
 - `jsdoc/check-line-alignment` - More desirable default not yet implemented
 - `jsdoc/informative-docs` - Too troublesome to deal with descriptions as it is
 - `jsdoc/no-blank-block-descriptions` - Bad for debugging

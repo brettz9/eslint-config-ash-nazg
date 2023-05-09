@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 34.12.0
+
+- chore: Update devDeps/peerDeps. (including new rules from Unicorn and jsdoc)
+
 ## 34.11.1
 
 - fix: bump peer for `eslint-plugin-jsdoc`

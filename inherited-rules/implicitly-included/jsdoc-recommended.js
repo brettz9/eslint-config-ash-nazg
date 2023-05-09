@@ -13,7 +13,6 @@ module.exports = {
     "jsdoc/require-property-type": "warn",
     "jsdoc/require-returns-check": "warn",
     "jsdoc/require-yields": "warn",
-    "jsdoc/require-yields-check": "warn",
-    "jsdoc/tag-lines": "warn"
+    "jsdoc/require-yields-check": "warn"
   }
 };
