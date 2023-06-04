@@ -579,7 +579,8 @@ appears, to Dark Lords.
   including if overrides are in place to loosen/tighten. Set to match any Markdown
   rules (`.md` extension) by default and excludes any example beginning with a
   backtick.
-- `check-syntax` - Following jsdoc, not Closure syntax
+- `check-syntax` - Following typescript, not Closure syntax
+- `imports-as-dependencies` - Useful
 - `match-description` - Cleaner to see complete sentences which its default allows.
 - `no-bad-blocks` - Useful to catch blocks likely intended as jsdoc
 - `require-returns-check` - If the return value doesn't match, there may be a problem.

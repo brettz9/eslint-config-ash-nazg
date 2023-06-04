@@ -6,6 +6,7 @@ module.exports = {
     "jsdoc/check-values": "warn",
     "jsdoc/empty-tags": "warn",
     "jsdoc/multiline-blocks": "warn",
+    "jsdoc/no-defaults": "warn",
     "jsdoc/no-multi-asterisks": "warn",
     "jsdoc/require-param": "warn",
     "jsdoc/require-property": "warn",

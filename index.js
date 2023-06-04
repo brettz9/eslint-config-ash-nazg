@@ -245,6 +245,7 @@ module.exports = {
         }
       ]
     }],
+    'jsdoc/imports-as-dependencies': 'error',
     'jsdoc/match-description': ['error', {
       contexts: ['any']
     }],
