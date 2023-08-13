@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 34.16.0
+
+- chore: bump semver, peerDeps/devDeps
+
 ## 34.15.0
 
 - chore: bump peerDeps/devDeps (including new rule from jsdoc)
