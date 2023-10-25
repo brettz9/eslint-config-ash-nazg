@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 34.17.1
+
+- fix: update peers.
+
 ## 34.17.0
 
 - feat(`index.js`): add `no-object-constructor`
