@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 34.17.0
+
+- feat(`index.js`): add `no-object-constructor`
+- chore: bump peerDeps/devDeps
+
 ## 34.16.0
 
 - chore: bump semver, peerDeps/devDeps

@@ -36,7 +36,6 @@ module.exports = {
     "no-multiple-empty-lines": "error",
     "no-new": "error",
     "no-new-func": "error",
-    "no-new-object": "error",
     "no-new-wrappers": "error",
     "no-octal-escape": "error",
     "no-proto": "error",

@@ -106,6 +106,7 @@ module.exports = {
     'no-loss-of-precision': ['error'],
     'no-new-native-nonconstructor': 'error',
     'no-nonoctal-decimal-escape': ['error'],
+    'no-object-constructor': ['error'],
     'no-restricted-globals': ['error', {
       name: 'event',
       message: 'Use local event parameter instead (preferably as \'e\' or \'ev\').'

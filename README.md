@@ -744,7 +744,7 @@ can be picky about giving up their *preh-shus*...
 - Waiting: Add [eslint-plugin-no-constructor-bind](https://github.com/markalfred/eslint-plugin-no-constructor-bind)
     when class properties start landing
 - Add own rules:
-    1. [tweak for `no-new-object`](https://github.com/eslint/eslint/issues/11810)
+    1. [tweak for `no-new-object`](https://github.com/eslint/eslint/issues/11810); now no-object-constructor
     1. [allow npm_config_* with `no-process-env`](https://github.com/eslint/eslint/issues/11808)
     1. [to-do query tool/extractor](https://github.com/sindresorhus/eslint-plugin-unicorn/issues/238#issuecomment-506917348)
 - Review <https://github.com/dustinspecker/awesome-eslint#practices>
