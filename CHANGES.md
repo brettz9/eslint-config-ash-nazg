@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 34.18.0
+
+- chore: bump peerDeps/devDeps
+
 ## 34.17.1
 
 - fix: update peers.
