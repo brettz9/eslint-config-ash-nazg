@@ -11,23 +11,22 @@ module.exports = {
     ]
   },
   overrides: [{
-    files: 'build.js',
-    globals: {
-      // Todo: Get rid of this usage (and esm) with native Node only
-      __dirname: true
+    files: ['inherited-rules/**'],
+    rules: {
+      // Uses JSON.stringify
+      '@stylistic/quotes': ['error', 'double'],
+      '@stylistic/quote-props': 'off'
+    }
+  }, {
+    files: 'inherited-rules/build.mjs',
+    parserOptions: {
+      ecmaVersion: 2021
     },
     extends: [
       './sauron-node-overrides.js'
     ]
-  }, {
-    files: ['inherited-rules/**'],
-    rules: {
-      // Uses JSON.stringify
-      quotes: ['error', 'double'],
-      'quote-props': 'off'
-    }
   }],
   rules: {
-    'max-len': 'off'
+    '@stylistic/max-len': 'off'
   }
 };

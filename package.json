@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ash-nazg",
-  "version": "34.18.0",
+  "version": "35.0.0",
   "description": "An expansion and tweaking of the \"standard\" config style for ESLint",
   "main": "index.js",
   "scripts": {
@@ -10,12 +10,12 @@
     "unused:compat": "node inherited-rules/build.mjs unused eslint-plugin-compat recommended",
     "unused:eslint-comments": "node inherited-rules/build.mjs unused eslint-plugin-eslint-comments recommended",
     "unused:html": "node inherited-rules/build.mjs unused eslint-plugin-html",
-    "unused:import": "node inherited-rules/build.mjs unused eslint-plugin-import recommended eslint-config-standard",
+    "unused:import": "node inherited-rules/build.mjs unused eslint-plugin-import recommended",
     "unused:jsdoc": "node inherited-rules/build.mjs unused eslint-plugin-jsdoc recommended",
     "unused:markdown": "node inherited-rules/build.mjs unused eslint-plugin-markdown",
     "unused:no-use-extend-native": "node inherited-rules/build.mjs unused eslint-plugin-no-use-extend-native recommended",
     "unused:node": "node inherited-rules/build.mjs unused eslint-plugin-n recommended-module",
-    "unused:promise": "node inherited-rules/build.mjs unused eslint-plugin-promise recommended eslint-config-standard",
+    "unused:promise": "node inherited-rules/build.mjs unused eslint-plugin-promise recommended",
     "unused:sonarjs": "node inherited-rules/build.mjs unused eslint-plugin-sonarjs recommended",
     "unused:unicorn": "node inherited-rules/build.mjs unused eslint-plugin-unicorn recommended",
     "unused:no-unsanitized": "node inherited-rules/build.mjs unused eslint-plugin-no-unsanitized DOM",
@@ -38,7 +38,7 @@
     "inherited:eslint": "node inherited-rules/build.mjs inherited @eslint/js/src/configs/eslint-all",
     "inherited:@brettz9": "node inherited-rules/build.mjs inherited @brettz9/eslint-plugin es6",
     "inherited:no-unsanitized": "node inherited-rules/build.mjs inherited eslint-plugin-no-unsanitized DOM",
-    "inherited": "rimraf inherited-rules/implicitly-included/*.js && npm run inherited:array-func && npm run inherited:compat && npm run inherited:eslint-comments && npm run inherited:html && npm run inherited:import && npm run inherited:markdown && npm run inherited:no-use-extend-native && npm run inherited:node && npm run inherited:promise && npm run inherited:sonarjs && npm run inherited:standard && npm run inherited:unicorn && npm run inherited:eslint-recommended && npm run inherited:eslint && npm run inherited:@brettz9 && npm run inherited:no-unsanitized && npm run inherited:jsdoc",
+    "inherited": "rimraf inherited-rules/implicitly-included/*.js && npm run inherited:array-func && npm run inherited:compat && npm run inherited:eslint-comments && npm run inherited:html && npm run inherited:import && npm run inherited:markdown && npm run inherited:no-use-extend-native && npm run inherited:node && npm run inherited:promise && npm run inherited:sonarjs && echo \"DISABLED FOR NOW: npm run inherited:standard\" && npm run inherited:unicorn && npm run inherited:eslint-recommended && npm run inherited:eslint && npm run inherited:@brettz9 && npm run inherited:no-unsanitized && npm run inherited:jsdoc",
     "compare": "npm run inherited && npm run unused",
     "eslint": "eslint --ext js,md,html .",
     "lint": "npm run eslint",
@@ -67,7 +67,8 @@
   },
   "peerDependencies": {
     "@brettz9/eslint-plugin": "^1.0.4",
-    "eslint": "^8.52.0",
+    "@stylistic/eslint-plugin": "^1.0.0",
+    "eslint": "^8.53.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-array-func": "^4.0.0",
     "eslint-plugin-compat": "^4.2.0",
@@ -80,13 +81,14 @@
     "eslint-plugin-no-unsanitized": "^4.0.2",
     "eslint-plugin-no-use-extend-native": "^0.5.0",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-sonarjs": "^0.22.0",
+    "eslint-plugin-sonarjs": "^0.23.0",
     "eslint-plugin-unicorn": "^49.0.0"
   },
   "devDependencies": {
     "@brettz9/eslint-plugin": "^1.0.4",
     "@scottnonnenberg/eslint-compare-config": "^1.1.0",
-    "eslint": "^8.52.0",
+    "@stylistic/eslint-plugin": "^1.0.0",
+    "eslint": "^8.53.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-array-func": "^4.0.0",
     "eslint-plugin-compat": "^4.2.0",
@@ -99,7 +101,7 @@
     "eslint-plugin-no-unsanitized": "^4.0.2",
     "eslint-plugin-no-use-extend-native": "^0.5.0",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-sonarjs": "^0.22.0",
+    "eslint-plugin-sonarjs": "^0.23.0",
     "eslint-plugin-unicorn": "^49.0.0",
     "rimraf": "^3.0.2"
   }

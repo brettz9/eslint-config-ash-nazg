@@ -61,13 +61,14 @@ module.exports = {
     }
   },
   rules: {
-    'class-methods-use-this': ['warn'],
-    'consistent-this': ['warn'],
-    'default-case': ['warn'],
-    'max-len': ['warn', {
+    '@stylistic/max-len': ['warn', {
       ignoreUrls: true,
       ignoreRegExpLiterals: true
     }],
+
+    'class-methods-use-this': ['warn'],
+    'consistent-this': ['warn'],
+    'default-case': ['warn'],
     'no-alert': ['warn'],
     'no-console': ['warn'],
     'no-empty-function': ['warn'],

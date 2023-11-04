@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 35.0.0
+
+- chore: switch to use stylistic and internal standard (build
+    script is seeing imports as unused despite being used)
+
 ## 34.18.0
 
 - chore: bump peerDeps/devDeps

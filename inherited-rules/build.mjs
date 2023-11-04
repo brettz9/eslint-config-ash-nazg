@@ -38,9 +38,11 @@ const left = {
     ...(!isInherited && rightModule === 'eslint-plugin-n'
       ? {
         ...cc.getLiteralConfigSync(
-          join(__dirname, 'implicitly-included', getModulePath(
-            'eslint-config-standard'
-          ))
+          // Use this until resume including remote `standard`
+          'standard.js'
+          // join(__dirname, 'implicitly-included', getModulePath(
+          //   'eslint-config-standard'
+          // ))
         ).rules
       }
       : {}
@@ -48,9 +50,11 @@ const left = {
     ...(rightModule === '@brettz9/eslint-plugin'
       ? {
         ...cc.getLiteralConfigSync(
-          join(__dirname, 'implicitly-included', getModulePath(
-            'eslint-config-standard'
-          ))
+          // Use this until resume including remote `standard`
+          'standard.js'
+          // join(__dirname, 'implicitly-included', getModulePath(
+          //   'eslint-config-standard'
+          // ))
         ).rules
       }
       : null),
@@ -77,7 +81,9 @@ const left = {
         ).configs.es6.rules,
         */
         ...cc.getLiteralConfigSync(
-          join('./node_modules/', 'eslint-config-standard')
+          // Use this until resume including remote `standard`
+          'standard.js'
+          // join('./node_modules/', 'eslint-config-standard')
         ).rules
       }
       : (rightModule === 'eslint-config-standard'
@@ -271,12 +277,11 @@ if (isInherited || Object.keys(rightConfig.rules).length) {
     getModulePath(rightModule, preferredConfig, isInherited)
   );
 
-  // eslint-disable-next-line max-len -- Too long
   // eslint-disable-next-line n/prefer-promises/fs -- needs higher Node version
   fs.writeFile(
     inheritedPath,
     '"use strict";\nmodule.exports = {\n  rules: ' + JSON.stringify(rightConfig.rules, null, 2).replace(/\n/gu, '\n  ') + '\n};\n',
-    // eslint-disable-next-line max-len -- Too long
+    // eslint-disable-next-line @stylistic/max-len -- Too long
     // eslint-disable-next-line promise/prefer-await-to-callbacks -- needs higher Node version to avoid
     (err) => {
       if (err) {
@@ -299,7 +304,7 @@ function getModulePath (rtModule, preferredCfg, isInheritd) {
   return rtModule.replace(
     /(?:eslint-(?:config|plugin)-)?/u,
     ''
-  ).replace(/\//gu, '_') +
+  ).replaceAll('/', '_') +
     (isInheritd && preferredCfg && preferredCfg !== '-'
       ? '-' + preferredCfg
       : ''

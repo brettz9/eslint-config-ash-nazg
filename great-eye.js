@@ -15,17 +15,27 @@ module.exports = {
     }
   },
   rules: {
+    '@stylistic/max-statements-per-line': ['warn'],
+
     'capitalized-comments': ['warn'],
     complexity: ['warn'],
     'max-statements': ['warn'],
-    'max-statements-per-line': ['warn'],
     'no-magic-numbers': ['warn'],
     'no-plusplus': ['warn'],
     'no-warning-comments': ['warn'],
 
-    'no-shadow': ['warn', {builtinGlobals: true, hoist: 'all', allow: ['parent', 'top', 'open', 'close', 'stop', 'blur', 'status', 'name', 'closed', 'start']}],
+    'no-shadow': ['warn', {
+      builtinGlobals: true,
+      hoist: 'all',
+      allow: [
+        'parent', 'top', 'open', 'close', 'stop', 'blur',
+        'status', 'name', 'closed', 'start'
+      ]
+    }],
 
-    'import/no-unused-modules': ['warn', {missingExports: true, unusedExports: true}],
+    'import/no-unused-modules': ['warn', {
+      missingExports: true, unusedExports: true
+    }],
 
     'jsdoc/check-alignment': ['warn'],
     'jsdoc/check-indentation': ['warn'],

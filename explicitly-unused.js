@@ -6,9 +6,14 @@ module.exports = {
     // which we have consciously not included (and not help catch any not
     // so considered as part of our `build.js` routines). See the README for
     // details on why we have decided not to include these.
+    '@stylistic/function-call-argument-newline': 'off',
+    '@stylistic/lines-around-comment': 'off',
+    '@stylistic/newline-per-chained-call': 'off',
+    '@stylistic/one-var-declaration-per-line': 'off',
+    '@stylistic/padding-line-between-statements': 'off',
+
     'array-element-newline': 'off',
     'arrow-body-style': 'off',
-    'function-call-argument-newline': 'off',
     'func-names': 'off',
     'func-style': 'off',
     'id-blacklist': 'off',
@@ -17,8 +22,6 @@ module.exports = {
     'id-match': 'off',
     'init-declarations': 'off',
     'line-comment-position': 'off',
-    'lines-around-comment': 'off',
-    'lines-between-class-members': 'off',
     'logical-assignment-operators': 'off',
     'max-classes-per-file': 'off',
     'max-depth': 'off',
@@ -26,7 +29,6 @@ module.exports = {
     'max-lines': 'off',
     'max-params': 'off',
     'multiline-comment-style': 'off',
-    'newline-per-chained-call': 'off',
     'no-continue': 'off',
     'no-inline-comments': 'off',
     'no-invalid-this': 'off',
@@ -42,8 +44,6 @@ module.exports = {
     'no-undefined': 'off',
     'no-underscore-dangle': 'off',
     'no-useless-concat': 'off',
-    'one-var-declaration-per-line': 'off',
-    'padding-line-between-statements': 'off',
     'prefer-arrow-callback': 'off',
     'prefer-object-has-own': 'off',
     'prefer-template': 'off',

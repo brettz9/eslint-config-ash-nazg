@@ -30,7 +30,10 @@ module.exports = function (config) {
       'new-cap': 'off',
       'no-invalid-this': 'off',
       'no-unused-expressions': 'off',
+
+      '@stylistic/object-curly-spacing': 'off',
       'object-curly-spacing': 'off',
+      '@stylistic/semi': 'off',
       semi: 'off',
 
       /**

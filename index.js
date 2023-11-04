@@ -17,7 +17,8 @@ module.exports = {
     'plugin:import/recommended',
     // This may override eslint:recommended and the promise/import rules,
     //  but it doesn't turn any off
-    'standard',
+    // 'standard', // Disabling until they fix
+    './standard.js',
     // These only add their own rules and are not used by the others
     'plugin:unicorn/recommended',
     'plugin:eslint-comments/recommended',
@@ -29,6 +30,7 @@ module.exports = {
     './+modules.js'
   ],
   plugins: [
+    '@stylistic/eslint-plugin',
     // Avoid its `recommended` config
     'markdown',
     // This has no rules
@@ -65,32 +67,64 @@ module.exports = {
     }
   ],
   rules: {
-    // RULES SHOULD ONLY BE DIFFERENT FROM INHERITED (ENABLING, DISABLING, CHANGING)
+    // RULES SHOULD ONLY BE DIFFERENT FROM INHERITED (ENABLING,
+    //   DISABLING, CHANGING)
 
-    'array-bracket-newline': ['error', 'consistent'],
-    'array-bracket-spacing': ['error'],
+    '@stylistic/array-bracket-newline': ['error', 'consistent'],
+    '@stylistic/array-bracket-spacing': ['error'],
+    '@stylistic/arrow-parens': ['error'],
+    '@stylistic/computed-property-spacing': ['error'],
+    '@stylistic/function-paren-newline': ['error', 'consistent'],
+    '@stylistic/implicit-arrow-linebreak': ['error'],
+    '@stylistic/indent': ['error', 2, {outerIIFEBody: 0}],
+    '@stylistic/jsx-quotes': ['error'],
+    '@stylistic/linebreak-style': ['error'],
+    '@stylistic/multiline-ternary': ['error', 'always-multiline'],
+    '@stylistic/no-confusing-arrow': ['error'],
+    '@stylistic/no-extra-semi': ['error'],
+    '@stylistic/nonblock-statement-body-position': ['error'],
+    '@stylistic/object-curly-spacing': ['error', 'never'],
+    '@stylistic/quote-props': ['error', 'as-needed'],
+    '@stylistic/quotes': ['error', 'single', {
+      avoidEscape: true,
+      allowTemplateLiterals: true
+    }],
+    '@stylistic/semi': ['error', 'always'],
+    '@stylistic/semi-style': ['error'],
+    '@stylistic/switch-colon-spacing': ['error'],
+    '@stylistic/wrap-regex': ['error'],
+
+    // Disable standard (which still uses)
+    '@stylistic/lines-between-class-members': 'off',
+    'lines-between-class-members': 'off',
+    '@stylistic/object-curly-newline': ['off'],
+    'object-curly-newline': ['off'],
+    '@stylistic/object-property-newline': ['off'],
+    'object-property-newline': ['off'],
+
+    // Override standard
+    '@stylistic/padded-blocks': ['error', 'never'],
+    'padded-blocks': ['error', 'never'],
+    '@stylistic/no-extra-parens': ['off'],
+    'no-extra-parens': ['off'],
+
+    // Disable non-stylistic from standard
+    'no-use-before-define': 'off',
+
     'array-callback-return': ['error'],
-    'arrow-parens': ['error'],
     'block-scoped-var': ['error'],
-    'computed-property-spacing': ['error'],
     'consistent-return': ['error'],
     'default-case-last': ['error'],
     'default-param-last': ['error'],
     'dot-notation': ['error'],
     'func-name-matching': ['error'],
-    'function-paren-newline': ['error', 'consistent'],
     'grouped-accessor-pairs': ['error'],
     'guard-for-in': ['error'],
-    'implicit-arrow-linebreak': ['error'],
-    'jsx-quotes': ['error'],
-    'linebreak-style': ['error'],
     'max-nested-callbacks': ['error'],
-    'multiline-ternary': ['error', 'always-multiline'],
     'no-await-in-loop': ['error'],
     'no-constant-binary-expression': 'error',
     'no-bitwise': ['error'],
     'no-buffer-constructor': ['error'],
-    'no-confusing-arrow': ['error'],
     'no-constructor-return': ['error'],
     'no-div-regex': ['error'],
     'no-duplicate-imports': ['error'],
@@ -125,7 +159,6 @@ module.exports = {
     'no-var': ['error'],
     'no-void': ['error'],
     'no-warning-comments': ['error', {terms: ['fixme', 'xxx']}],
-    'nonblock-statement-body-position': ['error'],
     'object-shorthand': ['error', 'always', {avoidExplicitReturnArrows: true}],
     'operator-assignment': ['error'],
     'prefer-const': ['error'],
@@ -135,31 +168,17 @@ module.exports = {
     'prefer-regex-literals': ['error'],
     'prefer-rest-params': ['error'],
     'prefer-spread': ['error'],
-    'quote-props': ['error', 'as-needed'],
-    quotes: ['error', 'single', {
-      avoidEscape: true,
-      allowTemplateLiterals: true
-    }],
     radix: ['error', 'as-needed'],
     'require-await': ['error'],
-    'semi-style': ['error'],
     strict: ['off'],
-    'switch-colon-spacing': ['error'],
-    'wrap-regex': ['error'],
 
-    semi: ['error', 'always'],
-    indent: ['error', 2, {outerIIFEBody: 0}],
-    'object-curly-spacing': ['error', 'never'],
     'no-restricted-syntax': ['error', '[operator=instanceof]'],
 
     'no-promise-executor-return': 'error',
     'no-unreachable-loop': 'error',
 
     // Disable standard
-    'object-curly-newline': ['off'],
-    'object-property-newline': ['off'],
     'one-var': ['off'],
-    'lines-between-class-members': 'off',
 
     // PROMISE
     'promise/no-multiple-resolved': 'error',
