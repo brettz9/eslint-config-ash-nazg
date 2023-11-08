@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 35.1.0
+
+- feat(loosen): switch to `markers` for `@stylistic/spaced-comment`
+- chore: bump peerDeps/devDeps
+
 ## 35.0.0
 
 - chore: switch to use stylistic and internal standard (build

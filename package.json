@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ash-nazg",
-  "version": "35.0.0",
+  "version": "35.1.0",
   "description": "An expansion and tweaking of the \"standard\" config style for ESLint",
   "main": "index.js",
   "scripts": {
@@ -67,7 +67,7 @@
   },
   "peerDependencies": {
     "@brettz9/eslint-plugin": "^1.0.4",
-    "@stylistic/eslint-plugin": "^1.0.0",
+    "@stylistic/eslint-plugin": "^1.0.1",
     "eslint": "^8.53.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-array-func": "^4.0.0",
@@ -77,7 +77,7 @@
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-jsdoc": "^46.8.2",
     "eslint-plugin-markdown": "^3.0.1",
-    "eslint-plugin-n": "^16.2.0",
+    "eslint-plugin-n": "^16.3.0",
     "eslint-plugin-no-unsanitized": "^4.0.2",
     "eslint-plugin-no-use-extend-native": "^0.5.0",
     "eslint-plugin-promise": "^6.1.1",
@@ -87,7 +87,7 @@
   "devDependencies": {
     "@brettz9/eslint-plugin": "^1.0.4",
     "@scottnonnenberg/eslint-compare-config": "^1.1.0",
-    "@stylistic/eslint-plugin": "^1.0.0",
+    "@stylistic/eslint-plugin": "^1.0.1",
     "eslint": "^8.53.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-array-func": "^4.0.0",
@@ -97,7 +97,7 @@
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-jsdoc": "^46.8.2",
     "eslint-plugin-markdown": "^3.0.1",
-    "eslint-plugin-n": "^16.2.0",
+    "eslint-plugin-n": "^16.3.0",
     "eslint-plugin-no-unsanitized": "^4.0.2",
     "eslint-plugin-no-use-extend-native": "^0.5.0",
     "eslint-plugin-promise": "^6.1.1",

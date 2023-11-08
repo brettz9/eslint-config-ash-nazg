@@ -224,6 +224,7 @@ the exceptions of:
     dosomething();
 }};`
 8. `lines-between-class-members` - Don't feel any need for it
+9. `@stylistic/spaced-comment` - Adding `markers` for sake of TS-style `/// <reference>` comments.
 
 ## Rationale for changing required rules' configuration away from ESLint defaults
 

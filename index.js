@@ -101,12 +101,13 @@ module.exports = {
     'object-curly-newline': ['off'],
     '@stylistic/object-property-newline': ['off'],
     'object-property-newline': ['off'],
+    '@stylistic/no-extra-parens': ['off'],
+    'no-extra-parens': ['off'],
 
     // Override standard
     '@stylistic/padded-blocks': ['error', 'never'],
     'padded-blocks': ['error', 'never'],
-    '@stylistic/no-extra-parens': ['off'],
-    'no-extra-parens': ['off'],
+    '@stylistic/spaced-comment': ['error', 'always', {markers: ['/']}],
 
     // Disable non-stylistic from standard
     'no-use-before-define': 'off',
