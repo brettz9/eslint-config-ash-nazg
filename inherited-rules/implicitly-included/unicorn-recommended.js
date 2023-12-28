@@ -22,6 +22,7 @@ module.exports = {
     "unicorn/no-thenable": "error",
     "unicorn/no-this-assignment": "error",
     "unicorn/no-unnecessary-await": "error",
+    "unicorn/no-unnecessary-polyfills": "error",
     "unicorn/no-unreadable-iife": "error",
     "unicorn/no-useless-fallback-in-spread": "error",
     "unicorn/no-useless-length-check": "error",
