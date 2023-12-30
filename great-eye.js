@@ -1,7 +1,6 @@
-'use strict';
+import sauron from './sauron.js';
 
-module.exports = {
-  extends: ['./sauron.js'],
+export default [...sauron, {
   settings: {
     preferredTypes: {
       'Promise.<>': {
@@ -54,4 +53,4 @@ module.exports = {
     'unicorn/prefer-set-has': 'error',
     'unicorn/prefer-object-has-own': 'error'
   }
-};
+}];

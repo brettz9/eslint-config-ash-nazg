@@ -47,17 +47,6 @@ const left = {
       }
       : {}
     ),
-    ...(rightModule === '@brettz9/eslint-plugin'
-      ? {
-        ...cc.getLiteralConfigSync(
-          // Use this until resume including remote `standard`
-          'standard.js'
-          // join(__dirname, 'implicitly-included', getModulePath(
-          //   'eslint-config-standard'
-          // ))
-        ).rules
-      }
-      : null),
     ...(rightModule === '@eslint/js/src/configs/eslint-all'
       ? {
         ...cc.getLiteralConfigSync(
@@ -74,12 +63,6 @@ const left = {
     ...(rightModule === '@eslint/js/src/configs/eslint-recommended' ||
       (!isInherited && rightModule === '@eslint/js/src/configs/eslint-all')
       ? {
-        /*
-        // Todo: This has no effect due to need to process `extends` as below
-        ...cc.getLiteralConfigSync(
-          join('./node_modules/', '@brettz9/eslint-plugin')
-        ).configs.es6.rules,
-        */
         ...cc.getLiteralConfigSync(
           // Use this until resume including remote `standard`
           'standard.js'
@@ -166,21 +149,7 @@ if (
 
 const prefix = rightModule.replace(/eslint-plugin-/u, '');
 
-const rightConfig = rightModule === '@brettz9/eslint-plugin'
-  ? {
-    rules: {
-      ...cc.getLiteralConfigSync(
-        join('./node_modules/', '@brettz9/eslint-plugin/lib/configs/_base.js')
-      ).rules,
-      ...cc.getLiteralConfigSync(
-        join(
-          './node_modules/',
-          '@brettz9/eslint-plugin/lib/configs/_override-es6.js'
-        )
-      ).rules
-    }
-  }
-  : isInherited &&
+const rightConfig = isInherited &&
   // If we are checking inherited, some configs, like "standard", are not rule
   //   functions but are just the rules with "error", etc., but we also want
   //   these treated as included (through `right.rules`); however, other
@@ -197,7 +166,6 @@ const rightConfig = rightModule === '@brettz9/eslint-plugin'
 // Without this block, these configs/plugins were including their prefixes
 //   in the rules (redundantly):
 // 1. inherited: standard
-// 2. inherited/unused: @brettz9/eslint-plugin
 
 Object.entries(rightConfig.rules).forEach(([key, val]) => {
   let keyReplaced = key;

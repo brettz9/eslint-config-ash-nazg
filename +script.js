@@ -1,14 +1,14 @@
-'use strict';
-
-module.exports = {
-  parserOptions: {
+export default [{
+  languageOptions: {
     sourceType: 'script',
-    ecmaFeatures: {
-      globalReturn: false
+    parserOptions: {
+      ecmaFeatures: {
+        globalReturn: false
+      }
     }
   },
   rules: {
     'import/no-commonjs': 'off',
     strict: ['error']
   }
-};
+}];

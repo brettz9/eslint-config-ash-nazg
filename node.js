@@ -1,20 +1,24 @@
-'use strict';
+import globals from 'globals';
+import node from 'eslint-plugin-n';
+import index from './index.js';
+import standard from './standard.js';
+import modules from './+modules.js';
 
-const {env, ecmaVersion} = require('./detectEnv.js');
+// import {FlatCompat} from '@eslint/eslintrc';
+// const __dirname = import.meta.dirname;
+// const compat = new FlatCompat({
+//   baseDirectory: __dirname
+// });
 
-module.exports = {
-  extends: [
-    './index.js',
-    'plugin:n/recommended-module',
-    // Override `index.js`-set ES2015+ if ES5
-    ...(ecmaVersion < 2015
-      ? ['plugin:@brettz9/es5']
-      : ['plugin:@brettz9/es6']
-    )
-  ],
-  env,
-  parserOptions: {
-    ecmaVersion
+export default [...index, standard[1], node.configs['flat/recommended-module'], {
+  // Node-specific modules
+  ...modules[1],
+  files: ['**/*.mjs', '**/*.ts', '**/*.tsx', '**/*.vue']
+}, {
+  languageOptions: {
+    globals: {
+      ...globals.node
+    }
   },
   rules: {
     // Disable Node-added
@@ -53,4 +57,4 @@ module.exports = {
     // For this, we want the import extension
     'n/no-missing-import': 'off'
   }
-};
+}];

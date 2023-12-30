@@ -1,7 +1,8 @@
-'use strict';
+import index from './index.js';
 
-module.exports = {
-  extends: ['./index.js', 'plugin:no-unsanitized/DOM'],
+import noUnsanitized from 'eslint-plugin-no-unsanitized';
+
+export default [...index, noUnsanitized.DOM, {
   settings: {
     jsdoc: {
       preferredTypes: {
@@ -129,4 +130,4 @@ module.exports = {
 
     'eslint-comments/require-description': 'error'
   }
-};
+}];

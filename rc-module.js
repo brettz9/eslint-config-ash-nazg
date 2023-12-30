@@ -1,9 +1,6 @@
-'use strict';
+import sauronNode from './sauron-node.js';
 
-module.exports = {
-  extends: [
-    './sauron-node.js'
-  ],
+export default [sauronNode, {
   rules: {
     'compat/compat': 'off',
     'no-console': 'off',
@@ -11,4 +8,4 @@ module.exports = {
     'n/no-process-env': 'off',
     'n/no-unpublished-import': 'off'
   }
-};
+}];

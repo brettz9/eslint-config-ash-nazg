@@ -1,5 +1,5 @@
-'use strict';
+import sauronNode from './sauron-node.js';
+import rc from './rc.js';
+import mocha from './mocha.js';
 
-module.exports = {
-  extends: ['./sauron-node.js', './rc.js', './mocha.js']
-};
+export default [...sauronNode, ...rc, ...mocha];

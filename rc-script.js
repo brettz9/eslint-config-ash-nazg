@@ -1,13 +1,10 @@
-'use strict';
+import sauronNodeScript from './sauron-node-script.js';
 
-module.exports = {
-  extends: [
-    './sauron-node-script.js'
-  ],
+export default [...sauronNodeScript, {
   rules: {
     'compat/compat': 'off',
     'no-console': 'off',
     'n/no-process-env': 'off',
     'n/no-unpublished-import': 'off'
   }
-};
+}];

@@ -1,5 +1,4 @@
-'use strict';
+import sauronNode from './sauron-node.js';
+import scriptNode from './+script-node.js';
 
-module.exports = {
-  extends: ['./sauron-node.js', './+script-node.js']
-};
+export default [...sauronNode, ...scriptNode];

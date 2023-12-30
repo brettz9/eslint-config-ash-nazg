@@ -1,6 +1,4 @@
-'use strict';
+import greatEye from './great-eye.js';
+import sauronNode from './sauron-node.js';
 
-module.exports = {
-  extends: ['./great-eye.js', './sauron-node.js'],
-  rules: {}
-};
+export default [...greatEye, ...sauronNode];

@@ -1,14 +1,9 @@
-'use strict';
+import cypress from 'eslint-plugin-cypress'; // Todo: Apply as of https://github.com/cypress-io/eslint-plugin-cypress/issues/146
+import mochaPlus from './mocha-plus.js';
 
-// Todo: Move to own repo so can add dependencies
-
-module.exports = {
-  extends: [
-    'plugin:cypress/recommended',
-    './mocha-plus.js'
-  ],
+export default [cypress, ...mochaPlus, {
   rules: {
     // Conflicts with Cypress `should`
     'mocha-cleanup/invalid-assertions': 0
   }
-};
+}];

@@ -1,16 +1,15 @@
-'use strict';
+import node from 'eslint-plugin-n';
+import globals from 'globals';
 
-// As adding after defaults, recalculate ecmaVersion (Node plugins sets own
-//  `ecmaVersion`)
-const {env, ecmaVersion} = require('./detectEnv.js');
-
-module.exports = {
-  env,
-  extends: ['plugin:n/recommended-script'],
-  parserOptions: {
-    ecmaVersion,
-    ecmaFeatures: {
-      globalReturn: true
+export default [node['recommended-script'], {
+  languageOptions: {
+    globals: {
+      ...globals.node
+    },
+    parserOptions: {
+      ecmaFeatures: {
+        globalReturn: true
+      }
     }
   },
   rules: {
@@ -20,4 +19,4 @@ module.exports = {
     'import/no-commonjs': 'off',
     strict: ['error']
   }
-};
+}];

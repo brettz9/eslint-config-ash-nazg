@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = {
+export default [{
   rules: {
     // This file is for indicating those rules available in inherited plugins
     // which we have consciously not included (and not help catch any not
@@ -92,10 +90,6 @@ module.exports = {
 
     'promise/no-native': 'off',
 
-    '@brettz9/arrow-parens': 'off',
-    '@brettz9/no-instanceof-array': 'off',
-    '@brettz9/no-instanceof-wrapper': 'off',
-
     'eslint-comments/no-restricted-disable': 'off',
     'eslint-comments/no-use': 'off',
 
@@ -143,4 +137,4 @@ module.exports = {
     'unicorn/prefer-text-content': 'off',
     'unicorn/prefer-trim-start-end': 'off'
   }
-};
+}];

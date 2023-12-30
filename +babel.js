@@ -1,5 +1,3 @@
-'use strict';
-
 // Move to own repo so can have `@babel/eslint-parser` and `@babel/eslint-plugin` as deps.
 
 // Adapted from MIT-licensed: https://github.com/futagoza/eslint-config-futagozaryuu/blob/master/packages/%40futagoza/eslint-config-core/stylistic-issues.js
@@ -9,9 +7,9 @@
  * @param {ESLintConfig} config
  * @returns {ESLintConfig}
  */
-module.exports = function (config) {
+export default [function (config) {
   return {
-    parser: '@babel/eslint-parser',
+    parser: '@babel/eslint-parser', // Types: https://github.com/babel/babel/issues/16221
     parserOptions: {
       ...config.parserOptions,
       requireConfigFile: false
@@ -19,7 +17,7 @@ module.exports = function (config) {
 
     plugins: [
       ...config.plugins,
-      '@babel/eslint-plugin'
+      '@babel/eslint-plugin' // Flat config: https://github.com/babel/babel/issues/16220
     ],
     rules: {
 
@@ -82,4 +80,4 @@ module.exports = function (config) {
       '@babel/semi': config.rules.semi || 'off'
     }
   };
-};
+}];

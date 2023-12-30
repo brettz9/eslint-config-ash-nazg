@@ -1,5 +1,4 @@
-'use strict';
-module.exports = {
+export default [{
   rules: {
     'accessor-pairs': 'error',
     '@stylistic/arrow-spacing': 'error',
@@ -124,14 +123,18 @@ module.exports = {
     '@stylistic/wrap-iife': 'error',
     '@stylistic/yield-star-spacing': 'error',
     yoda: 'error',
-    'import/export': 'error',
-    'import/first': 'error',
-    'import/no-duplicates': 'error',
-    'import/no-named-default': 'error',
-    'import/no-webpack-loader-syntax': 'error',
+    // Todo: Reenable
+    // 'import/export': 'error',
+    // 'import/first': 'error',
+    // 'import/no-duplicates': 'error',
+    // 'import/no-named-default': 'error',
+    // 'import/no-webpack-loader-syntax': 'error'
+  }
+}, {
+  rules: {
     'n/no-callback-literal': 'error',
     'n/no-deprecated-api': 'error',
     'n/no-exports-assign': 'error',
     'n/process-exit-as-throw': 'error'
   }
-};
+}];
