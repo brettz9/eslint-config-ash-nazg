@@ -1,5 +1,9 @@
-'use strict';
+/* eslint-disable jsdoc/imports-as-dependencies -- Bug */
+import sauronNodeScript from './sauron-node-script.js';
+import rc from './rc.js';
 
-module.exports = {
-  extends: ['./sauron-node-script.js', './rc.js', './mocha.js']
-};
+/** @type {import('eslint').Linter.FlatConfig[]} */
+export default [
+  ...sauronNodeScript,
+  ...rc
+];

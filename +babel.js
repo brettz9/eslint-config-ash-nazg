@@ -1,26 +1,33 @@
-'use strict';
-
-// Move to own repo so can have `@babel/eslint-parser` and `@babel/eslint-plugin` as deps.
+// Move to own repo so can have `@babel/eslint-parser` and
+//   `@babel/eslint-plugin` as deps.
+/* eslint-disable jsdoc/imports-as-dependencies -- Bug? */
 
 // Adapted from MIT-licensed: https://github.com/futagoza/eslint-config-futagozaryuu/blob/master/packages/%40futagoza/eslint-config-core/stylistic-issues.js
 
+// Types: https://github.com/babel/babel/issues/16221
+
+import babelParser from '@babel/eslint-parser';
+import babelEslintPlugin from '@babel/eslint-plugin';
+
 /**
  * Allows passing in a whole config to wrap.
- * @param {ESLintConfig} config
- * @returns {ESLintConfig}
+ * @param {import('eslint').Linter.FlatConfig} config
+ * @returns {import('eslint').Linter.FlatConfig}
  */
-module.exports = function (config) {
+export default function babelConfig (config) {
   return {
-    parser: '@babel/eslint-parser',
-    parserOptions: {
-      ...config.parserOptions,
-      requireConfigFile: false
+    languageOptions: {
+      parser: babelParser,
+      parserOptions: {
+        ...config.languageOptions?.parserOptions,
+        requireConfigFile: false
+      }
     },
 
-    plugins: [
+    plugins: {
       ...config.plugins,
-      '@babel/eslint-plugin'
-    ],
+      babelEslintPlugin
+    },
     rules: {
 
       ...config.rules,
@@ -39,47 +46,44 @@ module.exports = function (config) {
       /**
        * Require constructor names to begin with a capital letter.
        *
-       * @see
-       * - https://eslint.org/docs/rules/new-cap
-       * - https://github.com/babel/babel/tree/master/eslint/babel-eslint-plugin#rules
+       * @see {@link https://eslint.org/docs/rules/new-cap}
+       * @see {@link https://github.com/babel/babel/tree/master/eslint/babel-eslint-plugin#rules}
        */
-      '@babel/new-cap': config.rules['new-cap'] || 'off',
+      '@babel/new-cap': config?.rules?.['new-cap'] || 'off',
 
       /**
        * Disallow `this` keywords outside of classes or class-like objects.
        *
-       * @see
-       * - https://eslint.org/docs/rules/no-invalid-this
-       * - https://github.com/babel/babel/tree/master/eslint/babel-eslint-plugin#rules
+       * @see {@link https://eslint.org/docs/rules/no-invalid-this}
+       * @see {@link https://github.com/babel/babel/tree/master/eslint/babel-eslint-plugin#rules}
        */
-      '@babel/no-invalid-this': config.rules['no-invalid-this'] || 'off',
+      '@babel/no-invalid-this': config?.rules?.['no-invalid-this'] || 'off',
 
       /**
        * Disallow unused expressions.
        *
-       * @see
-       * - https://eslint.org/docs/rules/no-unused-expressions
-       * - https://github.com/babel/babel/tree/master/eslint/babel-eslint-plugin#rules
+       * @see {@link https://eslint.org/docs/rules/no-unused-expressions}
+       * @see {@link https://github.com/babel/babel/tree/master/eslint/babel-eslint-plugin#rules}
        */
-      '@babel/no-unused-expressions': config.rules['no-unused-expressions'] || 'off',
+      '@babel/no-unused-expressions':
+        config?.rules?.['no-unused-expressions'] || 'off',
 
       /**
        * Enforce consistent spacing inside braces (🔧 ).
        *
-       * @see
-       * - https://eslint.org/docs/rules/object-curly-spacing
-       * - https://github.com/babel/babel/tree/master/eslint/babel-eslint-plugin#rules
+       * @see {@link https://eslint.org/docs/rules/object-curly-spacing}
+       * @see {@link https://github.com/babel/babel/tree/master/eslint/babel-eslint-plugin#rules}
        */
-      '@babel/object-curly-spacing': config.rules['object-curly-spacing'] || 'off',
+      '@babel/object-curly-spacing':
+        config?.rules?.['object-curly-spacing'] || 'off',
 
       /**
        * Require or disallow semicolons instead of ASI (🔧).
        *
-       * @see
-       * - https://eslint.org/docs/rules/semi
-       * - https://github.com/babel/babel/tree/master/eslint/babel-eslint-plugin#rules
+       * @see {@link https://eslint.org/docs/rules/semi}
+       * @see {@link https://github.com/babel/babel/tree/master/eslint/babel-eslint-plugin#rules}
        */
-      '@babel/semi': config.rules.semi || 'off'
+      '@babel/semi': config?.rules?.semi || 'off'
     }
   };
-};
+}

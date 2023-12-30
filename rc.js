@@ -1,19 +1,18 @@
-/**
- * @author Toru Nagashima
- * See LICENSE file in root directory for full license.
- */
-'use strict';
+/* eslint-disable jsdoc/imports-as-dependencies -- Bug */
+import {readFile} from 'fs/promises';
+import globals from 'globals';
+import rcScript from './rc-script.js';
+import rcModule from './rc-module.js';
 
-const {join} = require('path');
-
-// Could make a simpler, more generic version for own repo
-
-module.exports = {
-  overrides: [
-    {
+/** @type {import('eslint').Linter.FlatConfig[]} */
+export default [
+  ...rcScript.map((cfg) => {
+    return {
+      ...cfg,
       files: [
         '**/scripts/**/*',
         '.babelrc.js',
+        'babel.config.js',
         '.eslintrc.js',
         '.eslintrc.cjs',
         '.mocharc.js',
@@ -27,40 +26,40 @@ module.exports = {
         '*.webpack.config.js',
         'web-ext-config.js',
         'web-ext-config.cjs'
-      ],
-      extends: [
-        './rc-script.js'
       ]
-    },
-    {
+    };
+  }),
+  ...rcModule.map((cfg) => {
+    return {
+      ...cfg,
       files: [
         '**/scripts/rollup-plugin/**/*',
         'rollup.config.js',
-        '*.rollup.config.js'
-      ],
-      extends: [
-        './rc-module.js'
+        '*.rollup.config.js',
+        'eslint.config.js'
       ]
-    },
-    {
-      files: '**/*.{md,mkdn,mdown,markdown}',
-      processor: 'markdown/markdown'
-    },
-    {
-      files: '**/*.md/*.js',
-      rules: {
-        'n/no-missing-require': ['error', {allowModules: [
-          // eslint-disable-next-line n/global-require, import/no-dynamic-require -- Meant to be flexible
-          require(join(process.cwd(), 'package.json')).name
-        ]}]
-      }
-    },
-    {
-      files: 'build/**',
-      rules: {
-        'compat/compat': 'off',
-        'n/no-unpublished-import': 'off'
-      }
+    };
+  }),
+  {
+    files: ['**/*.{md,mkdn,mdown,markdown}'],
+    processor: 'markdown/markdown'
+  },
+  {
+    files: ['**/*.md/*.js'],
+    rules: {
+      'n/no-missing-require': ['error', {allowModules: [
+        // @ts-expect-error Buffer can be assigned to JSON.parse
+        JSON.parse(await readFile('package.json')).name
+      ]}]
     }
-  ]
-};
+  },
+  {
+    files: ['build/**'],
+    languageOptions: {
+      globals: globals.node
+    },
+    rules: {
+      'compat/compat': 'off'
+    }
+  }
+];

@@ -1,6 +1,6 @@
-'use strict';
+/* eslint-disable jsdoc/imports-as-dependencies -- Bug */
+import greatEye from './great-eye.js';
+import sauronNode from './sauron-node.js';
 
-module.exports = {
-  extends: ['./great-eye.js', './sauron-node.js'],
-  rules: {}
-};
+/** @type {import('eslint').Linter.FlatConfig[]} */
+export default [...greatEye, ...sauronNode];

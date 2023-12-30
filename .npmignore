@@ -1,1 +1,4 @@
 pnpm-lock.yaml
+eslint.config.js
+inherited-rules/build.js
+typings

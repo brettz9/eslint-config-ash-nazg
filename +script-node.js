@@ -1,23 +1,25 @@
-'use strict';
+/* eslint-disable jsdoc/imports-as-dependencies -- Bug */
+import node from 'eslint-plugin-n';
+import globals from 'globals';
 
-// As adding after defaults, recalculate ecmaVersion (Node plugins sets own
-//  `ecmaVersion`)
-const {env, ecmaVersion} = require('./detectEnv.js');
+/** @type {import('eslint').Linter.FlatConfig[]} */
+export default [
+  node.configs['flat/recommended-script'],
+  {
+    languageOptions: {
+      globals: globals.node,
+      parserOptions: {
+        ecmaFeatures: {
+          globalReturn: true
+        }
+      }
+    },
+    rules: {
+      // Allow for Node or Unicorn
+      'no-process-exit': 'off',
 
-module.exports = {
-  env,
-  extends: ['plugin:n/recommended-script'],
-  parserOptions: {
-    ecmaVersion,
-    ecmaFeatures: {
-      globalReturn: true
+      'import/no-commonjs': 'off',
+      strict: ['error']
     }
-  },
-  rules: {
-    // Allow for Node or Unicorn
-    'no-process-exit': 'off',
-
-    'import/no-commonjs': 'off',
-    strict: ['error']
   }
-};
+];

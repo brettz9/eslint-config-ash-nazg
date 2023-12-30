@@ -1,43 +1,35 @@
-/**
- * @author Toru Nagashima
- * See LICENSE file in root directory for full license.
- */
-'use strict';
-
 // Todo: Might move these very basic configs (Mocha, and add one for Node
 //   globals, etc.) to own repo
+/* eslint-disable jsdoc/imports-as-dependencies -- Bug */
 
-module.exports = {
-  overrides: [
-    {
-      files: ['**/test/**', '**/tests/**', 'cypress/integration/**'],
-      env: {
-        mocha: true
-      },
-      // Are all of these redundant with `env: {mocha: true}`?
-      globals: {
-        chai: 'readonly',
-        expect: 'readonly',
-        assert: 'readonly',
-        should: 'readonly',
+/** @type {import('eslint').Linter.FlatConfig[]} */
+export default [{
+  files: ['**/test/**', '**/tests/**', 'cypress/integration/**'],
+  languageOptions: {
+    globals: {
+      chai: 'readonly',
+      expect: 'readonly',
+      assert: 'readonly',
+      should: 'readonly',
 
-        after: 'readonly',
-        afterEach: 'readonly',
-        before: 'readonly',
-        beforeEach: 'readonly',
-        describe: 'readonly',
-        it: 'readonly',
-        mocha: 'readonly',
-        xdescribe: 'readonly',
-        xit: 'readonly'
-      }
-
-      // Could disable arrow functions, named functions
-      /*
-      rules: {
-        'max-nested-callbacks': 'off',
-      },
-      */
+      // Could use globals.mocha for the following, but that
+      //   includes even more
+      after: 'readonly',
+      afterEach: 'readonly',
+      before: 'readonly',
+      beforeEach: 'readonly',
+      describe: 'readonly',
+      it: 'readonly',
+      mocha: 'readonly',
+      xdescribe: 'readonly',
+      xit: 'readonly'
     }
-  ]
-};
+  }
+
+  // Could disable arrow functions, named functions
+  /*
+  rules: {
+    'max-nested-callbacks': 'off',
+  },
+  */
+}];

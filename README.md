@@ -14,19 +14,11 @@ install-peerdeps -d eslint-config-ash-nazg
 
 ## The rules
 
-See [index.js](./index.js) (and [node.js](./node.js) for `ash-nazg/node`
+See [main.js](./main.js) (and [node.js](./node.js) for `ash-nazg/node`
 rules) for the rules we explicitly include (and see
 [sauron.js](./sauron.js) for the even stricter `ash-nazg/sauron` rules or
 [great-eye](./great-eye.js) (or [great-eye-node](./great-eye-node.js)) for
 still stricter rules though which are probably best not used).
-
-`env` is set to automatically include `'shared-node-browser': true` given that
-most environments will be Node or a browser or a polyglot Node-browser. If you
-really don't want this, you can override by setting
-`'shared-node-browser': false`. Note that this setting only adds globals which
-are present in either Node or the browser; it won't falsely allow browser
-globals in a Node app or vice versa; you can use `env`'s `node: true` or
-`browser: true` if you want to support Node or browser globals.
 
 (See [explicitly-unused.js](./explicitly-unused.js) for the core and extended
 rules we don't include (rationale for non-inclusion below).)
@@ -34,9 +26,7 @@ rules we don't include (rationale for non-inclusion below).)
 - [Main rules](https://eslint.org/docs/rules/) (also search for "error" within `eslint-recommended.js` of `@eslint/js`) for the `eslint:recommended` rules we inherit (though see below for our two modifications to these).
 - ["standard"](https://github.com/standard/eslint-config-standard/blob/master/eslintrc.json)
 rules we inherit (though see below for our handful of modifications).
-- [@brettz9/eslint-plugin](https://github.com/brettz9/eslint-plugin)
-    for a number of added rules
-- [eslint-comments/recommended](https://github.com/mysticatea/eslint-plugin-eslint-comments)
+- [eslint-comments/recommended](https://github.com/eslint-community/eslint-plugin-eslint-comments)
 - [eslint-plugin-no-use-extend-native](https://github.com/dustinspecker/eslint-plugin-no-use-extend-native) for one added rule.
 - [eslint-plugin-no-unsanitized](https://github.com/mozilla/eslint-plugin-no-unsanitized) for two added rules.
 - [Recommended Unicorn rules](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/index.js#L20-L53) (a few items disabled and enabled as per below)
@@ -126,12 +116,12 @@ typically inheriting "recommended" configs), see
 `/inherited-rules/implicitly-included`.
 
 To see which rules from the extended config we disabled, see our relevant
-config(s) (e.g., `index.js`).
+config(s) (e.g., `main.js`).
 
 To see which rules from the plugin that each extended config derives from
 (i.e., the non-recommended rules of a plug-in), see `explicitly-unused.js`
 for ones we have consciously not used and see our relevant config(s)
-(e.g., `index.js`) for the ones we did add (alongside any recommended).
+(e.g., `main.js`) for the ones we did add (alongside any recommended).
 
 The `unused` folder is used to capture any (non-recommended) rules which
 are not explicitly either enabled or within `explicitly-unused.js` (as
@@ -406,15 +396,15 @@ appears, to Dark Lords.
 
 `promise/no-nesting` - can be useful to nest sometimes
 
-`promise/no-promise-in-callback` - May be difficult to apply (Note: Is disabled in `index.js` but enabled in `sauron.js`)
+`promise/no-promise-in-callback` - May be difficult to apply (Note: Is disabled in `main.js` but enabled in `sauron.js`)
 
-`promise/no-callback-in-promise` - May be difficult to apply (Note: Is disabled in `index.js` but enabled in `sauron.js`)
+`promise/no-callback-in-promise` - May be difficult to apply (Note: Is disabled in `main.js` but enabled in `sauron.js`)
 
-`promise/avoid-new` - Can be useful or even necessary for APIs missing Promise version (Note: Is disabled in `index.js` but enabled in `sauron.js`; could use `promisify`)
+`promise/avoid-new` - Can be useful or even necessary for APIs missing Promise version (Note: Is disabled in `main.js` but enabled in `sauron.js`; could use `promisify`)
 
-`promise/no-return-in-finally` - (Note: Is disabled in `index.js` but enabled in `sauron.js`)
+`promise/no-return-in-finally` - (Note: Is disabled in `main.js` but enabled in `sauron.js`)
 
-`promise/valid-params` - (Note: Is disabled in `index.js` but enabled in `sauron.js`)
+`promise/valid-params` - (Note: Is disabled in `main.js` but enabled in `sauron.js`)
 
 #### Rationale for suppressing some `eslint-plugin-jsdoc` rules
 
@@ -536,18 +526,6 @@ appears, to Dark Lords.
 
 - `eslint-comments/no-restricted-disable` - See no need
 - `eslint-comments/no-use` - See no need
-
-### Rationale for not including some `plugin:@brettz9/es6` rules
-
-- `@brettz9/arrow-parens` - Covered by other rules
-- `@brettz9/no-instanceof-array` - Covered by our blocking of all
-    `instanceof`
-- `@brettz9/no-instanceof-wrapper` - Covered by our blocking of all
-    `instanceof`
-- `@brettz9/prefer-for-of` - I prefer array extras for easier reuse,
-    currying, etc. than `for-of`
-- `@brettz9/no-use-ignored-vars` - Relies on a regex (for pseudo-privates)
-    which can be useful
 
 ### Rationale for not including some `array-func` rules
 
@@ -710,6 +688,10 @@ for projects to specify all child types.
 The `preferredTypes` setting was enabled here for integer/float as it can
 be cumbersome for projects to distinguish and because `Promise` even
 subclassed doesn't indicate the rejector type.
+
+## Rationale for not including some rules in @brettz9/eslint-plugin
+
+- `@brettz9/for-of` - Iterating functions can be easier to refactor
 
 ## Rationale for including rules that might not seem necessary
 

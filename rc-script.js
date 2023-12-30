@@ -1,13 +1,14 @@
-'use strict';
+/* eslint-disable jsdoc/imports-as-dependencies -- Bug */
+import sauronNodeScript from './sauron-node-script.js';
 
-module.exports = {
-  extends: [
-    './sauron-node-script.js'
-  ],
-  rules: {
-    'compat/compat': 'off',
-    'no-console': 'off',
-    'n/no-process-env': 'off',
-    'n/no-unpublished-import': 'off'
+/** @type {import('eslint').Linter.FlatConfig[]} */
+export default [
+  ...sauronNodeScript,
+  {
+    rules: {
+      'compat/compat': 'off',
+      'no-console': 'off',
+      'n/no-process-env': 'off'
+    }
   }
-};
+];

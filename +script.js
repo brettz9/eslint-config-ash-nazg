@@ -1,14 +1,16 @@
-'use strict';
-
-module.exports = {
-  parserOptions: {
+/* eslint-disable jsdoc/imports-as-dependencies -- Bug */
+/** @type {import('eslint').Linter.FlatConfig[]} */
+export default [{
+  languageOptions: {
     sourceType: 'script',
-    ecmaFeatures: {
-      globalReturn: false
+    parserOptions: {
+      ecmaFeatures: {
+        globalReturn: false
+      }
     }
   },
   rules: {
     'import/no-commonjs': 'off',
     strict: ['error']
   }
-};
+}];

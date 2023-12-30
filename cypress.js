@@ -1,14 +1,19 @@
-'use strict';
+/* eslint-disable jsdoc/imports-as-dependencies -- Bug */
+import cypress from 'eslint-plugin-cypress/flat';
 
-// Todo: Move to own repo so can add dependencies
+import mochaPlus from './mocha-plus.js';
 
-module.exports = {
-  extends: [
-    'plugin:cypress/recommended',
-    './mocha-plus.js'
-  ],
-  rules: {
-    // Conflicts with Cypress `should`
-    'mocha-cleanup/invalid-assertions': 0
+/** @type {import('eslint').Linter.FlatConfig[]} */
+export default [
+  {
+    ...(cypress.configs.recommended),
+    files: ['cypress/e2e/**']
+  },
+  ...mochaPlus,
+  {
+    rules: {
+      // Conflicts with Cypress `should`
+      'mocha-cleanup/invalid-assertions': 0
+    }
   }
-};
+];

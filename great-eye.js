@@ -1,7 +1,8 @@
-'use strict';
+/* eslint-disable jsdoc/imports-as-dependencies -- Bug */
+import sauron from './sauron.js';
 
-module.exports = {
-  extends: ['./sauron.js'],
+/** @type {import('eslint').Linter.FlatConfig[]} */
+export default [...sauron, {
   settings: {
     preferredTypes: {
       'Promise.<>': {
@@ -50,8 +51,10 @@ module.exports = {
 
     'unicorn/numeric-separators-style': 'error',
     'unicorn/prevent-abbreviations': 'error',
-    'unicorn/expiring-todo-comments': ['warn', {allowWarningComments: false, terms: ['todo']}],
+    'unicorn/expiring-todo-comments': ['warn', {
+      allowWarningComments: false, terms: ['todo']
+    }],
     'unicorn/prefer-set-has': 'error',
     'unicorn/prefer-object-has-own': 'error'
   }
-};
+}];
