@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 35.3.0
+
+- chore: bump devDeps/peerDeps.
+
 ## 35.2.0
 
 - feat(tighten): update unicorn to 50.0.0
