@@ -40,7 +40,7 @@
     "inherited:no-unsanitized": "node inherited-rules/build.mjs inherited eslint-plugin-no-unsanitized DOM",
     "inherited": "rimraf inherited-rules/implicitly-included/*.js && npm run inherited:array-func && npm run inherited:compat && npm run inherited:eslint-comments && npm run inherited:html && npm run inherited:import && npm run inherited:markdown && npm run inherited:no-use-extend-native && npm run inherited:node && npm run inherited:promise && npm run inherited:sonarjs && echo \"DISABLED FOR NOW: npm run inherited:standard\" && npm run inherited:unicorn && npm run inherited:eslint-recommended && npm run inherited:eslint && npm run inherited:@brettz9 && npm run inherited:no-unsanitized && npm run inherited:jsdoc",
     "compare": "npm run inherited && npm run unused",
-    "eslint": "eslint --ext js,md,html .",
+    "eslint": "eslint --ext js,mjs,cjs,md,html .",
     "lint": "npm run eslint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

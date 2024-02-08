@@ -280,7 +280,10 @@ if (isInherited || Object.keys(rightConfig.rules).length) {
   // eslint-disable-next-line n/prefer-promises/fs -- needs higher Node version
   fs.writeFile(
     inheritedPath,
-    '"use strict";\nmodule.exports = {\n  rules: ' + JSON.stringify(rightConfig.rules, null, 2).replace(/\n/gu, '\n  ') + '\n};\n',
+    '"use strict";\nmodule.exports = {\n  rules: ' +
+      JSON.stringify(rightConfig.rules, null, 2).replaceAll(
+        '\n', '\n  '
+      ) + '\n};\n',
     // eslint-disable-next-line @stylistic/max-len -- Too long
     // eslint-disable-next-line promise/prefer-await-to-callbacks -- needs higher Node version to avoid
     (err) => {
