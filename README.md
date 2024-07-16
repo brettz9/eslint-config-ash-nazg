@@ -87,8 +87,8 @@ removed or significantly modified in a future version:
 - `mocha-plus.js`: Strict but reasonable rules for checking Mocha/Chai (not
     naming "sauron" as not bundling with Sauron)
 - `cypress.js`: Strict but reasonable rules for checking Cypress
-- `rc.js`: Config for using `overrides` to give Rollup and RC config files to
-    support modules where available (and script where not)
+- `overrides.js`: Config for overrides to give browser directories,
+    and config and RC config files suitable default config
 
 ## Comparison to other "standards"
 

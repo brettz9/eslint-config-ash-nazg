@@ -5,7 +5,7 @@ import index from './index.js';
 /** @type {import('eslint').Linter.FlatConfig[]} */
 const config = [
   ...index([
-    'sauron', 'node', 'rc'
+    'sauron', 'node', 'overrides'
   ]),
   {
     files: ['inherited-rules/**'],

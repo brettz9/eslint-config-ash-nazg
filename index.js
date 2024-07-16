@@ -1,5 +1,7 @@
 /* eslint-disable jsdoc/imports-as-dependencies -- Bug */
 // Todo: Add TS config, including for use with JS!
+// eslint-disable-next-line n/no-sync -- No async configs
+import {readFileSync} from 'fs';
 
 import globals from 'globals';
 
@@ -13,7 +15,7 @@ import main from './main.js';
 
 import scriptNode from './+script-node.js';
 import script from './+script.js';
-import rc from './rc.js';
+import overrides from './overrides.js';
 import browser from './browser.js';
 import cypress from './cypress.js';
 import mochaPlus from './mocha-plus.js';
@@ -21,25 +23,39 @@ import mochaPlus from './mocha-plus.js';
 import babel from './+babel.js';
 import thirdParty from './eslint.config.3rdparty.js';
 
+/**
+ * @type {{
+ *   type?: "module"|"commonjs",
+ *   browserslist?: string[]
+ * }}
+ */
+let pkg;
+try {
+  /* eslint-disable n/no-sync -- No async */
+  // @ts-expect-error JSON.parse can handle Buffer
+  pkg = JSON.parse(readFileSync('./package.json'));
+  /* eslint-enable n/no-sync -- No async */
+} catch (err) {
+  // eslint-disable-next-line no-console -- CLI
+  console.log('Error', err);
+}
+
+/**
+ * @typedef {("great-eye"|"sauron"|"saruman"|
+ *   "bare"|"polyglot"|"node"|"browser"|
+ *   "overrides"|
+ *   "script"|"module"|
+ *   "cypress"|"mocha"|
+ *   "babel"|"third-party")[]} Types
+ */
+
+
 // Todo: Detect script automatically for configs too; add module as option
-// Todo: determine that `polyglot` is default, or require node, polyglot
-//        or browser? Make need for "basic" explicit or as the default?
-//        Remember that polyglot is stricter than either Node or browser
-//        as only accepts common globals
-// Todo: Make browser dependent by default on specific folder (`public`,
-//        `demo`?)
-// Todo: Detect `browserlist` for browser setting, or use that to determine
-//        whether to apply the browser settings
 // Todo: How to figure if main code is being compiled (could check/load Babel
 //        and/or Rollup files, but a bit imperfect) so can safely use
 //        latest ecmaVersion? What about cases that can't be polyfilled?
 /**
- * @param {("great-eye"|"sauron"|"basic"|
- *   "node"|"polyglot"|"browser"|
- *   "script"|"module"|
- *   "rc"|
- *   "cypress"|"mocha"|
- *   "babel"|"third-party")[]} types
+ * @param {Types} types
  * @param {import('eslint').Linter.FlatConfig} [config]
  */
 export default function index (types, config) {
@@ -70,12 +86,26 @@ export default function index (types, config) {
     } else {
       configs.push(...sauron);
     }
+  // basic config ("saruman") is the default
   } else if (types.includes('node')) {
     configs.push(...node, {
       languageOptions
     });
   } else {
-    configs.push(...main);
+    configs.push(...main(pkg));
+  }
+
+  // `polyglot` is default, with polyglot stricter than either Node
+  //    or browser as only accepts common globals; remember too that
+  //    we have overrides for browser-specific and Node-specific
+  //    directories
+  if (!types.includes('node') && !types.includes('browser') &&
+    !types.includes('bare')) {
+    configs.push({
+      languageOptions: {
+        globals: globals['shared-node-browser']
+      }
+    });
   }
 
   if (types.includes('script')) {
@@ -86,11 +116,20 @@ export default function index (types, config) {
     }
   }
 
-  if (types.includes('rc')) {
-    configs.push(...rc);
+  if (types.includes('overrides')) {
+    configs.push(...overrides(types));
   }
 
   if (types.includes('browser')) {
+    if (!pkg.browserslist) {
+      // Can't detect for overrides though, as that may not actually be
+      //   using the browser-specific overrides
+      throw new Error(
+        'You have opted in for a browser-based config, but you have ' +
+        'not specified a `browserslist` in your `package.json`, e.g., ' +
+        'to `["cover 99.5%"]`.'
+      );
+    }
     configs.push(...browser);
     if (types.includes('node')) {
       configs.push({
