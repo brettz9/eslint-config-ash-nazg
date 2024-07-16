@@ -74,7 +74,7 @@ export default [
      */
     (chaiFriendly.configs).recommendedFlat
   ),
-  {
+  addTestFiles({
     rules: {
       // MOCHA
 
@@ -101,6 +101,6 @@ export default [
       }]
       */
     }
-  },
+  }),
   ...mocha
 ];

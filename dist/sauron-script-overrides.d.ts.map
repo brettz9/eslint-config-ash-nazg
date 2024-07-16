@@ -1,1 +1,1 @@
-{"version":3,"file":"sauron-script-overrides.d.ts","sourceRoot":"","sources":["../sauron-script-overrides.js"],"names":[],"mappings":"wBAKW,OAAO,QAAQ,EAAE,MAAM,CAAC,UAAU,EAAE"}
+{"version":3,"file":"sauron-script-overrides.d.ts","sourceRoot":"","sources":["../sauron-script-overrides.js"],"names":[],"mappings":"AAMS,qDACE,OAAO,YAAY,EAAE,KAAK,OAC5B;IACT,IAAU,CAAC,EAAE,QAAQ,GAAC,UAAU,CAAA;CAC3B,GACE,OAAO,QAAQ,EAAE,MAAM,CAAC,UAAU,EAAE,CAAA"}

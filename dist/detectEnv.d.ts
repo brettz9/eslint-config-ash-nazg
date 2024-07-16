@@ -2,23 +2,25 @@ export namespace languageOptions {
     export { globals };
     export { ecmaVersion };
 }
+export type EcmaVersion = 2024 | 2023 | 2022 | 2021 | 2020 | 2019 | 2018 | 2017 | 2016 | 2015 | 3 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15;
 /**
  * @param {string} packagePath
  */
 export function detectNodeVersion(packagePath: string): string | semver.SemVer;
 /**
  * @param {string|import('semver').SemVer} nodeVersion
+ * @returns {EcmaVersion}
 */
-export function getEcmaVersionForNodeVersion(nodeVersion: string | import("semver").SemVer): 5 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021;
+export function getEcmaVersionForNodeVersion(nodeVersion: string | import("semver").SemVer): EcmaVersion;
 /**
  * @param {{
- *   ecmaVersion: number,
+ *   ecmaVersion: EcmaVersion,
  *   nodeVersion: string|import('semver').SemVer,
  *   node?: boolean
  * }} cfg
  */
 export function getGlobalsForEcmaVersion({ ecmaVersion, nodeVersion, node }: {
-    ecmaVersion: number;
+    ecmaVersion: EcmaVersion;
     nodeVersion: string | import("semver").SemVer;
     node?: boolean;
 }): {};
@@ -27,10 +29,10 @@ export function getGlobalsForEcmaVersion({ ecmaVersion, nodeVersion, node }: {
  */
 export function getGlobalsAndEcmaVersionForCwd(cwd: string): {
     globals: {};
-    ecmaVersion: number;
+    ecmaVersion: EcmaVersion;
 };
 declare const globals: {};
-declare const ecmaVersion: 5 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021;
+declare const ecmaVersion: EcmaVersion;
 import semver from 'semver';
 export {};
 //# sourceMappingURL=detectEnv.d.ts.map

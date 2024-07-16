@@ -1,3 +1,4 @@
-declare const _default: import("eslint").Linter.FlatConfig[];
-export default _default;
+export default function node(pkg: {
+    type?: "module" | "commonjs";
+}): import("eslint").Linter.FlatConfig[];
 //# sourceMappingURL=node.d.ts.map

@@ -18,8 +18,8 @@ import sonarjs from 'eslint-plugin-sonarjs';
 import jsdoc from 'eslint-plugin-jsdoc';
 import noUseExtendNative from 'eslint-plugin-no-use-extend-native';
 
-import script from './+script.js';
-import modules from './+modules.js';
+import script from './script.js';
+import modules from './modules.js';
 import standard from './standard.js';
 
 // const __dirname = import.meta.dirname;

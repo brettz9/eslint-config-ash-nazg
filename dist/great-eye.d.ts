@@ -1,3 +1,4 @@
-declare const _default: import("eslint").Linter.FlatConfig[];
-export default _default;
+export default function greatEye(pkg: {
+    type?: "module" | "commonjs";
+}): import("eslint").Linter.FlatConfig[];
 //# sourceMappingURL=great-eye.d.ts.map

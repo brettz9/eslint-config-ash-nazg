@@ -2,14 +2,20 @@
 import node from './node.js';
 import sauron from './sauron.js';
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
-export default [
-  ...node,
-  ...sauron,
-  {
-    rules: {
-      'n/prefer-promises/dns': ['error'],
-      'n/prefer-promises/fs': ['error']
+/**
+ * @type {(pkg: {
+ *   type?: "module"|"commonjs"
+ * }) => import('eslint').Linter.FlatConfig[]}
+ */
+export default function sauronNode (pkg) {
+  return [
+    ...node(pkg),
+    ...sauron(pkg),
+    {
+      rules: {
+        'n/prefer-promises/dns': ['error'],
+        'n/prefer-promises/fs': ['error']
+      }
     }
-  }
-];
+  ];
+}

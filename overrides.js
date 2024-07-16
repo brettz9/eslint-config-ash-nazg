@@ -9,19 +9,23 @@ import browser from './browser.js';
 import greatEyeNode from './great-eye-node.js';
 import sauronNode from './sauron-node.js';
 import node from './node.js';
+import polyglot from './polyglot.js';
 
 /**
  * @type {(
- *   types: import('./index.js').Types) =>
- *     import('eslint').Linter.FlatConfig[]
+ *   types: import('./index.js').Types,
+ *   pkg: {
+ *     type?: "module"|"commonjs"
+ *   }
+ * ) => import('eslint').Linter.FlatConfig[]
  * }
  */
-export default function overrides (types) {
-  const nodeConfig = types.includes('sauron')
-    ? greatEyeNode
+export default function overrides (types, pkg) {
+  const nodeConfigs = types.includes('sauron')
+    ? greatEyeNode(pkg)
     : types.includes('sauron')
-      ? sauronNode
-      : node;
+      ? sauronNode(pkg)
+      : node(pkg);
   return [
     ...overridesScript.map((cfg) => {
       return {
@@ -86,28 +90,30 @@ export default function overrides (types) {
 
       return {
         ...cfg,
-        files: ['demo/**', '**/public/**']
+        files: ['demo/**', 'browser/**', '**/public/**']
       };
     }),
-    ...nodeConfig.map((cfg) => {
-      if (!cfg.rules) {
-        cfg.rules = {};
-      }
-      cfg.rules['compat/compat'] = 'off';
-      if (!cfg.languageOptions) {
-        cfg.languageOptions = {};
-      }
-      if (!cfg.languageOptions.globals) {
-        cfg.languageOptions.globals = {};
-      }
-      cfg.languageOptions.globals = {
-        ...cfg.languageOptions.globals,
-        ...globals.node
-      };
-
+    ...polyglot.map((config) => {
       return {
-        ...cfg,
-        files: ['build/**']
+        ...config,
+        files: ['polyglot/**']
+      };
+    }),
+    ...nodeConfigs.map((config) => {
+      return {
+        ...config,
+        files: ['build/**'],
+        languageOptions: {
+          ...config.languageOptions,
+          globals: {
+            ...config.languageOptions?.globals,
+            ...globals.node
+          }
+        },
+        rules: {
+          ...config.rules,
+          'compat/compat': /** @type {const} */ ('off')
+        }
       };
     })
   ];

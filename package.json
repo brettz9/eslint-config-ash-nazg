@@ -7,7 +7,7 @@
   "scripts": {
     "prepublishOnly": "pnpm i",
     "test-3rd": "es-file-traverse --file ./main.js --node --cjs --ignoreResolutionErrors",
-    "lint-3rd": "eslint --no-inline-config --config eslint.config.3rdparty.js `es-file-traverse --file ./main.js --node --cjs --ignoreResolutionErrors --parserOptions=\"{\\\"requireConfigFile\\\":false,\\\"babelOptions\\\":{\\\"plugins\\\":[\\\"@babel/plugin-syntax-import-attributes\\\"]}}\"`",
+    "lint-3rd": "eslint --no-inline-config --config third-party.js `es-file-traverse --file ./main.js --node --cjs --ignoreResolutionErrors --parserOptions=\"{\\\"requireConfigFile\\\":false,\\\"babelOptions\\\":{\\\"plugins\\\":[\\\"@babel/plugin-syntax-import-attributes\\\"]}}\"`",
     "3rd": "es-file-traverse --file ./main.js --node --cjs --ignoreResolutionErrors --parserOptions=\"{\\\"requireConfigFile\\\":false,\\\"babelOptions\\\":{\\\"plugins\\\":[\\\"@babel/plugin-syntax-import-attributes\\\"]}}\"",
     "unused:array-func": "node inherited-rules/build.mjs unused eslint-plugin-array-func all",
     "unused:compat": "node inherited-rules/build.mjs unused eslint-plugin-compat recommended",

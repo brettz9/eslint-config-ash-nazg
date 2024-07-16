@@ -11,6 +11,7 @@ export default [
   },
   ...mochaPlus,
   {
+    files: ['cypress/e2e/**'],
     rules: {
       // Conflicts with Cypress `should`
       'mocha-cleanup/invalid-assertions': 0

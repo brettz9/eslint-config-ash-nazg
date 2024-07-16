@@ -1,1 +1,1 @@
-{"version":3,"file":"sauron-script.d.ts","sourceRoot":"","sources":["../sauron-script.js"],"names":[],"mappings":"wBAIW,OAAO,QAAQ,EAAE,MAAM,CAAC,UAAU,EAAE"}
+{"version":3,"file":"sauron-script.d.ts","sourceRoot":"","sources":["../sauron-script.js"],"names":[],"mappings":"AAKU,0CAAM;IAChB,IAAQ,CAAC,EAAE,QAAQ,GAAC,UAAU,CAAA;CAC3B,GAAK,OAAO,QAAQ,EAAE,MAAM,CAAC,UAAU,EAAE,CAAA"}

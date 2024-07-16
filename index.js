@@ -12,16 +12,18 @@ import sauronNode from './sauron-node.js';
 import sauron from './sauron.js';
 import node from './node.js';
 import main from './main.js';
+import polyglot from './polyglot.js';
+import bare from './bare.js';
 
-import scriptNode from './+script-node.js';
-import script from './+script.js';
+import scriptNode from './script-node.js';
+import script from './script.js';
 import overrides from './overrides.js';
 import browser from './browser.js';
 import cypress from './cypress.js';
 import mochaPlus from './mocha-plus.js';
 
-import babel from './+babel.js';
-import thirdParty from './eslint.config.3rdparty.js';
+import babel from './babel.js';
+import thirdParty from './third-party.js';
 
 /**
  * @type {{
@@ -42,18 +44,21 @@ try {
 
 /**
  * @typedef {("great-eye"|"sauron"|"saruman"|
- *   "bare"|"polyglot"|"node"|"browser"|
- *   "overrides"|
+ *   "polyglot"|"bare"|"node"|"browser"|
  *   "script"|"module"|
- *   "cypress"|"mocha"|
+ *   "no-overrides"|
+ *   "no-cypress"|"mocha"|
  *   "babel"|"third-party")[]} Types
  */
 
-
-// Todo: Detect script automatically for configs too; add module as option
 // Todo: How to figure if main code is being compiled (could check/load Babel
-//        and/or Rollup files, but a bit imperfect) so can safely use
-//        latest ecmaVersion? What about cases that can't be polyfilled?
+//        and/or Rollup files, but a bit imperfect) so can safely use latest
+//        `ecmaVersion` even for `polyglot`/`bare` which can't rely on
+//        `engines`? Can use `polyglot` folder without disabling overrides and
+//            manually apply `ecmaVersion: 'latest'` to it
+//        `escompat` should handle for browser at least, with high default
+//        `ecmaVersion` of its own:
+//        https://github.com/keithamus/eslint-plugin-escompat/issues/25
 /**
  * @param {Types} types
  * @param {import('eslint').Linter.FlatConfig} [config]
@@ -72,23 +77,23 @@ export default function index (types, config) {
 
   if (types.includes('great-eye')) {
     if (types.includes('node')) {
-      configs.push(...greatEyeNode, {
+      configs.push(...greatEyeNode(pkg), {
         languageOptions
       });
     } else {
-      configs.push(...greatEye);
+      configs.push(...greatEye(pkg));
     }
   } else if (types.includes('sauron')) {
     if (types.includes('node')) {
-      configs.push(...sauronNode, {
+      configs.push(...sauronNode(pkg), {
         languageOptions
       });
     } else {
-      configs.push(...sauron);
+      configs.push(...sauron(pkg));
     }
   // basic config ("saruman") is the default
   } else if (types.includes('node')) {
-    configs.push(...node, {
+    configs.push(...node(pkg), {
       languageOptions
     });
   } else {
@@ -99,16 +104,13 @@ export default function index (types, config) {
   //    or browser as only accepts common globals; remember too that
   //    we have overrides for browser-specific and Node-specific
   //    directories
-  if (!types.includes('node') && !types.includes('browser') &&
-    !types.includes('bare')) {
-    configs.push({
-      languageOptions: {
-        globals: globals['shared-node-browser']
-      }
-    });
+  if (types.includes('bare')) {
+    configs.push(...bare);
+  } else if (!types.includes('node') && !types.includes('browser')) {
+    configs.push(...polyglot);
   }
 
-  if (types.includes('script')) {
+  if (types.includes('script') || pkg.type !== 'module') {
     if (types.includes('node')) {
       configs.push(...scriptNode);
     } else {
@@ -116,8 +118,8 @@ export default function index (types, config) {
     }
   }
 
-  if (types.includes('overrides')) {
-    configs.push(...overrides(types));
+  if (!types.includes('no-overrides')) {
+    configs.push(...overrides(types, pkg));
   }
 
   if (types.includes('browser')) {
@@ -146,7 +148,7 @@ export default function index (types, config) {
     }
   }
 
-  if (types.includes('cypress')) {
+  if (!types.includes('no-cypress')) {
     configs.push(...cypress);
   } else if (types.includes('mocha')) {
     configs.push(...mochaPlus);

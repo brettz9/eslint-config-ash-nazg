@@ -1,9 +1,19 @@
 /* eslint-disable jsdoc/imports-as-dependencies -- Bug */
 import sauronNodeScript from './sauron-node-script.js';
-import rc from './overrides.js';
+import overrides from './overrides.js';
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
-export default [
-  ...sauronNodeScript,
-  ...rc
-];
+/**
+* @type {(
+  *   types: import('./index.js').Types,
+  *   pkg: {
+  *     type?: "module"|"commonjs"
+  *   }
+  * ) => import('eslint').Linter.FlatConfig[]
+  * }
+  */
+export default function sauronNodeScriptOverrides (types, pkg) {
+  return [
+    ...sauronNodeScript(pkg),
+    ...overrides(types, pkg)
+  ];
+}

@@ -1,7 +1,17 @@
 /* eslint-disable jsdoc/imports-as-dependencies -- Bug */
 import sauronScript from './sauron-script.js';
-import rc from './overrides.js';
+import overrides from './overrides.js';
 import mocha from './mocha.js';
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
-export default [...sauronScript, ...rc, ...mocha];
+/**
+* @type {(
+*   types: import('./index.js').Types,
+*   pkg: {
+*     type?: "module"|"commonjs"
+*   }
+* ) => import('eslint').Linter.FlatConfig[]
+* }
+*/
+export default function sauronScriptOverrides (types, pkg) {
+  return [...sauronScript(pkg), ...overrides(types, pkg), ...mocha];
+}
