@@ -1,5 +1,52 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.0.0
+
+BREAKING CHANGE:
+
+Requires Node 18.20.3+
+
+Now to use the main config which is now a function accepting an array of
+combinations of the following (and a second optional config for the
+`babel` option):
+
+> "great-eye"|"sauron"|"saruman"|"polyglot"|"bare"|"node"|"browser"|
+"script"|"module"|"no-overrides"|"no-cypress"|"mocha"|"babel"|
+"third-party"
+
+Was not able to complete reinclusion for the following due to lack of
+flat config or ESLint 9 support:
+
+1. eslint-plugin-import
+2. eslint-plugin-escompat
+3. eslint-plugin-unsanitized
+4. @fintechstudios/eslint-plugin-chai-as-promised
+5. eslint-plugin-mocha-cleanup
+
+Renamed `rc` config to `overrides`.
+
+Throws if not encountering a `browserslist` in `package.json` when using
+the main browser config.
+
+Adds rules to `overrides` for folders, treating folders like `public` or
+`browser` as calling for the browser config. Applies more to the
+(auto-Node-based) `build` config.
+
+Auto-applies `overrides` and `cypress` by default.
+
+Renamed third-party config to `third-party.js`.
+
+Possibly other changes.
+
+- feat: switch to flat config
+- feat: add `bare` and `polyglot` configs
+- chore: update globals, semver
+- chore: some TS work
+- feat: detects `sourceType` automatically for .js files too,
+   based on `package.json`
+- fix: drop `no-unpublished-import` checks from rc configs
+- fix: add `eslint.config.js` to ESM configs
+
 ## 35.4.0
 
 - chore: bump devDeps/peerDeps.
