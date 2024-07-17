@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.0.4
+
+- fix: disable `import` rule usage in great-eye
+- fix: ensure great-eye is not used when sauron indicated
+
 ## 36.0.3
 
 - fix: add `server.js` to auto-Node files

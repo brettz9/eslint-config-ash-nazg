@@ -22,7 +22,7 @@ import polyglot from './polyglot.js';
  * }
  */
 export default function overrides (types, pkg) {
-  const nodeConfigs = types.includes('sauron')
+  const nodeConfigs = types.includes('great-eye')
     ? greatEyeNode(pkg)
     : types.includes('sauron')
       ? sauronNode(pkg)
