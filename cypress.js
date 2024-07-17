@@ -14,7 +14,8 @@ export default [
     files: ['cypress/**'],
     rules: {
       // Conflicts with Cypress `should`
-      'mocha-cleanup/invalid-assertions': 0
+      'mocha-cleanup/invalid-assertions': 0,
+      'import/unambiguous': 'off'
     }
   }
 ];

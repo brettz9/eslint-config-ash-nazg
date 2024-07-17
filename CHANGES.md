@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- fix: disable `import/unambiguous` in Cypress
+
 ## 36.0.4
 
 - fix: disable `import` rule usage in great-eye
