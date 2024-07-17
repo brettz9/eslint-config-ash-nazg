@@ -7,11 +7,11 @@ import mochaPlus from './mocha-plus.js';
 export default [
   {
     ...(cypress.configs.recommended),
-    files: ['cypress/e2e/**']
+    files: ['cypress/**']
   },
   ...mochaPlus,
   {
-    files: ['cypress/e2e/**'],
+    files: ['cypress/**'],
     rules: {
       // Conflicts with Cypress `should`
       'mocha-cleanup/invalid-assertions': 0

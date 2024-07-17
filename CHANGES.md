@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.0.2
+
+- fix: apply Cypress rules to all of `cypress` subdirectories
+- fix: ensure Node applied to Node RC scripts
+
 ## 36.0.1
 
 - fix: ensure when Node not included that modules does not reference Node

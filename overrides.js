@@ -3,6 +3,7 @@
 import {readFileSync} from 'fs';
 import globals from 'globals';
 import overridesScript from './overrides-script.js';
+import overridesScriptNode from './overrides-script-node.js';
 import overridesModule from './overrides-module.js';
 import browser from './browser.js';
 
@@ -35,17 +36,24 @@ export default function overrides (types, pkg) {
           '.babelrc.js',
           'babel.config.js',
           '.eslintrc.js',
-          '.eslintrc.cjs',
           '.mocharc.js',
-          '.mocharc.cjs',
           '.ncurc.js',
-          '.ncurc.cjs',
           '.3rdparty-eslintrc.js',
           '**/jsdoc-config.js',
           'webpack.config.js',
           '**/.vuepress/config.js',
           '*.webpack.config.js',
-          'web-ext-config.js',
+          'web-ext-config.js'
+        ]
+      };
+    }),
+    ...overridesScriptNode.map((cfg) => {
+      return {
+        ...cfg,
+        files: [
+          '.eslintrc.cjs',
+          '.mocharc.cjs',
+          '.ncurc.cjs',
           'web-ext-config.cjs'
         ]
       };
