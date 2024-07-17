@@ -30,7 +30,19 @@ export default function node (pkg) {
   return [
     ...index(pkg),
     standard[1],
-    nodePlugin.configs['flat/recommended-module'],
+    nodeRecommendedModule,
+    {
+      rules: {
+        'n/no-unsupported-features/es-syntax': [
+          'error',
+          // We could check for `ecmaVersion < 2020` to restrict
+          //   `dynamicImport`, but if present, typically compiling,
+          //   and seems support was available in earlier Node
+          //   experimentally anyways
+          {ignores: ['modules', 'dynamicImport']}
+        ]
+      }
+    },
     {
       // Node-specific modules
       ...modules[1],

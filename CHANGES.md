@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.0.1
+
+- fix: ensure when Node not included that modules does not reference Node
+    rules
+
 ## 36.0.0
 
 BREAKING CHANGE:

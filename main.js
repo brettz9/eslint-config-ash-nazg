@@ -21,24 +21,12 @@ import noUseExtendNative from 'eslint-plugin-no-use-extend-native';
 import script from './script.js';
 import modules from './modules.js';
 import standard from './standard.js';
+import {addFiles} from './index.js';
 
 // const __dirname = import.meta.dirname;
 // const compat = new FlatCompat({
 //   baseDirectory: __dirname
 // });
-
-/**
- * @param {import('eslint').Linter.FlatConfig[]} cfgs
- * @param {string[]} files
- * @returns {import('eslint').Linter.FlatConfig[]}
- */
-function addFiles (cfgs, files) {
-  // if Array.isArray(cfg) {}
-  return cfgs.map((cfg) => {
-    cfg.files = files;
-    return cfg;
-  });
-}
 
 /**
  * @type {(cfg: {
@@ -50,7 +38,9 @@ export default function main (pkg) {
     {
       ignores: ['dist'] // "third-party" can unset
     },
-    ...addFiles(pkg.type === 'module' ? modules : script, ['**/*.js']),
+    ...(/** @type {import('eslint').Linter.FlatConfig[]} */ (
+      addFiles(pkg.type === 'module' ? modules : script, ['**/*.js'])
+    )),
     {
       ...script[0],
       files: ['**/*.cjs']

@@ -26,6 +26,25 @@ import babel from './babel.js';
 import thirdParty from './third-party.js';
 
 /**
+ * @param {import('eslint').Linter.FlatConfig|
+*   import('eslint').Linter.FlatConfig[]} cfgs
+* @param {string[]} files
+* @returns {import('eslint').Linter.FlatConfig|
+*    import('eslint').Linter.FlatConfig[]
+* }
+*/
+export function addFiles (cfgs, files) {
+  if (Array.isArray(cfgs)) {
+    return cfgs.map((cfg) => {
+      cfg.files = files;
+      return cfg;
+    });
+  }
+  cfgs.files = files;
+  return cfgs;
+}
+
+/**
  * @type {{
  *   type?: "module"|"commonjs",
  *   browserslist?: string[]
