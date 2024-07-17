@@ -110,7 +110,7 @@ export default function overrides (types, pkg) {
     ...nodeConfigs.map((config) => {
       return {
         ...config,
-        files: ['build/**'],
+        files: ['build/**', 'server.js'],
         languageOptions: {
           ...config.languageOptions,
           globals: {

@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.0.3
+
+- fix: add `server.js` to auto-Node files
+
 ## 36.0.2
 
 - fix: apply Cypress rules to all of `cypress` subdirectories
