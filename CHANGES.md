@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.2.0
+
+- feat: add `name` to further configs
+- chore: bump `semver` and `@brettz9/eslint-plugin`
+
 ## 36.1.0
 
 - feat: add `name` to configs

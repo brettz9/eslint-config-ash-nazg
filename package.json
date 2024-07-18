@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ash-nazg",
-  "version": "36.1.0",
+  "version": "36.2.0",
   "description": "An expansion and tweaking of the \"standard\" config style for ESLint",
   "main": "index.js",
   "type": "module",
@@ -68,7 +68,7 @@
     "@babel/eslint-parser": "^7.24.8",
     "@babel/eslint-plugin": "^7.24.7",
     "@babel/plugin-syntax-import-attributes": "^7.24.7",
-    "@brettz9/eslint-plugin": "^2.0.1",
+    "@brettz9/eslint-plugin": "^3.0.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.3.0",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.7.0",
@@ -95,7 +95,7 @@
     "eslint-plugin-sonarjs": "^1.0.3",
     "eslint-plugin-unicorn": "^54.0.0",
     "globals": "^15.8.0",
-    "semver": "^7.6.2"
+    "semver": "^7.6.3"
   },
   "peerDependencies": {
     "eslint": "^9.6.0"
@@ -104,7 +104,7 @@
     "@scottnonnenberg/eslint-compare-config": "^1.1.0",
     "@types/eslint-plugin-markdown": "^2.0.2",
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^20.14.10",
+    "@types/node": "^20.14.11",
     "@types/semver": "^7.5.8",
     "eslint": "^9.7.0",
     "rimraf": "^5.0.0",

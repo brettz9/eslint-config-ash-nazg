@@ -5,7 +5,10 @@ import eslintCompat from 'eslint-plugin-compat';
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
-  eslintCompat.configs['flat/recommended']
+  {
+    name: 'ash-nazg/compat/flat-recommended',
+    ...eslintCompat.configs['flat/recommended']
+  }
   // esCompat.configs['flat/recommended]
   // noUnsanitized.DOM,
 ];

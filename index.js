@@ -97,6 +97,7 @@ export default function index (types, config) {
   if (types.includes('great-eye')) {
     if (types.includes('node')) {
       configs.push(...greatEyeNode(pkg), {
+        name: 'ash-nazg/great-eye-node/languageOptions',
         languageOptions
       });
     } else {
@@ -105,6 +106,7 @@ export default function index (types, config) {
   } else if (types.includes('sauron')) {
     if (types.includes('node')) {
       configs.push(...sauronNode(pkg), {
+        name: 'ash-nazg/sauron-node/languageOptions',
         languageOptions
       });
     } else {
@@ -113,6 +115,7 @@ export default function index (types, config) {
   // basic config ("saruman") is the default
   } else if (types.includes('node')) {
     configs.push(...node(pkg), {
+      name: 'ash-nazg/node/languageOptions',
       languageOptions
     });
   } else {
@@ -152,14 +155,20 @@ export default function index (types, config) {
       );
     }
     configs.push(...browser);
+    // Should we get ride of this--use polyglot if needing intersection of both
     if (types.includes('node')) {
       configs.push({
+        name: 'ash-nazg/node-and-browser/globals',
         languageOptions: {
-          globals: globals['shared-node-browser']
+          globals: {
+            ...globals.node,
+            ...globals.browser
+          }
         }
       });
     } else {
       configs.push({
+        name: 'ash-nazg/browser/globals',
         languageOptions: {
           globals: globals.browser
         }

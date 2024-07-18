@@ -6,6 +6,7 @@ import mochaPlus from './mocha-plus.js';
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
   {
+    name: 'ash-nazg/cypress/recommended',
     ...(cypress.configs.recommended),
     files: ['cypress/**']
   },

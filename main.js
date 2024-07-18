@@ -58,20 +58,35 @@ export default function main (pkg) {
     // These may override 'standard' which includes their rules,
     //   so including first
     // ...compat.extends('plugin:import/recommended'), // Todo: Reenable after ESLint 9/Flat support: https://github.com/import-js/eslint-plugin-import/issues/2948
-    promise.configs['flat/recommended'],
+    {
+      name: 'ash-nazg/promise/recommended',
+      ...promise.configs['flat/recommended']
+    },
     // This may override eslint:recommended and the promise/import rules,
     //  but it doesn't turn any off
     standard[0], // Using this until eslint-config-standard fixes
 
     // These only add their own rules and are not used by the others
     unicorn.configs['flat/recommended'],
-    comments.recommended,
-    arrayFunc.configs.all,
-    /** @type {import('eslint').Linter.FlatConfig} */ (
-      sonarjs.configs.recommended
-    ),
+    {
+      name: 'ash-nazg/comments/recommended',
+      ...comments.recommended
+    },
+    {
+      name: 'ash-nazg/array-func/all',
+      ...arrayFunc.configs.all
+    },
+    {
+      name: 'ash-nazg/sonarjs/recommended',
+      ...(/** @type {import('eslint').Linter.FlatConfig} */ (
+        sonarjs.configs.recommended
+      ))
+    },
     jsdoc.configs['flat/recommended'],
-    noUseExtendNative.configs.recommended,
+    {
+      name: 'ash-nazg/no-use-extend-native/recommended',
+      ...noUseExtendNative.configs.recommended
+    },
 
     modules[0],
     {

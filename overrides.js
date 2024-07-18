@@ -48,10 +48,10 @@ export default function overrides (types, pkg) {
         ]
       };
     }),
-    ...overridesScriptNode.map((cfg) => {
+    ...overridesScriptNode.map((cfg, idx) => {
       return {
         ...cfg,
-        name: 'ash-nazg/overrides/rc/cjs-node',
+        name: 'ash-nazg/overrides/rc/cjs-node/' + (cfg.name ?? idx),
         files: [
           '.eslintrc.cjs',
           '.mocharc.cjs',
@@ -114,10 +114,11 @@ export default function overrides (types, pkg) {
         files: ['polyglot/**']
       };
     }),
-    ...nodeConfigs.map((config) => {
+    ...nodeConfigs.map((config, idx) => {
       return {
         ...config,
-        name: 'ash-nazg/overrides/node-folders-or-files',
+        name: 'ash-nazg/overrides/node-folders-or-files/' +
+          (config.name ?? idx),
         files: ['build/**', 'server.js'],
         languageOptions: {
           ...config.languageOptions,
