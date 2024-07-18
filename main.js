@@ -52,7 +52,10 @@ export default function main (pkg) {
       name: 'ash-nazg/modules/mjs',
       files: ['**/*.mjs']
     },
-    js.configs.recommended,
+    {
+      name: 'ash-nazg/@eslint-js/recommended',
+      ...js.configs.recommended
+    },
     ...brettz9.configs.es6,
 
     // These may override 'standard' which includes their rules,

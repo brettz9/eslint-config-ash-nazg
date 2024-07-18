@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.2.1
+
+- fix: add one missing `name`
+
 ## 36.2.0
 
 - feat: add `name` to further configs
