@@ -60,7 +60,7 @@ export default function node (pkg) {
       rules: {
         // Disable Node-added
         // (Use Unicorn extension instead which allows in CLI apps)
-        'no-process-exit': 'off',
+        // 'no-process-exit': 'off', // Deprecated
         'n/exports-style': ['error', 'module.exports'],
         'n/prefer-global/buffer': ['error', 'always'],
         'n/prefer-global/console': ['error', 'always'],
@@ -73,9 +73,9 @@ export default function node (pkg) {
         // Still in "standard" (move to `explicitly-unused` or remove
         //   when removed there); if they enable some of the
         //   `eslint-plugin-n` equivalents, then remove them below
-        'handle-callback-err': 'off',
-        'no-new-require': 'off',
-        'no-path-concat': 'off',
+        // 'handle-callback-err': 'off', // Deprecated
+        // 'no-new-require': 'off', // Deprecated
+        // 'no-path-concat': 'off', // Deprecated
 
         // Enable eslint-plugin-n equivalents
         'n/callback-return': 'error',

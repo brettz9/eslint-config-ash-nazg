@@ -145,17 +145,17 @@ export default function main (pkg) {
 
         // Disable standard (which still uses)
         '@stylistic/lines-between-class-members': 'off',
-        'lines-between-class-members': 'off',
+        // 'lines-between-class-members': 'off', // Deprecated
         '@stylistic/object-curly-newline': ['off'],
-        'object-curly-newline': ['off'],
+        // 'object-curly-newline': ['off'], // Deprecated
         '@stylistic/object-property-newline': ['off'],
-        'object-property-newline': ['off'],
+        // 'object-property-newline': ['off'], // Deprecated
         '@stylistic/no-extra-parens': ['off'],
-        'no-extra-parens': ['off'],
+        // 'no-extra-parens': ['off'], // Deprecated
 
         // Override standard
         '@stylistic/padded-blocks': ['error', 'never'],
-        'padded-blocks': ['error', 'never'],
+        // 'padded-blocks': ['error', 'never'], // Deprecated
         '@stylistic/spaced-comment': ['error', 'always', {markers: ['/']}],
 
         // Disable non-stylistic from standard
@@ -174,7 +174,7 @@ export default function main (pkg) {
         'no-await-in-loop': ['error'],
         'no-constant-binary-expression': 'error',
         'no-bitwise': ['error'],
-        'no-buffer-constructor': ['error'],
+        // 'no-buffer-constructor': ['error'], // Deprecated
         'no-constructor-return': ['error'],
         'no-div-regex': ['error'],
         'no-duplicate-imports': ['error'],
@@ -333,7 +333,7 @@ export default function main (pkg) {
         'unicorn/empty-brace-spaces': 'off',
         'unicorn/explicit-length-check': 'off',
         'unicorn/filename-case': 'off',
-        'unicorn/import-index': 'off',
+        // 'unicorn/import-index': 'off', // Deprecated
         'unicorn/import-style': 'off',
         'unicorn/no-array-for-each': 'off',
         'unicorn/no-array-reduce': 'off',
@@ -353,7 +353,7 @@ export default function main (pkg) {
         'unicorn/prefer-array-flat-map': 'off',
 
         'unicorn/prevent-abbreviations': 'off',
-        'unicorn/prefer-exponentiation-operator': 'off',
+        // 'unicorn/prefer-exponentiation-operator': 'off', // Deprecated
         'unicorn/prefer-export-from': 'off',
         'unicorn/prefer-module': 'off',
         'unicorn/prefer-node-protocol': 'off',
@@ -370,7 +370,7 @@ export default function main (pkg) {
         // UNICORN
         'unicorn/better-regex': ['error', {sortCharacterClasses: false}],
         'unicorn/custom-error-definition': 'error',
-        'unicorn/no-unsafe-regex': 'error',
+        // 'unicorn/no-unsafe-regex': 'error', // Removed
         'unicorn/prefer-event-target': 'error',
         'unicorn/require-post-message-target-origin': 'error',
 

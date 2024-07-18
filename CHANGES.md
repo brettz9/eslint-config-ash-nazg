@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.3.0
+
+- fix: remove/change deprecated rules
+
 ## 36.2.1
 
 - fix: add one missing `name`

@@ -17,7 +17,7 @@ export default [
     },
     rules: {
       // Allow for Node or Unicorn
-      'no-process-exit': 'off',
+      // 'no-process-exit': 'off', // Deprecated
 
       'import/no-commonjs': 'off',
       strict: ['error']
