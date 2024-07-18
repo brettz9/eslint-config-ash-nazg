@@ -1,6 +1,7 @@
 /* eslint-disable jsdoc/imports-as-dependencies -- Bug */
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [{
+  name: 'ash-nazg/standard',
   rules: {
     'accessor-pairs': 'error',
     '@stylistic/arrow-spacing': 'error',
@@ -133,6 +134,7 @@ export default [{
     // 'import/no-webpack-loader-syntax': 'error'
   }
 }, {
+  name: 'ash-nazg/standard/node',
   rules: {
     'n/no-callback-literal': 'error',
     'n/no-deprecated-api': 'error',

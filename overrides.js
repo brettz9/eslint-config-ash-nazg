@@ -31,6 +31,7 @@ export default function overrides (types, pkg) {
     ...overridesScript.map((cfg) => {
       return {
         ...cfg,
+        name: 'ash-nazg/overrides/rc/js',
         files: [
           '**/scripts/**/*',
           '.babelrc.js',
@@ -50,6 +51,7 @@ export default function overrides (types, pkg) {
     ...overridesScriptNode.map((cfg) => {
       return {
         ...cfg,
+        name: 'ash-nazg/overrides/rc/cjs-node',
         files: [
           '.eslintrc.cjs',
           '.mocharc.cjs',
@@ -61,6 +63,7 @@ export default function overrides (types, pkg) {
     ...overridesModule.map((cfg) => {
       return {
         ...cfg,
+        name: 'ash-nazg/overrides/rc/modules',
         files: [
           '**/scripts/rollup-plugin/**/*',
           'rollup.config.js',
@@ -70,10 +73,12 @@ export default function overrides (types, pkg) {
       };
     }),
     {
+      name: 'ash-nazg/overrides/markdown/processor',
       files: ['**/*.{md,mkdn,mdown,markdown}'],
       processor: 'markdown/markdown'
     },
     {
+      name: 'ash-nazg/overrides/markdown/js',
       files: ['**/*.md/*.js'],
       rules: {
         'n/no-missing-require': ['error', {allowModules: [
@@ -98,18 +103,21 @@ export default function overrides (types, pkg) {
 
       return {
         ...cfg,
+        name: 'ash-nazg/overrides/browser',
         files: ['demo/**', 'browser/**', '**/public/**']
       };
     }),
     ...polyglot.map((config) => {
       return {
         ...config,
+        name: 'ash-nazg/overrides/polyglot-folder',
         files: ['polyglot/**']
       };
     }),
     ...nodeConfigs.map((config) => {
       return {
         ...config,
+        name: 'ash-nazg/overrides/node-folders-or-files',
         files: ['build/**', 'server.js'],
         languageOptions: {
           ...config.languageOptions,

@@ -8,6 +8,7 @@ import sauron from './sauron.js';
  */
 export default function greatEye (pkg) {
   return [...sauron(pkg), {
+    name: 'ash-nazg/great-eye',
     settings: {
       preferredTypes: {
         'Promise.<>': {

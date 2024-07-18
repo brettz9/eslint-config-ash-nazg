@@ -8,20 +8,13 @@ const config = [
     'sauron', 'node'
   ]),
   {
+    name: 'ash-nazg-internal/inherited',
     files: ['inherited-rules/**'],
     ignores: ['inherited-rules/build.js'],
     rules: {
       // Uses JSON.stringify
       '@stylistic/quotes': ['error', 'double'],
       '@stylistic/quote-props': 'off'
-    }
-  },
-  {
-    settings: {
-      polyfills: [
-        'Object.entries',
-        'Object.values'
-      ]
     }
   }
 ];

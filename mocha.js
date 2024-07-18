@@ -4,6 +4,7 @@
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [{
+  name: 'ash-nazg/mocha',
   files: ['**/test/**', '**/tests/**', 'cypress/integration/**'],
   languageOptions: {
     globals: {

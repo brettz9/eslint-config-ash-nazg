@@ -1,6 +1,7 @@
 /* eslint-disable jsdoc/imports-as-dependencies -- Bug */
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [{
+  name: 'ash-nazg-internal/explicitly-unused',
   rules: {
     // This file is for indicating those rules available in inherited plugins
     // which we have consciously not included (and not help catch any not

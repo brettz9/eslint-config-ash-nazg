@@ -6,9 +6,11 @@ import babelEsintParser from '@babel/eslint-parser';
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
   {
+    name: 'ash-nazg/third-party/ignores',
     ignores: ['!**/node_modules/', '!dist']
   },
   {
+    name: 'ash-nazg/third-party',
     languageOptions: {
       parser: babelEsintParser,
       parserOptions: {

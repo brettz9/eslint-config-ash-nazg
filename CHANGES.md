@@ -1,7 +1,8 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 36.1.0
 
+- feat: add `name` to configs
 - fix: disable `import/unambiguous` in Cypress
 
 ## 36.0.4

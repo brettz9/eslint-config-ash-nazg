@@ -11,6 +11,7 @@ export default [
   },
   ...mochaPlus,
   {
+    name: 'ash-nazg/cypress',
     files: ['cypress/**'],
     rules: {
       // Conflicts with Cypress `should`

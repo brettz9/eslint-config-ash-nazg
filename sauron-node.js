@@ -12,6 +12,7 @@ export default function sauronNode (pkg) {
     ...node(pkg),
     ...sauron(pkg),
     {
+      name: 'ash-nazg/sauron-node',
       rules: {
         'n/prefer-promises/dns': ['error'],
         'n/prefer-promises/fs': ['error']

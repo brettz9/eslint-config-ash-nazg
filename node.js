@@ -32,6 +32,7 @@ export default function node (pkg) {
     standard[1],
     nodeRecommendedModule,
     {
+      name: 'ash-nazg/node-esm/allow-dynamic-import-and-modules',
       rules: {
         'n/no-unsupported-features/es-syntax': [
           'error',
@@ -46,9 +47,11 @@ export default function node (pkg) {
     {
       // Node-specific modules
       ...modules[1],
+      name: 'ash-nazg/modules/mjs',
       files: ['**/*.mjs']
     },
     {
+      name: 'ash-nazg/node-esm',
       languageOptions: {
         globals: {
           ...esmNodeGlobals

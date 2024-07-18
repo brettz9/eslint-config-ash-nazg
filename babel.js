@@ -16,6 +16,7 @@ import babelEslintPlugin from '@babel/eslint-plugin';
  */
 export default function babelConfig (config) {
   return {
+    name: 'ash-nazg/babel',
     languageOptions: {
       parser: babelParser,
       parserOptions: {

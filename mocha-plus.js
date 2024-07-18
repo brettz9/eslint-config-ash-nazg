@@ -20,10 +20,12 @@ import mocha from './mocha.js';
 
 /**
  * @param {ESLintConfig} config
+ * @param {string} name
  * @returns {ESLintConfig}
  */
-function addTestFiles (config) {
+function addTestFiles (config, name) {
   return {
+    name,
     ...config,
     files: ['**/test/**', '**/tests/**', 'cypress/integration/**'],
     languageOptions: {
@@ -37,7 +39,10 @@ function addTestFiles (config) {
 
 /** @type {ESLintConfig[]} */
 export default [
-  addTestFiles(mochaPlugin.configs.flat.recommended),
+  addTestFiles(
+    mochaPlugin.configs.flat.recommended,
+    'ash-nazg/test-files/mocha'
+  ),
   // Todo: Reenable when available
   // ...addTestFiles(mochaCleanup['recommended-no-limits']),
   // ...addTestFiles(chaiAsPromised.recommended),
@@ -47,8 +52,10 @@ export default [
        * @type {Record<string, ESLintConfig>}
        */ (
         chaiExpectKeywords.configs
-      ).recommended
+      ).recommended,
+      'ash-nazg/test-files/chai-expect-keywords'
     ),
+    name: 'ash-nazg/chai-expect-keywords',
     rules: {
       'chai-expect-keywords/no-unsupported-keywords': [
         'error', {
@@ -66,13 +73,15 @@ export default [
     /**
      * @type {Record<string, ESLintConfig>}
      */
-    (chaiExpect.configs)['recommended-flat']
+    (chaiExpect.configs)['recommended-flat'],
+    'ash-nazg/test-files/chai-expect'
   ),
   addTestFiles(
     /**
      * @type {Record<string, ESLintConfig>}
      */
-    (chaiFriendly.configs).recommendedFlat
+    (chaiFriendly.configs).recommendedFlat,
+    'ash-nazg/test-files/chai-friendly'
   ),
   addTestFiles({
     rules: {
@@ -101,6 +110,6 @@ export default [
       }]
       */
     }
-  }),
+  }, 'ash-nazg/test-files/mocha-plus'),
   ...mocha
 ];

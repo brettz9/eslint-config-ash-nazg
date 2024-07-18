@@ -10,6 +10,7 @@ export default function sauron (pkg) {
   return [
     ...main(pkg),
     {
+      name: 'ash-nazg/sauron',
       settings: {
         jsdoc: {
           preferredTypes: {

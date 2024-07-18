@@ -36,6 +36,7 @@ import {addFiles} from './index.js';
 export default function main (pkg) {
   return [
     {
+      name: 'ash-nazg/ignore-dist',
       ignores: ['dist'] // "third-party" can unset
     },
     ...(/** @type {import('eslint').Linter.FlatConfig[]} */ (
@@ -43,10 +44,12 @@ export default function main (pkg) {
     )),
     {
       ...script[0],
+      name: 'ash-nazg/script/cjs',
       files: ['**/*.cjs']
     },
     {
       ...modules[0],
+      name: 'ash-nazg/modules/mjs',
       files: ['**/*.mjs']
     },
     js.configs.recommended,
@@ -72,6 +75,7 @@ export default function main (pkg) {
 
     modules[0],
     {
+      name: 'ash-nazg/main',
       plugins: {
         '@stylistic': stylistic,
         // Avoid its `recommended` config

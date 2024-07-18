@@ -3,6 +3,7 @@
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
   {
+    name: 'ash-nazg/overrides-module',
     rules: {
       'compat/compat': 'off',
       'no-console': 'off',
