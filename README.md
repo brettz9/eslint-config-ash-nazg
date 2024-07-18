@@ -722,6 +722,15 @@ feel free to file issues if you really feel there are compelling reasons
 for different defaults. But again, I have to add caution that ring bearers
 can be picky about giving up their *preh-shus*...
 
+## High-priority to-dos
+
+1. Restore the following as may become available in flat config:
+    1. eslint-plugin-import
+    2. eslint-plugin-unsanitized (waiting on typescript-eslint))
+    3. eslint-plugin-escompat (has PR)
+    4. @fintechstudios/eslint-plugin-chai-as-promised (has PR)
+    5. eslint-plugin-mocha-cleanup (has PR)
+
 ## To-dos
 
 - Waiting: Add [eslint-plugin-no-constructor-bind](https://github.com/markalfred/eslint-plugin-no-constructor-bind)
@@ -755,3 +764,4 @@ can be picky about giving up their *preh-shus*...
     - <https://github.com/nickdeis/eslint-plugin-notice>
     - <https://github.com/eslint/generator-eslint> (global install of `yo` also)
     - Note `eslint --print-config file` for getting at applied config for a file
+
