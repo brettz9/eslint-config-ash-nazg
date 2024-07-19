@@ -61,10 +61,7 @@ export default function main (pkg) {
     // These may override 'standard' which includes their rules,
     //   so including first
     // ...compat.extends('plugin:import/recommended'), // Todo: Reenable after ESLint 9/Flat support: https://github.com/import-js/eslint-plugin-import/issues/2948
-    {
-      name: 'ash-nazg/promise/recommended',
-      ...promise.configs['flat/recommended']
-    },
+    promise.configs['flat/recommended'],
     // This may override eslint:recommended and the promise/import rules,
     //  but it doesn't turn any off
     standard[0], // Using this until eslint-config-standard fixes
