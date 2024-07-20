@@ -16,8 +16,13 @@ export default [
     files: ['cypress/**'],
     rules: {
       // Conflicts with Cypress `should`
-      'mocha-cleanup/invalid-assertions': 0,
-      'import/unambiguous': 'off'
+      'mocha-cleanup/invalid-assertions': 'off',
+      'import/unambiguous': 'off',
+
+      // Cypress `then` acts differently
+      'promise/prefer-await-to-then': 'off',
+      'promise/catch-or-return': 'off',
+      'promise/always-return': 'off'
     }
   }
 ];

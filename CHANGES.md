@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.3.1
+
+- fix: avoid certain Promise rules in Cypress
+
 ## 36.3.0
 
 - fix: remove/change deprecated rules
