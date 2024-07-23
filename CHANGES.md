@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.4.1
+
+- fix: prioritize browser config over cypress (latter has earlier
+    `ecmaVersion`)
+
 ## 36.4.0
 
 - feat: adds escompat

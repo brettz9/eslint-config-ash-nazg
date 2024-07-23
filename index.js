@@ -143,6 +143,14 @@ export default function index (types, config) {
     configs.push(...overrides(types, pkg));
   }
 
+  // We put these before `browser` so `ecmaVersion` of escompat (2023)
+  //   can override Cypress' (2019)
+  if (!types.includes('no-cypress')) {
+    configs.push(...cypress);
+  } else if (types.includes('mocha')) {
+    configs.push(...mochaPlus);
+  }
+
   if (types.includes('browser')) {
     if (!pkg.browserslist) {
       // Can't detect for overrides though, as that may not actually be
@@ -173,12 +181,6 @@ export default function index (types, config) {
         }
       });
     }
-  }
-
-  if (!types.includes('no-cypress')) {
-    configs.push(...cypress);
-  } else if (types.includes('mocha')) {
-    configs.push(...mochaPlus);
   }
 
   return configs;
