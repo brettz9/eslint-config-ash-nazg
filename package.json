@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ash-nazg",
-  "version": "36.3.1",
+  "version": "36.4.0",
   "description": "An expansion and tweaking of the \"standard\" config style for ESLint",
   "main": "index.js",
   "type": "module",
@@ -82,16 +82,17 @@
     "eslint-plugin-chai-friendly": "^1.0.0",
     "eslint-plugin-compat": "^6.0.0",
     "eslint-plugin-cypress": "^3.3.0",
+    "eslint-plugin-escompat": "^3.8.1",
     "eslint-plugin-html": "^8.1.1",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsdoc": "^48.8.1",
+    "eslint-plugin-jsdoc": "^48.8.3",
     "eslint-plugin-markdown": "^5.1.0",
     "eslint-plugin-mocha": "^10.4.3",
     "eslint-plugin-mocha-cleanup": "^1.11.3",
     "eslint-plugin-n": "^17.9.0",
     "eslint-plugin-no-unsanitized": "^4.0.2",
     "eslint-plugin-no-use-extend-native": "^0.7.1",
-    "eslint-plugin-promise": "^6.5.0",
+    "eslint-plugin-promise": "^6.6.0",
     "eslint-plugin-sonarjs": "^1.0.3",
     "eslint-plugin-unicorn": "^54.0.0",
     "globals": "^15.8.0",
@@ -108,6 +109,6 @@
     "@types/semver": "^7.5.8",
     "eslint": "^9.7.0",
     "rimraf": "^5.0.0",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.4"
   }
 }

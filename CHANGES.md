@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.4.0
+
+- feat: adds escompat
+
 ## 36.3.1
 
 - fix: avoid certain Promise rules in Cypress
@@ -59,7 +63,7 @@ Was not able to complete reinclusion for the following due to lack of
 flat config or ESLint 9 support:
 
 1. eslint-plugin-import
-2. eslint-plugin-escompat
+2. eslint-plugin-escompat (now added)
 3. eslint-plugin-unsanitized
 4. @fintechstudios/eslint-plugin-chai-as-promised
 5. eslint-plugin-mocha-cleanup

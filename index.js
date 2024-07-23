@@ -76,8 +76,7 @@ try {
 //        `engines`? Can use `polyglot` folder without disabling overrides and
 //            manually apply `ecmaVersion: 'latest'` to it
 //        `escompat` should handle for browser at least, with high default
-//        `ecmaVersion` of its own:
-//        https://github.com/keithamus/eslint-plugin-escompat/issues/25
+//        `ecmaVersion` of its own (currently 2023)
 /**
  * @param {Types} types
  * @param {import('eslint').Linter.FlatConfig} [config]
