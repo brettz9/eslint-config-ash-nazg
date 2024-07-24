@@ -233,7 +233,9 @@ export default function main (pkg) {
         // PROMISE
         'promise/no-multiple-resolved': 'error',
         'promise/no-new-statics': 'error',
-        'promise/prefer-await-to-then': 'error',
+        'promise/prefer-await-to-then': ['error', {
+          strict: true
+        }],
 
         // PROMISE DISABLE
         'promise/param-names': 'off',
