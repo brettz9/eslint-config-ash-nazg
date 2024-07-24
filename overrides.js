@@ -103,7 +103,7 @@ export default function overrides (types, pkg) {
 
       return {
         ...cfg,
-        name: 'ash-nazg/overrides/browser',
+        name: 'ash-nazg/overrides/browser/' + cfg.name,
         files: ['demo/**', 'browser/**', '**/public/**']
       };
     }),

@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- fix: `name` tweaks
+
 ## 36.4.1
 
 - fix: prioritize browser config over cypress (latter has earlier

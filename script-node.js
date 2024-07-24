@@ -6,7 +6,7 @@ import globals from 'globals';
 export default [
   node.configs['flat/recommended-script'],
   {
-    name: 'ash-nazg/Script node',
+    name: 'ash-nazg/script-node',
     languageOptions: {
       globals: globals.node,
       parserOptions: {
