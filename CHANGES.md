@@ -1,7 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 36.5.0
 
+- feat: add `strict` option for `promise/prefer-await-to-then`
+- chore: update deps.
 - fix: `name` tweaks
 
 ## 36.4.1
