@@ -57,8 +57,8 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0(eslint@9.7.0)
       eslint-plugin-cypress:
-        specifier: ^3.3.0
-        version: 3.3.0(eslint@9.7.0)
+        specifier: ^3.4.0
+        version: 3.4.0(eslint@9.7.0)
       eslint-plugin-escompat:
         specifier: ^3.11.0
         version: 3.11.0(eslint@9.7.0)
@@ -939,8 +939,8 @@ packages:
     peerDependencies:
       eslint: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
 
-  eslint-plugin-cypress@3.3.0:
-    resolution: {integrity: sha512-HPHMPzYBIshzJM8wqgKSKHG2p/8R0Gbg4Pb3tcdC9WrmkuqxiKxSKbjunUrajhV5l7gCIFrh1P7C7GuBqH6YuQ==}
+  eslint-plugin-cypress@3.4.0:
+    resolution: {integrity: sha512-Rrrr3Ri6wHqzrRr+TyUV7bDS4UnMMrFY1R1PP2F7XdGfe9txDC6lQEshyoNOWqGoPkbbeDm1x1XPc/adxemsnA==}
     peerDependencies:
       eslint: '>=7'
 
@@ -3149,7 +3149,7 @@ snapshots:
       lodash.memoize: 4.1.2
       semver: 7.6.3
 
-  eslint-plugin-cypress@3.3.0(eslint@9.7.0):
+  eslint-plugin-cypress@3.4.0(eslint@9.7.0):
     dependencies:
       eslint: 9.7.0
       globals: 13.24.0
