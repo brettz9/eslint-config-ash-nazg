@@ -19,6 +19,6 @@ export function addFiles(cfgs: import("eslint").Linter.FlatConfig | import("esli
  * @param {Types} types
  * @param {import('eslint').Linter.FlatConfig} [config]
  */
-export default function index(types: Types, config?: import("eslint").Linter.FlatConfig<import("eslint").Linter.RulesRecord> | undefined): import("eslint").Linter.FlatConfig<import("eslint").Linter.RulesRecord>[];
+export default function index(types: Types, config?: import("eslint").Linter.FlatConfig | undefined): import("eslint").Linter.FlatConfig[];
 export type Types = ("great-eye" | "sauron" | "saruman" | "polyglot" | "bare" | "node" | "browser" | "script" | "module" | "no-overrides" | "no-cypress" | "mocha" | "babel" | "third-party")[];
 //# sourceMappingURL=index.d.ts.map

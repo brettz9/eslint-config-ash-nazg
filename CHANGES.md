@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.6.0
+
+- feat: update Unicorn (uses new rule: `no-length-as-slice-end`)
+
 ## 36.5.0
 
 - feat: add `strict` option for `promise/prefer-await-to-then`
