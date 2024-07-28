@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       '@babel/eslint-parser':
-        specifier: ^7.25.0
-        version: 7.25.0(@babel/core@7.23.7)(eslint@9.8.0)
+        specifier: ^7.25.1
+        version: 7.25.1(@babel/core@7.23.7)(eslint@9.8.0)
       '@babel/eslint-plugin':
-        specifier: ^7.24.7
-        version: 7.24.7(@babel/eslint-parser@7.25.0(@babel/core@7.23.7)(eslint@9.8.0))(eslint@9.8.0)
+        specifier: ^7.25.1
+        version: 7.25.1(@babel/eslint-parser@7.25.1(@babel/core@7.23.7)(eslint@9.8.0))(eslint@9.8.0)
       '@babel/plugin-syntax-import-attributes':
         specifier: ^7.24.7
         version: 7.24.7(@babel/core@7.23.7)
@@ -51,8 +51,8 @@ importers:
         specifier: ^3.1.0
         version: 3.1.0
       eslint-plugin-chai-friendly:
-        specifier: ^1.0.0
-        version: 1.0.0(eslint@9.8.0)
+        specifier: ^1.0.1
+        version: 1.0.1(eslint@9.8.0)
       eslint-plugin-compat:
         specifier: ^6.0.0
         version: 6.0.0(eslint@9.8.0)
@@ -156,15 +156,15 @@ packages:
     resolution: {integrity: sha512-+UpDgowcmqe36d4NwqvKsyPMlOLNGMsfMmQ5WGCu+siCe3t3dfe9njrzGfdN4qq+bcNUt0+Vw6haRxBOycs4dw==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/eslint-parser@7.25.0':
-    resolution: {integrity: sha512-mlcTKuQAjczDRwWLIxv+Q925jaMUO8Jl5dxmWJSSGVYfZ4rKMp8daQvVC3rM1G2v8V+/fO0yIVTSLS+2zcB8rg==}
+  '@babel/eslint-parser@7.25.1':
+    resolution: {integrity: sha512-Y956ghgTT4j7rKesabkh5WeqgSFZVFwaPR0IWFm7KFHFmmJ4afbG49SmfW4S+GyRPx0Dy5jxEWA5t0rpxfElWg==}
     engines: {node: ^10.13.0 || ^12.13.0 || >=14.0.0}
     peerDependencies:
       '@babel/core': ^7.11.0
       eslint: ^7.5.0 || ^8.0.0 || ^9.0.0
 
-  '@babel/eslint-plugin@7.24.7':
-    resolution: {integrity: sha512-lODNPJnM+OfcxxBvdmI2YmUeC0fBK3k9yET5O+1Eukr8d5VpO19c6ARtNheE2t2i/8XNYTzp3HeGEAAGZH3nnQ==}
+  '@babel/eslint-plugin@7.25.1':
+    resolution: {integrity: sha512-jF04YOsrCbEeQk4s+FwsuRddwBiAHooMDG9/nrV83HiYQwEuQppbXTeXyydxCoH5oEWmVBI51wHuZrcIXMkPfw==}
     engines: {node: ^10.13.0 || ^12.13.0 || >=14.0.0}
     peerDependencies:
       '@babel/eslint-parser': ^7.11.0
@@ -931,8 +931,8 @@ packages:
     peerDependencies:
       eslint: '>=2.0.0 <= 9.x'
 
-  eslint-plugin-chai-friendly@1.0.0:
-    resolution: {integrity: sha512-M7pDQ/H5IiMz1LsfNi7Js4LvKx7cx0VMJHT/u1d35GOXxkQdJ2vAeaLC5q6GW126KVOnUMJ8WvBMWWLxtfdcog==}
+  eslint-plugin-chai-friendly@1.0.1:
+    resolution: {integrity: sha512-dxD/uz1YKJ8U4yah1i+V/p/u+kHRy3YxTPe2nJGqb5lCR+ucan/KIexfZ5+q4X+tkllyMe86EBbAkdlwxNy3oQ==}
     engines: {node: '>=0.10.0'}
     peerDependencies:
       eslint: '>=3.0.0'
@@ -2232,7 +2232,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/eslint-parser@7.25.0(@babel/core@7.23.7)(eslint@9.8.0)':
+  '@babel/eslint-parser@7.25.1(@babel/core@7.23.7)(eslint@9.8.0)':
     dependencies:
       '@babel/core': 7.23.7
       '@nicolo-ribaudo/eslint-scope-5-internals': 5.1.1-v1
@@ -2240,9 +2240,9 @@ snapshots:
       eslint-visitor-keys: 2.1.0
       semver: 6.3.1
 
-  '@babel/eslint-plugin@7.24.7(@babel/eslint-parser@7.25.0(@babel/core@7.23.7)(eslint@9.8.0))(eslint@9.8.0)':
+  '@babel/eslint-plugin@7.25.1(@babel/eslint-parser@7.25.1(@babel/core@7.23.7)(eslint@9.8.0))(eslint@9.8.0)':
     dependencies:
-      '@babel/eslint-parser': 7.25.0(@babel/core@7.23.7)(eslint@9.8.0)
+      '@babel/eslint-parser': 7.25.1(@babel/core@7.23.7)(eslint@9.8.0)
       eslint: 9.8.0
       eslint-rule-composer: 0.3.0
 
@@ -3023,7 +3023,7 @@ snapshots:
 
   es-file-traverse@1.2.0(@babel/core@7.23.7)(eslint-plugin-import@2.29.1(eslint@9.8.0))(eslint@9.8.0):
     dependencies:
-      '@babel/eslint-parser': 7.25.0(@babel/core@7.23.7)(eslint@9.8.0)
+      '@babel/eslint-parser': 7.25.1(@babel/core@7.23.7)(eslint@9.8.0)
       command-line-basics: 2.0.1
       eslint-import-resolver-typescript: 3.6.1(eslint-plugin-import@2.29.1(eslint@9.8.0))(eslint@9.8.0)
       esquery: 1.5.0
@@ -3142,7 +3142,7 @@ snapshots:
     dependencies:
       eslint: 9.8.0
 
-  eslint-plugin-chai-friendly@1.0.0(eslint@9.8.0):
+  eslint-plugin-chai-friendly@1.0.1(eslint@9.8.0):
     dependencies:
       eslint: 9.8.0
 
