@@ -26,11 +26,11 @@ import babel from './babel.js';
 import thirdParty from './third-party.js';
 
 /**
- * @param {import('eslint').Linter.FlatConfig|
-*   import('eslint').Linter.FlatConfig[]} cfgs
+ * @param {import('eslint').Linter.Config|
+*   import('eslint').Linter.Config[]} cfgs
 * @param {string[]} files
-* @returns {import('eslint').Linter.FlatConfig|
-*    import('eslint').Linter.FlatConfig[]
+* @returns {import('eslint').Linter.Config|
+*    import('eslint').Linter.Config[]
 * }
 */
 export function addFiles (cfgs, files) {
@@ -79,14 +79,14 @@ try {
 //        `ecmaVersion` of its own (currently 2023)
 /**
  * @param {Types} types
- * @param {import('eslint').Linter.FlatConfig} [config]
+ * @param {import('eslint').Linter.Config} [config]
  */
 export default function index (types, config) {
-  /** @type {import('eslint').Linter.FlatConfig[]} */
+  /** @type {import('eslint').Linter.Config[]} */
   const configs = [];
 
   if (types.includes('babel')) {
-    return [babel(/** @type {import('eslint').Linter.FlatConfig} */ (config))];
+    return [babel(/** @type {import('eslint').Linter.Config} */ (config))];
   }
 
   if (types.includes('third-party')) {

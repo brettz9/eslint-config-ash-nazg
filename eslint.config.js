@@ -2,7 +2,7 @@
 
 import index from './index.js';
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
+/** @type {import('eslint').Linter.Config[]} */
 const config = [
   ...index([
     'sauron', 'node'

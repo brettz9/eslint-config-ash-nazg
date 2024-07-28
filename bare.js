@@ -1,7 +1,7 @@
 /* eslint-disable jsdoc/imports-as-dependencies -- Bug */
 import {builtinModules} from 'node:module';
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
+/** @type {import('eslint').Linter.Config[]} */
 export default [
   {
     name: 'ash-nazg/bare',

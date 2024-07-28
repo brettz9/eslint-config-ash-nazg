@@ -15,7 +15,7 @@ import chaiFriendly from 'eslint-plugin-chai-friendly';
 import mocha from './mocha.js';
 
 /**
- * @typedef {import('eslint').Linter.FlatConfig} ESLintConfig
+ * @typedef {import('eslint').Linter.Config} ESLintConfig
  */
 
 /**

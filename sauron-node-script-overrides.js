@@ -8,7 +8,7 @@ import overrides from './overrides.js';
   *   pkg: {
   *     type?: "module"|"commonjs"
   *   }
-  * ) => import('eslint').Linter.FlatConfig[]
+  * ) => import('eslint').Linter.Config[]
   * }
   */
 export default function sauronNodeScriptOverrides (types, pkg) {

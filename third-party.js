@@ -3,7 +3,7 @@
 /* eslint-disable jsdoc/imports-as-dependencies -- Bug */
 import babelEsintParser from '@babel/eslint-parser';
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
+/** @type {import('eslint').Linter.Config[]} */
 export default [
   {
     name: 'ash-nazg/third-party/ignores',

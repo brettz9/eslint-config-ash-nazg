@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.7.0
+
+- fix(TS): avoid deprecated types
+
 ## 36.6.0
 
 - feat: update Unicorn (uses new rule: `no-length-as-slice-end`)

@@ -3,7 +3,7 @@ import cypress from 'eslint-plugin-cypress/flat';
 
 import mochaPlus from './mocha-plus.js';
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
+/** @type {import('eslint').Linter.Config[]} */
 export default [
   {
     ...(cypress.configs.recommended),

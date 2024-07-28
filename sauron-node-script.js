@@ -7,7 +7,7 @@ import scriptNode from './script-node.js';
   *   pkg: {
   *     type?: "module"|"commonjs"
   *   }
-  * ) => import('eslint').Linter.FlatConfig[]
+  * ) => import('eslint').Linter.Config[]
   * }
   */
 export default function sauronNodeScript (pkg) {

@@ -11,8 +11,8 @@ import babelEslintPlugin from '@babel/eslint-plugin';
 
 /**
  * Allows passing in a whole config to wrap.
- * @param {import('eslint').Linter.FlatConfig} config
- * @returns {import('eslint').Linter.FlatConfig}
+ * @param {import('eslint').Linter.Config} config
+ * @returns {import('eslint').Linter.Config}
  */
 export default function babelConfig (config) {
   return {

@@ -2,7 +2,7 @@
 //   globals, etc.) to own repo
 /* eslint-disable jsdoc/imports-as-dependencies -- Bug */
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
+/** @type {import('eslint').Linter.Config[]} */
 export default [{
   name: 'ash-nazg/mocha',
   files: ['**/test/**', '**/tests/**', 'cypress/integration/**'],

@@ -1,1 +1,1 @@
-{"version":3,"file":"cypress.d.ts","sourceRoot":"","sources":["../cypress.js"],"names":[],"mappings":"wBAKW,OAAO,QAAQ,EAAE,MAAM,CAAC,UAAU,EAAE"}
+{"version":3,"file":"cypress.d.ts","sourceRoot":"","sources":["../cypress.js"],"names":[],"mappings":"wBAKW,OAAO,QAAQ,EAAE,MAAM,CAAC,MAAM,EAAE"}

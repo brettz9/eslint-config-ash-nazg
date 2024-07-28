@@ -31,7 +31,7 @@ import {addFiles} from './index.js';
 /**
  * @type {(cfg: {
  *   type?: "module"|"commonjs"
- * }) => import('eslint').Linter.FlatConfig[]}
+ * }) => import('eslint').Linter.Config[]}
  */
 export default function main (pkg) {
   return [
@@ -39,7 +39,7 @@ export default function main (pkg) {
       name: 'ash-nazg/ignore-dist',
       ignores: ['dist'] // "third-party" can unset
     },
-    ...(/** @type {import('eslint').Linter.FlatConfig[]} */ (
+    ...(/** @type {import('eslint').Linter.Config[]} */ (
       addFiles(pkg.type === 'module' ? modules : script, ['**/*.js'])
     )),
     {
@@ -78,7 +78,7 @@ export default function main (pkg) {
     },
     {
       name: 'ash-nazg/sonarjs/recommended',
-      ...(/** @type {import('eslint').Linter.FlatConfig} */ (
+      ...(/** @type {import('eslint').Linter.Config} */ (
         sonarjs.configs.recommended
       ))
     },

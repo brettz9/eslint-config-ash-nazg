@@ -2,7 +2,7 @@
 import node from 'eslint-plugin-n';
 import globals from 'globals';
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
+/** @type {import('eslint').Linter.Config[]} */
 export default [
   node.configs['flat/recommended-script'],
   {

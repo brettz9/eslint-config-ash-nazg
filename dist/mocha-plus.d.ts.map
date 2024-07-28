@@ -1,1 +1,1 @@
-{"version":3,"file":"mocha-plus.d.ts","sourceRoot":"","sources":["../mocha-plus.js"],"names":[],"mappings":"wBAuCW,YAAY,EAAE;;2BAtBZ,OAAO,QAAQ,EAAE,MAAM,CAAC,UAAU"}
+{"version":3,"file":"mocha-plus.d.ts","sourceRoot":"","sources":["../mocha-plus.js"],"names":[],"mappings":"wBAuCW,YAAY,EAAE;;2BAtBZ,OAAO,QAAQ,EAAE,MAAM,CAAC,MAAM"}

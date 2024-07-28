@@ -2,7 +2,7 @@ declare module 'eslint-plugin-mocha' {
   interface ConfigsStructure {
     configs: {
       flat: {
-        recommended: import('eslint').Linter.FlatConfig
+        recommended: import('eslint').Linter.Config
       }
     }
   }

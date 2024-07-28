@@ -24,7 +24,7 @@ delete nodeRecommendedModule.languageOptions?.globals;
 /**
  * @type {(pkg: {
  *   type?: "module"|"commonjs"
-* }) => import('eslint').Linter.FlatConfig[]}
+* }) => import('eslint').Linter.Config[]}
  */
 export default function node (pkg) {
   return [
