@@ -69,14 +69,14 @@ importers:
         specifier: ^2.29.1
         version: 2.29.1(eslint@9.8.0)
       eslint-plugin-jsdoc:
-        specifier: ^48.8.3
-        version: 48.8.3(eslint@9.8.0)
+        specifier: ^48.9.0
+        version: 48.9.0(eslint@9.8.0)
       eslint-plugin-markdown:
         specifier: ^5.1.0
         version: 5.1.0(eslint@9.8.0)
       eslint-plugin-mocha:
-        specifier: ^10.4.3
-        version: 10.4.3(eslint@9.8.0)
+        specifier: ^10.5.0
+        version: 10.5.0(eslint@9.8.0)
       eslint-plugin-mocha-cleanup:
         specifier: ^1.11.3
         version: 1.11.3(eslint@9.8.0)
@@ -973,8 +973,8 @@ packages:
       '@typescript-eslint/parser':
         optional: true
 
-  eslint-plugin-jsdoc@48.8.3:
-    resolution: {integrity: sha512-AtIvwwW9D17MRkM0Z0y3/xZYaa9mdAvJrkY6fU/HNUwGbmMtHVvK4qRM9CDixGVtfNrQitb8c6zQtdh6cTOvLg==}
+  eslint-plugin-jsdoc@48.9.0:
+    resolution: {integrity: sha512-U2G9ujC8fVK7LUu4h9fnhQ7hWQXNVqGXcT8BqmLRze3r1OHMq0v26zqRWJffPDscDjvMP2OvLO47QcMjL226KQ==}
     engines: {node: '>=18'}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
@@ -991,8 +991,8 @@ packages:
     peerDependencies:
       eslint: '>=0.8.0'
 
-  eslint-plugin-mocha@10.4.3:
-    resolution: {integrity: sha512-emc4TVjq5Ht0/upR+psftuz6IBG5q279p+1dSRDeHf+NS9aaerBi3lXKo1SEzwC29hFIW21gO89CEWSvRsi8IQ==}
+  eslint-plugin-mocha@10.5.0:
+    resolution: {integrity: sha512-F2ALmQVPT1GoP27O1JTZGrV9Pqg8k79OeIuvw63UxMtQKREZtmkK1NFgkZQ2TW7L2JSSFKHFPTtHu5z8R9QNRw==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       eslint: '>=7.0.0'
@@ -3204,7 +3204,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-jsdoc@48.8.3(eslint@9.8.0):
+  eslint-plugin-jsdoc@48.9.0(eslint@9.8.0):
     dependencies:
       '@es-joy/jsdoccomment': 0.46.0
       are-docs-informative: 0.0.2
@@ -3232,7 +3232,7 @@ snapshots:
       eslint: 9.8.0
       requireindex: 1.2.0
 
-  eslint-plugin-mocha@10.4.3(eslint@9.8.0):
+  eslint-plugin-mocha@10.5.0(eslint@9.8.0):
     dependencies:
       eslint: 9.8.0
       eslint-utils: 3.0.0(eslint@9.8.0)
