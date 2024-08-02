@@ -134,7 +134,14 @@ export default function overrides (types, pkg) {
           ...config.languageOptions,
           globals: {
             ...config.languageOptions?.globals,
-            ...globals.node
+            ...globals.node,
+            ...(pkg.type === 'module'
+              ? /** @type {import('eslint').Linter.Globals} */ ({
+                __dirname: 'off',
+                __filename: 'off'
+              })
+              : {}
+            )
           }
         },
         rules: {

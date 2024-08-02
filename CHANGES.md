@@ -1,5 +1,13 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.8.1
+
+- fix: ensure `no-restricted-imports` is off for Node configs (for cases
+    inheriting bare config)
+- fix: for overrides config, ensure `__dirname` and `__filename` are disabled
+    for modules
+- fix: for scripts, ensure `module` and `exports` are at least defined
+
 ## 36.8.0
 
 - feat: add to default Node/default browser folder overrides

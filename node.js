@@ -58,6 +58,8 @@ export default function node (pkg) {
         }
       },
       rules: {
+        'no-restricted-imports': 'off',
+
         // Disable Node-added
         // (Use Unicorn extension instead which allows in CLI apps)
         // 'no-process-exit': 'off', // Deprecated
