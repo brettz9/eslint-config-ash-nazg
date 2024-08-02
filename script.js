@@ -7,7 +7,10 @@ export default [{
     globals: {
       // Not necessarily all of Node globals
       module: 'readonly',
-      exports: 'readonly'
+      exports: 'readonly',
+      require: 'readonly',
+      __dirname: 'readonly',
+      __filename: 'readonly'
     },
     parserOptions: {
       ecmaFeatures: {

@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.8.2
+
+- fix: ensure scripts includes `require`, `__dirname` and `__filename`
+
 ## 36.8.1
 
 - fix: ensure `no-restricted-imports` is off for Node configs (for cases
