@@ -104,7 +104,11 @@ export default function overrides (types, pkg) {
       return {
         ...cfg,
         name: 'ash-nazg/overrides/browser/' + cfg.name,
-        files: ['demo/**', 'browser/**', '**/public/**']
+        files: [
+          '**/demo/**',
+          '**/browser/**',
+          '**/public/**'
+        ]
       };
     }),
     ...polyglot.map((config) => {
@@ -119,7 +123,13 @@ export default function overrides (types, pkg) {
         ...config,
         name: 'ash-nazg/overrides/node-folders-or-files/' +
           (config.name ?? idx),
-        files: ['build/**', 'server.js'],
+        files: [
+          '**/build/**',
+          '**/tools/**',
+          '**/bin/**',
+          '**/server/**',
+          '**/server.js'
+        ],
         languageOptions: {
           ...config.languageOptions,
           globals: {

@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.8.0
+
+- feat: add to default Node/default browser folder overrides
+
 ## 36.7.0
 
 - fix(TS): avoid deprecated types
