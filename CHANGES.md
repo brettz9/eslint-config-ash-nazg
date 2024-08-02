@@ -3,6 +3,7 @@
 ## 36.8.0
 
 - feat: add to default Node/default browser folder overrides
+- chore: update deps.
 
 ## 36.7.0
 
