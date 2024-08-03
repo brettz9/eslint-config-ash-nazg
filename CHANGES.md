@@ -1,8 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 36.10.0
 
 - feat: disable `unicorn/no-anonymous-default-export` for module overrides
+- chore: update `eslint-plugin-escompat`, `eslint-plugin-jsdoc`
 
 ## 36.9.0
 
