@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- chore: uninstall `eslint-plugin-chai-assert-bdd`
+
 ## 36.8.6
 
 - fix: `plugins` to include `n` in overrides

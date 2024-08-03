@@ -41,9 +41,6 @@ importers:
       eslint-plugin-array-func:
         specifier: ^5.0.1
         version: 5.0.1(eslint@9.8.0)
-      eslint-plugin-chai-assert-bdd:
-        specifier: ^0.0.3
-        version: 0.0.3
       eslint-plugin-chai-expect:
         specifier: ^3.1.0
         version: 3.1.0(eslint@9.8.0)
@@ -916,10 +913,6 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=8.51.0'
-
-  eslint-plugin-chai-assert-bdd@0.0.3:
-    resolution: {integrity: sha512-4sK/ivV3UxDpCxl008QvqEuigz3SXIVXw9O9bSLgCDA3C9r95o+9W5pHQQEcmJnaHd/D0se6dujkLo4K0eVLJw==}
-    engines: {node: '>=0.10.0'}
 
   eslint-plugin-chai-expect-keywords@3.1.0:
     resolution: {integrity: sha512-0RccqS5zfNFnwomz2OhpaIaK/Z5f0RypBiR4Va+nTo1QncPHQC2YxQk+IbHb3SY4Lj4hToQ9IXejzZSqF0Ae9A==}
@@ -3131,8 +3124,6 @@ snapshots:
   eslint-plugin-array-func@5.0.1(eslint@9.8.0):
     dependencies:
       eslint: 9.8.0
-
-  eslint-plugin-chai-assert-bdd@0.0.3: {}
 
   eslint-plugin-chai-expect-keywords@3.1.0:
     dependencies:
