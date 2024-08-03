@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.8.5
+
+- fix: make explict that `strict` is global
+- fix: avoid chai globals
+
 ## 36.8.4
 
 - fix: avoid certain mocha globals that are now imported

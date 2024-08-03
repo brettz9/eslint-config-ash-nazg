@@ -2,7 +2,7 @@
 
 // Not technically flat: https://eslint.org/docs/latest/extend/plugin-migration-flat-config#migrating-environments-for-flat-config
 // However, we don't need flat config--just to embed its globals
-import chaiAssertBdd from 'eslint-plugin-chai-assert-bdd';
+// import chaiAssertBdd from 'eslint-plugin-chai-assert-bdd';
 
 // Not following ESLint typings, but exports flat:
 import mochaPlugin from 'eslint-plugin-mocha';
@@ -27,13 +27,14 @@ function addTestFiles (config, name) {
   return {
     name,
     ...config,
-    files: ['**/test/**', '**/tests/**', 'cypress/e2e/**'],
-    languageOptions: {
-      globals: {
-        // assert, expect, should
-        ...chaiAssertBdd.environments['mocha-chai'].globals
-      }
-    }
+    files: ['**/test/**', '**/tests/**', 'cypress/e2e/**']
+    // These globals are now typically imported
+    // languageOptions: {
+    //   globals: {
+    //     // assert, expect, should
+    //     // ...chaiAssertBdd.environments['mocha-chai'].globals
+    //   }
+    // }
   };
 }
 

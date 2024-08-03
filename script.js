@@ -20,6 +20,6 @@ export default [{
   },
   rules: {
     'import/no-commonjs': 'off',
-    strict: ['error']
+    strict: ['error', 'global']
   }
 }];

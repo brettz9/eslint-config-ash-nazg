@@ -9,7 +9,7 @@ export default [
     name: 'ash-nazg/script-node',
     languageOptions: {
       globals: globals.node,
-      sourceType: 'script', // Seemed to need to restate this
+      sourceType: 'script', // Necessary to restate this?
       parserOptions: {
         ecmaFeatures: {
           globalReturn: true
@@ -21,7 +21,7 @@ export default [
       // 'no-process-exit': 'off', // Deprecated
 
       'import/no-commonjs': 'off',
-      strict: ['error']
+      strict: ['error', 'global']
     }
   }
 ];
