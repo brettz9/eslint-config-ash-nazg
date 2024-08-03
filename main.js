@@ -403,7 +403,8 @@ export default function main (pkg) {
         'sonarjs/no-nested-template-literals': 'off',
 
         // Disable @brettz9/eslint-plugin
-        '@brettz9/prefer-for-of': 'off'
+        '@brettz9/prefer-for-of': 'off',
+        '@brettz9/no-use-ignored-vars': 'off'
       }
     }
   ];

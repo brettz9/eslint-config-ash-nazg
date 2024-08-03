@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- feat: disable `@brettz9/no-use-ignored-vars`
+
 ## 36.10.0
 
 - feat: disable `unicorn/no-anonymous-default-export` for module overrides
