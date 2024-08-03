@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.8.6
+
+- fix: `plugins` to include `n` in overrides
+
 ## 36.8.5
 
 - fix: make explict that `strict` is global

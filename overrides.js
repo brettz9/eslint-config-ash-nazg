@@ -2,6 +2,8 @@
 // eslint-disable-next-line n/no-sync -- For sync API
 import {readFileSync} from 'fs';
 import globals from 'globals';
+import nodePlugin from 'eslint-plugin-n';
+
 import overridesScript from './overrides-script.js';
 import overridesScriptNode from './overrides-script-node.js';
 import overridesModule from './overrides-module.js';
@@ -80,6 +82,9 @@ export default function overrides (types, pkg) {
     {
       name: 'ash-nazg/overrides/markdown/js',
       files: ['**/*.md/*.js'],
+      plugins: {
+        n: nodePlugin
+      },
       rules: {
         'n/no-missing-require': ['error', {allowModules: [
           /* eslint-disable n/no-sync -- For sync API */
