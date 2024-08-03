@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- feat: disable `unicorn/no-anonymous-default-export` for module overrides
+
 ## 36.9.0
 
 - feat: loosen some restrictive mocha rules
