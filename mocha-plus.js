@@ -27,7 +27,7 @@ function addTestFiles (config, name) {
   return {
     name,
     ...config,
-    files: ['**/test/**', '**/tests/**', 'cypress/integration/**'],
+    files: ['**/test/**', '**/tests/**', 'cypress/e2e/**'],
     languageOptions: {
       globals: {
         // assert, expect, should

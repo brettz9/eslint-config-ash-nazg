@@ -5,7 +5,7 @@
 /** @type {import('eslint').Linter.Config[]} */
 export default [{
   name: 'ash-nazg/mocha',
-  files: ['**/test/**', '**/tests/**', 'cypress/integration/**'],
+  files: ['**/test/**', '**/tests/**', 'cypress/e2e/**'],
   languageOptions: {
     globals: {
       chai: 'readonly',

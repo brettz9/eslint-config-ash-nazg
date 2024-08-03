@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.8.3
+
+- fix: change `cypress/integration` to `cypress/e2e`
+
 ## 36.8.2
 
 - fix: ensure scripts includes `require`, `__dirname` and `__filename`
