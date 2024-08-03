@@ -1,7 +1,8 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 36.9.0
 
+- feat: loosen some restrictive mocha rules
 - chore: uninstall `eslint-plugin-chai-assert-bdd`
 
 ## 36.8.6

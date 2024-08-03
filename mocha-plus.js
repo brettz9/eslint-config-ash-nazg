@@ -88,6 +88,12 @@ export default [
     rules: {
       // MOCHA
 
+      // Not very important
+      'mocha/consistent-spacing-between-blocks': 0,
+
+      // Adds an indent level
+      'mocha/max-top-level-suites': 0,
+
       // Too oppressive when planning to extend a section
       'mocha/no-hooks-for-single-case': 0,
 
