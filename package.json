@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ash-nazg",
-  "version": "36.8.3",
+  "version": "36.8.4",
   "description": "An expansion and tweaking of the \"standard\" config style for ESLint",
   "main": "index.js",
   "type": "module",

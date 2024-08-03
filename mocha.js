@@ -8,10 +8,11 @@ export default [{
   files: ['**/test/**', '**/tests/**', 'cypress/e2e/**'],
   languageOptions: {
     globals: {
-      chai: 'readonly',
-      expect: 'readonly',
-      assert: 'readonly',
-      should: 'readonly',
+      // Imported nowadays
+      // chai: 'readonly',
+      // expect: 'readonly',
+      // assert: 'readonly',
+      // should: 'readonly',
 
       // Could use globals.mocha for the following, but that
       //   includes even more

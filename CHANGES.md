@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.8.4
+
+- fix: avoid certain mocha globals that are now imported
+- fix: restate `sourceType: "script"` for script-node
+
 ## 36.8.3
 
 - fix: change `cypress/integration` to `cypress/e2e`
