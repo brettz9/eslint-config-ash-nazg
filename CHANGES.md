@@ -1,6 +1,6 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 36.11.0
 
 - feat: add `lintAllEsApis` setting for `eslint-plugin-compat`
 - feat: disable `@brettz9/no-use-ignored-vars`
