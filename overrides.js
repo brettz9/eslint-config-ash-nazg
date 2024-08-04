@@ -14,6 +14,15 @@ import sauronNode from './sauron-node.js';
 import node from './node.js';
 import polyglot from './polyglot.js';
 
+import esCompat from 'eslint-plugin-escompat';
+
+const disabledEsCompat = Object.keys(
+  esCompat.configs['flat/recommended'].rules
+).reduce((obj, ruleName) => {
+  obj[ruleName] = 'off';
+  return obj;
+}, /** @type {import('eslint').Linter.RulesRecord} */ ({}));
+
 /**
  * @type {(
  *   types: import('./index.js').Types,
@@ -30,6 +39,7 @@ export default function overrides (types, pkg) {
       ? sauronNode(pkg)
       : node(pkg);
   return [
+    // The overrides should be Node files (e.g., to disable browser rules)
     ...overridesScript.map((cfg) => {
       return {
         ...cfg,
@@ -47,7 +57,11 @@ export default function overrides (types, pkg) {
           '**/.vuepress/config.js',
           '*.webpack.config.js',
           'web-ext-config.js'
-        ]
+        ],
+        rules: {
+          ...cfg.rules,
+          ...disabledEsCompat
+        }
       };
     }),
     ...overridesScriptNode.map((cfg, idx) => {
@@ -59,7 +73,11 @@ export default function overrides (types, pkg) {
           '.mocharc.cjs',
           '.ncurc.cjs',
           'web-ext-config.cjs'
-        ]
+        ],
+        rules: {
+          ...cfg.rules,
+          ...disabledEsCompat
+        }
       };
     }),
     ...overridesModule.map((cfg) => {
@@ -71,7 +89,11 @@ export default function overrides (types, pkg) {
           'rollup.config.js',
           '*.rollup.config.js',
           'eslint.config.js'
-        ]
+        ],
+        rules: {
+          ...cfg.rules,
+          ...disabledEsCompat
+        }
       };
     }),
     {
@@ -151,7 +173,8 @@ export default function overrides (types, pkg) {
         },
         rules: {
           ...config.rules,
-          'compat/compat': /** @type {const} */ ('off')
+          'compat/compat': /** @type {const} */ ('off'),
+          ...disabledEsCompat
         }
       };
     })

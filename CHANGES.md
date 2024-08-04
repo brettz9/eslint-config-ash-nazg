@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.11.1
+
+- fix: disable escompat rules for (Node) overrides files
+
 ## 36.11.0
 
 - feat: add `lintAllEsApis` setting for `eslint-plugin-compat`
