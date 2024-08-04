@@ -2,6 +2,7 @@
 
 ## ?
 
+- feat: add `lintAllEsApis` setting for `eslint-plugin-compat`
 - feat: disable `@brettz9/no-use-ignored-vars`
 
 ## 36.10.0

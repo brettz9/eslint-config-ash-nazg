@@ -6,6 +6,13 @@ import esCompat from 'eslint-plugin-escompat';
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
+    name: 'ash-nazg/browser/settings',
+    settings: {
+      // for `eslint-plugin-compat` (may currently catch some escompat does not)
+      lintAllEsApis: true
+    }
+  },
+  {
     name: 'ash-nazg/compat/flat-recommended',
     ...eslintCompat.configs['flat/recommended']
   },
