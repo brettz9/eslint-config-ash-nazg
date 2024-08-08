@@ -39,8 +39,8 @@ importers:
         specifier: ^1.2.0
         version: 1.2.0(@babel/core@7.23.7)(eslint-plugin-import@2.29.1(eslint@9.8.0))(eslint@9.8.0)
       eslint-plugin-array-func:
-        specifier: ^5.0.1
-        version: 5.0.1(eslint@9.8.0)
+        specifier: ^5.0.2
+        version: 5.0.2(eslint@9.8.0)
       eslint-plugin-chai-expect:
         specifier: ^3.1.0
         version: 3.1.0(eslint@9.8.0)
@@ -66,8 +66,8 @@ importers:
         specifier: ^2.29.1
         version: 2.29.1(eslint@9.8.0)
       eslint-plugin-jsdoc:
-        specifier: ^48.11.0
-        version: 48.11.0(eslint@9.8.0)
+        specifier: ^50.0.0
+        version: 50.0.0(eslint@9.8.0)
       eslint-plugin-markdown:
         specifier: ^5.1.0
         version: 5.1.0(eslint@9.8.0)
@@ -78,17 +78,17 @@ importers:
         specifier: ^1.11.3
         version: 1.11.3(eslint@9.8.0)
       eslint-plugin-n:
-        specifier: ^17.10.1
-        version: 17.10.1(eslint@9.8.0)
+        specifier: ^17.10.2
+        version: 17.10.2(eslint@9.8.0)
       eslint-plugin-no-unsanitized:
         specifier: ^4.0.2
         version: 4.0.2(eslint@9.8.0)
       eslint-plugin-no-use-extend-native:
-        specifier: ^0.7.1
-        version: 0.7.1(eslint@9.8.0)
+        specifier: ^0.7.2
+        version: 0.7.2(eslint@9.8.0)
       eslint-plugin-promise:
-        specifier: ^7.0.0
-        version: 7.0.0(eslint@9.8.0)
+        specifier: ^7.1.0
+        version: 7.1.0(eslint@9.8.0)
       eslint-plugin-sonarjs:
         specifier: ^1.0.4
         version: 1.0.4(eslint@9.8.0)
@@ -908,8 +908,8 @@ packages:
       eslint-import-resolver-webpack:
         optional: true
 
-  eslint-plugin-array-func@5.0.1:
-    resolution: {integrity: sha512-bRydL/TorX9B6HMMGzggkTzoaY0dM1iCIdA/SGM8VB2P8+38TH+dqYmDdfLCR5LOdDUHq0XBFgkvVnb7DB61cw==}
+  eslint-plugin-array-func@5.0.2:
+    resolution: {integrity: sha512-iyLex2+pTcxHZ6OLL80oMy+CtffpJ9j6A/57VQi1VN5bK1IS/0o+mWvezDHeAlwXjn6ksRO9L5SGU329BBuY8A==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=8.51.0'
@@ -966,8 +966,8 @@ packages:
       '@typescript-eslint/parser':
         optional: true
 
-  eslint-plugin-jsdoc@48.11.0:
-    resolution: {integrity: sha512-d12JHJDPNo7IFwTOAItCeJY1hcqoIxE0lHA8infQByLilQ9xkqrRa6laWCnsuCrf+8rUnvxXY1XuTbibRBNylA==}
+  eslint-plugin-jsdoc@50.0.0:
+    resolution: {integrity: sha512-czyJ5F7/qY2LIhUD5Bl6q1CCZ8mjvfEA9HQN5nvIp/Pb8VLIlUNd+DMZdA2OKN74QQMS3pobC06hFqAOJyOv5Q==}
     engines: {node: '>=18'}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
@@ -990,8 +990,8 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
-  eslint-plugin-n@17.10.1:
-    resolution: {integrity: sha512-hm/q37W6efDptJXdwirsm6A257iY6ZNtpoSG0wEzFzjJ3AhL7OhEIhdSR2e4OdYfHO5EDeqlCfFrjf9q208IPw==}
+  eslint-plugin-n@17.10.2:
+    resolution: {integrity: sha512-e+s4eAf5NtJaxPhTNu3qMO0Iz40WANS93w9LQgYcvuljgvDmWi/a3rh+OrNyMHeng6aOWGJO0rCg5lH4zi8yTw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.23.0'
@@ -1001,14 +1001,14 @@ packages:
     peerDependencies:
       eslint: ^6 || ^7 || ^8
 
-  eslint-plugin-no-use-extend-native@0.7.1:
-    resolution: {integrity: sha512-MvX+lkFQFDdswvII4USunH+AEa0soRm2LmtaVdEn9l8aSRTmd3WrX4gAmCW1M3UaH0xTZKG79GDhnR2G00MdvA==}
+  eslint-plugin-no-use-extend-native@0.7.2:
+    resolution: {integrity: sha512-hUBlwaTXIO1GzTwPT6pAjvYwmSHe4XduDhAiQvur4RUujmBUFjd8Nb2+e7WQdsQ+nGHWGRlogcUWXJRGqizTWw==}
     engines: {node: '>=18.18.0'}
     peerDependencies:
       eslint: ^9.3.0
 
-  eslint-plugin-promise@7.0.0:
-    resolution: {integrity: sha512-wb1ECT+b90ndBdAujhIdAU8oQ3Vt5gKqP/t78KOmg0ifynrvc2jGR9f6ndbOVNFpKf6jLUBlBBDF3H3Wk0JICg==}
+  eslint-plugin-promise@7.1.0:
+    resolution: {integrity: sha512-8trNmPxdAy3W620WKDpaS65NlM5yAumod6XeC4LOb+jxlkG4IVcp68c6dXY2ev+uT4U1PtG57YDV6EGAXN0GbQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
@@ -3121,7 +3121,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-array-func@5.0.1(eslint@9.8.0):
+  eslint-plugin-array-func@5.0.2(eslint@9.8.0):
     dependencies:
       eslint: 9.8.0
 
@@ -3195,7 +3195,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-jsdoc@48.11.0(eslint@9.8.0):
+  eslint-plugin-jsdoc@50.0.0(eslint@9.8.0):
     dependencies:
       '@es-joy/jsdoccomment': 0.46.0
       are-docs-informative: 0.0.2
@@ -3231,7 +3231,7 @@ snapshots:
       globals: 13.24.0
       rambda: 7.5.0
 
-  eslint-plugin-n@17.10.1(eslint@9.8.0):
+  eslint-plugin-n@17.10.2(eslint@9.8.0):
     dependencies:
       '@eslint-community/eslint-utils': 4.4.0(eslint@9.8.0)
       enhanced-resolve: 5.17.0
@@ -3247,7 +3247,7 @@ snapshots:
     dependencies:
       eslint: 9.8.0
 
-  eslint-plugin-no-use-extend-native@0.7.1(eslint@9.8.0):
+  eslint-plugin-no-use-extend-native@0.7.2(eslint@9.8.0):
     dependencies:
       eslint: 9.8.0
       is-get-set-prop: 2.0.0
@@ -3255,7 +3255,7 @@ snapshots:
       is-obj-prop: 2.0.0
       is-proto-prop: 3.0.1
 
-  eslint-plugin-promise@7.0.0(eslint@9.8.0):
+  eslint-plugin-promise@7.1.0(eslint@9.8.0):
     dependencies:
       eslint: 9.8.0
 
