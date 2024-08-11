@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.12.0
+
+- chore: update deps.
+
 ## 36.11.1
 
 - fix: disable escompat rules for (Node) overrides files
