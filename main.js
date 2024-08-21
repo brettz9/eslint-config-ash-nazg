@@ -6,7 +6,7 @@ import stylistic from '@stylistic/eslint-plugin';
 import js from '@eslint/js';
 import brettz9 from '@brettz9/eslint-plugin';
 
-import markdown from 'eslint-plugin-markdown';
+import markdown from '@eslint/markdown';
 import html from 'eslint-plugin-html';
 import promise from 'eslint-plugin-promise';
 // import importPlugin from 'eslint-plugin-import';

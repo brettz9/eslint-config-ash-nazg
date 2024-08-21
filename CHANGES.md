@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.13.0
+
+- feat: switch to renamed markdown plugin
+
 ## 36.12.0
 
 - chore: update deps.

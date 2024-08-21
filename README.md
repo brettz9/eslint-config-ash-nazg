@@ -148,7 +148,7 @@ a few other (peer) dependencies.
   all of the `eslint-plugin-jsdoc` rules should only apply when JSDoc is
   used. We also avoid some of `eslint-plugin-jsdoc` stricter checking
   requirements for descriptions.
-- `eslint-plugin-markdown` - Another basic use case is ensuring code
+- `@eslint/markdown` - Another basic use case is ensuring code
   snippets are linted, which is why this is expected. You may find ESLint's
   discussion of `overrides` helpful for tweaking rules for Markdown (and
   you may also wish to use `overrides`, for the `eslint-plugin-jsdoc`
