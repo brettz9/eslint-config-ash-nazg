@@ -3,6 +3,7 @@
 ## 36.13.0
 
 - feat: switch to renamed markdown plugin
+- chore: update deps.
 
 ## 36.12.0
 
