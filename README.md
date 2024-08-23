@@ -726,7 +726,7 @@ can be picky about giving up their *preh-shus*...
 
 1. Restore the following as may become available in flat config:
     1. eslint-plugin-import
-    2. eslint-plugin-unsanitized (waiting on typescript-eslint))
+    2. eslint-plugin-unsanitized
     3. @fintechstudios/eslint-plugin-chai-as-promised (has PR)
     4. eslint-plugin-mocha-cleanup (has PR)
 
