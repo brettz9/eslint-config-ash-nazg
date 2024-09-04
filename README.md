@@ -543,14 +543,17 @@ appears, to Dark Lords.
 - `max-switch-cases` - Sounds too arbitrary.
 - `no-collapsible-if` - Sometimes more logically clear or made in preparation
   for future expansion
+- `no-commented-code` - Overly oppressive
 - `no-duplicate-string` - Often used in test files and repeated in fairly
   minor instances or instances repeated but spread out within a large file
 - `no-identical-functions` - Often used in test files and repeated by fairly
   minor functions or functions repeated but spread out within a large file
+- `no-nested-conditional` - Not needed
 - `no-small-switch` - Too useful to start a pattern to which one intends to add later.
 - `prefer-immediate-return` - Can be useful for documenting even if method name
     should be descriptive, especially if there are different returns with subtly
     different results
+- `todo-tag` - Use expiring to-dos, etc. instead
 
 ### Rationale for including eslint-plugin-jsdoc rules which are not in `plugin:jsdoc/recommended`
 

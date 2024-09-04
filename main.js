@@ -392,15 +392,19 @@ export default function main (pkg) {
 
         // SonarJS
         'sonarjs/no-inverted-boolean-check': 'error',
+
         'sonarjs/max-switch-cases': 'off',
         'sonarjs/no-collapsible-if': 'off',
+        'sonarjs/no-commented-code': 'off',
         'sonarjs/no-duplicate-string': 'off',
         'sonarjs/no-identical-functions': 'off',
+        'sonarjs/no-nested-conditional': 'off',
         'sonarjs/no-small-switch': 'off',
         'sonarjs/prefer-immediate-return': 'off',
         'sonarjs/cognitive-complexity': 'off',
         'sonarjs/no-nested-switch': 'off',
         'sonarjs/no-nested-template-literals': 'off',
+        'sonarjs/todo-tag': 'off',
 
         // Disable @brettz9/eslint-plugin
         '@brettz9/prefer-for-of': 'off',
