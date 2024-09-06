@@ -408,6 +408,13 @@ export default function main (pkg) {
         'sonarjs/no-nested-template-literals': 'off',
         'sonarjs/todo-tag': 'off',
 
+        'sonarjs/no-nested-functions': 'off',
+        'sonarjs/no-lonely-if': 'off',
+        'sonarjs/prefer-default-last': 'off',
+        'sonarjs/no-primitive-wrappers': 'off',
+        // Handling elsewhere
+        'sonarjs/code-eval': 'off',
+
         // Disable @brettz9/eslint-plugin
         '@brettz9/prefer-for-of': 'off',
         '@brettz9/no-use-ignored-vars': 'off'

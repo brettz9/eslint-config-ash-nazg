@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.15.0
+
+- feat: disable overly aggressive sonarjs rules
+
 ## 36.14.1
 
 - fix: disable problematic `sonarjs/sonar-no-fallthrough` rule
