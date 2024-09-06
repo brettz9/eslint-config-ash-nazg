@@ -120,8 +120,9 @@ const detectNodeVersion = (packagePath) => {
  */
 export const pkgSatisfiesNodeVersion = (pkg, range) => {
   const {engines: {node} = {}} = pkg;
-  return node
-    ? semver.satisfies(node, range)
+  const version = node && semver.minVersion(node)?.version;
+  return version
+    ? semver.satisfies(version, range)
     : (() => {
       throw new Error('Could not detect Node version from package.json');
     });
