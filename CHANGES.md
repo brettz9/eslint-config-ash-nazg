@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.14.0
+
+- feat: conditional `requireFlag` on `require-unicode-regexp`
+- feat: update deps.
+
 ## 36.13.0
 
 - feat: switch to renamed markdown plugin

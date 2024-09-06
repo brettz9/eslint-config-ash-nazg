@@ -1,11 +1,16 @@
 import main from './main.js';
+import {
+  pkgSatisfiesNodeVersion, pkgSatisfiesBrowserVersion
+} from './detectEnv.js';
 
 /**
  * @type {(pkg: {
-*   type?: "module"|"commonjs"
-* }) => import('eslint').Linter.Config[]}
-*/
-export default function sauron (pkg) {
+ *   type?: "module"|"commonjs",
+ *   engines?: {node?: string},
+ *   browserslist?: string[]|string
+ * }, types: string[]) => import('eslint').Linter.Config[]}
+ */
+export default function sauron (pkg, types) {
   return [
     ...main(pkg),
     {
@@ -102,7 +107,23 @@ export default function sauron (pkg) {
         }],
         'prefer-named-capture-group': ['warn'],
         'prefer-numeric-literals': ['warn'],
-        'require-unicode-regexp': ['warn'],
+        'require-unicode-regexp': [
+          'warn',
+          (
+            (types.includes('node') &&
+              pkgSatisfiesNodeVersion(pkg, '>=20.0.0')) ||
+            (types.includes('browser') &&
+              pkgSatisfiesBrowserVersion(
+                pkg,
+                // Keep in sync with eslint-plugin-escompat
+                'edge > 0, safari < 17, firefox < 116, chrome < 112'
+              ))
+          )
+            ? {
+              requireFlag: 'v'
+            }
+            : {}
+        ],
         'vars-on-top': ['warn'],
 
         'no-implicit-globals': ['error', {lexicalBindings: true}],

@@ -9,7 +9,7 @@ import sauron from './sauron.js';
 export default function sauronNode (pkg) {
   return [
     ...node(pkg),
-    ...sauron(pkg),
+    ...sauron(pkg, ['node']),
     {
       name: 'ash-nazg/sauron-node',
       rules: {

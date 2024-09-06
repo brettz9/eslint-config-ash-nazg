@@ -1,4 +1,7 @@
 // Todo: Move to own repo
+/* eslint-disable n/no-sync -- Not sure possible to use here */
+
+import browserslist from 'browserslist';
 
 /**
  * You can use this in your `eslint.config.js` as follows...
@@ -31,7 +34,6 @@
  *   3|5|6|7|8|9|10|11|12|13|14|15} EcmaVersion
  */
 
-/* eslint-disable n/no-sync -- Not sure possible to use here */
 import {readFileSync} from 'node:fs';
 import {join} from 'node:path';
 import semver from 'semver';
@@ -108,6 +110,39 @@ const detectNodeVersion = (packagePath) => {
     nodeVersion = version;
   } catch {}
   return nodeVersion;
+};
+
+/**
+ * @param {{
+ *   engines?: {node?: string}
+ * }} pkg
+ * @param {string} range
+ */
+export const pkgSatisfiesNodeVersion = (pkg, range) => {
+  const {engines: {node} = {}} = pkg;
+  return node
+    ? semver.satisfies(node, range)
+    : (() => {
+      throw new Error('Could not detect Node version from package.json');
+    });
+};
+
+/**
+ * @param {{
+ *   browserslist?: string[]|string
+ * }} pkg
+ * @param {string} range
+ */
+export const pkgSatisfiesBrowserVersion = (pkg, range) => {
+  if (!pkg?.browserslist) {
+    throw new Error('No `browserslist` found in `package.json`');
+  }
+  const desiredBrowsers = browserslist(pkg.browserslist);
+  const browsers = browserslist(range);
+  const badBrowsers = desiredBrowsers.filter(
+    (browser) => browsers.includes(browser)
+  ).join(', ');
+  return !badBrowsers;
 };
 
 /**

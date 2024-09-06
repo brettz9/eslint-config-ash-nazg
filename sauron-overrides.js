@@ -12,5 +12,5 @@ import mocha from './mocha.js';
   * }
   */
 export default function sauronOverrides (types, pkg) {
-  return [...sauron(pkg), ...overrides(types, pkg), ...mocha];
+  return [...sauron(pkg, []), ...overrides(types, pkg), ...mocha];
 }

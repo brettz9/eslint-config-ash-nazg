@@ -108,7 +108,7 @@ export default function index (types, config) {
         languageOptions
       });
     } else {
-      configs.push(...sauron(pkg));
+      configs.push(...sauron(pkg, types));
     }
   // basic config ("saruman") is the default
   } else if (types.includes('node')) {

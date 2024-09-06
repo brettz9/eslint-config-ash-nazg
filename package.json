@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ash-nazg",
-  "version": "36.13.0",
+  "version": "36.14.0",
   "description": "An expansion and tweaking of the \"standard\" config style for ESLint",
   "main": "index.js",
   "type": "module",
@@ -75,6 +75,7 @@
     "@eslint/markdown": "^6.1.0",
     "@fintechstudios/eslint-plugin-chai-as-promised": "^3.1.0",
     "@stylistic/eslint-plugin": "^2.7.2",
+    "browserslist": "^4.23.3",
     "es-file-traverse": "^1.2.0",
     "eslint-plugin-array-func": "^5.0.2",
     "eslint-plugin-chai-expect": "^3.1.0",

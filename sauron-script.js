@@ -7,5 +7,5 @@ import script from './script.js';
 * }) => import('eslint').Linter.Config[]}
  */
 export default function sauronScript (pkg) {
-  return [...sauron(pkg), ...script];
+  return [...sauron(pkg, []), ...script];
 }
