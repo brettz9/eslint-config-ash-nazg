@@ -1,4 +1,3 @@
-/* eslint-disable jsdoc/imports-as-dependencies -- Bug */
 import node from './node.js';
 import sauron from './sauron.js';
 

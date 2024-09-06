@@ -71,8 +71,8 @@
     "@brettz9/eslint-plugin": "^3.0.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.0",
     "@eslint/eslintrc": "^3.1.0",
-    "@eslint/js": "^9.9.1",
-    "@eslint/markdown": "^6.0.0",
+    "@eslint/js": "^9.10.0",
+    "@eslint/markdown": "^6.1.0",
     "@fintechstudios/eslint-plugin-chai-as-promised": "^3.1.0",
     "@stylistic/eslint-plugin": "^2.7.2",
     "es-file-traverse": "^1.2.0",
@@ -103,9 +103,9 @@
   "devDependencies": {
     "@scottnonnenberg/eslint-compare-config": "^1.1.0",
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^22.5.3",
+    "@types/node": "^22.5.4",
     "@types/semver": "^7.5.8",
-    "eslint": "^9.9.1",
+    "eslint": "^9.10.0",
     "rimraf": "^5.0.0",
     "typescript": "^5.5.4"
   }

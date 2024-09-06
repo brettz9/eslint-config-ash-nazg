@@ -1,4 +1,3 @@
-/* eslint-disable jsdoc/imports-as-dependencies -- Bug */
 import globals from 'globals';
 import bare from './bare.js';
 

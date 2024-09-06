@@ -1,4 +1,3 @@
-/* eslint-disable jsdoc/imports-as-dependencies -- Bug */
 import sauron from './sauron.js';
 import overrides from './overrides.js';
 import mocha from './mocha.js';

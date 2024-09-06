@@ -1,4 +1,3 @@
-/* eslint-disable jsdoc/imports-as-dependencies -- Bug */
 
 // Not technically flat: https://eslint.org/docs/latest/extend/plugin-migration-flat-config#migrating-environments-for-flat-config
 // However, we don't need flat config--just to embed its globals

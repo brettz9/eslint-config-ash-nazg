@@ -1,4 +1,3 @@
-/* eslint-disable jsdoc/imports-as-dependencies -- Bug */
 // eslint-disable-next-line n/no-sync -- For sync API
 import {readFileSync} from 'fs';
 import globals from 'globals';

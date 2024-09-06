@@ -1,4 +1,3 @@
-/* eslint-disable jsdoc/imports-as-dependencies -- Bug */
 import node from 'eslint-plugin-n';
 import globals from 'globals';
 

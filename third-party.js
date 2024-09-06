@@ -1,6 +1,5 @@
 // Move to eslint-plugin-privileges and import here
 
-/* eslint-disable jsdoc/imports-as-dependencies -- Bug */
 import babelEsintParser from '@babel/eslint-parser';
 
 /** @type {import('eslint').Linter.Config[]} */

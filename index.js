@@ -1,4 +1,3 @@
-/* eslint-disable jsdoc/imports-as-dependencies -- Bug */
 // Todo: Add TS config, including for use with JS!
 // eslint-disable-next-line n/no-sync -- No async configs
 import {readFileSync} from 'fs';

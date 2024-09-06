@@ -1,4 +1,3 @@
-/* eslint-disable jsdoc/imports-as-dependencies -- Bug */
 import sauronNodeScript from './sauron-node-script.js';
 import overrides from './overrides.js';
 

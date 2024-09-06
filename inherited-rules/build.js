@@ -1,7 +1,6 @@
 /* eslint quotes: ["error", "single"] -- not using JSON.stringify here */
 /* eslint-disable n/no-sync, no-console -- build script so sync and
     console ok */
-/* eslint-disable jsdoc/imports-as-dependencies -- Bug? */
 
 // Todo: Update for flat configs!
 

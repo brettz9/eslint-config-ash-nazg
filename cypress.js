@@ -1,4 +1,3 @@
-/* eslint-disable jsdoc/imports-as-dependencies -- Bug */
 import cypress from 'eslint-plugin-cypress/flat';
 
 import mochaPlus from './mocha-plus.js';

@@ -1,4 +1,3 @@
-/* eslint-disable jsdoc/imports-as-dependencies -- Bug */
 // import {fixupPluginRules} from '@eslint/compat'
 // import {FlatCompat} from '@eslint/eslintrc';
 
