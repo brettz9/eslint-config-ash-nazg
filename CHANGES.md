@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.14.1
+
+- fix: disable problematic `sonarjs/sonar-no-fallthrough` rule
+
 ## 36.14.0
 
 - feat: conditional `requireFlag` on `require-unicode-regexp`
