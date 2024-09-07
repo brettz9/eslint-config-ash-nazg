@@ -413,7 +413,7 @@ export default function main (pkg) {
         'sonarjs/no-self-compare': 'off',
         'sonarjs/prefer-default-last': 'off',
         'sonarjs/no-primitive-wrappers': 'off',
-        'sonarjs/no-regex-complexity': 'off',
+        'sonarjs/regex-complexity': 'off',
         'sonarjs/slow-regex': 'off',
         // Handling elsewhere
         'sonarjs/code-eval': 'off',
