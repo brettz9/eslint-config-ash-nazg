@@ -552,6 +552,9 @@ appears, to Dark Lords.
 - `no-nested-conditional` - Not needed
 - `no-nested-functions` - Good idea but restrictive
 - `no-primitive-wrappers` - Handling elsewhere
+- `no-regex-complexity` - Oppressive
+- `no-self-compare` - Handling elsewhere
+- `slow-regex` - Oppressive
 - `no-small-switch` - Too useful to start a pattern to which one intends to add later.
 - `prefer-default-last` - Handling elsewhere
 - `prefer-immediate-return` - Can be useful for documenting even if method name
