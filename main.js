@@ -408,15 +408,19 @@ export default function main (pkg) {
         'sonarjs/no-nested-template-literals': 'off',
         'sonarjs/todo-tag': 'off',
 
+        'sonarjs/no-empty-function': 'off',
         'sonarjs/no-nested-functions': 'off',
         'sonarjs/no-lonely-if': 'off',
         'sonarjs/no-self-compare': 'off',
         'sonarjs/prefer-default-last': 'off',
-        'sonarjs/no-primitive-wrappers': 'off',
         'sonarjs/regex-complexity': 'off',
         'sonarjs/slow-regex': 'off',
         // Handling elsewhere
         'sonarjs/code-eval': 'off',
+        'sonarjs/constructor-for-side-effects': 'off',
+        'sonarjs/new-cap': 'off',
+        'sonarjs/no-exclusive-tests': 'off',
+        'sonarjs/no-primitive-wrappers': 'off',
 
         // Disable @brettz9/eslint-plugin
         '@brettz9/prefer-for-of': 'off',
