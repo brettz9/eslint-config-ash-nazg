@@ -1,6 +1,6 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 36.16.2
 
 - fix: properly disable overly aggressive sonarjs rules
 
