@@ -415,12 +415,18 @@ export default function main (pkg) {
         'sonarjs/prefer-default-last': 'off',
         'sonarjs/regex-complexity': 'off',
         'sonarjs/slow-regex': 'off',
+        'sonarjs/sonar-max-params': 'off',
         // Handling elsewhere
         'sonarjs/code-eval': 'off',
         'sonarjs/constructor-for-side-effects': 'off',
         'sonarjs/new-cap': 'off',
         'sonarjs/no-exclusive-tests': 'off',
         'sonarjs/no-primitive-wrappers': 'off',
+        'sonarjs/sonar-no-control-regex': 'off',
+        'sonarjs/unused-import': 'off',
+        'sonarjs/no-var': 'off',
+        'sonarjs/no-ignored-exceptions': 'off',
+        'sonarjs/default-param-last': 'off',
 
         // Disable @brettz9/eslint-plugin
         '@brettz9/prefer-for-of': 'off',
