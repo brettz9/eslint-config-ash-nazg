@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.17.0
+
+- chore: update deps.
+- fix: properly disable overly aggressive sonarjs rules
+
 ## 36.16.3
 
 - fix: properly disable overly aggressive sonarjs rules
