@@ -3,10 +3,10 @@ import sauron from './sauron.js';
 /**
  * @type {(pkg: {
 *   type?: "module"|"commonjs"
-* }) => import('eslint').Linter.Config[]}
+* }, types: string[]) => import('eslint').Linter.Config[]}
  */
-export default function greatEye (pkg) {
-  return [...sauron(pkg), {
+export default function greatEye (pkg, types) {
+  return [...sauron(pkg, types), {
     name: 'ash-nazg/great-eye',
     settings: {
       preferredTypes: {

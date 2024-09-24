@@ -4,8 +4,8 @@ import sauronNode from './sauron-node.js';
 /**
  * @type {(pkg: {
 *   type?: "module"|"commonjs"
-* }) => import('eslint').Linter.Config[]}
+* }, types: string[]) => import('eslint').Linter.Config[]}
  */
-export default function greatEyeNode (pkg) {
-  return [...greatEye(pkg), ...sauronNode(pkg)];
+export default function greatEyeNode (pkg, types) {
+  return [...greatEye(pkg, types), ...sauronNode(pkg)];
 }

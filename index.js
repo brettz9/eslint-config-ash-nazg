@@ -94,12 +94,12 @@ export default function index (types, config) {
 
   if (types.includes('great-eye')) {
     if (types.includes('node')) {
-      configs.push(...greatEyeNode(pkg), {
+      configs.push(...greatEyeNode(pkg, types), {
         name: 'ash-nazg/great-eye-node/languageOptions',
         languageOptions
       });
     } else {
-      configs.push(...greatEye(pkg));
+      configs.push(...greatEye(pkg, types));
     }
   } else if (types.includes('sauron')) {
     if (types.includes('node')) {

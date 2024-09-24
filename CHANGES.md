@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- fix: ensure great eye passes on args
+- chore: update deps.
+
 ## 36.17.1
 
 - fix: properly disable overly aggressive sonarjs rules
