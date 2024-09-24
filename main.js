@@ -8,13 +8,16 @@ import brettz9 from '@brettz9/eslint-plugin';
 import markdown from '@eslint/markdown';
 import html from 'eslint-plugin-html';
 import promise from 'eslint-plugin-promise';
-// import importPlugin from 'eslint-plugin-import';
+import importPlugin from 'eslint-plugin-import';
 import unicorn from 'eslint-plugin-unicorn';
 import comments from '@eslint-community/eslint-plugin-eslint-comments/configs';
 
 import arrayFunc from 'eslint-plugin-array-func';
 import sonarjs from 'eslint-plugin-sonarjs';
 import jsdoc from 'eslint-plugin-jsdoc';
+
+// eslint-disable-next-line @stylistic/max-len -- Long
+// eslint-disable-next-line import/namespace, import/default, import/no-named-as-default, import/no-named-as-default-member -- Experimental JSON
 import noUseExtendNative from 'eslint-plugin-no-use-extend-native';
 
 import script from './script.js';
@@ -59,7 +62,7 @@ export default function main (pkg) {
 
     // These may override 'standard' which includes their rules,
     //   so including first
-    // ...compat.extends('plugin:import/recommended'), // Todo: Reenable after ESLint 9/Flat support: https://github.com/import-js/eslint-plugin-import/issues/2948
+    importPlugin.flatConfigs.recommended,
     promise.configs['flat/recommended'],
     // This may override eslint:recommended and the promise/import rules,
     //  but it doesn't turn any off

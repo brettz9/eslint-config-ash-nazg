@@ -126,9 +126,8 @@ export default function sauron (pkg, types) {
         ],
         'vars-on-top': ['warn'],
 
-        // Todo: Reenable after: https://github.com/import-js/eslint-plugin-import/issues/2948
-        // 'import/unambiguous': 'warn',
-        // 'import/no-commonjs': 'warn',
+        'import/unambiguous': 'warn',
+        'import/no-commonjs': 'warn',
 
         'jsdoc/require-jsdoc': ['warn', {
           require: {

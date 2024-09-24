@@ -735,10 +735,9 @@ can be picky about giving up their *preh-shus*...
 ## High-priority to-dos
 
 1. Restore the following as may become available in flat config:
-    1. eslint-plugin-import
-    2. eslint-plugin-unsanitized
-    3. @fintechstudios/eslint-plugin-chai-as-promised (has PR)
-    4. eslint-plugin-mocha-cleanup (has PR)
+    1. eslint-plugin-unsanitized
+    2. @fintechstudios/eslint-plugin-chai-as-promised (has PR)
+    3. eslint-plugin-mocha-cleanup (has PR)
 
 ## To-dos
 
