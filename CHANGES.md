@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.18.1
+
+- fix: apply `no-implicit-globals` rule only if in browser
+
 ## 36.18.0
 
 - fix: apply `lexicalBindings` option only for `no-implicit-globals` if in browser

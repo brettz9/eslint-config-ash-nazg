@@ -180,7 +180,6 @@ export default function main (pkg) {
         'no-eq-null': ['error'],
         'no-extra-label': ['error'],
         'no-implicit-coercion': ['error'],
-        'no-implicit-globals': ['error'],
         'no-lonely-if': ['error'],
         'no-loop-func': ['error'],
         'no-loss-of-precision': ['error'],
