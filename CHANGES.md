@@ -1,7 +1,8 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 36.18.0
 
+- fix: apply `lexicalBindings` option only for `no-implicit-globals` if in browser
 - fix: ensure great eye passes on args
 - chore: update deps.
 

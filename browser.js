@@ -15,6 +15,12 @@ export default [
     name: 'ash-nazg/compat/flat-recommended',
     ...eslintCompat.configs['flat/recommended']
   },
-  esCompat.configs['flat/recommended']
+  esCompat.configs['flat/recommended'],
   // noUnsanitized.DOM,
+  {
+    name: 'ash-nazg/browser',
+    rules: {
+      'no-implicit-globals': ['error', {lexicalBindings: true}],
+    }
+  }
 ];

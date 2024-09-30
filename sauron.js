@@ -126,7 +126,7 @@ export default function sauron (pkg, types) {
         ],
         'vars-on-top': ['warn'],
 
-        'no-implicit-globals': ['error', {lexicalBindings: true}],
+        'no-implicit-globals': ['error'],
 
         // Todo: Reenable after: https://github.com/import-js/eslint-plugin-import/issues/2948
         // 'import/unambiguous': 'warn',
