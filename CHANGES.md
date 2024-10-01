@@ -2,7 +2,7 @@
 
 ## 36.19.0
 
-- feat: `caughtError: none` for `no-unused-vars`
+- feat: `caughtErrors: none` for `no-unused-vars`
 
 ## 36.18.1
 

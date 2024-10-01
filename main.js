@@ -427,6 +427,7 @@ export default function main (pkg) {
         'sonarjs/no-primitive-wrappers': 'off',
         'sonarjs/sonar-no-control-regex': 'off',
         'sonarjs/unused-import': 'off',
+        'sonarjs/no-throw-literal': 'off',
         'sonarjs/no-var': 'off',
         'sonarjs/no-redundant-jump': 'off',
         'sonarjs/sonar-no-unused-vars': 'off',
