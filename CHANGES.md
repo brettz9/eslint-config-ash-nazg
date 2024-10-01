@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.19.0
+
+- feat: `caughtError: none` for `no-unused-vars`
+
 ## 36.18.1
 
 - fix: apply `no-implicit-globals` rule only if in browser

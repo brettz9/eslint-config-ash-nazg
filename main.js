@@ -154,6 +154,10 @@ export default function main (pkg) {
         // 'padded-blocks': ['error', 'never'], // Deprecated
         '@stylistic/spaced-comment': ['error', 'always', {markers: ['/']}],
 
+        'no-unused-vars': ['error', {
+          caughtErrors: 'none'
+        }],
+
         // Disable non-stylistic from standard
         'no-use-before-define': 'off',
 
