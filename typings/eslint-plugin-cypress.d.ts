@@ -1,4 +1,4 @@
-declare module 'eslint-plugin-cypress' {
+declare module 'eslint-plugin-cypress/flat' {
   import type { Linter } from "eslint";
 
   declare const cypress: {

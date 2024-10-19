@@ -1,4 +1,5 @@
-import cypress from 'eslint-plugin-cypress';
+// eslint-disable-next-line import/no-unresolved -- Ok
+import cypress from 'eslint-plugin-cypress/flat';
 
 import mochaPlus from './mocha-plus.js';
 

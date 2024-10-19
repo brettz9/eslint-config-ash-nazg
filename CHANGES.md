@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.20.1
+
+- fix: cypress issue
+
 ## 36.20.0
 
 - chore: update deps.
