@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.20.0
+
+- chore: update deps.
+
 ## 36.19.0
 
 - feat: `caughtErrors: none` for `no-unused-vars`

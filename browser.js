@@ -20,7 +20,7 @@ export default [
   {
     name: 'ash-nazg/browser',
     rules: {
-      'no-implicit-globals': ['error', {lexicalBindings: true}],
+      'no-implicit-globals': ['error', {lexicalBindings: true}]
     }
   }
 ];
