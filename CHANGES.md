@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.21.0
+
+- fix: disable redundant sonarjs/no-unused-expressions
+- chore: update deps. and devDeps.
+
 ## 36.20.1
 
 - fix: cypress issue
