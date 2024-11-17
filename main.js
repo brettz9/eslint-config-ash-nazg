@@ -432,6 +432,7 @@ export default function main (pkg) {
         'sonarjs/unused-import': 'off',
         'sonarjs/no-throw-literal': 'off',
         'sonarjs/no-var': 'off',
+        'sonarjs/no-unused-expressions': 'off',
         'sonarjs/no-redundant-jump': 'off',
         'sonarjs/sonar-no-unused-vars': 'off',
         'sonarjs/no-dead-store': 'off',
