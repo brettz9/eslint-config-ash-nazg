@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.22.2
+
+- fix: overrides issue
+
 ## 36.22.1
 
 - fix: mocha issue

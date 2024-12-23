@@ -11,6 +11,7 @@ import greatEyeNode from './great-eye-node.js';
 import sauronNode from './sauron-node.js';
 import node from './node.js';
 import polyglot from './polyglot.js';
+import {languageOptions} from './detectEnv.js';
 
 import esCompat from 'eslint-plugin-escompat';
 
@@ -156,6 +157,7 @@ export default function overrides (types, pkg) {
           '**/server.js'
         ],
         languageOptions: {
+          ecmaVersion: languageOptions.ecmaVersion,
           ...config.languageOptions,
           globals: {
             ...config.languageOptions?.globals,
