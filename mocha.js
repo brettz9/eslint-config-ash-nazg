@@ -1,11 +1,19 @@
 // Todo: Might move these very basic configs (Mocha, and add one for Node
 //   globals, etc.) to own repo
 
+import {languageOptions} from './detectEnv.js';
+
 /** @type {import('eslint').Linter.Config[]} */
 export default [{
   name: 'ash-nazg/mocha',
   files: ['**/test/**', '**/tests/**', 'cypress/e2e/**'],
   languageOptions: {
+    ...(languageOptions.ecmaVersion
+      ? {
+        ecmaVersion: languageOptions.ecmaVersion
+      }
+      : {}
+    ),
     globals: {
       // Imported nowadays
       // chai: 'readonly',

@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.22.1
+
+- fix: mocha issue
+
 ## 36.22.0
 
 - fix: great eye node
