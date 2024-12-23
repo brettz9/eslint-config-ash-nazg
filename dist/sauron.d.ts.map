@@ -1,1 +1,1 @@
-{"version":3,"file":"sauron.d.ts","sourceRoot":"","sources":["../sauron.js"],"names":[],"mappings":"AAIU,oCAAM;IAChB,IAAQ,CAAC,EAAE,QAAQ,GAAC,UAAU,CAAA;CAC3B,GAAK,OAAO,QAAQ,EAAE,MAAM,CAAC,MAAM,EAAE,CAAA"}
+{"version":3,"file":"sauron.d.ts","sourceRoot":"","sources":["../sauron.js"],"names":[],"mappings":"AAMU,oCAAM;IACX,IAAI,CAAC,EAAE,QAAQ,GAAC,UAAU,CAAC;IAC3B,OAAO,CAAC,EAAE;QAAC,IAAI,CAAC,EAAE,MAAM,CAAA;KAAC,CAAC;IAC1B,YAAY,CAAC,EAAE,MAAM,EAAE,GAAC,MAAM,CAAA;CAC/B,SAAS,MAAM,EAAE,GAAK,OAAO,QAAQ,EAAE,MAAM,CAAC,MAAM,EAAE,CAAA"}

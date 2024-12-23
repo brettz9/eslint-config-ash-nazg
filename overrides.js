@@ -1,4 +1,3 @@
-// eslint-disable-next-line n/no-sync -- For sync API
 import {readFileSync} from 'fs';
 import globals from 'globals';
 import nodePlugin from 'eslint-plugin-n';
@@ -33,7 +32,7 @@ const disabledEsCompat = Object.keys(
  */
 export default function overrides (types, pkg) {
   const nodeConfigs = types.includes('great-eye')
-    ? greatEyeNode(pkg)
+    ? greatEyeNode(pkg, types)
     : types.includes('sauron')
       ? sauronNode(pkg)
       : node(pkg);

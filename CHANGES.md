@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 36.22.0
+
+- fix: great eye node
+- chore: update deps. and devDeps.
+
 ## 36.21.0
 
 - fix: disable redundant sonarjs/no-unused-expressions

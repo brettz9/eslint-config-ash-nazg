@@ -1,3 +1,11 @@
+export function pkgSatisfiesNodeVersion(pkg: {
+    engines?: {
+        node?: string;
+    };
+}, range: string): boolean | (() => never);
+export function pkgSatisfiesBrowserVersion(pkg: {
+    browserslist?: string[] | string;
+}, range: string): boolean;
 export namespace languageOptions {
     export { globals };
     export { ecmaVersion };

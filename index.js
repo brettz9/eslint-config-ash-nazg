@@ -1,5 +1,4 @@
 // Todo: Add TS config, including for use with JS!
-// eslint-disable-next-line n/no-sync -- No async configs
 import {readFileSync} from 'fs';
 
 import globals from 'globals';
