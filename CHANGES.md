@@ -1,5 +1,11 @@
 # eslint-config-ash-nazg CHANGES
 
+## 37.1.0
+
+- fix(overrides): ensure Node globals exist for ESLint and Rollup cfg
+- fix(overrides): disable `no-restricted-imports` (for bare/polyglot
+    configs) for Rollup/ESLint
+
 ## 37.0.1
 
 - docs: demo usage

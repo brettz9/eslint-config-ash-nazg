@@ -82,6 +82,22 @@ export default function overrides (types, pkg) {
     ...overridesModule.map((cfg) => {
       return {
         ...cfg,
+        ...(cfg.languageOptions
+          ? {
+            languageOptions: {
+              ...cfg.languageOptions,
+              globals: {
+                ...cfg.languageOptions.globals,
+                ...globals.node
+              }
+            }
+          }
+          : {
+            languageOptions: {
+              globals: globals.node
+            }
+          }
+        ),
         name: 'ash-nazg/overrides/rc/modules',
         files: [
           '**/scripts/rollup-plugin/**/*',
@@ -91,7 +107,9 @@ export default function overrides (types, pkg) {
         ],
         rules: {
           ...cfg.rules,
-          ...disabledEsCompat
+          ...disabledEsCompat,
+          // We only want to restrict imports for non-Node-specific polyglot
+          'no-restricted-imports': 'off'
         }
       };
     }),
