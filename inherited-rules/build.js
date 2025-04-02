@@ -115,7 +115,7 @@ function getExtensions (config) {
   ).reduce((obj, extension) => {
     // Todo: This should support external extensions, but have no need now
     // No cyclic detection
-    extension = extension.replace(/plugin:.*\//u, '');
+    extension = extension.replace(/plugin:.*\//v, '');
     if (!right.configs[extension]) {
       if (cache[preferredConfig]) {
         return obj;
@@ -151,7 +151,7 @@ if (
 
 // console.log('left', left); throw new Error('exit');
 
-const prefix = rightModule.replace(/eslint-plugin-/u, '');
+const prefix = rightModule.replace(/eslint-plugin-/v, '');
 
 const rightConfig = isInherited &&
   // If we are checking inherited, some configs, like "standard", are not rule
@@ -280,7 +280,7 @@ if (isInherited || Object.keys(rightConfig.rules).length) {
  */
 function getModulePath (rtModule, preferredCfg, isInheritd) {
   return rtModule.replace(
-    /(?:eslint-(?:config|plugin)-)?/u,
+    /(?:eslint-(?:config|plugin)-)?/v,
     ''
   ).replaceAll('/', '_') +
     (isInheritd && preferredCfg && preferredCfg !== '-'

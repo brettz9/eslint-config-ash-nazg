@@ -30,8 +30,8 @@ import browserslist from 'browserslist';
  */
 
 /**
- * @typedef {2024|2023|2022|2021|2020|2019|2018|2017|2016|2015|
- *   3|5|6|7|8|9|10|11|12|13|14|15} EcmaVersion
+ * @typedef {2025|2024|2023|2022|2021|2020|2019|2018|2017|2016|2015|
+ *   3|5|6|7|8|9|10|11|12|13|14|15|16} EcmaVersion
  */
 
 import {readFileSync} from 'node:fs';
@@ -74,7 +74,7 @@ const getGlobalsForEcmaVersion = ({ecmaVersion, nodeVersion, node = true}) => {
 */
 const getEcmaVersionForNodeVersion = (nodeVersion) => {
   return semver.satisfies(nodeVersion, '>=20.0.0')
-    ? 2023
+    ? 2025
     : semver.satisfies(nodeVersion, '>=16.0.0')
       ? 2022
       : semver.satisfies(nodeVersion, '>=15.0.0')

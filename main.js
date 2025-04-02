@@ -16,8 +16,6 @@ import arrayFunc from 'eslint-plugin-array-func';
 import sonarjs from 'eslint-plugin-sonarjs';
 import jsdoc from 'eslint-plugin-jsdoc';
 
-// eslint-disable-next-line @stylistic/max-len -- Long
-// eslint-disable-next-line import/namespace, import/default, import/no-named-as-default, import/no-named-as-default-member -- Experimental JSON
 import noUseExtendNative from 'eslint-plugin-no-use-extend-native';
 
 import script from './script.js';

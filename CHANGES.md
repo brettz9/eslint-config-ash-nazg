@@ -1,5 +1,11 @@
 # eslint-config-ash-nazg CHANGES
 
+## 37.0.0
+
+BREAKING CHANGES: Require Node 20+
+
+- fix: default to es2025
+
 ## 36.22.2
 
 - fix: overrides issue
