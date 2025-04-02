@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 37.0.1
+
+- docs: demo usage
+
 ## 37.0.0
 
 BREAKING CHANGES: Require Node 20+

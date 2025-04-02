@@ -12,6 +12,25 @@ npm i -D eslint-config-ash-nazg
 install-peerdeps -d eslint-config-ash-nazg
 ```
 
+## Usage
+
+```js
+import ashNazg from 'eslint-config-ash-nazg';
+
+export default [
+  ...ashNazg([
+    'sauron', // "great-eye"|"sauron"|"saruman" (default)
+    'node' // "polyglot" (default)|"bare"|"node"|"browser"|
+    // "script"|"module" (Default)
+
+    // Other options
+    // "no-overrides"|
+    // "no-cypress"|"mocha"|
+    // "babel"|"third-party"
+  ])
+];
+```
+
 ## The rules
 
 See [main.js](./main.js) (and [node.js](./node.js) for `ash-nazg/node`

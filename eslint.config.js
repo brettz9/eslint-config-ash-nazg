@@ -7,6 +7,12 @@ const config = [
     'sauron', 'node'
   ]),
   {
+    files: ['README.md/*.js'],
+    rules: {
+      'import/no-unresolved': 'off'
+    }
+  },
+  {
     name: 'ash-nazg-internal/inherited',
     files: ['inherited-rules/**'],
     ignores: ['inherited-rules/build.js'],
