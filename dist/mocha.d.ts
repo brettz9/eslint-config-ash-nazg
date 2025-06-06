@@ -13,6 +13,7 @@ declare const _default: {
             xdescribe: "readonly";
             xit: "readonly";
         };
+        ecmaVersion?: import("./detectEnv.js").EcmaVersion | undefined;
     };
 }[];
 export default _default;

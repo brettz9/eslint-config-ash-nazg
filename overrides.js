@@ -37,6 +37,8 @@ export default function overrides (types, pkg) {
     : types.includes('sauron')
       ? sauronNode(pkg)
       : node(pkg);
+
+  // @ts-expect-error Should be ok
   return [
     // The overrides should be Node files (e.g., to disable browser rules)
     ...overridesScript.map((cfg) => {

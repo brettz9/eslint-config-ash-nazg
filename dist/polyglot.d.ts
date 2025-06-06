@@ -4,6 +4,7 @@ declare const _default: (import("eslint").Linter.Config<import("eslint").Linter.
         globals: {
             readonly AbortController: false;
             readonly AbortSignal: false;
+            readonly AsyncDisposableStack: false;
             readonly atob: false;
             readonly Blob: false;
             readonly BroadcastChannel: false;
@@ -20,6 +21,7 @@ declare const _default: (import("eslint").Linter.Config<import("eslint").Linter.
             readonly CryptoKey: false;
             readonly CustomEvent: false;
             readonly DecompressionStream: false;
+            readonly DisposableStack: false;
             readonly DOMException: false;
             readonly Event: false;
             readonly EventTarget: false;
@@ -53,6 +55,7 @@ declare const _default: (import("eslint").Linter.Config<import("eslint").Linter.
             readonly setTimeout: false;
             readonly structuredClone: false;
             readonly SubtleCrypto: false;
+            readonly SuppressedError: false;
             readonly TextDecoder: false;
             readonly TextDecoderStream: false;
             readonly TextEncoder: false;
@@ -60,6 +63,7 @@ declare const _default: (import("eslint").Linter.Config<import("eslint").Linter.
             readonly TransformStream: false;
             readonly TransformStreamDefaultController: false;
             readonly URL: false;
+            readonly URLPattern: false;
             readonly URLSearchParams: false;
             readonly WebAssembly: false;
             readonly WebSocket: false;

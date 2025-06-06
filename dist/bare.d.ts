@@ -2,7 +2,7 @@ declare const _default: {
     name: string;
     rules: {
         'no-restricted-imports': ["error", {
-            paths: string[];
+            paths: readonly string[];
         }];
     };
 }[];

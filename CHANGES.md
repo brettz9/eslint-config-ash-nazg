@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 38.0.0
+
+- chore: update deps. and devDeps.
+- fix: avoid `sonarjs/no-unused-vars`
+
 ## 37.1.0
 
 - fix(overrides): ensure Node globals exist for ESLint and Rollup cfg

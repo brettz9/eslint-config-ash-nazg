@@ -40,7 +40,7 @@ function addTestFiles (config, name) {
 /** @type {ESLintConfig[]} */
 export default [
   addTestFiles(
-    mochaPlugin.configs.flat.recommended,
+    mochaPlugin.configs.recommended,
     'ash-nazg/test-files/mocha'
   ),
   // Todo: Reenable when available

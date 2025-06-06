@@ -399,6 +399,7 @@ export default function main (pkg) {
         // Due to bug: https://sonarsource.atlassian.net/browse/JS-296
         'sonarjs/sonar-no-fallthrough': 'off',
 
+        'sonarjs/no-unused-vars': 'off',
         'sonarjs/max-switch-cases': 'off',
         'sonarjs/no-collapsible-if': 'off',
         'sonarjs/no-commented-code': 'off',
