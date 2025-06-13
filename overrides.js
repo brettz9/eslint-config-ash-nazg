@@ -96,6 +96,7 @@ export default function overrides (types, pkg) {
           }
           : {
             languageOptions: {
+              ecmaVersion: languageOptions.ecmaVersion,
               globals: globals.node
             }
           }

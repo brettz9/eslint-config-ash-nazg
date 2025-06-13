@@ -1,7 +1,8 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 38.0.1
 
+- fix: allow rollup config in overrides to get `ecmaVersion`
 - chore: update deps. and devDep.
 
 ## 38.0.0
