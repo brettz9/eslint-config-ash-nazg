@@ -67,7 +67,7 @@ export default function main (pkg) {
     standard[0], // Using this until eslint-config-standard fixes
 
     // These only add their own rules and are not used by the others
-    unicorn.configs['flat/recommended'],
+    unicorn.configs.recommended,
     {
       name: 'ash-nazg/comments/recommended',
       ...comments.recommended
