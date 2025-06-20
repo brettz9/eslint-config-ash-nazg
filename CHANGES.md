@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 38.0.2
+
+- fix: add missing `languageOptions` for polyglot versions
+
 ## 38.0.1
 
 - fix: allow rollup config in overrides to get `ecmaVersion`

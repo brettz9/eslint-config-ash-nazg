@@ -107,7 +107,10 @@ export default function index (types, config) {
         languageOptions
       });
     } else {
-      configs.push(...sauron(pkg, types));
+      configs.push(...sauron(pkg, types), {
+        name: 'ash-nazg/sauron-polyglot/languageOptions',
+        languageOptions
+      });
     }
   // basic config ("saruman") is the default
   } else if (types.includes('node')) {
@@ -116,7 +119,10 @@ export default function index (types, config) {
       languageOptions
     });
   } else {
-    configs.push(...main(pkg));
+    configs.push(...main(pkg), {
+      name: 'ash-nazg/polyglot/languageOptions',
+      languageOptions
+    });
   }
 
   // `polyglot` is default, with polyglot stricter than either Node
@@ -160,7 +166,7 @@ export default function index (types, config) {
       );
     }
     configs.push(...browser);
-    // Should we get ride of this--use polyglot if needing intersection of both
+    // Should we get rid of this--use polyglot if needing intersection of both
     if (types.includes('node')) {
       configs.push({
         name: 'ash-nazg/node-and-browser/globals',
