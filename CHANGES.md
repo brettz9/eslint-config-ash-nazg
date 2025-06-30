@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- chore: update deps. and devDeps.
+
 ## 38.0.2
 
 - fix: add missing `languageOptions` for polyglot versions

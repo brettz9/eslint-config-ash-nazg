@@ -2,6 +2,7 @@ declare const _default: ({
     readonly rules: Readonly<import("eslint").Linter.RulesRecord>;
 } | {
     name: string;
+    basePath?: string;
     files?: Array<string | string[]>;
     ignores?: string[];
     language?: string;

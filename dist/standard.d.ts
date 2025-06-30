@@ -14,7 +14,7 @@ declare const _default: ({
         '@stylistic/dot-location': "error";
         '@stylistic/eol-last': "error";
         eqeqeq: "error";
-        '@stylistic/func-call-spacing': "error";
+        '@stylistic/function-call-spacing': "error";
         '@stylistic/generator-star-spacing': "error";
         '@stylistic/key-spacing': "error";
         '@stylistic/keyword-spacing': "error";
@@ -152,7 +152,7 @@ declare const _default: ({
         '@stylistic/dot-location'?: undefined;
         '@stylistic/eol-last'?: undefined;
         eqeqeq?: undefined;
-        '@stylistic/func-call-spacing'?: undefined;
+        '@stylistic/function-call-spacing'?: undefined;
         '@stylistic/generator-star-spacing'?: undefined;
         '@stylistic/key-spacing'?: undefined;
         '@stylistic/keyword-spacing'?: undefined;

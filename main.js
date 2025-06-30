@@ -76,12 +76,7 @@ export default function main (pkg) {
       name: 'ash-nazg/array-func/all',
       ...arrayFunc.configs.all
     },
-    {
-      name: 'ash-nazg/sonarjs/recommended',
-      ...(/** @type {import('eslint').Linter.Config} */ (
-        sonarjs.configs.recommended
-      ))
-    },
+    sonarjs.configs.recommended,
     jsdoc.configs['flat/recommended'],
     {
       name: 'ash-nazg/no-use-extend-native/recommended',

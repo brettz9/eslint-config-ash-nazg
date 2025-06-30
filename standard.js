@@ -15,7 +15,7 @@ export default [{
     '@stylistic/dot-location': 'error',
     '@stylistic/eol-last': 'error',
     eqeqeq: 'error',
-    '@stylistic/func-call-spacing': 'error',
+    '@stylistic/function-call-spacing': 'error',
     '@stylistic/generator-star-spacing': 'error',
     '@stylistic/key-spacing': 'error',
     '@stylistic/keyword-spacing': 'error',
