@@ -67,13 +67,13 @@
     "node": ">=20.0.0"
   },
   "dependencies": {
-    "@babel/eslint-parser": "^7.27.5",
+    "@babel/eslint-parser": "^7.28.0",
     "@babel/eslint-plugin": "^7.27.1",
     "@babel/plugin-syntax-import-attributes": "^7.27.1",
     "@brettz9/eslint-plugin": "^3.0.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
     "@eslint/eslintrc": "^3.3.1",
-    "@eslint/js": "^9.30.0",
+    "@eslint/js": "^9.30.1",
     "@eslint/markdown": "^6.6.0",
     "@fintechstudios/eslint-plugin-chai-as-promised": "^3.1.0",
     "@stylistic/eslint-plugin": "^5.1.0",
@@ -88,16 +88,16 @@
     "eslint-plugin-escompat": "^3.11.4",
     "eslint-plugin-html": "^8.1.3",
     "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-jsdoc": "^51.3.1",
+    "eslint-plugin-jsdoc": "^51.3.4",
     "eslint-plugin-mocha": "^11.1.0",
     "eslint-plugin-mocha-cleanup": "^1.11.3",
-    "eslint-plugin-n": "^17.20.0",
+    "eslint-plugin-n": "^17.21.0",
     "eslint-plugin-no-unsanitized": "^4.1.2",
     "eslint-plugin-no-use-extend-native": "^0.7.2",
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-sonarjs": "^3.0.4",
     "eslint-plugin-unicorn": "^59.0.1",
-    "globals": "^16.2.0",
+    "globals": "^16.3.0",
     "semver": "^7.7.2"
   },
   "peerDependencies": {
@@ -105,9 +105,9 @@
   },
   "devDependencies": {
     "@scottnonnenberg/eslint-compare-config": "^1.1.0",
-    "@types/node": "^24.0.7",
+    "@types/node": "^24.0.12",
     "@types/semver": "^7.7.0",
-    "eslint": "^9.30.0",
+    "eslint": "^9.30.1",
     "rimraf": "^6.0.1",
     "typescript": "^5.8.3"
   }
