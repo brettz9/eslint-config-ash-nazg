@@ -128,7 +128,7 @@ export default function main (pkg) {
         '@stylistic/quote-props': ['error', 'as-needed'],
         '@stylistic/quotes': ['error', 'single', {
           avoidEscape: true,
-          allowTemplateLiterals: true
+          allowTemplateLiterals: 'always'
         }],
         '@stylistic/semi': ['error', 'always'],
         '@stylistic/semi-style': ['error'],
