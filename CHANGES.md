@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 39.0.2
+
+- fix: block sonarjs no-fallthrough rule
+
 ## 39.0.1
 
 - fix: avoid deprecated property
