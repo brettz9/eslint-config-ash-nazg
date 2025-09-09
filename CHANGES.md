@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 39.1.0
+
+- chore: update deps including new unicorn rules
+
 ## 39.0.2
 
 - fix: block sonarjs no-fallthrough rule

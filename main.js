@@ -14,7 +14,7 @@ import comments from '@eslint-community/eslint-plugin-eslint-comments/configs';
 
 import arrayFunc from 'eslint-plugin-array-func';
 import sonarjs from 'eslint-plugin-sonarjs';
-import jsdoc from 'eslint-plugin-jsdoc';
+import {jsdoc} from 'eslint-plugin-jsdoc';
 
 import noUseExtendNative from 'eslint-plugin-no-use-extend-native';
 
@@ -77,7 +77,9 @@ export default function main (pkg) {
       ...arrayFunc.configs.all
     },
     sonarjs.configs.recommended,
-    jsdoc.configs['flat/recommended'],
+    jsdoc({
+      config: 'flat/recommended'
+    }),
     {
       name: 'ash-nazg/no-use-extend-native/recommended',
       ...noUseExtendNative.configs.recommended
