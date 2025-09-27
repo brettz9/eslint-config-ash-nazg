@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 39.4.0
+
+- chore: update deps.
+
 ## 39.3.0
 
 - chore: update deps. and devDeps.

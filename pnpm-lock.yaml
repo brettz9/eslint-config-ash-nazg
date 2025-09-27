@@ -45,8 +45,8 @@ importers:
         specifier: ^2.0.1
         version: 2.0.1(@babel/core@7.26.0)(eslint-plugin-import@2.32.0(eslint@9.36.0))(eslint@9.36.0)
       eslint-plugin-array-func:
-        specifier: ^5.0.2
-        version: 5.0.2(eslint@9.36.0)
+        specifier: ^5.1.0
+        version: 5.1.0(eslint@9.36.0)
       eslint-plugin-chai-expect:
         specifier: ^3.1.0
         version: 3.1.0(eslint@9.36.0)
@@ -72,8 +72,8 @@ importers:
         specifier: ^2.32.0
         version: 2.32.0(eslint@9.36.0)
       eslint-plugin-jsdoc:
-        specifier: ^60.3.1
-        version: 60.3.1(eslint@9.36.0)
+        specifier: ^60.4.1
+        version: 60.4.1(eslint@9.36.0)
       eslint-plugin-mocha:
         specifier: ^11.1.0
         version: 11.1.0(eslint@9.36.0)
@@ -227,8 +227,8 @@ packages:
     peerDependencies:
       eslint: '>=7.20.0'
 
-  '@es-joy/jsdoccomment@0.60.0':
-    resolution: {integrity: sha512-nZIXk63VbpIooJVXRWEhLIbVScE8rtbcPWr+zQ0ZQsnflvomq31DvB5hR0T1IoikvrNaF4pNoDOi5se5tmIZIg==}
+  '@es-joy/jsdoccomment@0.62.0':
+    resolution: {integrity: sha512-yWi6sm7INEwnfS7IJvE0dU+RTrwzLPFcY7e7eGpu/l5Q9lWfQ2ROwZ0qVnc242jw2TUPsfHX3XMIISkGBv57RQ==}
     engines: {node: '>=20.11.0'}
 
   '@eslint-community/eslint-plugin-eslint-comments@4.5.0':
@@ -949,8 +949,8 @@ packages:
       eslint-import-resolver-webpack:
         optional: true
 
-  eslint-plugin-array-func@5.0.2:
-    resolution: {integrity: sha512-iyLex2+pTcxHZ6OLL80oMy+CtffpJ9j6A/57VQi1VN5bK1IS/0o+mWvezDHeAlwXjn6ksRO9L5SGU329BBuY8A==}
+  eslint-plugin-array-func@5.1.0:
+    resolution: {integrity: sha512-+OULB0IQdENBmBf8pHMPPObgV6QyfeXFin483jPonOaiurI9UFmc8UydWriK5f5Gel8xBhQLA6NzMwbck1BUJw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=8.51.0'
@@ -1007,8 +1007,8 @@ packages:
       '@typescript-eslint/parser':
         optional: true
 
-  eslint-plugin-jsdoc@60.3.1:
-    resolution: {integrity: sha512-AEJRW4EgERmAGnMraZXu85r5xgtI9XqKlgKfaWkkFmHbMVMii2oz1dmz1b3GISJOkhfHNi4JsVC0RA+IPTrkBg==}
+  eslint-plugin-jsdoc@60.4.1:
+    resolution: {integrity: sha512-ThiCaCUu0UQlKcQszs7Zv/6ghBowDh5B33rNXwQK1MMPh/defS3hcuDxONUhoBGfFe/v4hpe1xbxXCFs6XvSnQ==}
     engines: {node: '>=20.11.0'}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
@@ -1642,8 +1642,8 @@ packages:
     resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
     hasBin: true
 
-  jsdoc-type-pratt-parser@5.4.0:
-    resolution: {integrity: sha512-F9GQ+F1ZU6qvSrZV8fNFpjDNf614YzR2eF6S0+XbDjAcUI28FSoXnYZFjQmb1kFx3rrJb5PnxUH3/Yti6fcM+g==}
+  jsdoc-type-pratt-parser@5.9.0:
+    resolution: {integrity: sha512-G1+QGbmN5EZ53DN3yKF6jax0FXeVEX4mgIx1K4YrsWhtXRaySR9cTZqB43ISxKAEna2LBG/I7NSl9wV//l1XPA==}
     engines: {node: '>=12.0.0'}
 
   jsesc@3.0.2:
@@ -2518,7 +2518,7 @@ snapshots:
       '@babel/traverse': 7.26.4
       '@babel/types': 7.26.3
       convert-source-map: 2.0.0
-      debug: 4.4.1
+      debug: 4.4.3
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       semver: 6.3.1
@@ -2606,7 +2606,7 @@ snapshots:
       '@babel/parser': 7.26.3
       '@babel/template': 7.25.9
       '@babel/types': 7.26.3
-      debug: 4.4.1
+      debug: 4.4.3
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -2620,13 +2620,13 @@ snapshots:
     dependencies:
       eslint: 9.36.0
 
-  '@es-joy/jsdoccomment@0.60.0':
+  '@es-joy/jsdoccomment@0.62.0':
     dependencies:
       '@types/estree': 1.0.8
       '@typescript-eslint/types': 8.44.1
       comment-parser: 1.4.1
       esquery: 1.6.0
-      jsdoc-type-pratt-parser: 5.4.0
+      jsdoc-type-pratt-parser: 5.9.0
 
   '@eslint-community/eslint-plugin-eslint-comments@4.5.0(eslint@9.36.0)':
     dependencies:
@@ -3531,7 +3531,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-array-func@5.0.2(eslint@9.36.0):
+  eslint-plugin-array-func@5.1.0(eslint@9.36.0):
     dependencies:
       eslint: 9.36.0
 
@@ -3607,9 +3607,9 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-jsdoc@60.3.1(eslint@9.36.0):
+  eslint-plugin-jsdoc@60.4.1(eslint@9.36.0):
     dependencies:
-      '@es-joy/jsdoccomment': 0.60.0
+      '@es-joy/jsdoccomment': 0.62.0
       are-docs-informative: 0.0.2
       comment-parser: 1.4.1
       debug: 4.4.3
@@ -4315,7 +4315,7 @@ snapshots:
     dependencies:
       argparse: 2.0.1
 
-  jsdoc-type-pratt-parser@5.4.0: {}
+  jsdoc-type-pratt-parser@5.9.0: {}
 
   jsesc@3.0.2: {}
 
