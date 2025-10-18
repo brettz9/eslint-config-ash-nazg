@@ -6,7 +6,9 @@ export default [
     name: 'ash-nazg/bare',
     rules: {
       'no-restricted-imports': ['error', {
-        paths: builtinModules
+        paths: [...builtinModules, ...builtinModules.map((builtinModule) => {
+          return `node:${builtinModule}`;
+        })]
       }]
     }
   }
