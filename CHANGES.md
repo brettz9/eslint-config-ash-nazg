@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 39.6.1
+
+- chore: update `eslint-plugin-jsdoc`
+
 ## 39.6.0
 
 - chore: update deps. including `eslint-plugin-jsdoc`
