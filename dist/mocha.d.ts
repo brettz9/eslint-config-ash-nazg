@@ -3,15 +3,15 @@ declare const _default: {
     files: string[];
     languageOptions: {
         globals: {
-            after: "readonly";
-            afterEach: "readonly";
-            before: "readonly";
-            beforeEach: "readonly";
-            describe: "readonly";
-            it: "readonly";
-            mocha: "readonly";
-            xdescribe: "readonly";
-            xit: "readonly";
+            after: string;
+            afterEach: string;
+            before: string;
+            beforeEach: string;
+            describe: string;
+            it: string;
+            mocha: string;
+            xdescribe: string;
+            xit: string;
         };
         ecmaVersion?: import("./detectEnv.js").EcmaVersion | undefined;
     };

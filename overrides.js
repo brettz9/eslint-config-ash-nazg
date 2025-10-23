@@ -89,7 +89,9 @@ export default function overrides (types, pkg) {
             languageOptions: {
               ...cfg.languageOptions,
               globals: {
-                ...cfg.languageOptions.globals,
+                // eslint-disable-next-line @stylistic/max-len -- Long
+                // eslint-disable-next-line unicorn/no-useless-fallback-in-spread -- TS
+                ...cfg.languageOptions.globals ?? {},
                 ...globals.node
               }
             }
@@ -144,7 +146,8 @@ export default function overrides (types, pkg) {
         cfg.languageOptions.globals = {};
       }
       cfg.languageOptions.globals = {
-        ...cfg.languageOptions.globals,
+        // eslint-disable-next-line unicorn/no-useless-fallback-in-spread -- TS
+        ...cfg.languageOptions.globals ?? {},
         ...globals.browser
       };
 
@@ -181,7 +184,9 @@ export default function overrides (types, pkg) {
           ecmaVersion: languageOptions.ecmaVersion,
           ...config.languageOptions,
           globals: {
-            ...config.languageOptions?.globals,
+            // eslint-disable-next-line @stylistic/max-len -- Long
+            // eslint-disable-next-line unicorn/no-useless-fallback-in-spread -- TS
+            ...config.languageOptions?.globals ?? {},
             ...globals.node,
             ...(pkg.type === 'module'
               ? /** @type {import('eslint').Linter.Globals} */ ({

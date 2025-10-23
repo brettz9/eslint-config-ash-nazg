@@ -2,8 +2,7 @@ import cypress from 'eslint-plugin-cypress';
 
 import mochaPlus from './mocha-plus.js';
 
-/** @type {import('eslint').Linter.Config[]} */
-export default [
+export default /** @type {import('eslint').Linter.Config[]} */ ([
   {
     ...(cypress.configs.recommended),
     files: ['cypress/**']
@@ -23,4 +22,4 @@ export default [
       'promise/always-return': 'off'
     }
   }
-];
+]);

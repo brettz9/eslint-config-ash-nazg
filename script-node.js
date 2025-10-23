@@ -1,8 +1,7 @@
 import node from 'eslint-plugin-n';
 import globals from 'globals';
 
-/** @type {import('eslint').Linter.Config[]} */
-export default [
+export default /** @type {import('eslint').Linter.Config[]} */ ([
   node.configs['flat/recommended-script'],
   {
     name: 'ash-nazg/script-node',
@@ -23,4 +22,4 @@ export default [
       strict: ['error', 'global']
     }
   }
-];
+]);

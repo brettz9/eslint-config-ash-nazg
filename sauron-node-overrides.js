@@ -6,10 +6,13 @@ import overrides from './overrides.js';
  * @param {{
  *   type?: "module"|"commonjs"
  * }} pkg
+ * @returns {import('eslint').Linter.Config[]}
  */
-export default function sauronNodeOverrides (types, pkg) {
+function sauronNodeOverrides (types, pkg) {
   return [
     ...sauronNode(pkg),
     ...overrides(types, pkg)
   ];
 }
+
+export default sauronNodeOverrides;

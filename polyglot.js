@@ -1,8 +1,7 @@
 import globals from 'globals';
 import bare from './bare.js';
 
-/** @type {import('eslint').Linter.Config[]} */
-export default [
+export default /** @type {import('eslint').Linter.Config[]} */ ([
   {
     name: 'ash-nazg/polyglot',
     languageOptions: {
@@ -10,4 +9,4 @@ export default [
     }
   },
   ...bare
-];
+]);

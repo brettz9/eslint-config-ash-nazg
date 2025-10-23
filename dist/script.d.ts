@@ -1,17 +1,17 @@
 declare const _default: {
     name: string;
     languageOptions: {
-        sourceType: "script";
+        sourceType: string;
         globals: {
-            module: "readonly";
-            exports: "readonly";
-            require: "readonly";
-            __dirname: "readonly";
-            __filename: "readonly";
+            module: string;
+            exports: string;
+            require: string;
+            __dirname: string;
+            __filename: string;
         };
         parserOptions: {
             ecmaFeatures: {
-                globalReturn: false;
+                globalReturn: boolean;
             };
         };
     };

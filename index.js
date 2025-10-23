@@ -78,8 +78,10 @@ try {
 /**
  * @param {Types} types
  * @param {import('eslint').Linter.Config} [config]
+ * @throws {Error}
+ * @returns {import('eslint').Linter.Config[]}
  */
-export default function index (types, config) {
+function index (types, config) {
   /** @type {import('eslint').Linter.Config[]} */
   const configs = [];
 
@@ -189,3 +191,5 @@ export default function index (types, config) {
 
   return configs;
 }
+
+export default index;

@@ -3,16 +3,16 @@ declare const _default: {
     languageOptions: {
         parserOptions: {
             ecmaFeatures: {
-                globalReturn: false;
+                globalReturn: boolean;
             };
         };
-        sourceType: "module";
+        sourceType: string;
         globals: {
-            __dirname: "off";
-            __filename: "off";
-            exports: "off";
-            module: "off";
-            require: "off";
+            __dirname: string;
+            __filename: string;
+            exports: string;
+            module: string;
+            require: string;
         };
     };
 }[];

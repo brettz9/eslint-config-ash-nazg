@@ -37,8 +37,7 @@ function addTestFiles (config, name) {
   };
 }
 
-/** @type {ESLintConfig[]} */
-export default [
+export default /** @type {ESLintConfig[]} */ ([
   addTestFiles(
     mochaPlugin.configs.recommended,
     'ash-nazg/test-files/mocha'
@@ -118,4 +117,4 @@ export default [
     }
   }, 'ash-nazg/test-files/mocha-plus'),
   ...mocha
-];
+]);
