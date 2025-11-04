@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 39.7.0
+
+- feat: require `v` flag for polyglot configs
+
 ## 39.6.1
 
 - chore: update `eslint-plugin-jsdoc`

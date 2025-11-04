@@ -1,3 +1,3 @@
-declare const _default: import("eslint").Linter.Config<import("eslint").Linter.RulesRecord>[];
+declare const _default: import("eslint").Linter.Config<import("@eslint/core", { with: { "resolution-mode": "require" } }).RulesConfig>[];
 export default _default;
 //# sourceMappingURL=overrides-script-node.d.ts.map

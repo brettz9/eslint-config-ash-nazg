@@ -117,7 +117,8 @@ export default function sauron (pkg, types) {
                 pkg,
                 // Keep in sync with eslint-plugin-escompat
                 'edge > 0, safari < 17, firefox < 116, chrome < 112'
-              ))
+              )) ||
+            (!types.includes('node') && !types.includes('browser'))
           )
             ? {
               requireFlag: 'v'
