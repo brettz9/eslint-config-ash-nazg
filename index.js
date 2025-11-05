@@ -134,7 +134,22 @@ function index (types, config) {
   if (types.includes('bare')) {
     configs.push(...bare);
   } else if (!types.includes('node') && !types.includes('browser')) {
-    configs.push(...polyglot);
+    configs.push(...polyglot.map((cfg) => {
+      return {
+        ...cfg,
+        ...(cfg.languageOptions
+          ? {
+            languageOptions: {
+              ecmaVersion: languageOptions.ecmaVersion,
+              globals: {
+                ...languageOptions.globals,
+                ...cfg.languageOptions.globals
+              }
+            }
+          }
+          : {})
+      };
+    }));
   }
 
   if (types.includes('script') || pkg.type !== 'module') {
