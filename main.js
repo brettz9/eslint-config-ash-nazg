@@ -392,7 +392,7 @@ export default function main (pkg) {
 
         // SonarJS
         'sonarjs/no-inverted-boolean-check': 'error',
-
+        'sonarjs/public-static-readonly': 'off',
         'sonarjs/no-fallthrough': 'off',
         'sonarjs/no-unused-vars': 'off',
         'sonarjs/max-switch-cases': 'off',

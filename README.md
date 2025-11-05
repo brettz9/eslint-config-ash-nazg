@@ -573,6 +573,7 @@ appears, to Dark Lords.
 - `no-primitive-wrappers` - Handling elsewhere
 - `no-regex-complexity` - Oppressive
 - `no-self-compare` - Handling elsewhere
+- `public-static-readonly` - Good for TS but unfortunately reports in JS too
 - `slow-regex` - Oppressive
 - `no-small-switch` - Too useful to start a pattern to which one intends to add later.
 - `prefer-default-last` - Handling elsewhere
