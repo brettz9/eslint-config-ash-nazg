@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 39.8.0
+
+- feat: avoid jsdoc/check-types fixes that are equivalent to other rules
+
 ## 39.7.1
 
 - fix: polyglot `ecmaVersion` getting lost

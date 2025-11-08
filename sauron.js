@@ -18,25 +18,10 @@ export default function sauron (pkg, types) {
       settings: {
         jsdoc: {
           preferredTypes: {
-            '*': {
-              message: 'Use a more precise type or if necessary use ' +
-                '`any` or add to a `typedef`.',
-              replacement: 'any'
-            },
-            any: {
-              message: 'Use a more precise type or if necessary ' +
-                'use in a `typedef`',
-              replacement: false
-            },
             Any: {
               message: 'Use a more precise type or if necessary use ' +
                 '`any` or add to a `typedef`.',
               replacement: 'any'
-            },
-            Function: {
-              message: 'Point to a `@callback` namepath or add to a ' +
-                '`typedef` if truly arbitrary in form',
-              replacement: false
             },
             function: {
               message: 'Point to a `@callback` namepath or add `Function` ' +
