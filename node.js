@@ -4,12 +4,6 @@ import index from './main.js';
 import standard from './standard.js';
 import modules from './modules.js';
 
-// import {FlatCompat} from '@eslint/eslintrc';
-// const __dirname = import.meta.dirname;
-// const compat = new FlatCompat({
-//   baseDirectory: __dirname
-// });
-
 const esmNodeGlobals = {
   ...globals.node,
   __dirname: /** @type {const} */ ('off'),

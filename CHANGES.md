@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- perf: remove unused @eslint/eslintrc
+- chore: update deps. and devDeps.
+
 ## 39.8.0
 
 - feat: avoid jsdoc/check-types fixes that are equivalent to other rules
