@@ -1,6 +1,3 @@
-// import {fixupPluginRules} from '@eslint/compat'
-// import {FlatCompat} from '@eslint/eslintrc';
-
 import stylistic from '@stylistic/eslint-plugin';
 import js from '@eslint/js';
 import brettz9 from '@brettz9/eslint-plugin';
@@ -22,11 +19,6 @@ import script from './script.js';
 import modules from './modules.js';
 import standard from './standard.js';
 import {addFiles} from './index.js';
-
-// const __dirname = import.meta.dirname;
-// const compat = new FlatCompat({
-//   baseDirectory: __dirname
-// });
 
 /**
  * @type {(cfg: {
