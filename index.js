@@ -143,6 +143,7 @@ function index (types, config) {
               ecmaVersion: languageOptions.ecmaVersion,
               globals: {
                 ...languageOptions.globals,
+                // @ts-expect-error An object
                 ...cfg.languageOptions.globals
               }
             }
