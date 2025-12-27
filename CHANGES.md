@@ -1,6 +1,6 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 39.9.0
 
 - perf: remove unused @eslint/eslintrc
 - chore: update deps. and devDeps.
