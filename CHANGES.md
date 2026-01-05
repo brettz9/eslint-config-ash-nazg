@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## 39.10.0
+
+- feat: reenable `eslint-plugin-no-unsanitized`
+- chore: update `globals` dep.
+
 ## 39.9.0
 
 - perf: remove unused @eslint/eslintrc

@@ -1,6 +1,6 @@
 import eslintCompat from 'eslint-plugin-compat';
 import esCompat from 'eslint-plugin-escompat';
-// import noUnsanitized from 'eslint-plugin-no-unsanitized'; // Todo: Disable until https://github.com/mozilla/eslint-plugin-no-unsanitized/pull/239#issuecomment-2132867450
+import noUnsanitized from 'eslint-plugin-no-unsanitized';
 
 export default /** @type {import('eslint').Linter.Config[]} */ ([
   {
@@ -15,7 +15,7 @@ export default /** @type {import('eslint').Linter.Config[]} */ ([
     ...eslintCompat.configs['flat/recommended']
   },
   esCompat.configs['flat/recommended'],
-  // noUnsanitized.DOM,
+  noUnsanitized.configs.recommended,
   {
     name: 'ash-nazg/browser',
     rules: {

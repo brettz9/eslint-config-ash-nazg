@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ash-nazg",
-  "version": "39.9.0",
+  "version": "39.10.0",
   "description": "An expansion and tweaking of the \"standard\" config style for ESLint",
   "main": "index.js",
   "types": "./dist/index.d.ts",
@@ -97,7 +97,7 @@
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-sonarjs": "^3.0.5",
     "eslint-plugin-unicorn": "^62.0.0",
-    "globals": "^16.5.0",
+    "globals": "^17.0.0",
     "semver": "^7.7.3"
   },
   "peerDependencies": {
