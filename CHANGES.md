@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 39.11.0
+
+- chore: update deps., devDeps.; fix sonarjs version to avoid broken version
+
 ## 39.10.0
 
 - feat: reenable `eslint-plugin-no-unsanitized`
