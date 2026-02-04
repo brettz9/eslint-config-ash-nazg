@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 39.11.1
+
+- fix: ensure `SwitchCase: 0` is present on `@stylistic/indent` as seems no longer the default (at least when has object options)
+
 ## 39.11.0
 
 - chore: update deps., devDeps.; fix sonarjs version to avoid broken version

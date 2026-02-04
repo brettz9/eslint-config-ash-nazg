@@ -111,7 +111,7 @@ export default function main (pkg) {
         '@stylistic/computed-property-spacing': ['error'],
         '@stylistic/function-paren-newline': ['error', 'consistent'],
         '@stylistic/implicit-arrow-linebreak': ['error'],
-        '@stylistic/indent': ['error', 2, {outerIIFEBody: 0}],
+        '@stylistic/indent': ['error', 2, {SwitchCase: 0, outerIIFEBody: 0}],
         '@stylistic/jsx-quotes': ['error'],
         '@stylistic/linebreak-style': ['error'],
         '@stylistic/multiline-ternary': ['error', 'always-multiline'],
