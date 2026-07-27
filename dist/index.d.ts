@@ -6,9 +6,8 @@
 *    import('eslint').Linter.Config[]
 * }
 */
-export function addFiles(cfgs: import("eslint").Linter.Config | import("eslint").Linter.Config[], files: string[]): import("eslint").Linter.Config | import("eslint").Linter.Config[];
-export default index;
-export type Types = ("great-eye" | "sauron" | "saruman" | "polyglot" | "bare" | "node" | "browser" | "script" | "module" | "no-overrides" | "no-cypress" | "mocha" | "babel" | "third-party")[];
+export declare function addFiles(cfgs: import('eslint').Linter.Config | import('eslint').Linter.Config[], files: string[]): import('eslint').Linter.Config | import('eslint').Linter.Config[];
+export type Types = ("great-eye" | "sauron" | "saruman" | *   "polyglot" | "bare" | "node" | "browser" | *   "script" | "module" | *   "no-overrides" | *   "no-cypress" | "mocha" | *   "babel" | "third-party")[];
 /**
  * @typedef {("great-eye"|"sauron"|"saruman"|
  *   "polyglot"|"bare"|"node"|"browser"|
@@ -23,5 +22,6 @@ export type Types = ("great-eye" | "sauron" | "saruman" | "polyglot" | "bare" | 
  * @throws {Error}
  * @returns {import('eslint').Linter.Config[]}
  */
-declare function index(types: Types, config?: import("eslint").Linter.Config): import("eslint").Linter.Config[];
+declare function index(types: Types, config?: import('eslint').Linter.Config): import('eslint').Linter.Config[];
+export default index;
 //# sourceMappingURL=index.d.ts.map

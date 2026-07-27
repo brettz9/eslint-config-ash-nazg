@@ -10,16 +10,16 @@ const esmNodeGlobals = {
   __filename: /** @type {const} */ ('off')
 };
 
-const nodeRecommendedModule = nodePlugin.configs['flat/recommended-module'];
-// We don't want __dirname/__filename
-delete nodeRecommendedModule.languageOptions?.globals;
-
 /**
  * @type {(pkg: {
  *   type?: "module"|"commonjs"
 * }) => import('eslint').Linter.Config[]}
  */
 export default function node (pkg) {
+  const nodeRecommendedModule = nodePlugin.configs['flat/recommended-module'];
+  // We don't want __dirname/__filename
+  delete nodeRecommendedModule.languageOptions?.globals;
+
   return [
     ...index(pkg),
     standard[1],

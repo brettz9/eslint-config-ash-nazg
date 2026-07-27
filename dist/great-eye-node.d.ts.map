@@ -1,1 +1,1 @@
-{"version":3,"file":"great-eye-node.d.ts","sourceRoot":"","sources":["../great-eye-node.js"],"names":[],"mappings":"AAIU,0CAAM;IACZ,IAAI,CAAC,EAAE,QAAQ,GAAC,UAAU,CAAA;CAC3B,SAAS,MAAM,EAAE,GAAK,OAAO,QAAQ,EAAE,MAAM,CAAC,MAAM,EAAE,CAAA"}
+{"version":3,"file":"great-eye-node.d.ts","sourceRoot":"","sources":["../great-eye-node.js"],"names":[],"mappings":"AAGA;;;;GAIG;AACH,MAAM,CAAC,OAAO,UAAU,YAAY,CAAE,GAAG;WAH9B,QAAQ,GAAC,UAAU;CAGW,EAAE,KAAK,UAAA,wEAE/C"}

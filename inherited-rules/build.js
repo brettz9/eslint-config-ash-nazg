@@ -116,8 +116,8 @@ function getExtensions (config) {
     // Todo: This should support external extensions, but have no need now
     // No cyclic detection
     extension = extension.replace(/plugin:.*\//v, '');
-    if (!right.configs[extension]) {
-      if (cache[preferredConfig]) {
+    if (!Object.hasOwn(right.configs, extension)) {
+      if (Object.hasOwn(cache, preferredConfig)) {
         return obj;
       }
       cache[preferredConfig] = right.configs[preferredConfig];
@@ -194,25 +194,26 @@ if (isInherited) {
   console.log('leftRules', leftRules);
 
   Object.keys(rightConfig.rules).forEach((key) => {
-    if (leftRules.includes(key)) {
-      if (
-        // Not a problem if regular eslint (as already reviewed)
-        key.includes('/') &&
-        // Not a problem for jsdoc which we've reviewed
-        !key.includes('jsdoc') &&
-        // Not a problem if overriding
-        left.rules[key] !== 'off' &&
-        left.rules[key][0] !== 'off' &&
-        // Probably not a problem if has options (likely non-default)
-        !left.rules[key][1]
-      ) {
-        throw new Error(
-          'k' + '::' + key + '::' + JSON.stringify(left.rules[key])
-        );
-      }
-      const replacedKey = key.replace(rightModule + '/', '');
-      delete rightConfig.rules[replacedKey];
+    if (!leftRules.includes(key)) {
+      return;
     }
+    if (
+      // Not a problem if regular eslint (as already reviewed)
+      key.includes('/') &&
+      // Not a problem for jsdoc which we've reviewed
+      !key.includes('jsdoc') &&
+      // Not a problem if overriding
+      left.rules[key] !== 'off' &&
+      left.rules[key][0] !== 'off' &&
+      // Probably not a problem if has options (likely non-default)
+      !left.rules[key][1]
+    ) {
+      throw new Error(
+        'k::' + key + '::' + JSON.stringify(left.rules[key])
+      );
+    }
+    const replacedKey = key.replace(rightModule + '/', '');
+    delete rightConfig.rules[replacedKey];
   });
 } else {
   let rulesMissingFromLeft;

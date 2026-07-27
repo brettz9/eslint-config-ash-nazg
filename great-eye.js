@@ -39,7 +39,7 @@ export default function greatEye (pkg, types) {
         ]
       }],
 
-      'import/no-unused-modules': ['warn', {
+      'import-x/no-unused-modules': ['warn', {
         missingExports: true, unusedExports: true
       }],
 

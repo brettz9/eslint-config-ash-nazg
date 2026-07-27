@@ -14,7 +14,7 @@ export default /** @type {import('eslint').Linter.Config[]} */ ([
     rules: {
       // Conflicts with Cypress `should`
       'mocha-cleanup/invalid-assertions': 'off',
-      'import/unambiguous': 'off',
+      'import-x/unambiguous': 'off',
 
       // Cypress `then` acts differently
       'promise/prefer-await-to-then': 'off',

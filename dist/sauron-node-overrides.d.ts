@@ -1,4 +1,3 @@
-export default sauronNodeOverrides;
 /**
  * @param {import('./index.js').Types} types
  * @param {{
@@ -6,7 +5,8 @@ export default sauronNodeOverrides;
  * }} pkg
  * @returns {import('eslint').Linter.Config[]}
  */
-declare function sauronNodeOverrides(types: import("./index.js").Types, pkg: {
+declare function sauronNodeOverrides(types: import('./index.js').Types, pkg: {
     type?: "module" | "commonjs";
-}): import("eslint").Linter.Config[];
+}): import('eslint').Linter.Config[];
+export default sauronNodeOverrides;
 //# sourceMappingURL=sauron-node-overrides.d.ts.map

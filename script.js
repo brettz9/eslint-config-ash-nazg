@@ -18,7 +18,7 @@ export default [{
     }
   },
   rules: {
-    'import/no-commonjs': 'off',
+    'import-x/no-commonjs': 'off',
     strict: ['error', 'global']
   }
 }];

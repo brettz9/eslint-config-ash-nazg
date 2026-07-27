@@ -1,1 +1,1 @@
-{"version":3,"file":"sauron-node.d.ts","sourceRoot":"","sources":["../sauron-node.js"],"names":[],"mappings":"AAIU,wCAAM;IACX,IAAI,CAAC,EAAE,QAAQ,GAAC,UAAU,CAAA;CAC3B,GAAK,OAAO,QAAQ,EAAE,MAAM,CAAC,MAAM,EAAE,CAAA"}
+{"version":3,"file":"sauron-node.d.ts","sourceRoot":"","sources":["../sauron-node.js"],"names":[],"mappings":"AAGA;;;;GAIG;AACH,MAAM,CAAC,OAAO,UAAU,UAAU,CAAE,GAAG;WAH3B,QAAQ,GAAC,UAAU;CAGQ,wEAYtC"}

@@ -82,9 +82,6 @@ try {
  * @returns {import('eslint').Linter.Config[]}
  */
 function index (types, config) {
-  /** @type {import('eslint').Linter.Config[]} */
-  const configs = [];
-
   if (types.includes('babel')) {
     return [babel(/** @type {import('eslint').Linter.Config} */ (config))];
   }
@@ -92,6 +89,9 @@ function index (types, config) {
   if (types.includes('third-party')) {
     return thirdParty;
   }
+
+  /** @type {import('eslint').Linter.Config[]} */
+  const configs = [];
 
   if (types.includes('great-eye')) {
     if (types.includes('node')) {

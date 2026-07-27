@@ -5,7 +5,7 @@ import brettz9 from '@brettz9/eslint-plugin';
 import markdown from '@eslint/markdown';
 import html from 'eslint-plugin-html';
 import promise from 'eslint-plugin-promise';
-import importPlugin from 'eslint-plugin-import';
+import {flatConfigs} from 'eslint-plugin-import-x';
 import unicorn from 'eslint-plugin-unicorn';
 import comments from '@eslint-community/eslint-plugin-eslint-comments/configs';
 
@@ -52,7 +52,7 @@ export default function main (pkg) {
 
     // These may override 'standard' which includes their rules,
     //   so including first
-    importPlugin.flatConfigs.recommended,
+    flatConfigs.recommended,
     promise.configs['flat/recommended'],
     // This may override eslint:recommended and the promise/import rules,
     //  but it doesn't turn any off
@@ -240,32 +240,31 @@ export default function main (pkg) {
         'promise/valid-params': 'off',
 
         // IMPORT
-        // Todo: Reenable
-        // 'import/no-absolute-path': 'error',
-        // 'import/no-dynamic-require': 'error',
-        // 'import/no-empty-named-blocks': 'error',
-        // 'import/no-self-import': 'error',
-        // 'import/no-useless-path-segments': 'error',
-        // 'import/no-named-as-default': 'error',
-        // 'import/no-named-as-default-member': 'error',
-        // 'import/no-deprecated': 'error',
-        // 'import/no-extraneous-dependencies': 'error',
-        // 'import/no-mutable-exports': 'error',
-        // 'import/no-amd': 'error',
+        'import-x/no-absolute-path': 'error',
+        'import-x/no-dynamic-require': 'error',
+        'import-x/no-empty-named-blocks': 'error',
+        'import-x/no-self-import': 'error',
+        'import-x/no-useless-path-segments': 'error',
+        'import-x/no-named-as-default': 'error',
+        'import-x/no-named-as-default-member': 'error',
+        'import-x/no-deprecated': 'error',
+        'import-x/no-extraneous-dependencies': 'error',
+        'import-x/no-mutable-exports': 'error',
+        'import-x/no-amd': 'error',
 
-        // 'import/no-unresolved': ['error', {
-        //   ignore: ['fs/promises', '@uce', '@uce/reactive']
-        // }],
+        'import-x/no-unresolved': ['error', {
+          ignore: ['fs/promises', '@uce', '@uce/reactive']
+        }],
 
-        // 'import/extensions': ['error', 'always', {ignorePackages: true}],
-        // 'import/order': ['error', {groups: [
-        //   'builtin',
-        //   'external',
-        //   'internal',
-        //   ['parent', 'sibling', 'index']
-        // ]}],
-        // 'import/newline-after-import': 'error',
-        // 'import/no-anonymous-default-export': 'error',
+        'import-x/extensions': ['error', 'always', {ignorePackages: true}],
+        'import-x/order': ['error', {groups: [
+          'builtin',
+          'external',
+          'internal',
+          ['parent', 'sibling', 'index']
+        ]}],
+        'import-x/newline-after-import': 'error',
+        'import-x/no-anonymous-default-export': 'off',
 
         // JSDOC DISABLE
         'jsdoc/check-alignment': ['off'],
@@ -321,12 +320,14 @@ export default function main (pkg) {
         'unicorn/catch-error-name': 'off',
         'unicorn/consistent-destructuring': 'off',
         'unicorn/consistent-function-scoping': 'off',
+        'unicorn/default-export-style': 'off',
         'unicorn/empty-brace-spaces': 'off',
         'unicorn/explicit-length-check': 'off',
         'unicorn/filename-case': 'off',
         // 'unicorn/import-index': 'off', // Deprecated
         'unicorn/import-style': 'off',
-        'unicorn/no-array-for-each': 'off',
+        'unicorn/name-replacements': 'off',
+        'unicorn/no-for-each': 'off',
         'unicorn/no-array-reduce': 'off',
         'unicorn/no-await-expression-member': 'off',
         'unicorn/no-lonely-if': 'off',
@@ -359,7 +360,7 @@ export default function main (pkg) {
         'unicorn/throw-new-error': 'off',
 
         // UNICORN
-        'unicorn/better-regex': ['error', {sortCharacterClasses: false}],
+        'unicorn/consistent-conditional-object-spread': ['error', 'ternary'],
         'unicorn/custom-error-definition': 'error',
         // 'unicorn/no-unsafe-regex': 'error', // Removed
         'unicorn/prefer-event-target': 'error',

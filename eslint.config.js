@@ -9,7 +9,7 @@ const config = [
   {
     files: ['README.md/*.js'],
     rules: {
-      'import/no-unresolved': 'off'
+      'import-x/no-unresolved': 'off'
     }
   },
   {

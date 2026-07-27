@@ -18,7 +18,7 @@ export default /** @type {import('eslint').Linter.Config[]} */ ([
       // Allow for Node or Unicorn
       // 'no-process-exit': 'off', // Deprecated
 
-      'import/no-commonjs': 'off',
+      'import-x/no-commonjs': 'off',
       strict: ['error', 'global']
     }
   }

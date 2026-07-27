@@ -112,8 +112,8 @@ export default function sauron (pkg, types) {
         ],
         'vars-on-top': ['warn'],
 
-        'import/unambiguous': 'warn',
-        'import/no-commonjs': 'warn',
+        'import-x/unambiguous': 'warn',
+        'import-x/no-commonjs': 'warn',
 
         'jsdoc/require-jsdoc': ['warn', {
           require: {

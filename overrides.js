@@ -1,6 +1,7 @@
 import {readFileSync} from 'fs';
 import globals from 'globals';
 import nodePlugin from 'eslint-plugin-n';
+import esCompat from 'eslint-plugin-escompat';
 
 import overridesScript from './overrides-script.js';
 import overridesScriptNode from './overrides-script-node.js';
@@ -12,8 +13,6 @@ import sauronNode from './sauron-node.js';
 import node from './node.js';
 import polyglot from './polyglot.js';
 import {languageOptions} from './detectEnv.js';
-
-import esCompat from 'eslint-plugin-escompat';
 
 const disabledEsCompat = Object.keys(
   esCompat.configs['flat/recommended'].rules

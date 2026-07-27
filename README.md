@@ -159,7 +159,7 @@ a few other (peer) dependencies.
 - `eslint-plugin-compat` - Though its list of browsers to support is not
   added by our code, it is a basic enough of a need to remind one
   of its need to be present (and to avoid needing to add the rule for it).
-- `eslint-plugin-import` - Besides being peer dependencies of `standard`,
+- `eslint-plugin-import-x` - Besides being peer dependencies of `standard`,
   this has some additional useful rules we apply.
 - `eslint-plugin-jsdoc` - provides a number of helpful rules for catching
   bad or incomplete JSDoc during development. Note that we do not impose
@@ -282,10 +282,10 @@ the rule.
     uglier with quoting
 - `radix` - We're only dealing with ES5+ environments, so the radix is
     redundant for base 10.
-- `import/order` - Enforcing "builtin", "external", "internal" and then
+- `import-x/order` - Enforcing "builtin", "external", "internal" and then
   ["parent", "sibling", "index"] in any order as these may be
   project-specific.
-- `import/no-unresolved` - `fs/promises` should be allowed by default as a
+- `import-x/no-unresolved` - `fs/promises` should be allowed by default as a
     Node module. `@uce/reactive` is just a virtual package (as used by
     `uce-template`.
 
@@ -360,45 +360,46 @@ happy with it thus far).
 - `sort-keys` - Too cumbersome
 - `sort-vars` - Too cumbersome
 
-#### Rationale for disabled import rules
+#### Rationale for disabled import-x rules
 
-- `import/no-restricted-paths` - Project-specific
-- `import/no-internal-modules` - Useful but have to specify, so
+- `import-x/no-anonymous-default-export` - Not important
+- `import-x/no-restricted-paths` - Project-specific
+- `import-x/no-internal-modules` - Useful but have to specify, so
     project-specific
-- `import/no-import-module-exports` - Seems redundant for normal CJS
-- `import/no-cycle` - Don't see a problem with cyclic imports in ESM
-- `import/no-nodejs-modules` - Useful for some projects, but not all
+- `import-x/no-import-module-exports` - Seems redundant for normal CJS
+- `import-x/no-cycle` - Don't see a problem with cyclic imports in ESM
+- `import-x/no-nodejs-modules` - Useful for some projects, but not all
   including even client-side (though does offer `allow` option)
-- `import/no-relative-packages` - Not needed for general environments
-- `import/exports-last` - Has some reason for being, but nicer to see
+- `import-x/no-relative-packages` - Not needed for general environments
+- `import-x/exports-last` - Has some reason for being, but nicer to see
   with declaration that the object is being exported. To find all, just
   search for "export"
-- `import/no-namespace` - While can be more efficient to import only what
+- `import-x/no-namespace` - While can be more efficient to import only what
   one needs, having a namespace can also avoid confusion.
-- `import/prefer-default-export` - Could even be a bad practice as
+- `import-x/prefer-default-export` - Could even be a bad practice as
   ugly to import with non-defaults added later
-- `import/no-default-export` - Has some basis, but defaults are admittedly
+- `import-x/no-default-export` - Has some basis, but defaults are admittedly
   convenient. Let's not be so opinionated.
-- `import/no-named-export` - Could even be a bad practice as
+- `import-x/no-named-export` - Could even be a bad practice as
   ugly to import with non-defaults added later
-- `import/no-relative-parent-imports` - Appealing in some ways, but too rigid
+- `import-x/no-relative-parent-imports` - Appealing in some ways, but too rigid
   for a broad standard
-- *`import/dynamic-import-chunkname`* - Might revisit for warnings, but
+- *`import-x/dynamic-import-chunkname`* - Might revisit for warnings, but
   probably too specific for a broad standard
-- `import/max-dependencies` - Too constraining
-- `import/no-unassigned-import` - Could be useful with `allow` option,
+- `import-x/max-dependencies` - Too constraining
+- `import-x/no-unassigned-import` - Could be useful with `allow` option,
   but that would be project-specific, and unassigned imports are needed
   for polyfills
-- `import/group-exports` - Too rigid as with `exports-last`.
+- `import-x/group-exports` - Too rigid as with `exports-last`.
 
 #### Rationale for disabled Node and Promise rules
 
 `no-process-exit` (added by Node recommended) - has a version in Unicorn
 which allows in CLI apps.
 
-`node/no-missing-import` - Redundant with `import/no-unresolved`
+`node/no-missing-import` - Redundant with `import-x/no-unresolved`
 
-`node/file-extension-in-import` - Redundant with `import/extensions` and has no
+`node/file-extension-in-import` - Redundant with `import-x/extensions` and has no
 `ignorePackages` option currently.
 
 `node/prefer-promises/dns` and `node/prefer-promises/fs` are good, but
@@ -467,16 +468,17 @@ appears, to Dark Lords.
 - *`filename-case`* - Looks potentially useful with `camelCase`.
 - `import-index` - While understandable, seems may cause more trouble in
     making it harder to find references to `index`.
-- `import-style` - Using `eslint-plugin-import` instead
+- `import-style` - Using `eslint-plugin-import-x` instead
+- `name-replacements` - Oppressive
 - `no-array-reduce` - Though I can see some appeal to this (and `reduce` also
     suffers from not being able to short-circuit), I like it for object
     property accumulation, conditional array accumulation that can later be
     flattened, etc. It also seems superfluous to add an extra `join` with
     string concatenation.
-- `no-array-for-each` - Writing code for `forEach` allows later refactoring,
-    e.g., to move out of the block.
 - `no-await-expression-member` - A bit confining for convenience for only a
     little gain
+- `no-for-each` - Writing code for `forEach` allows later refactoring,
+    e.g., to move out of the block.
 - `no-instanceof-array` - Covered by our blocking of all `instanceof`
 - `no-keyword-prefix` - See no need.
 - `no-lonely-if` - Nested ifs can be useful to catch and ignore.
@@ -522,7 +524,7 @@ appears, to Dark Lords.
 
 ### Rationale for altering default on Unicorn rules
 
-- `better-regex` - Character classes can be arranged for readability.
+- `consistent-conditional-object-spread` - Clearer intent
 
 ### Rationale for including some Unicorn rules which are disabled in `plugin:unicorn/recommended`
 
@@ -626,7 +628,7 @@ may not all be under one's control).
 - `require-unicode-regexp` - Good, but some work to fix all.
 - `vars-on-top` - Not needed for `let`/`const`, and if overriding, this is
     cumbersome, despite being useful
-- `import/unambiguous` - A good practice, and one which `overrides` can
+- `import-x/unambiguous` - A good practice, and one which `overrides` can
     override (e.g., for polyfills or simple HTML tests), but cumbersome
     to label all files
 - `promise/prefer-await-to-callbacks` - Sometimes useful, but callbacks
@@ -688,7 +690,7 @@ for projects to specify all child types.
   "todo") - Good to catch to-dos, but better to search or
   parse code as a separate process rather than polluting one's ESLint
   warnings--some to-dos are ok to be left for the long term
-- `import/no-unused-modules` - Useful (for `missingExports` at least),
+- `import-x/no-unused-modules` - Useful (for `missingExports` at least),
   but doesn't catch dynamic imports and reports for other deliberately
   non-modular scripts
 - `jsdoc/check-alignment` (recommended) - A pretty good practice, but not

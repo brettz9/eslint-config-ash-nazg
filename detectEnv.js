@@ -1,8 +1,6 @@
 // Todo: Move to own repo
 /* eslint-disable n/no-sync -- Not sure possible to use here */
 
-import browserslist from 'browserslist';
-
 /**
  * You can use this in your `eslint.config.js` as follows...
  *
@@ -38,6 +36,8 @@ import {readFileSync} from 'node:fs';
 import {join} from 'node:path';
 import semver from 'semver';
 import globalsPkg from 'globals';
+
+import browserslist from 'browserslist';
 
 /**
  * @param {{
