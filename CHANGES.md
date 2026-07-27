@@ -1,7 +1,8 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 41.0.0
 
+- BREAKING: Require ESLint 10 peer
 - fix: disable `sonarjs/parameterized-tests`
 
 ## 40.2.0
