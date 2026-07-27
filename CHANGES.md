@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 40.2.0
+
+- feat: disable `unicorn/consistent-boolean-name` and `unicorn/prefer-await`
+
 ## 40.1.0
 
 - feat: disable `unicorn/no-this-outside-of-class` for test files

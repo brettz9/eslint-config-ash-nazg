@@ -457,6 +457,7 @@ appears, to Dark Lords.
 
 - `catch-error-name` - It can actually be useful to use different
     error names to indicate what type of error may be expected.
+- `consistent-boolean-name` - Oppressive
 - `consistent-destructuring` - In practice can be cumbersome
 - `consistent-function-scoping` - Though this can be useful, and it
   shouldn't be difficult to manually hoist functions upward, besides taking
@@ -500,6 +501,7 @@ appears, to Dark Lords.
 - `prefer-array-flat` - Present in `array-func`
 - `prefer-array-flat-map` - Present in `array-func`
 - `prefer-at` - Not widely available
+- `prefer-await` - Using promise plugin instead
 - `prefer-exponentiation` - Now present in eslint core
 - `prefer-export-from` - Understandable but cumbersome when importing anyways
     and have to use another style

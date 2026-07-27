@@ -318,6 +318,7 @@ export default function main (pkg) {
 
         // Unicorn disable
         'unicorn/catch-error-name': 'off',
+        'unicorn/consistent-boolean-name': 'off',
         'unicorn/consistent-destructuring': 'off',
         'unicorn/consistent-function-scoping': 'off',
         'unicorn/default-export-style': 'off',
@@ -345,6 +346,7 @@ export default function main (pkg) {
         'unicorn/prefer-array-flat-map': 'off',
 
         'unicorn/prevent-abbreviations': 'off',
+        'unicorn/prefer-await': 'off',
         // 'unicorn/prefer-exponentiation-operator': 'off', // Deprecated
         'unicorn/prefer-export-from': 'off',
         'unicorn/prefer-module': 'off',
