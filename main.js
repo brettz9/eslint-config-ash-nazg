@@ -387,6 +387,7 @@ export default function main (pkg) {
 
         // SonarJS
         'sonarjs/no-inverted-boolean-check': 'error',
+        'sonarjs/parameterized-tests': 'off',
         'sonarjs/public-static-readonly': 'off',
         'sonarjs/no-fallthrough': 'off',
         'sonarjs/no-unused-vars': 'off',

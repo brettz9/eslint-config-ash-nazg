@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- fix: disable `sonarjs/parameterized-tests`
+
 ## 40.2.0
 
 - feat: disable `unicorn/consistent-boolean-name` and `unicorn/prefer-await`
