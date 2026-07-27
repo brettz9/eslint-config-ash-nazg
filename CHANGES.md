@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 40.1.0
+
+- feat: disable `unicorn/no-this-outside-of-class` for test files
+
 ## 40.0.1
 
 - fix: temporarily disable `eslint-plugin-chai-expect-keywords`

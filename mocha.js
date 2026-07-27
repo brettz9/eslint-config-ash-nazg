@@ -33,12 +33,12 @@ export default [{
       xdescribe: 'readonly',
       xit: 'readonly'
     }
-  }
+  },
 
   // Could disable arrow functions, named functions
-  /*
   rules: {
-    'max-nested-callbacks': 'off',
-  },
-  */
+    // 'max-nested-callbacks': 'off',
+    // Used with Mocha this.timeout()
+    'unicorn/no-this-outside-of-class': 'off'
+  }
 }];
