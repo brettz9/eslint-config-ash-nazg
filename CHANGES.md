@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 40.0.1
+
+- fix: temporarily disable `eslint-plugin-chai-expect-keywords`
+
 ## 40.0.0
 
 - chore: update deps. and devDeps.
