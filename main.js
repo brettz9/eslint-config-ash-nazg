@@ -327,6 +327,7 @@ export default function main (pkg) {
         'unicorn/filename-case': 'off',
         // 'unicorn/import-index': 'off', // Deprecated
         'unicorn/import-style': 'off',
+        'unicorn/max-nested-calls': 'off',
         'unicorn/name-replacements': 'off',
         'unicorn/no-for-each': 'off',
         'unicorn/no-array-reduce': 'off',

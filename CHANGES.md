@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## ?
+
+- feat: disable `unicorn/max-nested-calls`
+
 ## 41.0.0
 
 - BREAKING: Require ESLint 10 peer

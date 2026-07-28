@@ -470,6 +470,7 @@ appears, to Dark Lords.
 - `import-index` - While understandable, seems may cause more trouble in
     making it harder to find references to `index`.
 - `import-style` - Using `eslint-plugin-import-x` instead
+- `max-nested-calls` - Oppressive
 - `name-replacements` - Oppressive
 - `no-array-reduce` - Though I can see some appeal to this (and `reduce` also
     suffers from not being able to short-circuit), I like it for object
