@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 41.1.1
+
+- fix: drop incompatible `@babel/plugin-syntax-import-attributes`
+
 ## 41.1.0
 
 - feat: disable `unicorn/max-nested-calls`, `unicorn/prefer-then-catch`,

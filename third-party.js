@@ -16,9 +16,6 @@ export default [
         sourceType: undefined,
         requireConfigFile: false,
         babelOptions: {
-          plugins: [
-            '@babel/plugin-syntax-import-attributes'
-          ]
         }
       }
     },

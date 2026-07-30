@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ash-nazg",
-  "version": "41.1.0",
+  "version": "41.1.1",
   "description": "An expansion and tweaking of the \"standard\" config style for ESLint",
   "main": "index.js",
   "types": "./dist/index.d.ts",
@@ -8,8 +8,8 @@
   "scripts": {
     "prepublishOnly": "pnpm i",
     "test-3rd": "es-file-traverse --file ./main.js --node --cjs --ignoreResolutionErrors",
-    "lint-3rd": "eslint --no-inline-config --config third-party.js `es-file-traverse --file ./main.js --node --cjs --ignoreResolutionErrors --parserOptions=\"{\\\"requireConfigFile\\\":false,\\\"babelOptions\\\":{\\\"plugins\\\":[\\\"@babel/plugin-syntax-import-attributes\\\"]}}\"`",
-    "3rd": "es-file-traverse --file ./main.js --node --cjs --ignoreResolutionErrors --parserOptions=\"{\\\"requireConfigFile\\\":false,\\\"babelOptions\\\":{\\\"plugins\\\":[\\\"@babel/plugin-syntax-import-attributes\\\"]}}\"",
+    "lint-3rd": "eslint --no-inline-config --config third-party.js `es-file-traverse --file ./main.js --node --cjs --ignoreResolutionErrors --parserOptions=\"{\\\"requireConfigFile\\\":false}\"`",
+    "3rd": "es-file-traverse --file ./main.js --node --cjs --ignoreResolutionErrors --parserOptions=\"{\\\"requireConfigFile\\\":false}\"",
     "unused:array-func": "node inherited-rules/build.mjs unused eslint-plugin-array-func all",
     "unused:compat": "node inherited-rules/build.mjs unused eslint-plugin-compat recommended",
     "unused:eslint-comments": "node inherited-rules/build.mjs unused eslint-plugin-eslint-comments recommended",
@@ -69,7 +69,6 @@
   "dependencies": {
     "@babel/eslint-parser": "^8.0.1",
     "@babel/eslint-plugin": "^8.0.1",
-    "@babel/plugin-syntax-import-attributes": "8.0.0-rc.1",
     "@brettz9/eslint-plugin": "^3.0.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.7.2",
     "@eslint/core": "^1.2.1",
