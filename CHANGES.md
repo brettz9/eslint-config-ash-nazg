@@ -1,8 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
-## ?
+## 41.1.0
 
-- feat: disable `unicorn/max-nested-calls`
+- feat: disable `unicorn/max-nested-calls`, `unicorn/prefer-then-catch`,
+    `unicorn/no-confusing-array-splice`, `sonarjs/super-linear-regex`
 
 ## 41.0.0
 

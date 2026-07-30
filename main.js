@@ -325,6 +325,7 @@ export default function main (pkg) {
         'unicorn/empty-brace-spaces': 'off',
         'unicorn/explicit-length-check': 'off',
         'unicorn/filename-case': 'off',
+
         // 'unicorn/import-index': 'off', // Deprecated
         'unicorn/import-style': 'off',
         'unicorn/max-nested-calls': 'off',
@@ -332,6 +333,7 @@ export default function main (pkg) {
         'unicorn/no-for-each': 'off',
         'unicorn/no-array-reduce': 'off',
         'unicorn/no-await-expression-member': 'off',
+        'unicorn/no-confusing-array-splice': 'off',
         'unicorn/no-lonely-if': 'off',
         'unicorn/no-negated-condition': 'off',
         'unicorn/no-nested-ternary': 'off',
@@ -403,6 +405,7 @@ export default function main (pkg) {
         'sonarjs/cognitive-complexity': 'off',
         'sonarjs/no-nested-switch': 'off',
         'sonarjs/no-nested-template-literals': 'off',
+        'sonarjs/super-linear-regex': 'off',
         'sonarjs/todo-tag': 'off',
 
         'sonarjs/no-empty-function': 'off',

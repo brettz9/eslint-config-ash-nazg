@@ -479,6 +479,7 @@ appears, to Dark Lords.
     string concatenation.
 - `no-await-expression-member` - A bit confining for convenience for only a
     little gain
+- `no-confusing-array-splice` - splice is not so confusing and uglier to fix
 - `no-for-each` - Writing code for `forEach` allows later refactoring,
     e.g., to move out of the block.
 - `no-instanceof-array` - Covered by our blocking of all `instanceof`
@@ -518,6 +519,7 @@ appears, to Dark Lords.
 - `prefer-string-slice` - Added to Sauron but can be cumbersome to change for
   old projects
 - `prefer-string-replace-all` - Good but not available yet in Node (even 14)
+- `prefer-then-catch` - Using `eslint-plugin-promise` instead
 - `prefer-top-level-await` - Good requires Babel currently
 - `regex-shorthand` - Was renamed to `better-regex`.
 - `string-content` - Don't want the trouble of requiring formatted apostrophes (not recommended anyways).
@@ -586,6 +588,7 @@ appears, to Dark Lords.
 - `prefer-immediate-return` - Can be useful for documenting even if method name
     should be descriptive, especially if there are different returns with subtly
     different results
+- `super-linear-regex` - Too convenient
 - `todo-tag` - Use expiring to-dos, etc. instead
 
 ### Rationale for including eslint-plugin-jsdoc rules which are not in `plugin:jsdoc/recommended`
