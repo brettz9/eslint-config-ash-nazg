@@ -48,8 +48,8 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0(eslint@10.8.0(supports-color@7.2.0))
       eslint-plugin-chai-expect-keywords:
-        specifier: ^3.1.0
-        version: 3.1.0
+        specifier: ^3.3.0
+        version: 3.3.0(eslint@10.8.0(supports-color@7.2.0))
       eslint-plugin-chai-friendly:
         specifier: ^1.2.1
         version: 1.2.1(eslint@10.8.0(supports-color@7.2.0))
@@ -69,11 +69,11 @@ importers:
         specifier: ^4.17.1
         version: 4.17.1(eslint-import-resolver-node@0.3.10(supports-color@7.2.0))(eslint@10.8.0(supports-color@7.2.0))(supports-color@7.2.0)
       eslint-plugin-jsdoc:
-        specifier: ^63.3.1
-        version: 63.3.1(eslint@10.8.0(supports-color@7.2.0))(supports-color@7.2.0)
+        specifier: ^63.3.3
+        version: 63.3.3(eslint@10.8.0(supports-color@7.2.0))(supports-color@7.2.0)
       eslint-plugin-mocha:
-        specifier: ^12.0.0
-        version: 12.0.0(eslint@10.8.0(supports-color@7.2.0))
+        specifier: ^12.0.1
+        version: 12.0.1(eslint@10.8.0(supports-color@7.2.0))
       eslint-plugin-mocha-cleanup:
         specifier: ^1.11.3
         version: 1.11.3(eslint@10.8.0(supports-color@7.2.0))
@@ -96,8 +96,8 @@ importers:
         specifier: ^72.0.0
         version: 72.0.0(eslint@10.8.0(supports-color@7.2.0))
       globals:
-        specifier: ^17.8.0
-        version: 17.8.0
+        specifier: ^17.9.0
+        version: 17.9.0
       semver:
         specifier: ^7.8.5
         version: 7.8.5
@@ -109,11 +109,11 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       '@types/node':
-        specifier: ^26.1.1
-        version: 26.1.1
+        specifier: ^26.1.2
+        version: 26.1.2
       '@types/semver':
-        specifier: ^7.7.1
-        version: 7.7.1
+        specifier: ^7.8.0
+        version: 7.8.0
       eslint:
         specifier: ^10.8.0
         version: 10.8.0(supports-color@7.2.0)
@@ -213,8 +213,8 @@ packages:
   '@emnapi/wasi-threads@1.2.1':
     resolution: {integrity: sha512-uTII7OYF+/Mes/MrcIOYp5yOtSMLBWSIoLPpcgwipoiKbli6k322tcoFsxoIIxPDqW01SQGAgko4EzZi2BNv2w==}
 
-  '@es-joy/jsdoccomment@0.90.0':
-    resolution: {integrity: sha512-51x9KxyTAN6guZOCd+lmcDdkhgdMdP/6iMMtg9dyhCWDc3+iSUyoB7f/9WAM/yGHmGFq25Vd6bXRR7CZcB+tog==}
+  '@es-joy/jsdoccomment@0.91.0':
+    resolution: {integrity: sha512-vgqlMGNNhZxwDYbUNIHj3Hskb4R28iqdXx90ufHyt/NeuTQkeqjTDslAs9I0/GCAfbxP5BpH5WsL1R1fht5Lxg==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
   '@es-joy/resolve.exports@1.2.0':
@@ -404,11 +404,11 @@ packages:
   '@types/ms@2.1.0':
     resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
 
-  '@types/node@26.1.1':
-    resolution: {integrity: sha512-nxAkRSVkN1Y0JC1W8ky/fTfkGsMmcrRsbx+3XoZE+rMOX71kLYTV7fLXpqud1GpbpP5TuffXFqfX7fH2GgZREw==}
+  '@types/node@26.1.2':
+    resolution: {integrity: sha512-Vu4a5UFA9rIIFJ7rB/Vaafh9lrCQszopTCx6KjFboXTGQbPNasehVR5TEiithSDGyd1DEiUByggTZsg8jukeIg==}
 
-  '@types/semver@7.7.1':
-    resolution: {integrity: sha512-FmgJfu+MOcQ370SD0ev7EI8TlCAfKYU+B4m5T3yXc1CiRN94g/SZPtsCkk506aUDtlMnFZvasDwHHUcZUEaYuA==}
+  '@types/semver@7.8.0':
+    resolution: {integrity: sha512-1mAINjtQCXXeLkJ9ehXkwOcBpqtLxiVtKhpUf83DdRNdQKV0iXZpaHYqRr7nj+wvxuJzoAmAwXI+sCNMv1CzLQ==}
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
@@ -1127,9 +1127,11 @@ packages:
     peerDependencies:
       eslint: '>=8.51.0'
 
-  eslint-plugin-chai-expect-keywords@3.1.0:
-    resolution: {integrity: sha512-0RccqS5zfNFnwomz2OhpaIaK/Z5f0RypBiR4Va+nTo1QncPHQC2YxQk+IbHb3SY4Lj4hToQ9IXejzZSqF0Ae9A==}
-    engines: {node: '>=18.18.0'}
+  eslint-plugin-chai-expect-keywords@3.3.0:
+    resolution: {integrity: sha512-txCGC1Rtfih8w2L3EtXFX/d6rcbKqXd3X1lNJ9/0Be1U1KezitP2559pjNzygjpBuyiRPJkJV+HABdjhsFKeHg==}
+    engines: {node: ^22.13.0 || >=24.15.0}
+    peerDependencies:
+      eslint: '>=9.0.0'
 
   eslint-plugin-chai-expect@4.1.0:
     resolution: {integrity: sha512-9Ldti0tyxlvbc4BAQ5lNkHsXjgH518aGO5cg53hv2V9jfEfmyAcrmJeG9+tkeq7gwoRNm+fITlwAgZsK12Mejw==}
@@ -1196,8 +1198,8 @@ packages:
       '@typescript-eslint/parser':
         optional: true
 
-  eslint-plugin-jsdoc@63.3.1:
-    resolution: {integrity: sha512-yVyTPtOY2tA8EjTwUtaM3pFxj9i/3m4/FSPMv5gMnDHSSleCpzIYQLyV8KnVmEIkkPpNhDlkDQ99mTfjxgqLxA==}
+  eslint-plugin-jsdoc@63.3.3:
+    resolution: {integrity: sha512-xI4IeVRzRFA2DGHrPLIxF3U+oJHU3FE+P9Zb27fVs5dPHgfcpoAs0PyCbznVhK7pwR+9BPUztFeXSgpw/CL4Yg==}
     engines: {node: ^22.13.0 || >=24}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0
@@ -1208,8 +1210,8 @@ packages:
     peerDependencies:
       eslint: '>=0.8.0'
 
-  eslint-plugin-mocha@12.0.0:
-    resolution: {integrity: sha512-vMjec/KRiKxpdA5dKIYV5xRORrSnPvvfD2El3FGtUX2pP7JTP75KRCrwtBqRmKd8a8QWet1MsBKmfZIbQ6gdhA==}
+  eslint-plugin-mocha@12.0.1:
+    resolution: {integrity: sha512-oBHxSHxkIKV4L+iFM6BSyVRUID5JiX85KV6omqRed6aGDa4jk2hkhgi9uDrdPjwu1qzJ4T/5WXucsJOES4aUEQ==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       eslint: '>=10.2.0'
@@ -1464,6 +1466,10 @@ packages:
 
   globals@17.8.0:
     resolution: {integrity: sha512-Zz/LMDZScFmkakeL2cTHzf+PbWKdpU3uclqkZT7TjDG58j5WPt0PpA+n9uPI24fZtlw07q0OtEi84K+umsRzqQ==}
+    engines: {node: '>=18'}
+
+  globals@17.9.0:
+    resolution: {integrity: sha512-m/MvAW61QVU5VDNF1Vj8axt016h8w7L5TU1e9zlab7XIttAT2YAlCwl75K1fOqvMM9apmD7lbCIRhpfkhmxhCg==}
     engines: {node: '>=18'}
 
   globalthis@1.0.4:
@@ -1722,8 +1728,8 @@ packages:
     resolution: {integrity: sha512-/c+n06zvqFQGxdz1BbElF7S3nEghjNchLN1TjQnk2j10HYDaUc57rcvl6BbnziTx8NQmrg0JOs/iwRpvcYaxjQ==}
     engines: {node: '>=18.20'}
 
-  jsdoc-type-pratt-parser@7.3.0:
-    resolution: {integrity: sha512-DoyJXo7x/n48M3NsGOs9QnEws0ft0tV3YsSgvWMNxz2hZtz+Q6fpqUD96lVYX4a+jcEkzHeFNDJOn68TzXfbdA==}
+  jsdoc-type-pratt-parser@8.0.0:
+    resolution: {integrity: sha512-uQu/fXVqVaMg6gM8/E5G5+eygVcZ1NV0Z51CvqhNa2bDWxvHMl484ETr6vph4oPyC+KUcbP/w2W2pewfCiR9aQ==}
     engines: {node: '>=20.0.0'}
 
   jsesc@3.1.0:
@@ -2658,13 +2664,13 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  '@es-joy/jsdoccomment@0.90.0':
+  '@es-joy/jsdoccomment@0.91.0':
     dependencies:
       '@types/estree': 1.0.9
       '@typescript-eslint/types': 8.65.0
       comment-parser: 1.4.7
       esquery: 1.7.0
-      jsdoc-type-pratt-parser: 7.3.0
+      jsdoc-type-pratt-parser: 8.0.0
 
   '@es-joy/resolve.exports@1.2.0': {}
 
@@ -2855,11 +2861,11 @@ snapshots:
 
   '@types/ms@2.1.0': {}
 
-  '@types/node@26.1.1':
+  '@types/node@26.1.2':
     dependencies:
       undici-types: 8.3.0
 
-  '@types/semver@7.7.1': {}
+  '@types/semver@7.8.0': {}
 
   '@types/unist@3.0.3': {}
 
@@ -3577,9 +3583,11 @@ snapshots:
     dependencies:
       eslint: 10.8.0(supports-color@7.2.0)
 
-  eslint-plugin-chai-expect-keywords@3.1.0:
+  eslint-plugin-chai-expect-keywords@3.3.0(eslint@10.8.0(supports-color@7.2.0)):
     dependencies:
-      globals: 15.15.0
+      '@types/estree': 1.0.9
+      eslint: 10.8.0(supports-color@7.2.0)
+      globals: 17.9.0
 
   eslint-plugin-chai-expect@4.1.0(eslint@10.8.0(supports-color@7.2.0)):
     dependencies:
@@ -3666,9 +3674,9 @@ snapshots:
       - supports-color
     optional: true
 
-  eslint-plugin-jsdoc@63.3.1(eslint@10.8.0(supports-color@7.2.0))(supports-color@7.2.0):
+  eslint-plugin-jsdoc@63.3.3(eslint@10.8.0(supports-color@7.2.0))(supports-color@7.2.0):
     dependencies:
-      '@es-joy/jsdoccomment': 0.90.0
+      '@es-joy/jsdoccomment': 0.91.0
       '@es-joy/resolve.exports': 1.2.0
       are-docs-informative: 0.0.2
       comment-parser: 1.4.7
@@ -3691,7 +3699,7 @@ snapshots:
       eslint: 10.8.0(supports-color@7.2.0)
       requireindex: 1.2.0
 
-  eslint-plugin-mocha@12.0.0(eslint@10.8.0(supports-color@7.2.0)):
+  eslint-plugin-mocha@12.0.1(eslint@10.8.0(supports-color@7.2.0)):
     dependencies:
       '@eslint-community/eslint-utils': 4.10.1(eslint@10.8.0(supports-color@7.2.0))
       '@eslint/core': 1.2.1
@@ -3993,6 +4001,8 @@ snapshots:
 
   globals@17.8.0: {}
 
+  globals@17.9.0: {}
+
   globalthis@1.0.4:
     dependencies:
       define-properties: 1.2.1
@@ -4247,7 +4257,7 @@ snapshots:
 
   js-types@4.0.0: {}
 
-  jsdoc-type-pratt-parser@7.3.0: {}
+  jsdoc-type-pratt-parser@8.0.0: {}
 
   jsesc@3.1.0: {}
 

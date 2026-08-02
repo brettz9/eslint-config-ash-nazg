@@ -56,17 +56,16 @@ export default /** @type {ESLintConfig[]} */ ([
     ),
     name: 'ash-nazg/chai-expect-keywords',
     rules: {
-      // Todo: Reenable when ESLint 10 supported: https://github.com/gavinaiken/eslint-plugin-chai-expect-keywords/pull/19
-      // 'chai-expect-keywords/no-unsupported-keywords': [
-      //   'error', {
-      //     // allowKeywords: ["length"],
-      //     // Will admittedly vary by project but a bit of a hassle to
-      //     //  whitelist differently for each project
-      //     allowChaiAsPromised: true,
-      //     allowChaiDOM: true,
-      //     allowSinonChai: true
-      //   }
-      // ]
+      'chai-expect-keywords/no-unsupported-keywords': [
+        'error', {
+          // allowKeywords: ["length"],
+          // Will admittedly vary by project but a bit of a hassle to
+          //  whitelist differently for each project
+          allowChaiAsPromised: true,
+          allowChaiDOM: true,
+          allowSinonChai: true
+        }
+      ]
     }
   },
   addTestFiles(

@@ -3,6 +3,8 @@
 # 42.0.0
 
 - fix: disable `eslint-plugin-import-x`
+- fix: reenable `eslint-plugin-chai-expect-keywords`
+- chore: update deps. and devDeps.
 
 ## 41.1.1
 

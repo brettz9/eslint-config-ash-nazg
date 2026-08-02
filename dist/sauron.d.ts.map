@@ -1,1 +1,1 @@
-{"version":3,"file":"sauron.d.ts","sourceRoot":"","sources":["../sauron.js"],"names":[],"mappings":"AAKA;;;;;;GAMG;AACH,MAAM,CAAC,OAAO,UAAU,MAAM,CAAE,GAAG;WALvB,QAAQ,GAAC,UAAU;cAChB;QAAC,IAAI,CAAC,EAAE,MAAM,CAAA;KAAC;mBACV,MAAM,EAAE,GAAC,MAAM;CAGA,EAAE,KAAK,UAAA,wEAyJzC"}
+{"version":3,"file":"sauron.d.ts","sourceRoot":"","sources":["../sauron.js"],"names":[],"mappings":"AAKA;;;;;;GAMG;AACH,MAAM,CAAC,OAAO,UAAU,MAAM,CAAE,GAAG;WALvB,QAAQ,GAAC,UAAU;cAChB;QAAC,IAAI,CAAC,EAAE,MAAM,CAAA;KAAC;mBACV,MAAM,EAAE,GAAC,MAAM;CAGA,EAAE,KAAK,UAAA,wEA0JzC"}
