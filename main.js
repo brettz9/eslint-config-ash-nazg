@@ -240,31 +240,32 @@ export default function main (pkg) {
         'promise/valid-params': 'off',
 
         // IMPORT
-        'import-x/no-absolute-path': 'error',
-        'import-x/no-dynamic-require': 'error',
-        'import-x/no-empty-named-blocks': 'error',
-        'import-x/no-self-import': 'error',
-        'import-x/no-useless-path-segments': 'error',
-        'import-x/no-named-as-default': 'error',
-        'import-x/no-named-as-default-member': 'error',
-        'import-x/no-deprecated': 'error',
-        'import-x/no-extraneous-dependencies': 'error',
-        'import-x/no-mutable-exports': 'error',
-        'import-x/no-amd': 'error',
+        // TODO: Reenable
+        // 'import-x/no-absolute-path': 'error',
+        // 'import-x/no-dynamic-require': 'error',
+        // 'import-x/no-empty-named-blocks': 'error',
+        // 'import-x/no-self-import': 'error',
+        // 'import-x/no-useless-path-segments': 'error',
+        // 'import-x/no-named-as-default': 'error',
+        // 'import-x/no-named-as-default-member': 'error',
+        // 'import-x/no-deprecated': 'error',
+        // 'import-x/no-extraneous-dependencies': 'error',
+        // 'import-x/no-mutable-exports': 'error',
+        // 'import-x/no-amd': 'error',
 
-        'import-x/no-unresolved': ['error', {
-          ignore: ['fs/promises', '@uce', '@uce/reactive']
-        }],
+        // 'import-x/no-unresolved': ['error', {
+        //   ignore: ['fs/promises', '@uce', '@uce/reactive']
+        // }],
 
-        'import-x/extensions': ['error', 'always', {ignorePackages: true}],
-        'import-x/order': ['error', {groups: [
-          'builtin',
-          'external',
-          'internal',
-          ['parent', 'sibling', 'index']
-        ]}],
-        'import-x/newline-after-import': 'error',
-        'import-x/no-anonymous-default-export': 'off',
+        // 'import-x/extensions': ['error', 'always', {ignorePackages: true}],
+        // 'import-x/order': ['error', {groups: [
+        //   'builtin',
+        //   'external',
+        //   'internal',
+        //   ['parent', 'sibling', 'index']
+        // ]}],
+        // 'import-x/newline-after-import': 'error',
+        // 'import-x/no-anonymous-default-export': 'off',
 
         // JSDOC DISABLE
         'jsdoc/check-alignment': ['off'],

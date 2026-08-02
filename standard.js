@@ -124,12 +124,13 @@ export default [{
     'valid-typeof': 'error',
     '@stylistic/wrap-iife': 'error',
     '@stylistic/yield-star-spacing': 'error',
-    yoda: 'error',
-    'import-x/export': 'error',
-    'import-x/first': 'error',
-    'import-x/no-duplicates': 'error',
-    'import-x/no-named-default': 'error',
-    'import-x/no-webpack-loader-syntax': 'error'
+    yoda: 'error'
+    // TODO: Reenable
+    // 'import-x/export': 'error',
+    // 'import-x/first': 'error',
+    // 'import-x/no-duplicates': 'error',
+    // 'import-x/no-named-default': 'error',
+    // 'import-x/no-webpack-loader-syntax': 'error'
   }
 }, {
   name: 'ash-nazg/standard/node',

@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+# 42.0.0
+
+- fix: disable `eslint-plugin-import-x`
+
 ## 41.1.1
 
 - fix: drop incompatible `@babel/plugin-syntax-import-attributes`

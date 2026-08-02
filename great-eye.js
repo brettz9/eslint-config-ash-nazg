@@ -39,9 +39,10 @@ export default function greatEye (pkg, types) {
         ]
       }],
 
-      'import-x/no-unused-modules': ['warn', {
-        missingExports: true, unusedExports: true
-      }],
+      // TODO: Reenable
+      // 'import-x/no-unused-modules': ['warn', {
+      //   missingExports: true, unusedExports: true
+      // }],
 
       'jsdoc/check-alignment': ['warn'],
       'jsdoc/check-indentation': ['warn'],
