@@ -6,7 +6,7 @@
   "types": "./dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "prepublishOnly": "pnpm i",
+    "prepublishOnly": "pnpm tsc && pnpm i",
     "test-3rd": "es-file-traverse --file ./main.js --node --cjs --ignoreResolutionErrors",
     "lint-3rd": "eslint --no-inline-config --config third-party.js `es-file-traverse --file ./main.js --node --cjs --ignoreResolutionErrors --parserOptions=\"{\\\"requireConfigFile\\\":false}\"`",
     "3rd": "es-file-traverse --file ./main.js --node --cjs --ignoreResolutionErrors --parserOptions=\"{\\\"requireConfigFile\\\":false}\"",
