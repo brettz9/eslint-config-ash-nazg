@@ -1,6 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
-# 42.0.0
+## 42.0.1
+
+- fix: actually disable `eslint-plugin-import-x`
+
+## 42.0.0
 
 - feat: add `unicorn/single-line-block-comment`
 - feat: add `unicorn/no-barrel-files`

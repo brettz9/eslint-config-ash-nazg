@@ -5,7 +5,7 @@ import brettz9 from '@brettz9/eslint-plugin';
 import markdown from '@eslint/markdown';
 import html from 'eslint-plugin-html';
 import promise from 'eslint-plugin-promise';
-import {flatConfigs} from 'eslint-plugin-import-x';
+// import {flatConfigs} from 'eslint-plugin-import-x';
 import unicorn from 'eslint-plugin-unicorn';
 import comments from '@eslint-community/eslint-plugin-eslint-comments/configs';
 
@@ -52,7 +52,7 @@ export default function main (pkg) {
 
     // These may override 'standard' which includes their rules,
     //   so including first
-    flatConfigs.recommended,
+    // flatConfigs.recommended,
     promise.configs['flat/recommended'],
     // This may override eslint:recommended and the promise/import rules,
     //  but it doesn't turn any off
