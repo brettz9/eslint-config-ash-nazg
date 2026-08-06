@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 42.1.1
+
+- feat: actually disable `unicorn/no-unreadable-object-destructuring`
+
 ## 42.1.0
 
 - feat: disable `unicorn/no-unreadable-object-destructuring`

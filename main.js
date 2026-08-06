@@ -341,6 +341,7 @@ export default function main (pkg) {
         'unicorn/no-null': 'off',
         'unicorn/no-typeof-undefined': 'off',
         'unicorn/no-unreadable-array-destructuring': 'off',
+        'unicorn/no-unreadable-object-destructuring': 'off',
         'unicorn/no-useless-switch-case': 'off',
         'unicorn/no-useless-undefined': 'off',
         'unicorn/numeric-separators-style': 'off',
