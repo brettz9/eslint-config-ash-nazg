@@ -495,6 +495,7 @@ appears, to Dark Lords.
 - `no-typeof-undefined` - Ok but cumbersome, especially if global situation
     is complicated
 - `no-unreadable-array-destructuring` - Better to use this than multiple lines
+- `no-unreadable-object-destructuring` - Oppressive
 - `no-unused-properties` - While no doubt useful, it won't catch all cases,
     sounds computationally expensive, and may better be done with TypeScript
 - `no-useless-switch-case` - Still useful for flagging a viable value or
