@@ -2,6 +2,8 @@
 
 # 42.0.0
 
+- feat: add `unicorn/single-line-block-comment`
+- feat: add `unicorn/no-barrel-files`
 - fix: disable `eslint-plugin-import-x`
 - fix: reenable `eslint-plugin-chai-expect-keywords`
 - chore: update deps. and devDeps.

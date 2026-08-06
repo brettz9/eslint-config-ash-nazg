@@ -57,8 +57,8 @@ importers:
         specifier: ^7.0.2
         version: 7.0.2(eslint@10.8.0(supports-color@7.2.0))
       eslint-plugin-cypress:
-        specifier: ^6.4.3
-        version: 6.4.3(eslint@10.8.0(supports-color@7.2.0))
+        specifier: ^6.4.4
+        version: 6.4.4(eslint@10.8.0(supports-color@7.2.0))
       eslint-plugin-escompat:
         specifier: ^3.11.4
         version: 3.11.4(eslint@10.8.0(supports-color@7.2.0))
@@ -72,8 +72,8 @@ importers:
         specifier: ^63.3.3
         version: 63.3.3(eslint@10.8.0(supports-color@7.2.0))(supports-color@7.2.0)
       eslint-plugin-mocha:
-        specifier: ^12.0.1
-        version: 12.0.1(eslint@10.8.0(supports-color@7.2.0))
+        specifier: ^12.0.2
+        version: 12.0.2(eslint@10.8.0(supports-color@7.2.0))
       eslint-plugin-mocha-cleanup:
         specifier: ^1.11.3
         version: 1.11.3(eslint@10.8.0(supports-color@7.2.0))
@@ -93,8 +93,8 @@ importers:
         specifier: 4.2.0
         version: 4.2.0(eslint@10.8.0(supports-color@7.2.0))
       eslint-plugin-unicorn:
-        specifier: ^72.0.0
-        version: 72.0.0(eslint@10.8.0(supports-color@7.2.0))
+        specifier: ^73.0.0
+        version: 73.0.0(eslint@10.8.0(supports-color@7.2.0))
       globals:
         specifier: ^17.9.0
         version: 17.9.0
@@ -185,6 +185,10 @@ packages:
     resolution: {integrity: sha512-srpptsAkEbbNIC/q8nT7o+m6CQe8CJUTV/t7MYc9NnWlgYVtHOb7JH6SorxMhN0kuRJjVqXbKClG6xSbPtzz+g==}
     engines: {node: ^22.18.0 || >=24.11.0}
     hasBin: true
+
+  '@babel/runtime@7.29.7':
+    resolution: {integrity: sha512-Nq8OhGWiZIZGV6hLHoyAKLLcJihP/xFeBMGJoUrxTX2psI8dCifzLhZISFb+VWS3wFMRDmCGw5R+dOySCqPLhw==}
+    engines: {node: '>=6.9.0'}
 
   '@babel/template@8.0.0':
     resolution: {integrity: sha512-eAD0QW/AlbamBbw0FeGiwasbCVPq5ncW0HNVyLP3B9czqLyh4gvw+5JTSNt6le9+ziAU7mqDZsKTHf3jTb4chQ==}
@@ -1151,8 +1155,8 @@ packages:
     peerDependencies:
       eslint: ^9.0.0 || ^10.0.0
 
-  eslint-plugin-cypress@6.4.3:
-    resolution: {integrity: sha512-2/ulKNnCn+0vbaDI/6KovgGKsR/Y/bA+KMAkxRbHl2IAMd/UzU24ZOXpncR+QPBlaXqfAJ9NMCzdwX9Gjhm9AQ==}
+  eslint-plugin-cypress@6.4.4:
+    resolution: {integrity: sha512-ez6i14V0xYrq0DMKQmKPeWpi9XP8RI8GK6YT657yOnVlg72PUyR2psgVmC3jXjpTAXVdyB5VDoQPN/ytaw9+Pg==}
     peerDependencies:
       '@typescript-eslint/parser': '>=8'
       eslint: '>=9'
@@ -1210,8 +1214,8 @@ packages:
     peerDependencies:
       eslint: '>=0.8.0'
 
-  eslint-plugin-mocha@12.0.1:
-    resolution: {integrity: sha512-oBHxSHxkIKV4L+iFM6BSyVRUID5JiX85KV6omqRed6aGDa4jk2hkhgi9uDrdPjwu1qzJ4T/5WXucsJOES4aUEQ==}
+  eslint-plugin-mocha@12.0.2:
+    resolution: {integrity: sha512-RzjnzVBoidGFjVcvzQShLbfWug5pL/6d6LZFbBZk1b5duZ0ooq6dasmpu6qLyNowUZBqaWvQbnR5U1hsKX/+5g==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       eslint: '>=10.2.0'
@@ -1251,8 +1255,8 @@ packages:
     peerDependencies:
       eslint: ^8.0.0 || ^9.0.0 || ^10.0.0
 
-  eslint-plugin-unicorn@72.0.0:
-    resolution: {integrity: sha512-hqO6ksoOHO+ZhdseTuKRVQbx9U7PRO/cv8qAR1mctwzdVO2hYud8uS9luAhp43RJgziYgHAph8eHyipT8GL0ng==}
+  eslint-plugin-unicorn@73.0.0:
+    resolution: {integrity: sha512-V0YatLe9nkGhXEXKe2Qljb1EY0sJHwDV0HUF1NKFwtsHh/fU7qGHDgv+6fchzZcgU2/7noHo2gdjnmo0P2uDPw==}
     engines: {node: '>=22'}
     peerDependencies:
       eslint: '>=10.4'
@@ -1458,10 +1462,6 @@ packages:
 
   globals@15.15.0:
     resolution: {integrity: sha512-7ACyT3wmyp3I61S4fG682L0VA2RGD9otkqGJIwNUMF1SWUombIIk+af1unuDYgMm082aHYwD+mzJvv9Iu8dsgg==}
-    engines: {node: '>=18'}
-
-  globals@17.7.0:
-    resolution: {integrity: sha512-Czmyns5dUsq4seFBR/Kdydhmo8y9kC79hiSkPn0YcGtNnYWnrgt0vjrSjx9tspoDGWm2CMarffRuLjM4xUz8xg==}
     engines: {node: '>=18'}
 
   globals@17.8.0:
@@ -1739,6 +1739,10 @@ packages:
 
   json-buffer@3.0.1:
     resolution: {integrity: sha512-4bV5BfR2mqfQTJm+V5tPPdf+ZpuhiIvTuAB5g8kcrXOZpTT/QwwVRWBywX1ozr6lEuPdbHxwaJlm9G6mI2sfSQ==}
+
+  json-schema-to-ts@3.1.1:
+    resolution: {integrity: sha512-+DWg8jCJG2TEnpy7kOm/7/AxaYoaRbjVB4LFZLySZlWn8exGs3A4OLJR966cVvU26N7X9TWxl+Jsw7dzAqKT6g==}
+    engines: {node: '>=16'}
 
   json-schema-traverse@0.4.1:
     resolution: {integrity: sha512-xbbCH5dCYU5T8LcEhhuh7HJ88HXuW3qsI3Y0zOZFKfZEHcpWiHU/Jxzk629Brsab/mMiHQti9wMP+845RPe3Vg==}
@@ -2371,6 +2375,10 @@ packages:
     resolution: {integrity: sha512-iK5/YhZxq5GO5z8wb0bY1317uDF3Zjpha0QFFLA8/trAoiLbQD0HUbMesEaxyzUgDxi2QlcbM8IvqOlEjgoXBA==}
     engines: {node: '>=12.17'}
 
+  tagged-tag@1.0.0:
+    resolution: {integrity: sha512-yEFYrVhod+hdNyx7g5Bnkkb0G6si8HJurOoOEgC8B/O0uXLHlaey/65KRv6cuWBNhBgHKAROVpc7QyYqE5gFng==}
+    engines: {node: '>=20'}
+
   tapable@2.3.3:
     resolution: {integrity: sha512-uxc/zpqFg6x7C8vOE7lh6Lbda8eEL9zmVm/PLeTPBRhh1xCgdWaQ+J1CUieGpIfm2HdtsUpRv+HshiasBMcc6A==}
     engines: {node: '>=6'}
@@ -2390,6 +2398,9 @@ packages:
   to-valid-identifier@1.0.0:
     resolution: {integrity: sha512-41wJyvKep3yT2tyPqX/4blcfybknGB4D+oETKLs7Q76UiPqRpUJK3hr1nxelyYO0PHKVzJwlu0aCeEAsGI6rpw==}
     engines: {node: '>=20'}
+
+  ts-algebra@2.0.0:
+    resolution: {integrity: sha512-FPAhNPFMrkwz76P7cdjdmiShwMynZYN6SgOujD1urY4oNm80Ou9oMdmbR45LotcKOXoy7wSmHkRFE6Mxbrhefw==}
 
   ts-api-utils@2.5.0:
     resolution: {integrity: sha512-OJ/ibxhPlqrMM0UiNHJ/0CKQkoKF243/AEmplt3qpRgkW8VG7IfOS41h7V8TjITqdByHzrjcS/2si+y4lIh8NA==}
@@ -2415,6 +2426,10 @@ packages:
   type-fest@4.41.0:
     resolution: {integrity: sha512-TeTSQ6H5YHvpqVwBRcnLDCBnDOHWYu7IvGbHT6N8AOymcr9PJGjc1GTtiWZTYg0NCgYwvnYWEkVChQAr9bjfwA==}
     engines: {node: '>=16'}
+
+  type-fest@5.8.0:
+    resolution: {integrity: sha512-YGYEVz3Fm5iy/AybuA0oyNFq7H4CgQNfRp/qfe8nurE1kuCeNm3/vfm9X4Mtl+qLyaKJUh5xrFZwogr41SMjYA==}
+    engines: {node: '>=20'}
 
   typed-array-buffer@1.0.3:
     resolution: {integrity: sha512-nAYYwfY3qnzX30IkA6AQZjVbtK6duGontcQm1WSG1MD94YLqK0515GNApXkoxKOWMusVssAHWLh9SeaoefYFGw==}
@@ -2622,6 +2637,8 @@ snapshots:
   '@babel/parser@8.0.4':
     dependencies:
       '@babel/types': 8.0.4
+
+  '@babel/runtime@7.29.7': {}
 
   '@babel/template@8.0.0':
     dependencies:
@@ -3608,10 +3625,10 @@ snapshots:
       lodash.memoize: 4.1.2
       semver: 7.8.5
 
-  eslint-plugin-cypress@6.4.3(eslint@10.8.0(supports-color@7.2.0)):
+  eslint-plugin-cypress@6.4.4(eslint@10.8.0(supports-color@7.2.0)):
     dependencies:
       eslint: 10.8.0(supports-color@7.2.0)
-      globals: 17.8.0
+      globals: 17.9.0
 
   eslint-plugin-es-x@7.8.0(eslint@10.8.0(supports-color@7.2.0)):
     dependencies:
@@ -3699,12 +3716,15 @@ snapshots:
       eslint: 10.8.0(supports-color@7.2.0)
       requireindex: 1.2.0
 
-  eslint-plugin-mocha@12.0.1(eslint@10.8.0(supports-color@7.2.0)):
+  eslint-plugin-mocha@12.0.2(eslint@10.8.0(supports-color@7.2.0)):
     dependencies:
       '@eslint-community/eslint-utils': 4.10.1(eslint@10.8.0(supports-color@7.2.0))
       '@eslint/core': 1.2.1
+      '@types/estree': 1.0.9
       eslint: 10.8.0(supports-color@7.2.0)
-      globals: 17.7.0
+      globals: 17.8.0
+      json-schema-to-ts: 3.1.1
+      type-fest: 5.8.0
 
   eslint-plugin-n@18.2.2(eslint@10.8.0(supports-color@7.2.0))(ts-declaration-location@1.0.7(typescript@7.0.2))(typescript@7.0.2):
     dependencies:
@@ -3755,7 +3775,7 @@ snapshots:
       typescript: 6.0.3
       yaml: 2.9.0
 
-  eslint-plugin-unicorn@72.0.0(eslint@10.8.0(supports-color@7.2.0)):
+  eslint-plugin-unicorn@73.0.0(eslint@10.8.0(supports-color@7.2.0)):
     dependencies:
       '@eslint-community/eslint-utils': 4.10.1(eslint@10.8.0(supports-color@7.2.0))
       '@eslint/css-tree': 4.0.5
@@ -3767,7 +3787,7 @@ snapshots:
       entities: 4.5.0
       eslint: 10.8.0(supports-color@7.2.0)
       find-up-simple: 1.0.1
-      globals: 17.8.0
+      globals: 17.9.0
       indent-string: 5.0.0
       is-builtin-module: 5.0.0
       is-identifier: 1.1.0
@@ -3996,8 +4016,6 @@ snapshots:
       ini: 4.1.1
 
   globals@15.15.0: {}
-
-  globals@17.7.0: {}
 
   globals@17.8.0: {}
 
@@ -4262,6 +4280,11 @@ snapshots:
   jsesc@3.1.0: {}
 
   json-buffer@3.0.1: {}
+
+  json-schema-to-ts@3.1.1:
+    dependencies:
+      '@babel/runtime': 7.29.7
+      ts-algebra: 2.0.0
 
   json-schema-traverse@0.4.1: {}
 
@@ -5128,6 +5151,8 @@ snapshots:
       array-back: 6.2.3
       wordwrapjs: 5.1.1
 
+  tagged-tag@1.0.0: {}
+
   tapable@2.3.3: {}
 
   time-span@5.1.0:
@@ -5147,6 +5172,8 @@ snapshots:
     dependencies:
       '@sindresorhus/base62': 1.0.0
       reserved-identifiers: 1.2.0
+
+  ts-algebra@2.0.0: {}
 
   ts-api-utils@2.5.0(typescript@6.0.3):
     dependencies:
@@ -5174,6 +5201,10 @@ snapshots:
       prelude-ls: 1.2.1
 
   type-fest@4.41.0: {}
+
+  type-fest@5.8.0:
+    dependencies:
+      tagged-tag: 1.0.0
 
   typed-array-buffer@1.0.3:
     dependencies:

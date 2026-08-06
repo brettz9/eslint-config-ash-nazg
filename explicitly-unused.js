@@ -117,6 +117,8 @@ export default [{
 
     'sonarjs/elseif-without-else': 'off',
 
+    'unicorn/consistent-arrow-return-style': 'off',
+    'unicorn/iteration-fallback-style': 'off',
     'unicorn/no-unused-properties': 'off',
     'unicorn/no-keyword-prefix': 'off',
     'unicorn/prefer-at': 'off',

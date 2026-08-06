@@ -457,6 +457,7 @@ appears, to Dark Lords.
 
 - `catch-error-name` - It can actually be useful to use different
     error names to indicate what type of error may be expected.
+- `consistent-arrow-return-style` - Oppressive
 - `consistent-boolean-name` - Oppressive
 - `consistent-destructuring` - In practice can be cumbersome
 - `consistent-function-scoping` - Though this can be useful, and it
@@ -470,6 +471,7 @@ appears, to Dark Lords.
 - `import-index` - While understandable, seems may cause more trouble in
     making it harder to find references to `index`.
 - `import-style` - Using `eslint-plugin-import-x` instead
+- `iteration-fallback-style` - Oppressive
 - `max-nested-calls` - Oppressive
 - `name-replacements` - Oppressive
 - `no-array-reduce` - Though I can see some appeal to this (and `reduce` also
@@ -530,10 +532,12 @@ appears, to Dark Lords.
 ### Rationale for altering default on Unicorn rules
 
 - `consistent-conditional-object-spread` - Clearer intent
+- `single-line-block-comment-style` - More succinct
 
 ### Rationale for including some Unicorn rules which are disabled in `plugin:unicorn/recommended`
 
 - `unicorn/custom-error-definition` - Does not seem confining.
+- `unicorn/no-barrel-files` - Can be disabled if truly needed.
 - `unicorn/no-unsafe-regex` - Seems like something to watch for, though
     I may revisit if this reports too many common expressions.
 - `unicorn/require-post-message-target-origin` - Useful for common cases

@@ -367,6 +367,8 @@ export default function main (pkg) {
 
         // UNICORN
         'unicorn/consistent-conditional-object-spread': ['error', 'ternary'],
+        'unicorn/single-line-block-comment-style': ['error', 'single-line'],
+        'unicorn/no-barrel-files': 'error',
         'unicorn/custom-error-definition': 'error',
         // 'unicorn/no-unsafe-regex': 'error', // Removed
         'unicorn/prefer-event-target': 'error',
