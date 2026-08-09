@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 42.2.0
+
+- chore: update deps. and devDeps.
+
 ## 42.1.1
 
 - feat: actually disable `unicorn/no-unreadable-object-destructuring`
