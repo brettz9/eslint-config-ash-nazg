@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 42.3.0
+
+- chore: update jsdoc plugin
+
 ## 42.2.0
 
 - chore: update deps. and devDeps.
