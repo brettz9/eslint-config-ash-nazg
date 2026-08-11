@@ -7,14 +7,14 @@
 * }
 */
 export declare function addFiles(cfgs: import('eslint').Linter.Config | import('eslint').Linter.Config[], files: string[]): import('eslint').Linter.Config | import('eslint').Linter.Config[];
-export type Types = ("great-eye" | "sauron" | "saruman" | *   "polyglot" | "bare" | "node" | "browser" | *   "script" | "module" | *   "no-overrides" | *   "no-cypress" | "mocha" | *   "babel" | "third-party")[];
+export type Types = ("great-eye" | "sauron" | "saruman" | "polyglot" | "bare" | "node" | "browser" | "script" | "module" | "no-overrides" | "no-cypress" | "mocha" | "babel" | "third-party")[];
 /**
- * @typedef {("great-eye"|"sauron"|"saruman"|
- *   "polyglot"|"bare"|"node"|"browser"|
- *   "script"|"module"|
- *   "no-overrides"|
- *   "no-cypress"|"mocha"|
- *   "babel"|"third-party")[]} Types
+ * @typedef {("great-eye"|"sauron"|"saruman"
+ *   |"polyglot"|"bare"|"node"|"browser"
+ *   |"script"|"module"
+ *   |"no-overrides"
+ *   |"no-cypress"|"mocha"
+ *   |"babel"|"third-party")[]} Types
  */
 /**
  * @param {Types} types

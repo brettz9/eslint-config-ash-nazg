@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 42.3.1
+
+- fix(types): poorly formed due to TS issue
+
 ## 42.3.0
 
 - chore: update jsdoc plugin

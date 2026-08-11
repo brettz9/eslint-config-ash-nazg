@@ -60,12 +60,12 @@ try {
 }
 
 /**
- * @typedef {("great-eye"|"sauron"|"saruman"|
- *   "polyglot"|"bare"|"node"|"browser"|
- *   "script"|"module"|
- *   "no-overrides"|
- *   "no-cypress"|"mocha"|
- *   "babel"|"third-party")[]} Types
+ * @typedef {("great-eye"|"sauron"|"saruman"
+ *   |"polyglot"|"bare"|"node"|"browser"
+ *   |"script"|"module"
+ *   |"no-overrides"
+ *   |"no-cypress"|"mocha"
+ *   |"babel"|"third-party")[]} Types
  */
 
 // Todo: How to figure if main code is being compiled (could check/load Babel
