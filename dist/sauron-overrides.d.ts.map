@@ -1,1 +1,1 @@
-{"version":3,"file":"sauron-overrides.d.ts","sourceRoot":"","sources":["../sauron-overrides.js"],"names":[],"mappings":"AAIA;;;;;;;;IAQI;AACJ,MAAM,CAAC,OAAO,UAAU,eAAe,CAAE,KAAK,4BAAA,EAAE,GAAG;WALpC,QAAQ,GAAC,UAAU;CAKiB,wEAElD"}
+{"version":3,"file":"sauron-overrides.d.ts","sourceRoot":"","sources":["../sauron-overrides.js"],"names":[],"mappings":"AAIA;;;;;;;;GAQG;AACH,MAAM,CAAC,OAAO,UAAU,eAAe,CAAE,KAAK,4BAAA,EAAE,GAAG;WALrC,QAAQ,GAAC,UAAU;CAKkB,wEAElD"}

@@ -71,7 +71,7 @@ const getGlobalsForEcmaVersion = ({ecmaVersion, nodeVersion, node = true}) => {
 /**
  * @param {string|import('semver').SemVer} nodeVersion
  * @returns {EcmaVersion}
-*/
+ */
 const getEcmaVersionForNodeVersion = (nodeVersion) => {
   return semver.satisfies(nodeVersion, '>=20.0.0')
     ? 2025

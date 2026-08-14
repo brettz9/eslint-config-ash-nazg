@@ -15,7 +15,7 @@ declare const getGlobalsForEcmaVersion: ({ ecmaVersion, nodeVersion, node }: {
 /**
  * @param {string|import('semver').SemVer} nodeVersion
  * @returns {EcmaVersion}
-*/
+ */
 declare const getEcmaVersionForNodeVersion: (nodeVersion: string | import('semver').SemVer) => EcmaVersion;
 /**
  * @param {string} packagePath

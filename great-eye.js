@@ -2,8 +2,8 @@ import sauron from './sauron.js';
 
 /**
  * @type {(pkg: {
-*   type?: "module"|"commonjs"
-* }, types: string[]) => import('eslint').Linter.Config[]}
+ *   type?: "module"|"commonjs"
+ * }, types: string[]) => import('eslint').Linter.Config[]}
  */
 export default function greatEye (pkg, types) {
   return [...sauron(pkg, types), {
@@ -44,7 +44,6 @@ export default function greatEye (pkg, types) {
       //   missingExports: true, unusedExports: true
       // }],
 
-      'jsdoc/check-alignment': ['warn'],
       'jsdoc/check-indentation': ['warn'],
       'jsdoc/require-description': ['warn'],
       'jsdoc/require-param-description': ['warn'],

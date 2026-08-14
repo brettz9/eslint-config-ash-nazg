@@ -25,12 +25,12 @@ import thirdParty from './third-party.js';
 
 /**
  * @param {import('eslint').Linter.Config|
-*   import('eslint').Linter.Config[]} cfgs
-* @param {string[]} files
-* @returns {import('eslint').Linter.Config|
-*    import('eslint').Linter.Config[]
-* }
-*/
+ *   import('eslint').Linter.Config[]} cfgs
+ * @param {string[]} files
+ * @returns {import('eslint').Linter.Config|
+ *    import('eslint').Linter.Config[]
+ * }
+ */
 export function addFiles (cfgs, files) {
   if (Array.isArray(cfgs)) {
     return cfgs.map((cfg) => {

@@ -268,7 +268,6 @@ export default function main (pkg) {
         // 'import-x/no-anonymous-default-export': 'off',
 
         // JSDOC DISABLE
-        'jsdoc/check-alignment': ['off'],
         'jsdoc/newline-after-description': ['off'],
         'jsdoc/no-undefined-types': ['off'],
         'jsdoc/require-description': ['off'],

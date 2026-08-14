@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 42.4.0
+
+- feat: enforce `jsdoc/check-alignment`
+
 ## 42.3.1
 
 - fix(types): poorly formed due to TS issue

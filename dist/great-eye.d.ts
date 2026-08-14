@@ -1,7 +1,7 @@
 /**
  * @type {(pkg: {
-*   type?: "module"|"commonjs"
-* }, types: string[]) => import('eslint').Linter.Config[]}
+ *   type?: "module"|"commonjs"
+ * }, types: string[]) => import('eslint').Linter.Config[]}
  */
 export default function greatEye(pkg: {
     type?: "module" | "commonjs";

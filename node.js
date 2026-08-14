@@ -13,7 +13,7 @@ const esmNodeGlobals = {
 /**
  * @type {(pkg: {
  *   type?: "module"|"commonjs"
-* }) => import('eslint').Linter.Config[]}
+ * }) => import('eslint').Linter.Config[]}
  */
 export default function node (pkg) {
   const nodeRecommendedModule = nodePlugin.configs['flat/recommended-module'];

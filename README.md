@@ -705,8 +705,6 @@ for projects to specify all child types.
 - `import-x/no-unused-modules` - Useful (for `missingExports` at least),
   but doesn't catch dynamic imports and reports for other deliberately
   non-modular scripts
-- `jsdoc/check-alignment` (recommended) - A pretty good practice, but not
-    that important.
 - `jsdoc/check-indentation` - A pretty good practice, but that that important.
 - `jsdoc/require-description` - Though a very good practices, this is
     difficult for large code bases to implement and even cumbersome
