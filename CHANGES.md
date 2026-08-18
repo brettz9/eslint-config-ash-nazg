@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 42.5.0
+
+- chore: update jsdoc plugin
+
 ## 42.4.0
 
 - feat: enforce `jsdoc/check-alignment`

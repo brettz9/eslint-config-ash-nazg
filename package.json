@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ash-nazg",
-  "version": "42.4.0",
+  "version": "42.5.0",
   "description": "An expansion and tweaking of the \"standard\" config style for ESLint",
   "main": "index.js",
   "types": "./dist/index.d.ts",
@@ -87,7 +87,7 @@
     "eslint-plugin-escompat": "^3.11.4",
     "eslint-plugin-html": "^8.1.4",
     "eslint-plugin-import-x": "^4.17.1",
-    "eslint-plugin-jsdoc": "^64.2.0",
+    "eslint-plugin-jsdoc": "^64.2.1",
     "eslint-plugin-mocha": "^12.0.2",
     "eslint-plugin-mocha-cleanup": "^1.11.3",
     "eslint-plugin-n": "^18.3.0",
