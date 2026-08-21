@@ -64,7 +64,7 @@
   },
   "homepage": "https://github.com/brettz9/eslint-config-ash-nazg#readme",
   "engines": {
-    "node": ">=20.0.0"
+    "node": "^22.16.0 || >= 24.0.0"
   },
   "dependencies": {
     "@babel/eslint-parser": "^8.0.1",

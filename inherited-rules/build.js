@@ -8,12 +8,13 @@
 //  all rules
 
 import 'eslint'; // Needed by eslint-plugin-html
-import fs from 'fs';
-import {fileURLToPath} from 'url';
-import {join, dirname} from 'path';
+
+import fs from 'node:fs';
+import {join} from 'node:path';
+
 import cc from '@scottnonnenberg/eslint-compare-config';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const __dirname = import.meta.dirname;
 
 const [, , type, rightModule, preferredConfig, config2] = process.argv;
 

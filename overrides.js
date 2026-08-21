@@ -1,4 +1,4 @@
-import {readFileSync} from 'fs';
+import {readFileSync} from 'node:fs';
 import globals from 'globals';
 import nodePlugin from 'eslint-plugin-n';
 import esCompat from 'eslint-plugin-escompat';

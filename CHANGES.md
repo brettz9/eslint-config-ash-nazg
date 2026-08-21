@@ -1,5 +1,13 @@
 # eslint-config-ash-nazg CHANGES
 
+## 43.0.0 (unreleased)
+
+BREAKING CHANGE:
+
+Bump Node version to ^22.16.0 || >= 24.0.0
+
+- chore: linting
+
 ## 42.6.0
 
 - feat: enforce node: on Node imports

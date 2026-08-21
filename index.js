@@ -1,5 +1,5 @@
-// Todo: Add TS config, including for use with JS!
-import {readFileSync} from 'fs';
+// Todo: Add a TS config, including for use with JS!
+import {readFileSync} from 'node:fs';
 
 import globals from 'globals';
 
