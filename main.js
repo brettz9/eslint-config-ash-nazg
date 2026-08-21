@@ -354,7 +354,6 @@ export default function main (pkg) {
         // 'unicorn/prefer-exponentiation-operator': 'off', // Deprecated
         'unicorn/prefer-export-from': 'off',
         'unicorn/prefer-module': 'off',
-        'unicorn/prefer-node-protocol': 'off',
         'unicorn/prefer-number-properties': 'off',
         'unicorn/prefer-object-from-entries': 'off',
         'unicorn/prefer-prototype-methods': 'off',

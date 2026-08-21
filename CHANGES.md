@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 42.6.0
+
+- feat: enforce node: on Node imports
+
 ## 42.5.0
 
 - chore: update jsdoc plugin

@@ -512,7 +512,6 @@ appears, to Dark Lords.
     and have to use another style
 - `prefer-json-parse-buffer` - Not recommended now and may be less performant
 - `prefer-module` - Handling by different configs instead
-- `prefer-node-protocol` - Might revisit later if practice becomes adopted
 - `prefer-object-from-entries` - Too many false positives (e.g., non-simple
     objects)
 - `prefer-optional-catch-binding` - Understandable rule, but extra work if
