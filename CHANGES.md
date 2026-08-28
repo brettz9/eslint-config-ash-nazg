@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 43.0.1
+
+- fix: patch version of escompat
+
 ## 43.0.0
 
 BREAKING CHANGE:

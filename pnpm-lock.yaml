@@ -60,8 +60,8 @@ importers:
         specifier: ^7.0.1
         version: 7.0.1(eslint@10.9.1(supports-color@7.2.0))
       eslint-plugin-escompat:
-        specifier: ^3.11.5
-        version: 3.11.5(eslint@10.9.1(supports-color@7.2.0))
+        specifier: ^3.11.6
+        version: 3.11.6(eslint@10.9.1(supports-color@7.2.0))
       eslint-plugin-html:
         specifier: ^8.1.4
         version: 8.1.4
@@ -1178,8 +1178,8 @@ packages:
     peerDependencies:
       eslint: '>=8'
 
-  eslint-plugin-escompat@3.11.5:
-    resolution: {integrity: sha512-IA317IrLkT9L8AyzzPACjZNmDoq0kPk1nmAc5kazPiKPngPhA1kdhI4dolFWP7zUuvTk1CNMhTWzJiLxzjuanQ==}
+  eslint-plugin-escompat@3.11.6:
+    resolution: {integrity: sha512-Uuq41sywDPrhFn3SwFNnJkC8Pw368nhKi6waFniGggGB2NdFl/yun+uJFcAQ5RoxB/NKdv5iewHeEFf2OnYTWQ==}
     peerDependencies:
       eslint: '>=5.14.1'
 
@@ -3649,7 +3649,7 @@ snapshots:
       eslint: 10.9.1(supports-color@7.2.0)
       eslint-compat-utils: 0.5.1(eslint@10.9.1(supports-color@7.2.0))
 
-  eslint-plugin-escompat@3.11.5(eslint@10.9.1(supports-color@7.2.0)):
+  eslint-plugin-escompat@3.11.6(eslint@10.9.1(supports-color@7.2.0)):
     dependencies:
       browserslist: 4.28.8
       eslint: 10.9.1(supports-color@7.2.0)
