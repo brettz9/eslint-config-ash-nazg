@@ -9,3 +9,4 @@ minimumReleaseAgeExclude:
   - '@es-joy/jsdoccomment@0.93.2 || 0.95.0 || 0.95.1'
   - jsdoc-type-pratt-parser@9.0.1 || 9.1.1 || 9.1.2
   - '@typescript-eslint/types@8.67.0'
+  - eslint-plugin-escompat@3.11.5

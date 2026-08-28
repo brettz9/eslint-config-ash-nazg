@@ -1,11 +1,12 @@
 # eslint-config-ash-nazg CHANGES
 
-## 43.0.0 (unreleased)
+## 43.0.0
 
 BREAKING CHANGE:
 
 Bump Node version to ^22.16.0 || >= 24.0.0
 
+- feat: bump cypress and escompat plugins, types/node, eslint
 - chore: linting
 
 ## 42.6.0
