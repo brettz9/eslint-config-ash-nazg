@@ -1,8 +1,12 @@
 # eslint-config-ash-nazg CHANGES
 
+## 43.1.2
+
+- fix: issue with release
+
 ## 43.1.1
 
-- feat: update jsdoc plugin
+- fix: update jsdoc plugin
 
 ## 43.1.0
 
