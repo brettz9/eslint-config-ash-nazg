@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 43.1.0
+
+- feat: update unicorn, jsdoc, html, and escompat plugins
+
 ## 43.0.1
 
 - fix: patch version of escompat
