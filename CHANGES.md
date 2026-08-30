@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 43.1.1
+
+- feat: update jsdoc plugin
+
 ## 43.1.0
 
 - feat: update unicorn, jsdoc, html, and escompat plugins
