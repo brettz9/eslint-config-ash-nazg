@@ -1,5 +1,9 @@
 # eslint-config-ash-nazg CHANGES
 
+## 43.1.4
+
+- fix: add link to npm
+
 ## 43.1.3
 
 - chore: automate changes and versioning
