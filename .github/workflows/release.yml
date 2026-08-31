@@ -159,11 +159,18 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           VERSION="${{ steps.version.outputs.version }}"
+          {
+            cat /tmp/notes.md
+            echo
+            echo "---"
+            echo
+            echo "📦 npm: [\`eslint-config-ash-nazg@$VERSION\`](https://www.npmjs.com/package/eslint-config-ash-nazg/v/$VERSION)"
+          } > /tmp/release-body.md
           if gh release view "v$VERSION" >/dev/null 2>&1; then
             echo "GitHub release v$VERSION already exists."
           else
             gh release create "v$VERSION" \
               --title "v$VERSION" \
-              --notes-file /tmp/notes.md \
+              --notes-file /tmp/release-body.md \
               --target main
           fi
