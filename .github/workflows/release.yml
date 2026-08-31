@@ -1,0 +1,151 @@
+name: Release
+
+# Fires whenever package.json lands on main with a changed "version" field.
+# You bump the version (npm version / manual edit) and merge to main; this
+# workflow then writes CHANGES.md, tags, cuts a GitHub release, and publishes
+# to npm with provenance via OIDC trusted publishing (no NPM token needed).
+on:
+  push:
+    branches: [main]
+    paths:
+      - package.json
+
+permissions:
+  contents: write   # push the CHANGES.md commit + tag, create the GitHub release
+  id-token: write   # OIDC token for npm trusted publishing / provenance
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: Detect version change
+        id: version
+        run: |
+          NEW=$(node -p "require('./package.json').version")
+          echo "version=$NEW" >> "$GITHUB_OUTPUT"
+          if git rev-parse HEAD~1 >/dev/null 2>&1 && git cat-file -e HEAD~1:package.json 2>/dev/null; then
+            git show HEAD~1:package.json > /tmp/old-package.json
+            OLD=$(node -p "require('/tmp/old-package.json').version")
+          else
+            OLD=""
+          fi
+          if [ "$NEW" = "$OLD" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::package.json version unchanged ($NEW) - nothing to release."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "::notice::Releasing v$NEW (previous: ${OLD:-none})."
+          fi
+
+      - uses: pnpm/action-setup@v4
+        if: steps.version.outputs.changed == 'true'
+        with:
+          version: 11
+
+      - uses: actions/setup-node@v5
+        if: steps.version.outputs.changed == 'true'
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+          cache: pnpm
+
+      - name: Install
+        if: steps.version.outputs.changed == 'true'
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        if: steps.version.outputs.changed == 'true'
+        run: pnpm run lint
+
+      # `prepublishOnly` (pnpm tsc && pnpm i) is run automatically by `npm publish`
+      # below, so it is not invoked as a separate step here.
+
+      - name: Build CHANGES.md entry
+        if: steps.version.outputs.changed == 'true'
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || true)
+          if [ -n "$LAST_TAG" ]; then RANGE="$LAST_TAG..HEAD"; else RANGE="HEAD"; fi
+          echo "Collecting commits in range: $RANGE"
+          git log --no-merges --pretty=format:'%s' "$RANGE" \
+            | grep -Ev '^(chore: update CHANGES|[Rr]elease |v?[0-9]+\.[0-9]+\.[0-9]+)' \
+            | grep -Fv '[skip ci]' \
+            | sed 's/^/- /' > /tmp/notes.md || true
+          if [ ! -s /tmp/notes.md ]; then echo "- release: v$VERSION" > /tmp/notes.md; fi
+          echo "----- release notes -----"
+          cat /tmp/notes.md
+          echo "-------------------------"
+          node -e '
+            const fs = require("fs");
+            const [version, notesFile] = process.argv.slice(1);
+            const notes = fs.readFileSync(notesFile, "utf8").trimEnd();
+            const file = "CHANGES.md";
+            const md = fs.readFileSync(file, "utf8");
+            const esc = version.replace(/[.]/g, "\\.");
+            if (new RegExp("^## " + esc + "\\s*$", "m").test(md)) {
+              console.log("CHANGES.md already documents " + version + " - leaving it untouched.");
+              process.exit(0);
+            }
+            const lines = md.split("\n");
+            let idx = lines.findIndex((l) => l.startsWith("## "));
+            if (idx === -1) idx = lines.length;
+            lines.splice(idx, 0, "## " + version, "", notes, "");
+            fs.writeFileSync(file, lines.join("\n"));
+            console.log("Prepended ## " + version + " section to CHANGES.md.");
+          ' "$VERSION" /tmp/notes.md
+
+      - name: Commit CHANGES.md and tag
+        if: steps.version.outputs.changed == 'true'
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet -- CHANGES.md; then
+            git add CHANGES.md
+            git commit -m "chore: update CHANGES.md for v$VERSION [skip ci]"
+            git push origin HEAD:main
+          else
+            echo "CHANGES.md unchanged - skipping commit."
+          fi
+          if git rev-parse -q --verify "refs/tags/v$VERSION" >/dev/null; then
+            echo "Tag v$VERSION already exists locally."
+          else
+            git tag -a "v$VERSION" -m "v$VERSION"
+          fi
+          git push origin "refs/tags/v$VERSION"
+
+      - name: Publish to npm
+        if: steps.version.outputs.changed == 'true'
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          # OIDC trusted publishing needs a recent npm CLI.
+          npm install -g npm@latest
+          if [ "$(npm view "eslint-config-ash-nazg@$VERSION" version 2>/dev/null)" = "$VERSION" ]; then
+            echo "eslint-config-ash-nazg@$VERSION is already on npm - skipping publish."
+          else
+            npm publish --provenance --access public
+          fi
+
+      - name: Create GitHub release
+        if: steps.version.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          if gh release view "v$VERSION" >/dev/null 2>&1; then
+            echo "GitHub release v$VERSION already exists."
+          else
+            gh release create "v$VERSION" \
+              --title "v$VERSION" \
+              --notes-file /tmp/notes.md \
+              --target main
+          fi
