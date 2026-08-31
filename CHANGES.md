@@ -1,5 +1,18 @@
 # eslint-config-ash-nazg CHANGES
 
+## [43.1.6](https://github.com/brettz9/eslint-config-ash-nazg/compare/v43.1.5...v43.1.6) (2026-08-31)
+
+### Bug Fixes
+
+* update jsdoc plugin ([7934944](https://github.com/brettz9/eslint-config-ash-nazg/commit/7934944fca3adb84604cedd8b0a21c9b95d2b93b))
+
+### Chores
+
+* automate pushing with `release` script ([4c246e1](https://github.com/brettz9/eslint-config-ash-nazg/commit/4c246e1124e4088d0e883caa1eb69ea56a7e6964))
+
+### Documentation
+
+* CHANGES lb ([c078ac7](https://github.com/brettz9/eslint-config-ash-nazg/commit/c078ac7f8368707bd2399ddae0c3a066801a78ad))
 ## [43.1.5](https://github.com/brettz9/eslint-config-ash-nazg/compare/v43.1.4...v43.1.5) (2026-08-31)
 
 ### Bug Fixes
