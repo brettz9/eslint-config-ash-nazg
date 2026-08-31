@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## [43.1.5](https://github.com/brettz9/eslint-config-ash-nazg/compare/v43.1.4...v43.1.5) (2026-08-31)
+
+### Bug Fixes
+
+* attempt commit-and-tag-version ([f614cec](https://github.com/brettz9/eslint-config-ash-nazg/commit/f614cec4fff174e2394e1b59f74ea0fea0147f91))
 ## 43.1.4
 
 - fix: add link to npm
