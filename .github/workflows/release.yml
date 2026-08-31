@@ -1,18 +1,22 @@
 name: Release
 
-# Runs on every push to main. It looks at the conventional-commit subjects since
-# the last v* tag, infers a patch/minor/major bump, and if anything releasable is
-# found it bumps package.json, writes CHANGES.md, tags, publishes to npm (with
-# provenance via OIDC trusted publishing - no token), and cuts a GitHub release.
+# Triggered by the version tag a maintainer pushes after running
+# `pnpm run release` (commit-and-tag-version): it infers the bump from the
+# conventional commits since the last tag, bumps package.json, writes the new
+# section to CHANGES.md, and makes one local `chore(release)` commit + tag.
+# The maintainer then runs `git push --follow-tags origin main`, so the release
+# commit and tag go up together and this workflow never commits back to the repo
+# (main never gets ahead of a local checkout).
 #
-# The release commit is made with "[skip ci]" so it does not re-trigger this
-# workflow (GitHub skips runs whose head commit message contains that marker).
+# This job only validates and publishes the tagged commit: lint, `npm publish`
+# (with provenance via OIDC trusted publishing - no token), and a GitHub
+# release whose notes come from the matching CHANGES.md section.
 on:
   push:
-    branches: [main]
+    tags: ['v*']
 
 permissions:
-  contents: write   # push the release commit + tag, create the GitHub release
+  contents: write   # create the GitHub release
   id-token: write   # OIDC token for npm trusted publishing / provenance
 
 concurrency:
@@ -26,125 +30,66 @@ jobs:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-          fetch-tags: true
-
-      - name: Plan release
-        id: plan
-        run: |
-          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || true)
-          if [ -n "$LAST_TAG" ]; then
-            RANGE="$LAST_TAG..HEAD"
-          elif git rev-parse HEAD~1 >/dev/null 2>&1; then
-            # No tag yet: only look at the tip commit so the first automated
-            # release stays small and predictable.
-            RANGE="HEAD~1..HEAD"
-          else
-            RANGE="HEAD"
-          fi
-          echo "range=$RANGE" >> "$GITHUB_OUTPUT"
-          echo "Inspecting commits in: $RANGE (since ${LAST_TAG:-repo start})"
-
-          SUBJECTS=$(git log --no-merges --format='%s' "$RANGE" | grep -Fv '[skip ci]' || true)
-          BODIES=$(git log --no-merges --format='%B' "$RANGE" || true)
-
-          BUMP=""
-          if printf '%s\n' "$BODIES" | grep -qE '^BREAKING[ -]CHANGE:' \
-             || printf '%s\n' "$SUBJECTS" | grep -qE '^[a-zA-Z]+(\([^)]*\))?!:'; then
-            BUMP=major
-          elif printf '%s\n' "$SUBJECTS" | grep -qE '^feat(\([^)]*\))?!?:'; then
-            BUMP=minor
-          elif printf '%s\n' "$SUBJECTS" | grep -qE '^(fix|perf|refactor|revert|chore|docs|build|ci|style|test)(\([^)]*\))?!?:'; then
-            BUMP=patch
-          fi
-
-          if [ -z "$BUMP" ]; then
-            echo "release=false" >> "$GITHUB_OUTPUT"
-            echo "::notice::No releasable conventional commits since ${LAST_TAG:-repo start} - skipping release."
-          else
-            echo "release=true" >> "$GITHUB_OUTPUT"
-            echo "bump=$BUMP" >> "$GITHUB_OUTPUT"
-            echo "::notice::Planning a $BUMP release."
-          fi
 
       - uses: pnpm/action-setup@v4
-        if: steps.plan.outputs.release == 'true'
         with:
           version: 11
 
       - uses: actions/setup-node@v5
-        if: steps.plan.outputs.release == 'true'
         with:
           node-version: 24
           registry-url: https://registry.npmjs.org
           cache: pnpm
 
       - name: Install
-        if: steps.plan.outputs.release == 'true'
         run: pnpm install --frozen-lockfile
 
       - name: Lint
-        if: steps.plan.outputs.release == 'true'
         run: pnpm run lint
 
-      # `prepublishOnly` (pnpm tsc && pnpm i) is run automatically by `npm publish`
-      # below, so it is not invoked as a separate step here.
+      # `prepublishOnly` (pnpm tsc && pnpm i) is run automatically by `npm
+      # publish` below, so it is not invoked as a separate step here.
 
-      - name: Bump version
-        id: version
-        if: steps.plan.outputs.release == 'true'
+      - name: Extract release notes
+        id: notes
         run: |
-          NEW=$(npm version "${{ steps.plan.outputs.bump }}" --no-git-tag-version)
-          NEW=${NEW#v}
-          echo "version=$NEW" >> "$GITHUB_OUTPUT"
-          echo "::notice::New version: $NEW"
-
-      - name: Update CHANGES.md
-        if: steps.plan.outputs.release == 'true'
-        run: |
-          VERSION="${{ steps.version.outputs.version }}"
-          git log --no-merges --pretty=format:'%s' "${{ steps.plan.outputs.range }}" \
-            | grep -Ev '^(chore: (update CHANGES|release)|[Rr]elease |v?[0-9]+\.[0-9]+\.[0-9]+)' \
-            | grep -Fv '[skip ci]' \
-            | sed 's/^/- /' > /tmp/notes.md || true
-          if [ ! -s /tmp/notes.md ]; then echo "- release: v$VERSION" > /tmp/notes.md; fi
+          VERSION="${GITHUB_REF_NAME#v}"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          if [ "$(node -p "require('./package.json').version")" != "$VERSION" ]; then
+            echo "::error::package.json version does not match tag $GITHUB_REF_NAME"
+            exit 1
+          fi
+          node -e '
+            const fs = require("fs");
+            const version = process.argv[1];
+            const lines = fs.readFileSync("CHANGES.md", "utf8").split("\n");
+            // commit-and-tag-version writes "## [x.y.z](compare-url) (date)";
+            // also tolerate a plain "## x.y.z" heading.
+            const esc = version.replace(/[.]/g, "\\.");
+            const head = new RegExp("^## \\[?" + esc + "(\\]|\\s|$)");
+            const start = lines.findIndex((l) => head.test(l));
+            if (start === -1) {
+              console.error("No section for " + version + " in CHANGES.md");
+              process.exit(1);
+            }
+            let end = lines.findIndex((l, i) => i > start && l.startsWith("## "));
+            if (end === -1) end = lines.length;
+            fs.writeFileSync("/tmp/notes.md", lines.slice(start + 1, end).join("\n").trim() + "\n");
+          ' "$VERSION"
           echo "----- release notes -----"
           cat /tmp/notes.md
           echo "-------------------------"
-          node -e '
-            const fs = require("fs");
-            const [version, notesFile] = process.argv.slice(1);
-            const notes = fs.readFileSync(notesFile, "utf8").trimEnd();
-            const file = "CHANGES.md";
-            const md = fs.readFileSync(file, "utf8");
-            const esc = version.replace(/[.]/g, "\\.");
-            if (new RegExp("^## " + esc + "\\s*$", "m").test(md)) {
-              console.log("CHANGES.md already documents " + version + " - leaving it untouched.");
-              process.exit(0);
-            }
-            const lines = md.split("\n");
-            let idx = lines.findIndex((l) => l.startsWith("## "));
-            if (idx === -1) idx = lines.length;
-            lines.splice(idx, 0, "## " + version, "", notes, "");
-            fs.writeFileSync(file, lines.join("\n"));
-            console.log("Prepended ## " + version + " section to CHANGES.md.");
-          ' "$VERSION" /tmp/notes.md
-
-      - name: Commit, tag and push
-        if: steps.plan.outputs.release == 'true'
-        run: |
-          VERSION="${{ steps.version.outputs.version }}"
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add package.json CHANGES.md
-          git commit -m "chore: release v$VERSION [skip ci]"
-          git tag -a "v$VERSION" -m "v$VERSION"
-          git push origin HEAD:main
-          git push origin "refs/tags/v$VERSION"
+          {
+            cat /tmp/notes.md
+            echo
+            echo "---"
+            echo
+            echo "📦 npm: [\`eslint-config-ash-nazg@$VERSION\`](https://www.npmjs.com/package/eslint-config-ash-nazg/v/$VERSION)"
+          } > /tmp/release-body.md
 
       - name: Publish to npm
-        if: steps.plan.outputs.release == 'true'
         run: |
-          VERSION="${{ steps.version.outputs.version }}"
+          VERSION="${{ steps.notes.outputs.version }}"
           # OIDC trusted publishing needs a recent npm CLI.
           npm install -g npm@latest
           if [ "$(npm view "eslint-config-ash-nazg@$VERSION" version 2>/dev/null)" = "$VERSION" ]; then
@@ -154,18 +99,10 @@ jobs:
           fi
 
       - name: Create GitHub release
-        if: steps.plan.outputs.release == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          VERSION="${{ steps.version.outputs.version }}"
-          {
-            cat /tmp/notes.md
-            echo
-            echo "---"
-            echo
-            echo "📦 npm: [\`eslint-config-ash-nazg@$VERSION\`](https://www.npmjs.com/package/eslint-config-ash-nazg/v/$VERSION)"
-          } > /tmp/release-body.md
+          VERSION="${{ steps.notes.outputs.version }}"
           if gh release view "v$VERSION" >/dev/null 2>&1; then
             echo "GitHub release v$VERSION already exists."
           else

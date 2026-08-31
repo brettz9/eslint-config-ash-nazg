@@ -1,0 +1,17 @@
+{
+  "infile": "CHANGES.md",
+  "header": "# eslint-config-ash-nazg CHANGES\n",
+  "types": [
+    {"type": "feat", "section": "Features"},
+    {"type": "fix", "section": "Bug Fixes"},
+    {"type": "perf", "section": "Performance"},
+    {"type": "revert", "section": "Reverts"},
+    {"type": "refactor", "section": "Refactoring"},
+    {"type": "build", "section": "Build"},
+    {"type": "ci", "section": "CI"},
+    {"type": "chore", "section": "Chores"},
+    {"type": "docs", "section": "Documentation"},
+    {"type": "style", "section": "Styles"},
+    {"type": "test", "section": "Tests"}
+  ]
+}
