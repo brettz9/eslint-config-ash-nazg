@@ -9,7 +9,6 @@ rule them all!**
 
 ```sh
 npm i -D eslint-config-ash-nazg
-install-peerdeps -d eslint-config-ash-nazg
 ```
 
 ## Usage
