@@ -1,17 +1,18 @@
 name: Release
 
-# Fires whenever package.json lands on main with a changed "version" field.
-# You bump the version (npm version / manual edit) and merge to main; this
-# workflow then writes CHANGES.md, tags, cuts a GitHub release, and publishes
-# to npm with provenance via OIDC trusted publishing (no NPM token needed).
+# Runs on every push to main. It looks at the conventional-commit subjects since
+# the last v* tag, infers a patch/minor/major bump, and if anything releasable is
+# found it bumps package.json, writes CHANGES.md, tags, publishes to npm (with
+# provenance via OIDC trusted publishing - no token), and cuts a GitHub release.
+#
+# The release commit is made with "[skip ci]" so it does not re-trigger this
+# workflow (GitHub skips runs whose head commit message contains that marker).
 on:
   push:
     branches: [main]
-    paths:
-      - package.json
 
 permissions:
-  contents: write   # push the CHANGES.md commit + tag, create the GitHub release
+  contents: write   # push the release commit + tag, create the GitHub release
   id-token: write   # OIDC token for npm trusted publishing / provenance
 
 concurrency:
@@ -27,57 +28,82 @@ jobs:
           fetch-depth: 0
           fetch-tags: true
 
-      - name: Detect version change
-        id: version
+      - name: Plan release
+        id: plan
         run: |
-          NEW=$(node -p "require('./package.json').version")
-          echo "version=$NEW" >> "$GITHUB_OUTPUT"
-          if git rev-parse HEAD~1 >/dev/null 2>&1 && git cat-file -e HEAD~1:package.json 2>/dev/null; then
-            git show HEAD~1:package.json > /tmp/old-package.json
-            OLD=$(node -p "require('/tmp/old-package.json').version")
+          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || true)
+          if [ -n "$LAST_TAG" ]; then
+            RANGE="$LAST_TAG..HEAD"
+          elif git rev-parse HEAD~1 >/dev/null 2>&1; then
+            # No tag yet: only look at the tip commit so the first automated
+            # release stays small and predictable.
+            RANGE="HEAD~1..HEAD"
           else
-            OLD=""
+            RANGE="HEAD"
           fi
-          if [ "$NEW" = "$OLD" ]; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "::notice::package.json version unchanged ($NEW) - nothing to release."
+          echo "range=$RANGE" >> "$GITHUB_OUTPUT"
+          echo "Inspecting commits in: $RANGE (since ${LAST_TAG:-repo start})"
+
+          SUBJECTS=$(git log --no-merges --format='%s' "$RANGE" | grep -Fv '[skip ci]' || true)
+          BODIES=$(git log --no-merges --format='%B' "$RANGE" || true)
+
+          BUMP=""
+          if printf '%s\n' "$BODIES" | grep -qE '^BREAKING[ -]CHANGE:' \
+             || printf '%s\n' "$SUBJECTS" | grep -qE '^[a-zA-Z]+(\([^)]*\))?!:'; then
+            BUMP=major
+          elif printf '%s\n' "$SUBJECTS" | grep -qE '^feat(\([^)]*\))?!?:'; then
+            BUMP=minor
+          elif printf '%s\n' "$SUBJECTS" | grep -qE '^(fix|perf|refactor|revert|chore|docs|build|ci|style|test)(\([^)]*\))?!?:'; then
+            BUMP=patch
+          fi
+
+          if [ -z "$BUMP" ]; then
+            echo "release=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::No releasable conventional commits since ${LAST_TAG:-repo start} - skipping release."
           else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-            echo "::notice::Releasing v$NEW (previous: ${OLD:-none})."
+            echo "release=true" >> "$GITHUB_OUTPUT"
+            echo "bump=$BUMP" >> "$GITHUB_OUTPUT"
+            echo "::notice::Planning a $BUMP release."
           fi
 
       - uses: pnpm/action-setup@v4
-        if: steps.version.outputs.changed == 'true'
+        if: steps.plan.outputs.release == 'true'
         with:
           version: 11
 
       - uses: actions/setup-node@v5
-        if: steps.version.outputs.changed == 'true'
+        if: steps.plan.outputs.release == 'true'
         with:
           node-version: 24
           registry-url: https://registry.npmjs.org
           cache: pnpm
 
       - name: Install
-        if: steps.version.outputs.changed == 'true'
+        if: steps.plan.outputs.release == 'true'
         run: pnpm install --frozen-lockfile
 
       - name: Lint
-        if: steps.version.outputs.changed == 'true'
+        if: steps.plan.outputs.release == 'true'
         run: pnpm run lint
 
       # `prepublishOnly` (pnpm tsc && pnpm i) is run automatically by `npm publish`
       # below, so it is not invoked as a separate step here.
 
-      - name: Build CHANGES.md entry
-        if: steps.version.outputs.changed == 'true'
+      - name: Bump version
+        id: version
+        if: steps.plan.outputs.release == 'true'
+        run: |
+          NEW=$(npm version "${{ steps.plan.outputs.bump }}" --no-git-tag-version)
+          NEW=${NEW#v}
+          echo "version=$NEW" >> "$GITHUB_OUTPUT"
+          echo "::notice::New version: $NEW"
+
+      - name: Update CHANGES.md
+        if: steps.plan.outputs.release == 'true'
         run: |
           VERSION="${{ steps.version.outputs.version }}"
-          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || true)
-          if [ -n "$LAST_TAG" ]; then RANGE="$LAST_TAG..HEAD"; else RANGE="HEAD"; fi
-          echo "Collecting commits in range: $RANGE"
-          git log --no-merges --pretty=format:'%s' "$RANGE" \
-            | grep -Ev '^(chore: update CHANGES|[Rr]elease |v?[0-9]+\.[0-9]+\.[0-9]+)' \
+          git log --no-merges --pretty=format:'%s' "${{ steps.plan.outputs.range }}" \
+            | grep -Ev '^(chore: (update CHANGES|release)|[Rr]elease |v?[0-9]+\.[0-9]+\.[0-9]+)' \
             | grep -Fv '[skip ci]' \
             | sed 's/^/- /' > /tmp/notes.md || true
           if [ ! -s /tmp/notes.md ]; then echo "- release: v$VERSION" > /tmp/notes.md; fi
@@ -103,28 +129,20 @@ jobs:
             console.log("Prepended ## " + version + " section to CHANGES.md.");
           ' "$VERSION" /tmp/notes.md
 
-      - name: Commit CHANGES.md and tag
-        if: steps.version.outputs.changed == 'true'
+      - name: Commit, tag and push
+        if: steps.plan.outputs.release == 'true'
         run: |
           VERSION="${{ steps.version.outputs.version }}"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if ! git diff --quiet -- CHANGES.md; then
-            git add CHANGES.md
-            git commit -m "chore: update CHANGES.md for v$VERSION [skip ci]"
-            git push origin HEAD:main
-          else
-            echo "CHANGES.md unchanged - skipping commit."
-          fi
-          if git rev-parse -q --verify "refs/tags/v$VERSION" >/dev/null; then
-            echo "Tag v$VERSION already exists locally."
-          else
-            git tag -a "v$VERSION" -m "v$VERSION"
-          fi
+          git add package.json CHANGES.md
+          git commit -m "chore: release v$VERSION [skip ci]"
+          git tag -a "v$VERSION" -m "v$VERSION"
+          git push origin HEAD:main
           git push origin "refs/tags/v$VERSION"
 
       - name: Publish to npm
-        if: steps.version.outputs.changed == 'true'
+        if: steps.plan.outputs.release == 'true'
         run: |
           VERSION="${{ steps.version.outputs.version }}"
           # OIDC trusted publishing needs a recent npm CLI.
@@ -136,7 +154,7 @@ jobs:
           fi
 
       - name: Create GitHub release
-        if: steps.version.outputs.changed == 'true'
+        if: steps.plan.outputs.release == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
