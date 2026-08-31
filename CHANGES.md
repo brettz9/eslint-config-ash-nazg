@@ -1,5 +1,11 @@
 # eslint-config-ash-nazg CHANGES
 
+## 43.1.3
+
+- chore: automate changes and versioning
+- fix: avoid `install-peerdeps`
+- chore: add workflows
+
 ## 43.1.2
 
 - fix: issue with release
