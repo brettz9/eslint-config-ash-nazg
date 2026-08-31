@@ -45,7 +45,7 @@
     "compare": "npm run inherited && npm run unused",
     "eslint": "eslint .",
     "lint": "npm run eslint --",
-    "release": "commit-and-tag-version",
+    "release": "commit-and-tag-version && git push --follow-tags origin main",
     "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
