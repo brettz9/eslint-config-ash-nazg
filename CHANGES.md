@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## [43.1.7](https://github.com/brettz9/eslint-config-ash-nazg/compare/v43.1.6...v43.1.7) (2026-09-04)
+
+### Bug Fixes
+
+* update browserslist, jsdoc plugin, globals, devDeps ([52bdb17](https://github.com/brettz9/eslint-config-ash-nazg/commit/52bdb17ddcbe9c860950c31fb8b84252e51897c8))
 ## [43.1.6](https://github.com/brettz9/eslint-config-ash-nazg/compare/v43.1.5...v43.1.6) (2026-08-31)
 
 ### Bug Fixes
