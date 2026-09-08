@@ -160,7 +160,9 @@ export default function sauron (pkg, types) {
         'unicorn/prefer-number-properties': 'warn',
         'unicorn/prefer-string-slice': 'error',
 
-        '@eslint-community/eslint-comments/require-description': 'error'
+        '@eslint-community/eslint-comments/require-description': ['error', {
+          additionalDirectives: ['istanbul', 'c8']
+        }]
       }
     }
   ];
