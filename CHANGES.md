@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## [43.1.8](https://github.com/brettz9/eslint-config-ash-nazg/compare/v43.1.7...v43.1.8) (2026-09-08)
+
+### Chores
+
+* update eslint-comments, cypress, escompat, jsdoc plugins, devDeps. ([d397194](https://github.com/brettz9/eslint-config-ash-nazg/commit/d397194cf951d75b734e09c6c54533dbf0fd3f0d))
 ## [43.1.7](https://github.com/brettz9/eslint-config-ash-nazg/compare/v43.1.6...v43.1.7) (2026-09-04)
 
 ### Bug Fixes
