@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ash-nazg",
-  "version": "43.1.8",
+  "version": "43.1.9",
   "description": "An expansion and tweaking of the \"standard\" config style for ESLint",
   "main": "index.js",
   "types": "./dist/index.d.ts",
@@ -68,10 +68,10 @@
     "node": "^22.16.0 || >= 24.0.0"
   },
   "dependencies": {
-    "@babel/eslint-parser": "^8.0.1",
-    "@babel/eslint-plugin": "^8.0.1",
+    "@babel/eslint-parser": "^8.0.5",
+    "@babel/eslint-plugin": "^8.0.5",
     "@brettz9/eslint-plugin": "^3.0.0",
-    "@eslint-community/eslint-plugin-eslint-comments": "^4.8.0",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.8.1",
     "@eslint/core": "^1.2.1",
     "@eslint/js": "^10.0.1",
     "@eslint/markdown": "^8.0.3",
@@ -85,10 +85,10 @@
     "eslint-plugin-chai-friendly": "^1.2.1",
     "eslint-plugin-compat": "^7.0.2",
     "eslint-plugin-cypress": "^7.0.2",
-    "eslint-plugin-escompat": "^4.0.1",
+    "eslint-plugin-escompat": "^4.1.0",
     "eslint-plugin-html": "^8.2.0",
     "eslint-plugin-import-x": "^4.17.1",
-    "eslint-plugin-jsdoc": "^64.3.6",
+    "eslint-plugin-jsdoc": "^64.3.10",
     "eslint-plugin-mocha": "^12.0.2",
     "eslint-plugin-mocha-cleanup": "^1.11.3",
     "eslint-plugin-n": "^18.3.0",
@@ -104,7 +104,7 @@
     "eslint": "^10.0.0"
   },
   "devDependencies": {
-    "@babel/core": "8.0.1",
+    "@babel/core": "8.0.5",
     "@scottnonnenberg/eslint-compare-config": "^1.1.0",
     "@types/node": "^26.5.0",
     "@types/semver": "^7.8.0",
