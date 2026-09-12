@@ -1,5 +1,10 @@
 # eslint-config-ash-nazg CHANGES
 
+## [43.1.10](https://github.com/brettz9/eslint-config-ash-nazg/compare/v43.1.8...v43.1.10) (2026-09-12)
+
+### Bug Fixes
+
+* update babel, eslint-plugin-escompat, eslint-plugin-eslint-comments, eslint-plugin-jsdoc ([96430cb](https://github.com/brettz9/eslint-config-ash-nazg/commit/96430cbb6776e41e9754d1666272277200e6954b))
 ## [43.1.8](https://github.com/brettz9/eslint-config-ash-nazg/compare/v43.1.7...v43.1.8) (2026-09-08)
 
 ### Chores
