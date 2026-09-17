@@ -1,5 +1,15 @@
 # eslint-config-ash-nazg CHANGES
 
+## [43.2.0](https://github.com/brettz9/eslint-config-ash-nazg/compare/v43.1.10...v43.2.0) (2026-09-17)
+
+### Features
+
+* update browserslist; jsdoc, sonarjs, unicorn plugins; devDep. ([6d5a385](https://github.com/brettz9/eslint-config-ash-nazg/commit/6d5a3854d8e500d097da4add1d21d499175faf55))
+
+### Chores
+
+* update ncurc format ([e0ef7b1](https://github.com/brettz9/eslint-config-ash-nazg/commit/e0ef7b11528b402b42cb7c3a19f9f3f9b81ef2e2))
+
 ## [43.1.10](https://github.com/brettz9/eslint-config-ash-nazg/compare/v43.1.8...v43.1.10) (2026-09-12)
 
 ### Bug Fixes
