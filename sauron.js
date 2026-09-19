@@ -147,6 +147,13 @@ export default function sauron (pkg, types) {
         'jsdoc/require-throws': ['warn', {
           contexts: ['any']
         }],
+        'jsdoc/ts-ban-ts-comment': ['error', {
+          minimumDescriptionLength: 2,
+          'ts-check': 'allow-with-description',
+          'ts-expect-error': 'allow-with-description',
+          'ts-ignore': true,
+          'ts-nocheck': true
+        }],
 
         'promise/no-nesting': 'warn',
         'promise/no-promise-in-callback': 'warn',
