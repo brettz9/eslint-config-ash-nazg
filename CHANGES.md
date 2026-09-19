@@ -1,5 +1,11 @@
 # eslint-config-ash-nazg CHANGES
 
+## [43.2.1](https://github.com/brettz9/eslint-config-ash-nazg/compare/v43.2.0...v43.2.1) (2026-09-19)
+
+### Chores
+
+* update babel, jsdoc, unicorn plugins ([e709e01](https://github.com/brettz9/eslint-config-ash-nazg/commit/e709e01b902a43a0cf5779bdc1ab659975fc8344))
+
 ## [43.2.0](https://github.com/brettz9/eslint-config-ash-nazg/compare/v43.1.10...v43.2.0) (2026-09-17)
 
 ### Features
