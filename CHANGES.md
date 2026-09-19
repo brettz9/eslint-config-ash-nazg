@@ -1,5 +1,11 @@
 # eslint-config-ash-nazg CHANGES
 
+## [43.2.2](https://github.com/brettz9/eslint-config-ash-nazg/compare/v43.2.1...v43.2.2) (2026-09-19)
+
+### Bug Fixes
+
+* add ts-ban-ts-comment to sauron ([5f88dcf](https://github.com/brettz9/eslint-config-ash-nazg/commit/5f88dcf9c4d9e5656a7d6f009603b643803897af))
+
 ## [43.2.1](https://github.com/brettz9/eslint-config-ash-nazg/compare/v43.2.0...v43.2.1) (2026-09-19)
 
 ### Chores
