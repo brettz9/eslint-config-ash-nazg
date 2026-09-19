@@ -83,9 +83,9 @@ export default function overrides (types, pkg) {
     ...overridesModule.map((cfg) => {
       return {
         ...cfg,
-        ...(cfg.languageOptions
-          ? {
-            languageOptions: {
+        languageOptions: {
+          ...(cfg.languageOptions
+            ? {
               ...cfg.languageOptions,
               globals: {
                 // eslint-disable-next-line @stylistic/max-len -- Long
@@ -94,14 +94,11 @@ export default function overrides (types, pkg) {
                 ...globals.node
               }
             }
-          }
-          : {
-            languageOptions: {
+            : {
               ecmaVersion: languageOptions.ecmaVersion,
               globals: globals.node
-            }
-          }
-        ),
+            })
+        },
         name: 'ash-nazg/overrides/rc/modules',
         files: [
           '**/scripts/rollup-plugin/**/*',
