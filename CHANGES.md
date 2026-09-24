@@ -1,5 +1,11 @@
 # eslint-config-ash-nazg CHANGES
 
+## [43.2.3](https://github.com/brettz9/eslint-config-ash-nazg/compare/v43.2.2...v43.2.3) (2026-09-24)
+
+### Bug Fixes
+
+* update html plugin ([419045a](https://github.com/brettz9/eslint-config-ash-nazg/commit/419045ae9a5164364cf7cda8dead2a54bdbb821b))
+
 ## [43.2.2](https://github.com/brettz9/eslint-config-ash-nazg/compare/v43.2.1...v43.2.2) (2026-09-19)
 
 ### Bug Fixes
