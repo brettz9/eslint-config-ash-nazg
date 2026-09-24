@@ -86,7 +86,7 @@
     "eslint-plugin-compat": "^7.0.2",
     "eslint-plugin-cypress": "^7.0.2",
     "eslint-plugin-escompat": "^4.1.0",
-    "eslint-plugin-html": "^8.2.0",
+    "eslint-plugin-html": "^8.2.1",
     "eslint-plugin-import-x": "^4.17.1",
     "eslint-plugin-jsdoc": "^64.5.4",
     "eslint-plugin-mocha": "^12.0.2",
