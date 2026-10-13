@@ -168,7 +168,7 @@ export default function sauron (pkg, types) {
         'unicorn/prefer-string-slice': 'error',
 
         '@eslint-community/eslint-comments/require-description': ['error', {
-          additionalDirectives: ['istanbul', 'c8']
+          additionalDirectives: ['istanbul', 'c8', 'v8']
         }]
       }
     }
