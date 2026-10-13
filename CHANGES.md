@@ -1,5 +1,11 @@
 # eslint-config-ash-nazg CHANGES
 
+## [43.2.4](https://github.com/brettz9/eslint-config-ash-nazg/compare/v43.2.3...v43.2.4) (2026-10-13)
+
+### Bug Fixes
+
+* **sauron:** check v8 directives ([0933f4b](https://github.com/brettz9/eslint-config-ash-nazg/commit/0933f4b5b7c9314dde236dffeef1b4ea435e2707))
+
 ## [43.2.3](https://github.com/brettz9/eslint-config-ash-nazg/compare/v43.2.2...v43.2.3) (2026-09-24)
 
 ### Bug Fixes
